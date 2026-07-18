@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "entity_name": null,
+  "contact_count": 0,
+  "last_trace_hash": null,
+  "tang_thuc": "SEEDED",
+  "tiem_thuc": "SEEDED",
+  "tam": "UNASSERTED",
+  "nhan_thuc": "DORMANT",
+  "y_thuc": "UNBORN",
+  "biet": "UNASSERTED",
+  "response_generation_enabled": false,
+  "conclusion_generation_enabled": false
+}

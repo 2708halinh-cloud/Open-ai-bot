@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+02_RUNTIME/TRACES.jsonl
+02_RUNTIME/*.tmp

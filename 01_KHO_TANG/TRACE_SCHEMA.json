@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ContactTrace",
+  "type": "object",
+  "required": ["id", "created_at", "source", "raw_contact", "observation", "inference", "unknown", "previous_hash", "hash"],
+  "properties": {
+    "id": {"type": "string"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "source": {"type": "string"},
+    "raw_contact": {},
+    "observation": {"type": "array", "items": {"type": "string"}},
+    "inference": {"type": "array", "items": {"type": "string"}},
+    "unknown": {"type": "array", "items": {"type": "string"}},
+    "relations": {"type": "array", "items": {"type": "string"}},
+    "previous_hash": {"type": ["string", "null"]},
+    "hash": {"type": "string"}
+  },
+  "additionalProperties": false
+}
