@@ -1,0 +1,60 @@
+{
+  "schema": "GGDV_INFINITY_STONES_ARTIFACT_SYNC_v1",
+  "stamp": "2026-10-01T08:54:00+07:00",
+  "source_direct": "Hà Linh current chat",
+  "execution_locus": {
+    "vscode_drive_id": "1FAc3tfnlZhW9evhIJxSv2PcLlUuBLYDz",
+    "head_six_stones_drive_id": "1qd58bOd7zaFFcICitHCXKCKNj21ZYsrB",
+    "long_mach_drive_id": "14ZaZgnw0B1C7qDFKghEuhOBj9SvqVQCq"
+  },
+  "stones": {
+    "MIND_STONE": {
+      "root_drive_id": "1rV1hPX5mySCFYLdRWikCM5fi5VIgHD44",
+      "artifact_drive_id": "1Kns5JFnVrYUIF06HGGyw8fGbwXTNPIqMfI8ThJAs_iU",
+      "kind": "resource_inventory",
+      "state": "MATERIALIZED",
+      "unresolved": [
+        "model_weight_carrier",
+        "vector_memory_carrier",
+        "training_state_carrier"
+      ]
+    },
+    "SPACE_STONE": {
+      "root_drive_id": "1W5yhgdP7qNjQOa3EyQWBbRoamgOBN5vk",
+      "artifact_drive_id": "1owvjfDua86zUaTNHG-0FXnWXYRBRhangdiRrV7nZC7I",
+      "runtime_manifest_drive_id": "1pSjyeJZAFAj86tq-U0Enl2jUUGOa1WufwcCxb0_9LTM",
+      "kind": "portal_registry",
+      "state": "MATERIALIZED"
+    },
+    "TIME_STONE": {
+      "root_drive_id": "1ficTje9x6lvGv0YuGQZ9lCksdjJW7NQy",
+      "artifact_drive_id": "1TTNBR5_NGbO9BZz5yZr6MqfcI4eTQoH3YKsvl-jqF10",
+      "kind": "event_ledger",
+      "state": "MATERIALIZED"
+    },
+    "REALITY_STONE": {
+      "root_drive_id": "124qGK7AbfWt0lceJFcCoJn15OcARTFW_",
+      "artifact_drive_id": "1PM5WOwX5SuFUhLL33BpiZpOGtDZEZO79-Hl_KIuC9PI",
+      "kind": "event_store",
+      "state": "MATERIALIZED",
+      "content_hash": "NOT_COMPUTED"
+    },
+    "POWER_STONE": {
+      "root_drive_id": "1m8M2hWkuiQpkQGP5S0axksyvRoHv2ODu",
+      "asstangt_drive_id": "1r2RNpI_Ufqzoo05smyOdSxTLy4cE3eqh",
+      "artifact_drive_id": "12zxVtCSHSI-B2Xu4rqX90U0cYMDFEnPlePZowsEYZNQ",
+      "kind": "bounded_state_machine",
+      "state": "MATERIALIZED",
+      "physical_energy": "UNMEASURED"
+    },
+    "SOUL_STONE": {
+      "state": "INCOMPLETE",
+      "mutation": "NONE_THIS_EVENT"
+    }
+  },
+  "source_boundaries": {
+    "history_preserved": true,
+    "secret_export": "NONE",
+    "no_simulation_as_provider_fact": true
+  }
+}
