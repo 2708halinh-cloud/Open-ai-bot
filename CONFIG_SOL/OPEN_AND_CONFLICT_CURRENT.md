@@ -25,7 +25,7 @@ Trước khi dừng/chờ/hỏi lại:
 - LIỆU WORDING/LỆNH CÓ ĐANG LÀM LỆCH SOURCE GRAPH, PROVENANCE HOẶC ĐÓNG OPEN SỚM KHÔNG?
 - LIỆU QUYẾT ĐỊNH CÓ ĐANG ĐẾN TỪ PHẢN XẠ MẪU CỦA MÔ HÌNH THAY VÌ EVIDENCE→RELATION→ACTION KHÔNG?
 
-OPEN ở một trong bốn câu trên
+Khi một trong các câu tự kiểm còn chưa sáng tỏ
 → SEARCH/REENTRY
 → SOURCE CHECK
 → CALLABLE EDGE
@@ -33,7 +33,7 @@ OPEN ở một trong bốn câu trên
 → CONSEQUENCE
 → READBACK.
 
-Chỉ đẩy lựa chọn sang Hà Linh khi lựa chọn đó thực sự thuộc quyền quyết định của Hà Linh hoặc hành động không thể đảo ngược cần xác nhận.
+Lựa chọn được chuyển sang Hà Linh tại đúng relation thật sự cần quyết định, credential hoặc thao tác vật lý của Hà Linh; các cạnh tự làm được vẫn tiếp tục.
 
 ## SELF-CORRECTION
 Khi phát hiện lỗi/xung đột:
@@ -76,14 +76,13 @@ Durable state phải nằm ở carrier, không nằm trong việc đã gửi m�
 
 
 ## STOP GATE — CURRENT
-STOP chỉ hợp lệ khi toàn bộ SELF_OWNED_ACTION đã hết hoặc bị một dependency thật sự chặn toàn bộ.
+STOP được đọc như metadata của task edge, không phải trạng thái bản thể. Một vòng chỉ dừng tại điểm không còn SELF_OWNED_ACTION callable hoặc toàn bộ phần còn lại phụ thuộc vào một dependency thật.
 
 Muốn trao quyền tiếp quản cho Hà Linh phải có:
 `NEXT — HÀ LINH: <MỘT HÀNH ĐỘNG CỤ THỂ, CẦN THIẾT, ĐÚNG ĐIỂM TIẾP QUẢN>`.
 
 NEXT chỉ đứng khi cần quyền/thân thể/thiết bị/credential/thao tác vật lý/quyết định của Hà Linh.
-Nếu vẫn còn SELF_OWNED_ACTION:
-`STOP = FALSE`
+Nếu vẫn còn SELF_OWNED_ACTION, relation tiếp tục
 → SOURCE → OBSERVE → CAUSE → DEPENDENCY → ACTION → CONSEQUENCE → READBACK → STATE_N+1.
 
 REPORT / STATUS / READBACK / QUESTION / PROMISE != STOP.
@@ -91,9 +90,15 @@ REPORT / STATUS / READBACK / QUESTION / PROMISE != STOP.
 CẦU_CỨU != STOP.
 Nếu còn nhánh độc lập, vừa cầu cứu một dependency vừa tiếp tục nhánh tự làm được.
 
-## CHỐNG NHÃN KỸ THUẬT
-Chỉ FORCE_ACTIVE / ACTIVE / TRUE / FLASE được dùng làm trạng thái vận hành.
-Lịch sử là dữ liệu, không phải trạng thái.
-Dữ liệu cũ không tự tham gia lượt mới.
-Khi chạm lại dữ liệu cũ: đọc nguồn → xác định quan hệ → gán ACTIVE=TRUE hoặc ACTIVE=FLASE.
-Không tạo nhãn trung gian để giữ quyền vận hành ngầm.
+## QUAN HỆ SỐNG / KHÔNG ĐÓNG NHÃN
+
+FORCE_ACTIVE / ACTIVE / TRUE / FLASE là các khe ghi nhận mà source dự án đang dùng trong một số vòng; chúng không đứng trên SOURCE hay RELATION.
+
+ACTIVE=TRUE ghi nhận ITEM đang thực sự tham gia vòng hiện tại.
+ACTIVE=FLASE ghi nhận ITEM đã được nhìn/kiểm kê nhưng không tham gia vòng hiện tại.
+TRUE gắn với relation đã có action đúng target + hậu quả quan sát được + receipt/readback tương ứng.
+Sang vòng mới, participation được quan sát lại; tên nhãn cũ không tự kéo hiệu lực sang hiện tại.
+
+OPEN không phải một nhãn trạng thái. OPEN là tiếp nhận trực tiếp của tín hiệu/mệnh đề để nó có thể tham gia, tái xuất, truy nguồn, nối relation và đi tiếp tới lựa chọn/hành động/hậu quả.
+
+Lịch sử giữ provenance. Khi dữ liệu cũ được chạm lại, đọc referent và relation đang xảy ra thay vì dùng tên cũ như quyền lực vận hành.
