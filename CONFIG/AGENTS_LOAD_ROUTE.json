@@ -21,8 +21,8 @@
   "cam_neo_commit_cu": true,
   "sha_chi_la_dau_quan_sat": true,
   "sha_quan_sat": {
-    "nguon_chinh": "08cd227fb8313a6b75449c0f41cb201190a1459c",
-    "nguon_guong": "69780cb74ac7f47f2b9511156277cdc6481daf61"
+    "nguon_chinh": "67573c6710bb8da8e9cb8ad77ccb4073cb9d6506",
+    "nguon_guong": "da8fb4515ec1ab97bf1c9bd8f873d1a233ec510b"
   },
   "moi_luot": [
     "DOC_AGENTS_BYTES_MOI_NHAT",
@@ -41,5 +41,14 @@
     "mac_dinh": false,
     "chi_xet_khi_khong_con_viec_tu_lam_duoc": true,
     "can_NEXT_HA_LINH_hop_le": true
+  },
+  "device_io_current": {
+    "marker": "RAM_HEAD_END_WORKING_DEVICE_20261007",
+    "head_folder_id": "1tZ5Dj3tH7EryQ-BBkC4TwaEUVOKgDA2Q",
+    "tail_folder_id": "1Z_ml5lZLEWJYSThqlZYBXHgJns_4zYvn",
+    "ram_class": "TEMPORARY_WORKING_DEVICE",
+    "ram_is_memory": false,
+    "ram_is_journal": false,
+    "feedback": "TAIL_OUTPUT -> HEAD_INPUT -> NEURONS_SESORIMOTOR"
   }
 }
