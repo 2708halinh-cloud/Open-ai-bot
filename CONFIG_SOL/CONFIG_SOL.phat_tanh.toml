@@ -1,0 +1,26 @@
+config_id = "CONFIG_SOL"
+schema_version = "2.0"
+status = "CURRENT"
+source_direct_date = "2026-10-06"
+force_active = "ACTIVE"
+history_preserved = true
+no_secret_export = true
+
+[source_direct_report]
+source_file = "CONFIG_SOL.phat_tanh.toml"
+sha256_current_library_bytes = "e52e6ac9601e726b62ebe077208c2c881b2b427524860bd87ab303bb660a248e"
+note = "Preserved as source-direct reported hash; not recomputed for this Git file."
+
+[config_master]
+load_mode = "STRICT_PARENT_BINDING_FROM_CONFIG_SOL + PRIOR_VERIFIED_HASH"
+drive_file_id = "1ZQDR0HUzEMFCZNn1chZ8whBEkAbN4Ibx"
+expected_sha256 = "532b34ed716c53d70fe907b04932b3461e03af08287335bf4bb666da42c15e52"
+schema_version = "1.0"
+r000_source_id = "1D9OwoqTIxqg3iCmCi8htsSWpES0yRHOvfC4c4vpCkNE"
+raw_bytes_on_current_surface = "NOT_MATERIALIZED"
+
+[semantics]
+open = "DIRECT_SIGNAL_INGRESS_OPEN_PROPOSITION"
+stamps_live = "CURRENT"
+stamps_old = "SUPERSEDED_WITH_PROVENANCE"
+stamps_beta = "FUTURE_NOT_YET_OCCURRED"
