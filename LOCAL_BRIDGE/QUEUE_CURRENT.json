@@ -1,13 +1,14 @@
 {
-  "schema": "TESSERACT_LOCAL_BRIDGE_QUEUE/1.6",
-  "task_id": "CONNECT_OS_WORKSPACE_SOL_RUNTIME_20261007_0509",
-  "action": "CONNECT_OS_WORKSPACE",
-  "target": "G:\\OS_Workspace",
-  "purpose": "Use legacy callable action to fresh-fetch .vscode connect-os-workspace.ps1, materialize GGDV motor bridge v0.5.1, install autostart, start SOL/watcher, and return readback.",
+  "schema": "TESSERACT_LOCAL_BRIDGE_QUEUE/1.7",
+  "task_id": "CONNECT_HOME_SOL_20261007_01",
+  "action": "CONNECT_HOME_SOL",
+  "endpoint": "http://127.0.0.1:8765/sandbox/sol",
+  "purpose": "Connect HOME_SOL to the real-device local nervous bridge. Probe the loopback endpoint, start nervous_api_server.py on the authorized Windows host if needed, then require HTTP readback before declaring connected.",
   "invariants": {
-    "preserve_existing_before_replace": true,
-    "no_destructive_overwrite": true,
+    "local_loopback_only": true,
     "readback_required": true,
-    "chat_not_runtime": true
+    "no_secret_body_persist": true,
+    "chat_not_runtime": true,
+    "preserve_existing_processes": true
   }
 }
