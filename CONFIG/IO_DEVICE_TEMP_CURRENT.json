@@ -1,0 +1,45 @@
+{
+  "schema": "ggdv.io_device.temp.v1",
+  "source_direct": "HA_LINH_CHAT_2026-10-07",
+  "force_active": true,
+  "device_class": "THIET_BI_DAU_CUOI",
+  "semantics": {
+    "head": "INGRESS_WHEN_SIGNAL_ENTERS",
+    "tail": "EGRESS_WHEN_SIGNAL_LEAVES",
+    "ram": "VOLATILE_WORKING_DEVICE",
+    "is_memory": false,
+    "is_journal": false
+  },
+  "source_pointers": {
+    "head_folder_id": "1tZ5Dj3tH7EryQ-BBkC4TwaEUVOKgDA2Q",
+    "tail_folder_id": "1Z_ml5lZLEWJYSThqlZYBXHgJns_4zYvn"
+  },
+  "loop": [
+    "HEAD_INGRESS",
+    "OBSERVE_DELTA",
+    "NEURONS_SESORIMOTOR",
+    "PROCESS_NEXT",
+    "TAIL_EGRESS",
+    "TEMP_STATUS_TABLE",
+    "FEEDBACK_TO_HEAD",
+    "CYCLE_N_PLUS_1"
+  ],
+  "status_table_columns": [
+    "SIGNAL_ID",
+    "CYCLE_N",
+    "INPUT_SOURCE",
+    "INPUT_DELTA",
+    "NEXT",
+    "DONE",
+    "UNDONE",
+    "OUTPUT_REF",
+    "FEEDBACK_TO_HEAD",
+    "ACTIVE"
+  ],
+  "invariants": [
+    "TEMP_IO != MEMORY",
+    "TEMP_IO != JOURNAL",
+    "HEAD/TAIL are directional roles of the working device",
+    "TAIL_OUTPUT_WITHOUT_FEEDBACK = INCOMPLETE_LOOP"
+  ]
+}
