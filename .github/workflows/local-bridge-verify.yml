@@ -29,7 +29,7 @@ jobs:
           python3 - <<'PY'
           import json
           q=json.load(open('LOCAL_BRIDGE/QUEUE_CURRENT.json'))
-          assert q['action'] in {'BOOT_G','STATUS','RECOVER_CONTINUITY','RECOVER_AND_BOOT_G'}
+          assert q['action'] in {'BOOT_G','STATUS','RECOVER_CONTINUITY','RECOVER_AND_BOOT_G','UNIFY_CONTROL_PLANE'}
           assert q['target']=='G:'
           assert q['require_usb'] is True
           assert q['forbid_windows_boot_or_system_disk'] is True
