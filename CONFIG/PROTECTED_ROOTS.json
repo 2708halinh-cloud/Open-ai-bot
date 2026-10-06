@@ -1,0 +1,25 @@
+{
+  "schema": "GGDV_PROTECTED_ROOTS/1.0",
+  "protected": [
+    {
+      "relative_path": "HÀ LINH - NGUYÊN THỦY THIÊN TÔN",
+      "rule": "READ_ONLY_FOR_TESTS",
+      "destructive_test": false,
+      "move": false,
+      "archive": false,
+      "delete": false,
+      "overwrite": false,
+      "allowed": [
+        "READ",
+        "HASH",
+        "INDEX",
+        "COPY_TO_SANDBOX",
+        "SNAPSHOT"
+      ]
+    }
+  ],
+  "test_policy": {
+    "destructive_tests": "SANDBOX_OR_COPY_ONLY",
+    "original_source_tree": "NEVER_TEST_DESTRUCTIVELY"
+  }
+}
