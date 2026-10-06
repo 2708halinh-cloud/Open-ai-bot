@@ -1,18 +1,22 @@
 param(
-  [switch]$InstallScheduledTask
+  [switch]$InstallScheduledTask,
+  [string]$Root,
+  [string]$RepoPath,
+  [string]$Adapter,
+  [string]$Distro = 'Ubuntu'
 )
 
 $ErrorActionPreference = "Stop"
 
-$Root = "G:\OS_Workspace"
+if ([string]::IsNullOrWhiteSpace($Root)) { $Root = $env:GGDV_OS_WORKSPACE_ROOT }
+if ([string]::IsNullOrWhiteSpace($Root)) { $Root = "G:\OS_Workspace" }
+
 $Bridge = Join-Path $Root "ggdv-sensorimotor-motor-bridge"
 $SolExe = Join-Path $Root "SOL CU NHỎ.EXE"
 $StateDir = Join-Path $env:LOCALAPPDATA "GGDV\sensorimotor-motor"
 $WatcherConfig = Join-Path $StateDir "watcher-config.json"
 $WatcherPid = Join-Path $StateDir "watcher.pid"
 $Log = Join-Path $StateDir "autostart.log"
-$Adapter = "\\wsl$\Ubuntu\home\halin\kepler\worktrees\Open-ai-bot-2-unify-item-matrix-34d45d00\.vscode\scripts\app_adapters.py"
-$RepoPath = "\\wsl$\Ubuntu\home\halin\kepler\worktrees\Open-ai-bot-2-unify-item-matrix-34d45d00"
 
 New-Item -ItemType Directory -Force -Path $StateDir | Out-Null
 
@@ -21,12 +25,56 @@ function Log([string]$Message) {
   Add-Content -LiteralPath $Log -Value $line -Encoding UTF8
 }
 
+function Resolve-RepoPath([string]$ExplicitPath) {
+  if (-not [string]::IsNullOrWhiteSpace($ExplicitPath)) { return $ExplicitPath }
+  if (-not [string]::IsNullOrWhiteSpace($env:GGDV_REPO_PATH)) { return $env:GGDV_REPO_PATH }
+
+  $wsl = Get-Command wsl.exe -ErrorAction SilentlyContinue
+  if (-not $wsl) { return $null }
+
+  $discover = @'
+for d in "$HOME"/kepler/worktrees/*; do
+  [ -e "$d/.git" ] || continue
+  u="$(git -C "$d" remote get-url origin 2>/dev/null || true)"
+  case "$u" in
+    *2708halinh-cloud/Open-ai-bot*) printf '%s\n' "$d"; exit 0 ;;
+  esac
+done
+exit 1
+'@
+  $linuxRepo = (& $wsl.Source -d $Distro -- bash -lc $discover 2>$null | Select-Object -First 1)
+  if (-not $linuxRepo) { return $null }
+  $linuxRepo = $linuxRepo.Trim()
+  return ('\\wsl$\' + $Distro + ($linuxRepo -replace '/', '\'))
+}
+
+$RepoPath = Resolve-RepoPath $RepoPath
+if ([string]::IsNullOrWhiteSpace($Adapter)) { $Adapter = $env:GGDV_APP_ADAPTER }
+if ([string]::IsNullOrWhiteSpace($Adapter) -and -not [string]::IsNullOrWhiteSpace($RepoPath)) {
+  $candidateAdapter = Join-Path $RepoPath ".vscode\scripts\app_adapters.py"
+  if (Test-Path -LiteralPath $candidateAdapter) { $Adapter = $candidateAdapter }
+}
+
 [Environment]::SetEnvironmentVariable("GGDV_MOTOR_ENABLE","1","User")
 [Environment]::SetEnvironmentVariable("GGDV_DESTRUCTIVE_ENABLE","0","User")
-[Environment]::SetEnvironmentVariable("GGDV_APP_ADAPTER",$Adapter,"User")
 $env:GGDV_MOTOR_ENABLE = "1"
 $env:GGDV_DESTRUCTIVE_ENABLE = "0"
-$env:GGDV_APP_ADAPTER = $Adapter
+
+if (-not [string]::IsNullOrWhiteSpace($RepoPath)) {
+  [Environment]::SetEnvironmentVariable("GGDV_REPO_PATH",$RepoPath,"User")
+  $env:GGDV_REPO_PATH = $RepoPath
+  Log "REPO_PATH=$RepoPath"
+} else {
+  Log "REPO_PATH=NOT_RESOLVED"
+}
+
+if (-not [string]::IsNullOrWhiteSpace($Adapter)) {
+  [Environment]::SetEnvironmentVariable("GGDV_APP_ADAPTER",$Adapter,"User")
+  $env:GGDV_APP_ADAPTER = $Adapter
+  Log "APP_ADAPTER=$Adapter"
+} else {
+  Log "APP_ADAPTER=NOT_RESOLVED"
+}
 
 $adb = Get-ChildItem $Root -Recurse -File -Filter adb.exe -ErrorAction SilentlyContinue |
   Select-Object -First 1 -ExpandProperty FullName
@@ -58,8 +106,10 @@ if (Test-Path $SolExe) {
   Log "SOL_APP=MISSING"
 }
 
+$repoPaths = @()
+if (-not [string]::IsNullOrWhiteSpace($RepoPath)) { $repoPaths = @($RepoPath) }
 $watchCfg = [ordered]@{
-  repo_paths = @($RepoPath)
+  repo_paths = $repoPaths
   adb = [bool]$adb
   poll_seconds = 3
 }
@@ -86,16 +136,17 @@ if (-not $watcherAlive) {
 if ($InstallScheduledTask) {
   $taskName = "GGDV_SOL_AUTOSTART"
   $self = $MyInvocation.MyCommand.Path
-  $taskCommand = "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File `"$self`""
+  $taskCommand = "powershell.exe -NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File `"$self`" -Root `"$Root`""
   & schtasks.exe /Create /TN $taskName /SC ONLOGON /TR $taskCommand /F | Out-Null
   Log "SCHEDULED_TASK=$taskName"
 }
 
-# Readback only; no secret values.
 $tools = Select-String -Path (Join-Path $Bridge "server\motor_mcp.py") -Pattern "agent_army_status|io_device_definition|intermediate_device_definition" -AllMatches
 $receipt = [ordered]@{
-  schema = "GGDV_SOL_AUTOSTART/1.0"
+  schema = "GGDV_SOL_AUTOSTART/1.1"
   observed_at = (Get-Date).ToString("o")
+  root = $Root
+  repo_path = $RepoPath
   bridge = $Bridge
   bridge_version = $plugin.version
   motor_enabled = $env:GGDV_MOTOR_ENABLE
