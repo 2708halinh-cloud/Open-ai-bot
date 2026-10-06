@@ -8,7 +8,7 @@ STATE = ROOT / '.runtime' / 'LOCAL_BRIDGE_STATE.json'
 RECEIPTS = ROOT / '.runtime' / 'local_bridge_receipts'
 RECEIPTS.mkdir(parents=True, exist_ok=True)
 
-ALLOWED = {'BOOT_G', 'STATUS', 'RECOVER_CONTINUITY', 'RECOVER_AND_BOOT_G', 'UNIFY_CONTROL_PLANE', 'CONNECT_OS_WORKSPACE'}
+ALLOWED = {'BOOT_G', 'STATUS', 'RECOVER_CONTINUITY', 'RECOVER_AND_BOOT_G', 'UNIFY_CONTROL_PLANE', 'CONNECT_OS_WORKSPACE', 'UBUBU_LAZY_FETCH'}
 
 def run(cmd, **kw):
     return subprocess.run(cmd, cwd=ROOT, text=True, capture_output=True, **kw)
@@ -206,6 +206,24 @@ def connect_os_workspace(receipt):
     return p.returncode if p.returncode != 0 else 9
 
 
+
+def ububu_lazy_fetch(receipt):
+    p = run([
+        'python3','LOCAL_BRIDGE/ububu_lazy_fetch.py',
+        '--query','Gemini-Sự tiến hóa hệ thần kinh sứa-20261006-2120.txt',
+        '--query','HÀ LINH XUẤT TAY',
+        '--query','20261006-2120',
+        '--query','hệ thần kinh sứa',
+        '--receipt','.runtime/UBUBU_LAZY_FETCH_CURRENT.json'
+    ])
+    receipt['ububu_lazy_fetch_returncode'] = p.returncode
+    receipt['ububu_lazy_fetch_stdout'] = p.stdout[-20000:]
+    receipt['ububu_lazy_fetch_stderr'] = p.stderr[-12000:]
+    rp = ROOT / '.runtime' / 'UBUBU_LAZY_FETCH_CURRENT.json'
+    if rp.exists():
+        receipt['ububu_lazy_fetch_state'] = load_json(rp)
+    return p.returncode
+
 def execute(task):
     action = task.get('action')
     task_id = task.get('task_id')
@@ -226,6 +244,8 @@ def execute(task):
         rc = unify_control_plane(receipt)
     elif action == 'CONNECT_OS_WORKSPACE':
         rc = connect_os_workspace(receipt)
+    elif action == 'UBUBU_LAZY_FETCH':
+        rc = ububu_lazy_fetch(receipt)
     receipt['returncode'] = rc
     receipt['finished_at'] = time.time()
     return receipt
