@@ -48,3 +48,14 @@ bootstrap = "CURRENT_RUNTIME/LOCAL_SOL_OPEN_SUPPORT.ps1"
 repo_rename_executor = "CURRENT_RUNTIME/RENAME_AGENT_REPO.ps1"
 drive_tree_migration_executor = "CURRENT_RUNTIME/MIGRATE_DRIVE_TREE_TO_REPO.ps1"
 container_catalog = "CONFIG_SOL/SUPPORT_CONTAINER_CATALOG_CURRENT.json"
+
+[os_workspace]
+status = "OPEN_ACTIVE"
+local_path = "G:\\OS_Workspace"
+control_plane_repo = "2708halinh-cloud/.vscode"
+control_plane_binding = "OS_WORKSPACE_BINDING_CURRENT.json"
+connector_script = "scripts/connect-os-workspace.ps1"
+local_bridge_action = "CONNECT_OS_WORKSPACE"
+self_hosted_workflow_run_id = "37476673795"
+completion_rule = "CONNECTED only after binding + workspace file hash readback"
+host_data_preserved = true
