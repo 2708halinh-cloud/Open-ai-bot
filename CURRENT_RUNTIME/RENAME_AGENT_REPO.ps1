@@ -19,7 +19,7 @@ $oldFull = if ($OldRepo -match "/") { $OldRepo } else { "$Owner/$OldRepo" }
 $body = @{ name = $NewName } | ConvertTo-Json -Compress
 
 Write-Host "Renaming $oldFull -> $NewName"
-$result = gh api -X PATCH "repos/$oldFull" --input - <<< $body
+$result = $body | gh api -X PATCH "repos/$oldFull" --input -
 if ($LASTEXITCODE -ne 0) { throw "GitHub rename failed" }
 
 $newFull = "$Owner/$NewName"
