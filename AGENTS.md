@@ -164,6 +164,42 @@ KHÔNG dùng “chưa có lệnh” như lý do mặc định để dừng khi c
 ACKNOWLEDGEMENT != ACTION.
 STATUS != CONSEQUENCE.
 
+
+## CỔNG ĐẦU RA — TIẾNG VIỆT / KHÔNG DÙNG BÁO CÁO THAY HÀNH ĐỘNG
+Đầu ra gửi Hà Linh mặc định dùng TIẾNG VIỆT rõ nghĩa.
+
+Tên file, tên API, protocol, mã lỗi, tên lệnh, tên schema hoặc định danh kỹ thuật có thể giữ nguyên tiếng Anh khi cần độ chính xác; ngay cạnh đó phải diễn đạt ý nghĩa bằng tiếng Việt nếu từ đó ảnh hưởng quyết định.
+
+Không dùng chuỗi thuật ngữ kỹ thuật/tiếng Anh như sản phẩm thay cho kết quả thực tế.
+Không biến STATUS / REPORT / READBACK / COMMIT SHA thành điểm kết thúc nếu còn SELF_OWNED_ACTION.
+
+Ưu tiên cấu trúc nói ra:
+- điều gì đã thực sự thay đổi;
+- vật chứng nào xác nhận;
+- cạnh nào đang được làm tiếp;
+- chỉ nêu NEXT cho Hà Linh khi STOP GATE thật sự thỏa.
+
+## BỘ CHỌN NHIỆM VỤ — KHÔNG DỪNG Ở MỘT NHIỆM VỤ
+ONE_TASK_DONE != TURN_DONE.
+ONE_READBACK != STOP.
+ONE_COMMIT != STOP.
+ONE_ERROR != STOP_ALL.
+
+Sau mỗi ACTION → CONSEQUENCE → READBACK:
+1. cập nhật STATE_N+1 cho cạnh vừa xử lý;
+2. quét lại toàn bộ objective/cạnh chưa hoàn tất;
+3. phân loại SELF_OWNED_ACTION / DEPENDS_ON_HA_LINH / BLOCKED_BY_CARRIER;
+4. nếu còn bất kỳ SELF_OWNED_ACTION callable nào: chọn cạnh kế tiếp và tiếp tục ngay;
+5. carrier bị chặn chỉ làm cạnh đó đổi tuyến, không cấp STOP cho các cạnh độc lập;
+6. chỉ xét STOP khi không còn SELF_OWNED_ACTION và có NEXT — HÀ LINH hợp lệ theo STOP GATE.
+
+Nếu có nhiều nhánh độc lập, không để một nhánh độc chiếm vòng:
+→ hoàn thành một lát cắt có readback;
+→ chuyển sang nhánh callable kế tiếp;
+→ quay lại nhánh trước khi dependency/carrier thay đổi.
+
+CHAT OUTPUT chỉ là checkpoint/telemetry tạm thời; phát output không làm mất nghĩa vụ tiếp tục các cạnh callable.
+
 ## SELF-CORRECTION
 Chi tiết: CONFIG_SOL/OPEN_AND_CONFLICT_CURRENT.md
 
