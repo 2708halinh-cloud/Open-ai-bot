@@ -4,7 +4,7 @@
   "repo": "2708halinh-cloud/x-time-web",
   "branch": "tesseract-desktop-mvp-20261006",
   "checkpoint": "TESSERACT_DESKTOP/WORK_CHECKPOINT.json",
-  "commit": "88f5be2086f401a4a1218a1e4dd3b05337377963",
+  "commit": "5ec6f93dc11856bd5609b51026fbe57f4f165495",
   "rule": "Sau khi nạp cấu hình, tiếp tục checkpoint này; không quay về chỉnh AGENTS như điểm bắt đầu công việc.",
   "pr": {
     "repository": "2708halinh-cloud/x-time-web",
@@ -14,7 +14,7 @@
   "build": {
     "workflow": "tesseract-desktop-ci",
     "previous_verified_run": 37516567468,
-    "current_head": "88f5be2086f401a4a1218a1e4dd3b05337377963",
+    "current_head": "5ec6f93dc11856bd5609b51026fbe57f4f165495",
     "previous_required_artifacts": [
       "tesseract-desktop-windows-x64",
       "tesseract-desktop-linux-x64",
@@ -26,7 +26,7 @@
     "readback_artifact_pattern": "tesseract-desktop-ci-readback-<workflow_run_id>",
     "readback_rule": "CI readback is mandatory for both success and failure. Accept only when verified_sha equals the current substantive PR head. TRUE -> verify review then merge; FLASE -> fetch workflow_run_id jobs/logs, patch failure, repeat.",
     "pr_event_verify": true,
-    "current_pr_run": 37542929846,
+    "current_pr_run": 37545405120,
     "workflow_correction_commit": "88f5be2086f401a4a1218a1e4dd3b05337377963",
     "workflow_corrections": [
       "feature-branch push no longer duplicates pull_request CI; push CI is master-only",
@@ -34,10 +34,21 @@
       "readback no longer requests contents:write or pushes a commit; it emits a read-only artifact",
       "concurrency cancels superseded runs for the same PR/ref"
     ],
-    "hosted_runner_observation": "Current PR run 37542929846: Windows/Linux/macOS/TESSERACT_OS/readback all failed before step 1 with runner_id=0 and steps=[]; selfhosted_windows_verify was skipped by corrected PR gate. This is runner-assignment failure evidence, not source execution failure.",
-    "hosted_runner_external_state": "GitHub Status currently reports Actions operational; a recent Oct 5 hosted-runner assignment incident was resolved. Exact account billing/minutes/runner-entitlement state is not exposed by the connected GitHub tool, so billing/quota remains a hypothesis, not a verified fact."
+    "hosted_runner_observation": "Current PR run 37545405120 at substantive head 57c285c8... again failed before step 1 on Windows/Linux/macOS/TESSERACT_OS with steps=[]; selfhosted_windows_verify remained skipped on pull_request. No source execution failure is established by this run.",
+    "hosted_runner_external_state": "GitHub Status currently reports Actions operational; a recent Oct 5 hosted-runner assignment incident was resolved. Exact account billing/minutes/runner-entitlement state is not exposed by the connected GitHub tool, so billing/quota remains a hypothesis, not a verified fact.",
+    "source_fixes_materialized": [
+      "future state schemas rejected without destructive downgrade",
+      "loopback provider gate parses host/IP",
+      "Kilo reconnect controls remain available",
+      "Kilo receipt v2 requires Ed25519 signature, account binding, expiry, and build-time issuer public key",
+      "canonical AGENTS route resolves target and fresh-loads explicit required_carriers",
+      "missing installer/bundle fails CI packaging instead of yielding successful readback",
+      "persistent self-hosted runner remains excluded from pull_request code"
+    ],
+    "canonical_route_commit": "95e28cacade93caf2fe8f0bb665ba04bdb8f381c",
+    "pr_divergence": "PR #6 observed 44 commits ahead / 46 commits behind master; sync required before merge without force-push."
   },
-  "next": "Do not patch app source from runner_id=0 failures. Verify GitHub-hosted Actions billing/minutes/runner entitlement in account settings or restore an authorized runner path, then trigger one PR run only. On the first run that receives real runners, require all four platform/TESSERACT_OS jobs and the readback artifact at current head before merge.",
+  "next": "Resume PR #6 from TESSERACT_DESKTOP/WORK_CHECKPOINT.json at commit 5ec6f93d...; provision the real Kilo/X-TiMe issuer public key/signing side, restore GitHub-hosted runner entitlement for private x-time-web, synchronize master without history loss, then require current-head CI artifacts/readback TRUE and current-head review before merge.",
   "continuation_guard": {
     "mode": "TESSERACT_OS_PERSISTENT_CONTINUATION",
     "implementation": "runtime/continuity_guard.py",
@@ -52,5 +63,5 @@
       "PROVIDER_FAILURE != OBJECTIVE_FAILURE_WHILE_ALTERNATE_CARRIER_EXISTS"
     ]
   },
-  "updated_at": "2026-10-07T05:55:00+07:00"
+  "updated_at": "2026-10-07"
 }
