@@ -49,7 +49,7 @@ jobs:
           allowed={
               'BOOT_G','STATUS','RECOVER_CONTINUITY','RECOVER_AND_BOOT_G',
               'UNIFY_CONTROL_PLANE','CONNECT_OS_WORKSPACE','ENSURE_SOL_RUNTIME',
-              'UBUBU_LAZY_FETCH','THANOS_SNAP_META_TB','TESSERACT_Q6_META_LAZY_FETCH'
+              'UBUBU_LAZY_FETCH','THANOS_SNAP_META_TB','TESSERACT_Q6_META_LAZY_FETCH','CONNECT_HOME_SOL'
           }
           assert action in allowed, (action, sorted(allowed))
           if action in {'BOOT_G','RECOVER_AND_BOOT_G'}:
@@ -68,6 +68,13 @@ jobs:
               assert inv.get('preserve_existing_before_replace') is True
               assert inv.get('no_destructive_overwrite') is True
               assert inv.get('readback_required') is True
+              assert inv.get('chat_not_runtime') is True
+          elif action == 'CONNECT_HOME_SOL':
+              assert q.get('endpoint') == 'http://127.0.0.1:8765/sandbox/sol'
+              inv=q.get('invariants',{})
+              assert inv.get('local_loopback_only') is True
+              assert inv.get('readback_required') is True
+              assert inv.get('no_secret_body_persist') is True
               assert inv.get('chat_not_runtime') is True
           PY
       - name: Root-neutral worktree regression
