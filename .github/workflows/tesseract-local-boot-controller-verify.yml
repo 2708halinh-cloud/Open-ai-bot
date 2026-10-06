@@ -1,0 +1,33 @@
+name: tesseract-local-boot-controller-verify
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'terminal/tesseract_boot_g_from_wsl.sh'
+      - '.runtime/TESSERACT_BOOT_G.env'
+      - 'CURRENT_RUNTIME/TESSERACT_LOCAL_BOOT_CURRENT.md'
+      - '.github/workflows/tesseract-local-boot-controller-verify.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bash syntax
+        run: bash -n terminal/tesseract_boot_g_from_wsl.sh
+      - name: Runtime binding
+        run: |
+          set -a
+          source .runtime/TESSERACT_BOOT_G.env
+          set +a
+          test "$TESSERACT_BOOT_TARGET" = G
+          test "$TESSERACT_BOOT_IMAGE_SHA256" = f993e15478a1391c3a9d14d368158043d98c51494f3ae81e5b633870855c96df
+          test "$TESSERACT_BOOT_IMAGE_SIZE" = 67108864
+      - name: Embedded PowerShell parses
+        shell: pwsh
+        run: |
+          $text = Get-Content terminal/tesseract_boot_g_from_wsl.sh -Raw
+          $m = [regex]::Match($text, "(?s)cat > \"\$PS1\" <<'POWERSHELL'\r?\n(.*?)\r?\nPOWERSHELL")
+          if (-not $m.Success) { throw 'embedded PowerShell block not found' }
+          [void][scriptblock]::Create($m.Groups[1].Value)
