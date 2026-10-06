@@ -1,0 +1,28 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ggdv-sensorimotor-motor-bridge",
+  "version": "0.5.1",
+  "description": "GGDV NEURONS_SESORIMOTOR distributed Agent-Sub network with temporary RAM head/end I/O and transformable intermediate-device semantics, receipts, journal, continuity and destructive-action inhibition.",
+  "author": {
+    "name": "GGDV Project"
+  },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "GGDV NEURONS_SESORIMOTOR Army",
+        "shortDescription": "Distributed sensorimotor Agent-Sub network",
+        "longDescription": "Materializes NEURONS_SESORIMOTOR across Drive, GitHub, local repo, Windows/WSL, ADB, cloud and recovery. RAM is one temporary head/end working device, never memory. Intermediate devices such as IOAT/IOTA, .env, config, instructions and pointers are transformable operational carriers: current-at-T is not eternal. Secrets are reference-only; destructive candidates are inhibited unless separately permitted.",
+        "developerName": "GGDV Project",
+        "category": "Developer Tools",
+        "capabilities": [
+          "Interactive"
+        ],
+        "defaultPrompt": [
+          "Run one sensorimotor cycle for this repository and read back the consequence.",
+          "Observe my Windows/WSL/ADB motor state and select the next grounded action.",
+          "Continue from the last cursor and journal the next state transition."
+        ]
+      }
+    }
+  }
+}
