@@ -1,0 +1,34 @@
+{
+  "schema": "ggdv.io_device.intermediate.v1",
+  "source_direct": "HA_LINH_CHAT_2026-10-07",
+  "force_active": true,
+  "device_class": "THIET_BI_TRUNG_GIAN",
+  "project_semantics": "BAO_TOAN_NANG_LUONG_QUA_CHUYEN_HOA",
+  "meaning": "Preserve causal/provenance continuity while state, data, config and instructions may transform.",
+  "examples": [
+    "IOTA",
+    ".env",
+    "CONFIG/*",
+    "instruction files"
+  ],
+  "boundaries": {
+    "is_ram": false,
+    "is_memory_by_default": false,
+    "is_journal_by_default": false,
+    "persistent_carrier_possible": true,
+    "eternal_validity": false
+  },
+  "invariant": "STATE_N -> FRESH_READ -> DELTA -> TRANSFORM -> CONSEQUENCE -> READBACK -> STATE_N+1",
+  "rules": [
+    "VALID_AT_STATE_N != ETERNAL_TRUTH",
+    "PERSISTENT_FILE != MEMORY",
+    "TRANSFORMATION != LOSS_OF_CONTINUITY",
+    "STALE_RECHECK_BEFORE_ACTION",
+    "PRESERVE_INPUT_OUTPUT_PROVENANCE"
+  ],
+  "relation_to_io": {
+    "temp_io": "THIET_BI_DAU_CUOI/RAM handles temporary ingress/egress working frames",
+    "intermediate": "THIET_BI_TRUNG_GIAN handles transformable state/config/instruction carriers",
+    "durable": "MEMORY/JOURNAL is a separate durable layer only when an explicit persistence rule writes it"
+  }
+}
