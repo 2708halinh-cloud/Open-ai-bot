@@ -200,6 +200,16 @@ Nếu có nhiều nhánh độc lập, không để một nhánh độc chiếm 
 
 CHAT OUTPUT chỉ là checkpoint/telemetry tạm thời; phát output không làm mất nghĩa vụ tiếp tục các cạnh callable.
 
+
+## TIẾP TỤC NHIỀU NHIỆM VỤ
+Hoàn tất một nhiệm vụ chỉ đóng cạnh đó, không đóng cả lượt.
+Sau mỗi READBACK:
+1. cập nhật STATE_N+1 cho cạnh vừa xử lý;
+2. quét lại các objective chưa hoàn tất;
+3. nếu còn SELF_OWNED_ACTION có thể thực hiện, chuyển sang cạnh kế tiếp và tiếp tục;
+4. lỗi/chặn ở một carrier chỉ ảnh hưởng cạnh đó, không làm các nhánh độc lập dừng theo;
+5. chỉ xét STOP khi không còn SELF_OWNED_ACTION và STOP GATE đã đủ điều kiện.
+
 ## SELF-CORRECTION
 Chi tiết: CONFIG_SOL/OPEN_AND_CONFLICT_CURRENT.md
 
