@@ -1,0 +1,34 @@
+name: local-bridge-verify
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'LOCAL_BRIDGE/**'
+      - 'terminal/tesseract_boot_g_from_wsl.sh'
+      - '.runtime/TESSERACT_BOOT_G.env'
+      - '.github/workflows/local-bridge-verify.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python syntax
+        run: python3 -m py_compile LOCAL_BRIDGE/bridge.py
+      - name: Bash syntax
+        run: bash -n terminal/tesseract_boot_g_from_wsl.sh
+      - name: PowerShell bootstrap parses
+        shell: pwsh
+        run: "[void][scriptblock]::Create((Get-Content 'LOCAL_BRIDGE/bootstrap_once.ps1' -Raw))"
+      - name: Queue contract
+        run: |
+          python3 - <<'PY'
+          import json
+          q=json.load(open('LOCAL_BRIDGE/QUEUE_CURRENT.json'))
+          assert q['action'] in {'BOOT_G','STATUS'}
+          assert q['target']=='G:'
+          assert q['require_usb'] is True
+          assert q['forbid_windows_boot_or_system_disk'] is True
+          assert q['image_sha256']=='f993e15478a1391c3a9d14d368158043d98c51494f3ae81e5b633870855c96df'
+          PY
