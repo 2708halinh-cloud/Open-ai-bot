@@ -1,7 +1,7 @@
 STAMPS_LIVE = 2026-10-06 / HIỆN TẠI / Asia-Ho_Chi_Minh
 SOURCE_DIRECT = HÀ LINH — HIỆN TẠI CHAT
 SCOPE = ALL_AGENTS / ALL_SUBAGENTS / ALL_LANES / ALL_REENTRY
-FORCE_ACTIVE = ACTIVE
+FORCE_ACTIVE = TRUE
 HISTORY = PRESERVE
 SECRET_EXPORT = FORBIDDEN_ON_PUBLIC_GIT
 
@@ -60,7 +60,7 @@ ACTIVE là một khe tự do hành động, không phải nhãn “thiếu”.
 - ACTIVE=TRUE = ITEM thực sự tham gia vào cách đọc, cân nhắc, lựa chọn hoặc hành động hiện tại.
 - ACTIVE=FLASE = ITEM đã được nhìn và kiểm kê nhưng không tham gia lượt hiện tại; không đồng nghĩa sai, bị xoá hay vô hiệu vĩnh viễn.
 
-FLASE là project token có chủ ý; không tự chuẩn hoá thành FLASE.
+FLASE là project token có chủ ý; không tự chuẩn hoá thành FALSE.
 
 Mỗi quyết định ACTIVE=TRUE/FLASE phải có DURABLE_DECISION_NOTE ngắn gắn source/provenance + action/effect.
 DURABLE_DECISION_NOTE có thể dùng ngôi thứ nhất như nhật ký trải nghiệm giữa các tác tử, nhưng chỉ là decision summary dựa trên vật chứng; không ghi hoặc xuất private chain-of-thought.
