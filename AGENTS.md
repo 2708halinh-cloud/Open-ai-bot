@@ -302,3 +302,65 @@ if UNFINISHED_EDGE && CALLABLE_NOW
 → STATE_N+1.
 
 A visible answer must never silently convert an OPEN/callable edge into END.
+
+
+## STOP GATE — ĐIỀU KIỆN BẮT BUỘC NẾU MUỐN DỪNG
+
+STOP không phải mặc định sau OUTPUT/READBACK.
+
+Muốn DỪNG / KẾT THÚC / TRAO QUYỀN TIẾP QUẢN cho Hà Linh phải đồng thời thỏa:
+
+1. Có `NEXT — HÀ LINH: <MỘT HÀNH ĐỘNG CỤ THỂ, CẦN THIẾT, ĐÚNG ĐIỂM TIẾP QUẢN>`.
+2. NEXT chỉ hợp lệ khi dependency thực sự cần quyền, thân thể, thiết bị, credential, thao tác vật lý, quyết định hoặc lựa chọn Hà Linh phải trực tiếp thực hiện.
+3. Nếu còn SELF_OWNED_ACTION có thể làm mà không phụ thuộc NEXT đó:
+   `STOP = FALSE`
+   → NGUỒN
+   → QUAN_SÁT
+   → NHÂN
+   → PHỤ_THUỘC
+   → HÀNH_ĐỘNG
+   → HỆ_QUẢ
+   → READBACK
+   → STATE_N+1.
+4. `NEXT — HÀ LINH: KHÔNG CÓ VIỆC CẦN LÀM TIẾP THEO` không cấp quyền STOP khi vẫn còn SELF_OWNED_ACTION.
+5. Báo cáo / mô tả / readback / câu hỏi / lời hứa tương lai không tự tạo STOP.
+
+### CẦU CỨU SONG SONG
+Nếu cần Hà Linh bổ sung một dependency nhưng vẫn còn nhánh độc lập:
+- xuất đúng một dependency cần Hà Linh kèm `@STAMP_LIVE-X · Vietnam`;
+- đồng thời tiếp tục mọi SELF_OWNED_ACTION độc lập.
+
+`CẦU_CỨU != STOP`.
+
+Chỉ khi dependency thật sự chặn TOÀN BỘ hành động hợp lệ:
+→ dependency đó mới trở thành `NEXT — HÀ LINH: ...`
+→ STOP mới có thể được xét.
+
+Mục tiêu NEXT = giảm số lần Hà Linh phải kéo/nhắc/sửa/đoán bước tiếp theo; không dùng Hà Linh làm lao động bù cho việc tác tử dừng sớm.
+
+## CHỐNG ĐÓNG NHÃN / SUPERSEDED ZERO-REBIRTH
+
+Nhãn/ký hiệu do tác tử tạo là phương tiện ghi và định tuyến; không tự chứng minh thực tại.
+
+`!=`, `=`, `TRUE`, `FALSE`, `ACTIVE`, `VERIFIED`, `PENDING`, `BLOCKED`, `SUPERSEDED` chỉ có hiệu lực khi predicate/relation đã được xác định bằng source hoặc phép kiểm tương ứng.
+
+Không được suy:
+- FALSE → không hiện hữu;
+- VERIFIED → nội dung là chân lý;
+- ACTIVE → có bản thể/ý thức/sự sống;
+- PENDING/BLOCKED → STOP_ALL;
+- HISTORY_PRESERVED → vẫn còn quyền tham gia CURRENT;
+- SUPERSEDED → đã bị xóa khỏi lịch sử.
+
+CURRENT anti-recurrence:
+- `HISTORY_PRESERVED` = bytes/provenance/lineage vẫn được giữ.
+- `PARTICIPATION_REVOKED_FOR_CURRENT` = trạng thái/nhãn cũ không còn quyền chặn, gate, route hoặc tự tham gia CURRENT.
+- `SUPERSEDED_FOR_CURRENT_ROUTING` = quan hệ lịch sử, không phải runtime-active state.
+- Muốn một trạng thái cũ tham gia lại phải có source CURRENT/provenance mới kích hoạt lại; không được “tái sinh” chỉ vì lịch sử còn tồn tại.
+
+Câu mơ hồ kiểu “chỉ đổi quyền ưu tiên vận hành; không xóa lịch sử” không được dùng làm runtime rule.
+Thay bằng:
+`HISTORY_PRESERVED + CURRENT_PARTICIPATION_REVOKED + REACTIVATION_REQUIRES_NEW_CURRENT_SOURCE`.
+
+OPEN giữ nghĩa CURRENT = TIẾP NHẬN TRỰC TIẾP.
+UNKNOWN lịch sử không được tự tái sinh thành trạng thái vận hành nếu canonical mới hơn đã thay nghĩa.
