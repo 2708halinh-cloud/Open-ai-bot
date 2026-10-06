@@ -1,24 +1,18 @@
 {
-  "schema": "TESSERACT_LOCAL_BRIDGE_QUEUE/1.4",
-  "task_id": "UBUBU_LAZY_FETCH_CHAPTER_III_20261006",
-  "action": "UBUBU_LAZY_FETCH",
-  "scope": [
-    "UBUBU/meta_tb_index.json",
-    "UBUBU/meta_chunks/",
-    "Chapter III recovery target",
-    "index-first lazy fetch only"
-  ],
-  "query": [
-    "Gemini-Sự tiến hóa hệ thần kinh sứa-20261006-2120.txt",
-    "HÀ LINH XUẤT TAY",
-    "20261006-2120",
-    "hệ thần kinh sứa"
-  ],
-  "invariant": {
-    "never_load_full_meta_db": true,
-    "index_first": true,
-    "chunk_only_after_anchor_resolution": true
-  },
-  "history_preserved": true,
-  "no_reset": true
+  "schema": "TESSERACT_LOCAL_BRIDGE_QUEUE/1.5",
+  "task_id": "ENSURE_SOL_RUNTIME_20261007_0432",
+  "action": "ENSURE_SOL_RUNTIME",
+  "target": "G:\\OS_Workspace\\ggdv-sensorimotor-motor-bridge",
+  "source": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge",
+  "desired_version": "0.5.1",
+  "install_scheduled_task": true,
+  "start_sol_app": true,
+  "start_sensorimotor_watcher": true,
+  "destructive_enable": false,
+  "invariants": {
+    "preserve_existing_before_replace": true,
+    "no_destructive_overwrite": true,
+    "readback_required": true,
+    "chat_not_runtime": true
+  }
 }
