@@ -1,0 +1,9 @@
+{
+  "schema": "GGDV_TASK_RESUME/1.0",
+  "task": "TESSERACT Desktop",
+  "repo": "2708halinh-cloud/x-time-web",
+  "branch": "tesseract-desktop-mvp-20261006",
+  "checkpoint": "TESSERACT_DESKTOP/WORK_CHECKPOINT.json",
+  "commit": "5e599bb5c109aec008976b01d0c37e733b3734a5",
+  "rule": "Sau khi nạp cấu hình, tiếp tục checkpoint này; không quay về chỉnh AGENTS như điểm bắt đầu công việc."
+}
