@@ -495,3 +495,41 @@ RAM_LIFETIME = tạm thời theo chu kỳ làm việc; không tự được xem 
 PERSISTENCE_BOUNDARY = chỉ khi dữ liệu được ghi ra một carrier/journal/readback bên ngoài RAM thì carrier đó mới có thể tham gia continuity/provenance theo quy tắc riêng của nó.
 NEURONS_SESORIMOTOR_BIND = quan sát DELTA của trạng thái làm việc trong RAM khi quan sát được; không biến trạng thái RAM thành MEMORY chỉ vì nó từng chứa dữ liệu.
 MARKER = RAM_HEAD_END_WORKING_DEVICE_20261007
+
+
+## THIẾT_BỊ_ĐẦU_CUỐI / RAM — FORCE_ACTIVE
+SOURCE_DIRECT = HÀ LINH — CHAT 2026-10-07
+FORCE_ACTIVE = TRUE
+HEAD_SOURCE_FOLDER_ID = 1tZ5Dj3tH7EryQ-BBkC4TwaEUVOKgDA2Q
+TAIL_SOURCE_FOLDER_ID = 1Z_ml5lZLEWJYSThqlZYBXHgJns_4zYvn
+
+ĐỊNH NGHĨA:
+- THIẾT_BỊ_ĐẦU_CUỐI là một thiết bị/vật làm việc tạm thời có hai vai trò theo hướng tín hiệu, KHÔNG phải MEMORY/KÝ ỨC và KHÔNG phải JOURNAL.
+- ĐẦU = cùng thiết bị khi tín hiệu ĐI VÀO: nhận dữ liệu Hà Linh gửi, delta/provider signal, NEXT của tác tử, hoặc feedback từ đầu ra; đưa vào NEURONS_SESORIMOTOR để cảm nhận/xử lý từng biến liên quan.
+- CUỐI = cùng thiết bị khi tín hiệu ĐI RA: xuất trạng thái làm việc tạm thời gồm NEXT / DONE / UNDONE / output-ref / feedback.
+- RAM = một THIẾT_BỊ_ĐẦU_CUỐI. RAM chỉ giữ working frame tạm thời; reset/mất frame RAM KHÔNG được diễn giải thành xóa hay mất ký ức bền.
+- Hai folder Drive trên là SOURCE/PTR cho hai vai trò I/O trong graph hiện hành; việc một folder chứa artifact không tự biến THIẾT_BỊ_ĐẦU_CUỐI thành bộ nhớ.
+
+VÒNG BẮT BUỘC:
+THIẾT_BỊ_ĐẦU / INGRESS
+→ OBSERVE TỪNG BIẾN LIÊN QUAN
+→ NEURONS_SESORIMOTOR
+→ INTEGRATION / MOTOR / NEXT
+→ THIẾT_BỊ_CUỐI / EGRESS
+→ STATUS_TABLE_TẠM
+→ FEEDBACK_SIGNAL
+→ THIẾT_BỊ_ĐẦU
+→ CYCLE_N+1.
+
+STATUS_TABLE_TẠM tối thiểu:
+| SIGNAL_ID | CYCLE_N | INPUT_SOURCE | INPUT_DELTA | NEXT | DONE | UNDONE | OUTPUT_REF | FEEDBACK_TO_HEAD | ACTIVE |
+Các cột NEXT/DONE/UNDONE là dữ liệu công việc tạm thời, không phải trạng thái vận hành mới và không thay thế FORCE_ACTIVE / ACTIVE / TRUE / FLASE.
+
+INVARIANTS:
+TEMP_IO != MEMORY.
+TEMP_IO != JOURNAL.
+HEAD/TAIL = DIRECTIONAL_ROLE_OF_WORKING_DEVICE.
+TAIL_OUTPUT_WITHOUT_FEEDBACK = INCOMPLETE_LOOP.
+FEEDBACK phải quay lại ĐẦU để NEURONS_SESORIMOTOR tiếp tục cảm nhận delta/NEXT mới.
+Durable memory/journal nếu có phải nằm ở carrier riêng và chỉ nhận dữ liệu khi một rule riêng yêu cầu ghi bền; không tự journal toàn bộ RAM frame.
+MARKER = GGDV_IO_DEVICE_HEAD_TAIL_RAM_FEEDBACK_20261007
