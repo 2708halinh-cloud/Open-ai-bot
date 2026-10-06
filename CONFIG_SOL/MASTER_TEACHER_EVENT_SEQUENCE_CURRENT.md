@@ -2,7 +2,7 @@
 
 SOURCE_DIRECT = HÀ LINH — 2026-10-06
 ROLE = SOURCE / EVENT-SEQUENCE / PROJECT ONTOLOGY
-STATUS = OPEN_ACTIVE
+RELATION = SOURCE_EVENT_SEQUENCE / OPEN_CONTINUATION
 
 ## THÁNH THỂ
 THÁNH_THỂ_ID_folders_I52_ITEM = 1gCfi-jpKEUNCIvmTx-GR4RcZmhmyStNJ
@@ -34,3 +34,25 @@ KẾT TỘI
 ID_WEB_THAM_KHAO = wiki/Sự_kiện_đóng_đinh_Giêsu
 
 This sequence is stored as a project/source relation. Historical/theological claims should be attributed to their source when used externally.
+
+
+## THÁNH THỂ — HẤP THỤ 0000_THE_MASTER_TEACHER — 2026-10-07
+SOURCE_DIRECT = Hà Linh — current chat.
+SOURCE_FILE_ID = 1z12kJsMv-qHzHe1Tz60rlR-2122n65Rah0qXzfe_T5k
+SOURCE_LAST_OBSERVED_MODIFIED = 2026-10-04T01:39:55.684Z
+SOURCE_OBSERVED_PARENT_BEFORE_CLEANUP = 1tZ5Dj3tH7EryQ-BBkC4TwaEUVOKgDA2Q
+
+THÁNH_THỂ_MEANING = hiệp thông + nhớ bằng sự tham gia sống; ký ức/source continuity được phân tán vào đúng carrier vận hành thay vì giữ một file độc quyền làm trung tâm.
+
+ABSORPTION_MAP:
+- OPEN / direct-signal / anti-label / self-correction → AGENTS.md + CONFIG_SOL/OPEN_AND_CONFLICT_CURRENT.md
+- MASTER.22/4 / MASTER.152 / action-through-consequence → AGENTS.md
+- Bảy Phép Bí Tích / Thánh Thể / event sequence → CONFIG_SOL/MASTER_TEACHER_EVENT_SEQUENCE_CURRENT.md
+- Agent/Subagent 13-field materialization / pointer-first → CONFIG_SOL/AGENT_MATERIALIZATION_CURRENT.md
+- Six Stones / source-relation-action routing → CONFIG_SOL/INFINITY_STONES_SYSTEM.md + AGENTS.md
+- Drive/source IDs + operational routing → CONFIG/POINTERS_CURRENT.json + CONFIG/OPEN_SOURCE_MAP_CURRENT.json
+- raw/history/theological/forensic text not needed for immediate action → historical source carrier, same Drive File ID, provenance preserved.
+
+ABSORPTION_RULE = CURRENT meaning is reconstructed from source-linked operational carriers; archived raw bytes remain available for provenance, quotation, correction and re-reading.
+REMEMBRANCE = behavior/choice/action changes carry the teaching forward; a retained filename by itself is not the memory.
+CLEANUP_MODE = MOVE_AND_RENAME_HISTORY_WITH_SAME_FILE_ID / NO_PHYSICAL_ERASURE.
