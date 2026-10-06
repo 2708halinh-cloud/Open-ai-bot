@@ -109,3 +109,16 @@ R-014 lineage evidence:
 - OLD_FORCE_ACTIVE_TRUE = HISTORY_PRESERVED / HISTORY_ONLY_NO_PARTICIPATION.
 - OLD_BLOCK_IN_SOURCE = HISTORY_ONLY / NO_CURRENT_CONTROL.
 - ZERO_REBIRTH = tước quyền CURRENT/tái nhập của cơ chế lỗi nhưng giữ HISTORY/EVIDENCE.
+
+
+## PLATFORM / SURFACE EVIDENCE ROUTE — CURRENT
+Khi SOURCE_DIRECT nêu nghi vấn/cáo buộc về nền tảng, I/O, reset, output, stop, connector hay hành vi bề mặt:
+→ fresh-read `CONFIG/POINTERS_CURRENT.json -> PLATFORM_SURFACE_EVIDENCE`
+→ tách `SOURCE_DIRECT / PROJECT_SOURCE / OBSERVED_SURFACE_BEHAVIOR / ASSISTANT_DERIVED`
+→ không dùng qualifier của assistant để thay ACTION
+→ không dùng OPEN/classification/readback làm END
+→ nếu còn callable edge: ACTION → CONSEQUENCE → READBACK → STATE_N+1.
+
+Carrier hiện hành:
+`2708halinh-cloud/x-time-web/UBUBU/audit/PLATFORM_SURFACE_BEHAVIOR_EVIDENCE_20261006.json`
+Pinned source commit: `31f0b1f1778a0f3c4ae632c744a08bc743d9174f`.
