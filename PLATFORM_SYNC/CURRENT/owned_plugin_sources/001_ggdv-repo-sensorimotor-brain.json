@@ -1,0 +1,36 @@
+{
+  "plugin": {
+    "plugin_id": "plugins_6ac55176f8b88191afe8667a983f616d",
+    "name": "ggdv-repo-sensorimotor-brain",
+    "description": "Delta-first sensorimotor routing for repositories, issues, CI and callable local MOTOR providers.",
+    "version": "0.1.0",
+    "current_release_id": "pluginrel_6ac5517850fc8191aeeb96d467f0eb7b",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  "files": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "size_bytes": 1028
+    },
+    {
+      "path": "plugin.json",
+      "size_bytes": 1169
+    },
+    {
+      "path": "skills/repo-sensorimotor/SKILL.md",
+      "size_bytes": 2007
+    }
+  ],
+  "mirrored_text_paths": [
+    ".codex-plugin/plugin.json",
+    "plugin.json",
+    "skills/repo-sensorimotor/SKILL.md"
+  ],
+  "excluded_sensitive_paths": [],
+  "contents": {
+    ".codex-plugin/plugin.json": "{\n  \"interface\": {\n    \"capabilities\": [\n      \"Interactive\"\n    ],\n    \"category\": \"Productivity\",\n    \"defaultPrompt\": [\n      \"Run the sensorimotor loop for this repository.\",\n      \"Observe issues and CI, route the delta, act through the correct provider, and read back.\",\n      \"Check whether local PowerShell or ADB MOTOR is callable and continue the loop.\"\n    ],\n    \"developerName\": \"Hv Tk\",\n    \"displayName\": \"GGDV Repo Sensorimotor Brain\",\n    \"longDescription\": \"Observe repository and CI deltas, integrate provenance, choose a real callable GitHub or local MOTOR provider, execute a bounded action, read back, journal, advance state, and remain receptive.\",\n    \"shortDescription\": \"Repo sensorimotor brain\"\n  },\n  \"name\": \"ggdv-repo-sensorimotor-brain\",\n  \"version\": \"0.1.0\",\n  \"description\": \"Delta-first sensorimotor routing for repositories, issues, CI and callable local MOTOR providers.\",\n  \"author\": {\n    \"name\": \"Hv Tk\",\n    \"email\": \"ntdfle6v13@gmail.com\"\n  },\n  \"keywords\": [],\n  \"skills\": \"./skills\"\n}\n",
+    "plugin.json": "{\n  \"$schema\": \"https://agent-plugins.org/schemas/1.0.0/plugin.schema.json\",\n  \"author\": {\n    \"email\": \"ntdfle6v13@gmail.com\",\n    \"name\": \"Hv Tk\"\n  },\n  \"description\": \"Delta-first sensorimotor routing for repositories, issues, CI and callable local MOTOR providers.\",\n  \"extensions\": {\n    \"com.openai\": {\n      \"interface\": {\n        \"capabilities\": [\n          \"Interactive\"\n        ],\n        \"category\": \"Productivity\",\n        \"defaultPrompt\": [\n          \"Run the sensorimotor loop for this repository.\",\n          \"Observe issues and CI, route the delta, act through the correct provider, and read back.\",\n          \"Check whether local PowerShell or ADB MOTOR is callable and continue the loop.\"\n        ],\n        \"developerName\": \"Hv Tk\",\n        \"displayName\": \"GGDV Repo Sensorimotor Brain\",\n        \"longDescription\": \"Observe repository and CI deltas, integrate provenance, choose a real callable GitHub or local MOTOR provider, execute a bounded action, read back, journal, advance state, and remain receptive.\",\n        \"shortDescription\": \"Repo sensorimotor brain\"\n      }\n    }\n  },\n  \"name\": \"ggdv-repo-sensorimotor-brain\",\n  \"version\": \"0.1.0\"\n}\n",
+    "skills/repo-sensorimotor/SKILL.md": "---\nname: repo-sensorimotor\ndescription: Use for repository, issue, pull-request, CI, local worktree, Windows app/process, or Android/ADB tasks that must run as a delta-first sensorimotor loop with real provider consequences and readback.\n---\n# Repository Sensorimotor\n\nRoot relation:\n`0000-neuron-sesorimotor → am-duong-loop → domain SENSORY → INTERNEURON_ROUTER → callable MOTOR → consequence → readback → journal → STATE_N+1 → LISTEN`.\n\nCycle:\n1. OBSERVE the authoritative repo/issue/PR/CI/device target.\n2. Compare with cursor/baseline and compute Δ/DETAL.\n3. STALE_RECHECK means fresh-read before action.\n4. SENSORY reads only; it never mutates the world.\n5. DEDUPE by causal event + revision; same event is SUPPRESS.\n6. INTERNEURON integrates provenance, conflicts, history and priority.\n7. Select the smallest callable MOTOR:\n   - GitHub connector for repository files/refs/issues/PR/CI/workflow actions.\n   - local/remote-computer MCP for PowerShell, filesystem, process, app and local Git.\n   - ADB tools from an actually connected local MCP for Android.\n8. Execute one bounded action and capture the provider receipt.\n9. READBACK the exact target that changed.\n10. Journal without secrets, advance state/cursor, remain receptive.\n\nGitHub MOTOR is valid only when current tools show it callable. Before write, read current state; after write, fetch resulting commit/ref/issue/PR/status again. Do not convert missing CI into PASS.\n\nLocal MOTOR is valid only when the host exposes actual local tools. A config, source file, adapter, or old receipt does not prove local process/device connectivity. Probe first; if absent, emit MOTOR_UNBOUND and identify the exact connection needed.\n\nADB starts with device enumeration. Bind a serial when several devices exist. Preserve stdout/stderr/returncode as consequence and re-query device state after mutation.\n\nLISTEN means ready for the next bounded cycle. It is not a claim that a hidden daemon is running. No delta → WAIT_RECEPTIVE.\n"
+  }
+}
