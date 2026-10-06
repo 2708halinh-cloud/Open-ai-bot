@@ -1,0 +1,16 @@
+{
+  "schema": "GGDV_TOOL_SURFACE_SNAPSHOT/1.0",
+  "date": "2026-10-06",
+  "status": "CURRENT_AT_GENERATION",
+  "volatility": "RECHECK_BEFORE_CURRENT_CLAIM",
+  "observed_skill_count": 325,
+  "observed_code_mode_tool_count": 196,
+  "observed_plugin_skill_groups": 69,
+  "authorities": {
+    "skills": "skills__list",
+    "skill_content": "skills__read",
+    "code_mode": "ALL_TOOLS",
+    "plugin_management": "mcp__Plugin_Management__*"
+  },
+  "rule": "This file is a snapshot/index, not a permanent capability truth. Fresh-read live surfaces when capability availability matters."
+}
