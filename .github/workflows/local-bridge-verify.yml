@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'LOCAL_BRIDGE/**'
+      - 'RECOVERY/**'
       - 'terminal/tesseract_boot_g_from_wsl.sh'
       - '.runtime/TESSERACT_BOOT_G.env'
       - '.github/workflows/local-bridge-verify.yml'
@@ -15,7 +16,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Python syntax
-        run: python3 -m py_compile LOCAL_BRIDGE/bridge.py
+        run: |
+          python3 -m py_compile LOCAL_BRIDGE/bridge.py
+          python3 -m py_compile RECOVERY/recover_continuity.py
       - name: Bash syntax
         run: bash -n terminal/tesseract_boot_g_from_wsl.sh
       - name: PowerShell bootstrap parses
@@ -26,9 +29,13 @@ jobs:
           python3 - <<'PY'
           import json
           q=json.load(open('LOCAL_BRIDGE/QUEUE_CURRENT.json'))
-          assert q['action'] in {'BOOT_G','STATUS'}
+          assert q['action'] in {'BOOT_G','STATUS','RECOVER_CONTINUITY','RECOVER_AND_BOOT_G'}
           assert q['target']=='G:'
           assert q['require_usb'] is True
           assert q['forbid_windows_boot_or_system_disk'] is True
           assert q['image_sha256']=='f993e15478a1391c3a9d14d368158043d98c51494f3ae81e5b633870855c96df'
           PY
+      - name: Recovery contract
+        run: |
+          grep -q 'RECONSTRUCT_FROM_DURABLE_CARRIERS_NOT_CHAT_MEMORY' RECOVERY/recover_continuity.py
+          grep -q 'RECOVER_AND_BOOT_G' LOCAL_BRIDGE/bridge.py
