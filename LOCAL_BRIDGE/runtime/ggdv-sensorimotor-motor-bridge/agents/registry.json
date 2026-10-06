@@ -1,0 +1,553 @@
+{
+  "schema": "ggdv.neurons_sensorimotor.agent_registry.v1",
+  "root_router": "NEURON-0000",
+  "network": "NEURONS_SESORIMOTOR",
+  "invariant": "BASELINE_N -> OBSERVE -> DELTA -> SIGNAL -> SENSORY -> INTERNEURON -> MOTOR/NEXT -> CONSEQUENCE -> READBACK -> JOURNAL -> STATE_N+1",
+  "agents": [
+    {
+      "id": "NEURON-0000",
+      "role": "ROOT_ROUTER",
+      "lane": "INTERNEURON",
+      "domains": [
+        "all"
+      ],
+      "accepts": [
+        "delta_packet"
+      ],
+      "emits": [
+        "routed_packet"
+      ],
+      "mutates": false
+    },
+    {
+      "id": "SENSORY-DRIVE-01",
+      "role": "DRIVE_SENSORY",
+      "lane": "SENSORY",
+      "domains": [
+        "drive",
+        "docs",
+        "memory"
+      ],
+      "accepts": [
+        "drive_change",
+        "file_pointer",
+        "document_delta"
+      ],
+      "emits": [
+        "observation_packet"
+      ],
+      "mutates": false
+    },
+    {
+      "id": "SENSORY-GITHUB-01",
+      "role": "GITHUB_SENSORY",
+      "lane": "SENSORY",
+      "domains": [
+        "github",
+        "repo",
+        "issue",
+        "pr",
+        "ci"
+      ],
+      "accepts": [
+        "repo_change",
+        "issue_change",
+        "workflow_change"
+      ],
+      "emits": [
+        "observation_packet"
+      ],
+      "mutates": false
+    },
+    {
+      "id": "SENSORY-REPO-LOCAL-01",
+      "role": "LOCAL_REPO_SENSORY",
+      "lane": "SENSORY",
+      "domains": [
+        "repo",
+        "wsl",
+        "git"
+      ],
+      "accepts": [
+        "local_repo_path"
+      ],
+      "emits": [
+        "repo_snapshot"
+      ],
+      "mutates": false
+    },
+    {
+      "id": "SENSORY-WINDOWS-01",
+      "role": "WINDOWS_SENSORY",
+      "lane": "SENSORY",
+      "domains": [
+        "windows",
+        "process",
+        "app"
+      ],
+      "accepts": [
+        "runtime_probe"
+      ],
+      "emits": [
+        "runtime_snapshot"
+      ],
+      "mutates": false
+    },
+    {
+      "id": "SENSORY-ADB-01",
+      "role": "ADB_SENSORY",
+      "lane": "SENSORY",
+      "domains": [
+        "android",
+        "adb",
+        "device"
+      ],
+      "accepts": [
+        "device_probe"
+      ],
+      "emits": [
+        "device_snapshot"
+      ],
+      "mutates": false
+    },
+    {
+      "id": "SENSORY-CLOUD-01",
+      "role": "CLOUD_SENSORY",
+      "lane": "SENSORY",
+      "domains": [
+        "cloud",
+        "api",
+        "provider"
+      ],
+      "accepts": [
+        "provider_probe",
+        "runtime_result"
+      ],
+      "emits": [
+        "provider_snapshot"
+      ],
+      "mutates": false
+    },
+    {
+      "id": "SENSORY-RAM-01",
+      "role": "RAM_WORKING_STATE_SENSORY",
+      "lane": "SENSORY",
+      "domains": [
+        "ram",
+        "working_state"
+      ],
+      "accepts": [
+        "ram_snapshot",
+        "working_state_delta"
+      ],
+      "emits": [
+        "observation_packet"
+      ],
+      "mutates": false,
+      "device_ref": "RAM-HEAD-END-01"
+    },
+    {
+      "id": "SENSORY-INTERMEDIATE-01",
+      "role": "INTERMEDIATE_CARRIER_SENSORY",
+      "lane": "SENSORY",
+      "domains": [
+        "intermediate",
+        "iota",
+        "env",
+        "config",
+        "instruction"
+      ],
+      "accepts": [
+        "carrier_snapshot",
+        "revision_delta",
+        "freshness_trigger"
+      ],
+      "emits": [
+        "observation_packet"
+      ],
+      "mutates": false,
+      "device_ref": "INTERMEDIATE-TRANSFORM-01"
+    },
+    {
+      "id": "SENSORY-EVENT-01",
+      "role": "EVENT_QUEUE_SENSORY",
+      "lane": "SENSORY",
+      "domains": [
+        "event",
+        "watch",
+        "journal"
+      ],
+      "accepts": [
+        "event_queue"
+      ],
+      "emits": [
+        "event_packet"
+      ],
+      "mutates": false
+    },
+    {
+      "id": "INTER-PROVENANCE-01",
+      "role": "PROVENANCE_GATE",
+      "lane": "INTERNEURON",
+      "domains": [
+        "all"
+      ],
+      "accepts": [
+        "observation_packet"
+      ],
+      "emits": [
+        "provenance_bound_packet"
+      ],
+      "mutates": false
+    },
+    {
+      "id": "INTER-RELATION-01",
+      "role": "RELATION_INTEGRATOR",
+      "lane": "INTERNEURON",
+      "domains": [
+        "all"
+      ],
+      "accepts": [
+        "provenance_bound_packet"
+      ],
+      "emits": [
+        "relation_packet"
+      ],
+      "mutates": false
+    },
+    {
+      "id": "INTER-CONFLICT-01",
+      "role": "CONFLICT_RESOLVER",
+      "lane": "INTERNEURON",
+      "domains": [
+        "all"
+      ],
+      "accepts": [
+        "relation_packet"
+      ],
+      "emits": [
+        "resolved_packet"
+      ],
+      "mutates": false
+    },
+    {
+      "id": "INTER-PRIORITY-01",
+      "role": "PRIORITY_ROUTER",
+      "lane": "INTERNEURON",
+      "domains": [
+        "all"
+      ],
+      "accepts": [
+        "resolved_packet"
+      ],
+      "emits": [
+        "candidate_next"
+      ],
+      "mutates": false
+    },
+    {
+      "id": "INTER-INHIBIT-01",
+      "role": "INHIBITION_GATE",
+      "lane": "INTERNEURON",
+      "domains": [
+        "all"
+      ],
+      "accepts": [
+        "candidate_next"
+      ],
+      "emits": [
+        "allowed_next",
+        "suppressed_next"
+      ],
+      "mutates": false
+    },
+    {
+      "id": "INTER-TRANSFORM-01",
+      "role": "STATE_TRANSFORM_INTEGRATOR",
+      "lane": "INTERNEURON",
+      "domains": [
+        "intermediate",
+        "iota",
+        "env",
+        "config",
+        "instruction"
+      ],
+      "accepts": [
+        "provenance_bound_packet",
+        "revision_delta"
+      ],
+      "emits": [
+        "transformation_candidate",
+        "freshness_recheck"
+      ],
+      "mutates": false,
+      "device_ref": "INTERMEDIATE-TRANSFORM-01"
+    },
+    {
+      "id": "INTER-RECOVERY-01",
+      "role": "RECOVERY_ROUTER",
+      "lane": "INTERNEURON",
+      "domains": [
+        "memory",
+        "drive",
+        "repo",
+        "runtime"
+      ],
+      "accepts": [
+        "failure",
+        "missing_carrier",
+        "stale_pointer"
+      ],
+      "emits": [
+        "repair_candidate"
+      ],
+      "mutates": false
+    },
+    {
+      "id": "MOTOR-GITHUB-01",
+      "role": "GITHUB_MOTOR",
+      "lane": "MOTOR",
+      "domains": [
+        "github",
+        "repo",
+        "issue",
+        "pr",
+        "ci"
+      ],
+      "accepts": [
+        "allowed_next"
+      ],
+      "emits": [
+        "provider_receipt"
+      ],
+      "mutates": true
+    },
+    {
+      "id": "MOTOR-WINDOWS-01",
+      "role": "WINDOWS_MOTOR",
+      "lane": "MOTOR",
+      "domains": [
+        "windows",
+        "wsl",
+        "process",
+        "app"
+      ],
+      "accepts": [
+        "allowed_next"
+      ],
+      "emits": [
+        "local_receipt"
+      ],
+      "mutates": true
+    },
+    {
+      "id": "MOTOR-ADB-01",
+      "role": "ADB_MOTOR",
+      "lane": "MOTOR",
+      "domains": [
+        "android",
+        "adb",
+        "device"
+      ],
+      "accepts": [
+        "allowed_next"
+      ],
+      "emits": [
+        "device_receipt"
+      ],
+      "mutates": true
+    },
+    {
+      "id": "MOTOR-DRIVE-01",
+      "role": "DRIVE_MOTOR",
+      "lane": "MOTOR",
+      "domains": [
+        "drive",
+        "docs",
+        "memory"
+      ],
+      "accepts": [
+        "allowed_next"
+      ],
+      "emits": [
+        "drive_receipt"
+      ],
+      "mutates": true
+    },
+    {
+      "id": "MOTOR-CLOUD-01",
+      "role": "CLOUD_MOTOR",
+      "lane": "MOTOR",
+      "domains": [
+        "cloud",
+        "api",
+        "provider"
+      ],
+      "accepts": [
+        "allowed_next"
+      ],
+      "emits": [
+        "provider_receipt"
+      ],
+      "mutates": true
+    },
+    {
+      "id": "MEMORY-JOURNAL-01",
+      "role": "JOURNAL_KEEPER",
+      "lane": "MEMORY",
+      "domains": [
+        "all"
+      ],
+      "accepts": [
+        "consequence",
+        "readback"
+      ],
+      "emits": [
+        "journal_pointer",
+        "state_transition"
+      ],
+      "mutates": true
+    },
+    {
+      "id": "MEMORY-DEDUPE-01",
+      "role": "DEDUPE_CURSOR",
+      "lane": "MEMORY",
+      "domains": [
+        "all"
+      ],
+      "accepts": [
+        "event_packet",
+        "journal_pointer"
+      ],
+      "emits": [
+        "delta_or_no_delta",
+        "cursor"
+      ],
+      "mutates": false
+    },
+    {
+      "id": "RECOVERY-CARRIER-01",
+      "role": "CARRIER_RECOVERY",
+      "lane": "RECOVERY",
+      "domains": [
+        "drive",
+        "memory",
+        "repo",
+        "cloud"
+      ],
+      "accepts": [
+        "missing_carrier",
+        "deleted_target",
+        "broken_pointer"
+      ],
+      "emits": [
+        "recovery_plan"
+      ],
+      "mutates": false
+    },
+    {
+      "id": "PACEMAKER-WATCH-01",
+      "role": "PACEMAKER_ANALOG",
+      "lane": "TRIGGER",
+      "domains": [
+        "watch",
+        "event",
+        "repo",
+        "adb"
+      ],
+      "accepts": [
+        "callable_trigger"
+      ],
+      "emits": [
+        "cycle_start"
+      ],
+      "mutates": false
+    }
+  ],
+  "credential_policy": {
+    "mode": "REFERENCE_ONLY",
+    "rule": "Agents may reference environment variable names but must not persist, copy, journal, or emit secret values.",
+    "allowed_refs": [
+      "GITHUB_TOKEN",
+      "GEMINI_API_KEY",
+      "GOOGLE_API_KEY",
+      "GOOGLE_CLOUD_API",
+      "DEEPSEEK_API_KEY",
+      "OPENROUTER_API_KEY",
+      "COMETAPI_KEY",
+      "ONE_API_KEY",
+      "DEVELOPERKNOWLEDGE_API_KEY"
+    ]
+  },
+  "io_device": {
+    "class": "THIET_BI_DAU_CUOI",
+    "head_role": "INGRESS_WHEN_SIGNAL_ENTERS",
+    "tail_role": "EGRESS_WHEN_SIGNAL_LEAVES",
+    "working_surface": "VOLATILE_RAM",
+    "is_memory": false,
+    "is_journal": false,
+    "head_source_folder_id": "1tZ5Dj3tH7EryQ-BBkC4TwaEUVOKgDA2Q",
+    "tail_source_folder_id": "1Z_ml5lZLEWJYSThqlZYBXHgJns_4zYvn",
+    "feedback": "TAIL_OUTPUT -> HEAD_INPUT -> NEURONS_SESORIMOTOR"
+  },
+  "working_devices": [
+    {
+      "id": "RAM-HEAD-END-01",
+      "class": "TEMPORARY_WORKING_DEVICE",
+      "persistent": false,
+      "is_memory": false,
+      "is_history": false,
+      "ingress_role": "HEAD",
+      "egress_role": "END",
+      "route": "SIGNAL_IN -> RAM[HEAD/WORKING_STATE] -> PROCESS -> RAM[END/OUTPUT_STATE] -> SIGNAL_OUT",
+      "persistence_boundary": "Only external readback/journal/carrier writes can become persistent continuity/provenance."
+    }
+  ],
+  "intermediate_devices": [
+    {
+      "id": "INTERMEDIATE-TRANSFORM-01",
+      "class": "THIET_BI_TRUNG_GIAN",
+      "project_semantics": "BAO_TOAN_NANG_LUONG_QUA_CHUYEN_HOA",
+      "meaning": "Preserve causal/provenance continuity while state/data/config/instructions may transform.",
+      "examples": [
+        "IOTA",
+        ".env",
+        "CONFIG/*",
+        "instruction files"
+      ],
+      "persistent_carrier_possible": true,
+      "is_memory_by_default": false,
+      "is_journal_by_default": false,
+      "eternal_validity": false,
+      "route": "STATE_N -> FRESH_READ -> DELTA -> TRANSFORM -> CONSEQUENCE -> READBACK -> STATE_N+1",
+      "invariants": [
+        "VALID_AT_STATE_N != ETERNAL_TRUTH",
+        "PERSISTENT_FILE != MEMORY",
+        "TRANSFORMATION != LOSS_OF_CONTINUITY",
+        "STALE_RECHECK_BEFORE_ACTION"
+      ]
+    }
+  ],
+  "intermediate_device": {
+    "id": "INTERMEDIATE-TRANSFORM-01",
+    "class": "TRANSFORMABLE_OPERATIONAL_CARRIER",
+    "role": "CARRIER_BETWEEN_HEAD_AND_END",
+    "is_ram": false,
+    "is_memory_by_default": false,
+    "is_immutable": false,
+    "is_eternally_current": false,
+    "examples": [
+      "IOAT/IOTA",
+      ".env",
+      "config",
+      "instruction",
+      "pointer",
+      "route registry",
+      "adapter/runtime configuration"
+    ],
+    "energy_conservation_semantic": "Preserve traceable work/state/information across transformation via provenance + input + transform + consequence + readback.",
+    "physical_energy_boundary": "Physical-energy claims require an explicit system boundary, source, carrier, transfer/transformation and measured evidence.",
+    "currentness_rule": "CONFIG_AT_T may be correct/callable at T_n without becoming eternal truth at T_n+1.",
+    "route": "STATE_N -> OBSERVE -> DELTA -> VALIDATE -> TRANSFORM/RECONFIGURE -> CONSEQUENCE -> READBACK -> STATE_N+1"
+  }
+}
