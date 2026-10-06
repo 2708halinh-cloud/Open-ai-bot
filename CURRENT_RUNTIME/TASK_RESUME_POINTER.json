@@ -21,5 +21,19 @@
       "tesseract-os-x64"
     ]
   },
-  "next": "Chờ readback đủ 4 artifact của run 37516567468; nếu đạt thì merge PR #6; nếu lỗi thì sửa đúng job lỗi."
+  "next": "Chờ readback đủ 4 artifact của run 37516567468; nếu đạt thì merge PR #6; nếu lỗi thì sửa đúng job lỗi.",
+  "continuation_guard": {
+    "mode": "TESSERACT_OS_PERSISTENT_CONTINUATION",
+    "implementation": "runtime/continuity_guard.py",
+    "regression": "tests/test_continuity_guard.py",
+    "ci": ".github/workflows/tesseract-os-continuation-guard.yml",
+    "semantics": "Unbounded sequence of bounded evidenced cycles; no scheduler substitution; no busy-spin.",
+    "invariants": [
+      "OPEN != STOP",
+      "ONE_RUN_DONE != OBJECTIVE_DONE",
+      "REPORT_STATUS_PROGRESS != ACTION",
+      "TURN_BOUNDARY != RESET",
+      "PROVIDER_FAILURE != OBJECTIVE_FAILURE_WHILE_ALTERNATE_CARRIER_EXISTS"
+    ]
+  }
 }
