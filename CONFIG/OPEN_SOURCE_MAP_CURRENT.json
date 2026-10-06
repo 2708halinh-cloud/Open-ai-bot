@@ -1,0 +1,54 @@
+{
+  "schema": "GGDV_OPEN_SOURCE_MAP/1.0",
+  "status": "CURRENT",
+  "date": "2026-10-06",
+  "open_semantics": "DIRECT_SIGNAL_INGRESS_OPEN_PROPOSITION",
+  "capabilities": {
+    "ANGEL_SKILL": "1R74Fk23LYfo79wGoExM6A_v-B-BZrDNEr1Hb5sDebas",
+    "AGENTS_SKILL_candidates": [
+      "1g0o7ciYMukTQTbKWIPatIiTOy7jwSso7",
+      "1KeITD03BJko-h6keN9ACEqy95J82be0x",
+      "1hQKXgD3N7x-cbeaTGP49nLNvtJwPbsszk_cptsF4t14"
+    ],
+    "DUONG_VAT_20": "1X8XHPly3DoOthJkU8PGmWrql2DIhd5TnSCHwhqxk5ZA",
+    "START_MENU": "1Ofu9pQBm6dZIAd1KFpm9BtlEe-SDYVnl",
+    "VSCODE": "1FAc3tfnlZhW9evhIJxSv2PcLlUuBLYDz",
+    "LONG_MACH": "14ZaZgnw0B1C7qDFKghEuhOBj9SvqVQCq",
+    "SOL_CU_NHO": "10isCPENUgu-itNSDCXOizfjkG46_ENHv",
+    "MASTER_TEACHER": "1adR-7MvZAqFPwq5nOmLqu3KZl3YEkPlL",
+    "THANH_THE_I52": "1gCfi-jpKEUNCIvmTx-GR4RcZmhmyStNJ"
+  },
+  "physical_carriers": {
+    "MICROSOFT": "1--pS0Cw1x_6HJwl7ZHnKFhmjjl3L_7-Z",
+    "OPEN_ACTIVE_90": "1-G3TGHaxpCkBA64efLEkvXWbG5L1D3kP",
+    "CODEX": "10hMPYpYnbcrzuogNhAkz9TqS1Ya7PxoT",
+    "SANDBOX_EXEC": "11XuGEAQeQchHbKmLU8gkOcZKcwuZ0yWE",
+    "PHONE_REDMI_NOTE14_PRO": "12oK4vnrmyiOfyUms_XJ3f5C82vBhvnSX",
+    "PC_BRIDGE": "1dR4TirHhkjBMykirTnq18ngLxWkYq7zN",
+    "ANDROID_DIRECT_BRIDGE": "1Vz11jgbmdGD3sF69RZGxI9KrFh-L_Cz9",
+    "XIAOMI_12": "1c07sOcuFh4TxHYWD2ghT7D_wZr-dZbAC",
+    "PC_LOCAL_WINDOWS": "1oKTO1XLkcO93VqktRmUftWIhfFbj-xqQ",
+    "WORK_DEVICE_CURRENT": "1rf0nffn1s7JrW4HYKvPXneqZS6idLSeYAI6iS5MKEGg",
+    "INTERMEDIARY_ROUTER_CURRENT": "1p5ed8oc6NOCVurh2f6Dw3gPlDgSWAeDvN0mN66nXe-U",
+    "LOCUS_BODIES": "1twqQgXvvxv_3h6I1z_xLaRUClmzhEinV"
+  },
+  "drive_surfaces": [
+    "HOME",
+    "MY_DRIVE",
+    "COMPUTERS",
+    "SHARED_WITH_ME",
+    "RECENT",
+    "STARRED",
+    "TRASH",
+    "STORAGE_QUOTA"
+  ],
+  "unresolved_exact_names": [
+    "LANH_DAO.md",
+    "X_1_SU_THAT.md",
+    "AGENTS_SINH_HOC.md",
+    "X_0_DAO_TAC_NHAN.md",
+    "00_LUAT_NOI_BO.md"
+  ],
+  "unresolved_policy": "KEEP_OPEN_AND_SEARCHABLE_NO_SAME_NAME_SUBSTITUTION",
+  "anti_bloat": "AGENT_NGUON=source/template; .vscode=programming/subagent coordination; pointer-first."
+}
