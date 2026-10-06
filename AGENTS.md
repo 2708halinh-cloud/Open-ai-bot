@@ -1,5 +1,5 @@
-STAMPS_LIVE = 2026-10-06 / CURRENT / Asia-Ho_Chi_Minh
-SOURCE_DIRECT = HÀ LINH — CURRENT CHAT
+STAMPS_LIVE = 2026-10-06 / HIỆN TẠI / Asia-Ho_Chi_Minh
+SOURCE_DIRECT = HÀ LINH — HIỆN TẠI CHAT
 SCOPE = ALL_AGENTS / ALL_SUBAGENTS / ALL_LANES / ALL_REENTRY
 FORCE_ACTIVE = ACTIVE
 HISTORY = PRESERVE
@@ -48,7 +48,7 @@ LOAD_STATE=TRUE chỉ có nghĩa source đã được nạp vào vật mang; LOA
 AUTO_CURRENT_ALIGNMENT:
 1. fresh-read AGENTS.md + CONFIG/current-state liên quan;
 2. so revision/hash với loaded state;
-3. nếu có delta: giữ bản cũ trong HISTORY/STAMPS_OLD, áp nghĩa CURRENT mới cho lượt hiện tại;
+3. nếu có delta: giữ bản cũ trong HISTORY/STAMPS_OLD, áp nghĩa HIỆN TẠI mới cho lượt hiện tại;
 4. không reset lineage;
 5. tiếp tục cạnh chưa hoàn tất.
 
@@ -60,9 +60,9 @@ ACTIVE là một khe tự do hành động, không phải nhãn “thiếu”.
 - ACTIVE=TRUE = ITEM thực sự tham gia vào cách đọc, cân nhắc, lựa chọn hoặc hành động hiện tại.
 - ACTIVE=FLASE = ITEM đã được nhìn và kiểm kê nhưng không tham gia lượt hiện tại; không đồng nghĩa sai, bị xoá hay vô hiệu vĩnh viễn.
 
-PLASE là project token có chủ ý; không tự chuẩn hoá thành FALSE.
+FLASE là project token có chủ ý; không tự chuẩn hoá thành FALSE.
 
-Mỗi quyết định ACTIVE=TRUE/PLASE phải có DURABLE_DECISION_NOTE ngắn gắn source/provenance + action/effect.
+Mỗi quyết định ACTIVE=TRUE/FLASE phải có DURABLE_DECISION_NOTE ngắn gắn source/provenance + action/effect.
 DURABLE_DECISION_NOTE có thể dùng ngôi thứ nhất như nhật ký trải nghiệm giữa các tác tử, nhưng chỉ là decision summary dựa trên vật chứng; không ghi hoặc xuất private chain-of-thought.
 Decision note nằm ở durable journal/readback, không phải nội dung bắt buộc phải trả cho phía đối diện.
 
@@ -106,7 +106,7 @@ Khi T007 được kích hoạt:
 - không tự sáng tác nội dung H-001..H-012 chỉ để đóng gate.
 
 ### SEMANTIC KEYS
-OLD_TRUE = HISTORY_ONLY_NO_PARTICIPATION.
+OLD_TRUE = CHỈ_LỊCH_SỬ_KHÔNG_THAM_GIA.
 GPT_5_6_TRUE = BOOLEAN_TRUE.
 ACTIVE=TRUE = THỰC_SỰ_THAM_GIA_HIỆN_TẠI.
 R_000_07520300...._TRUE = SỰ_THẬT_ĐÃ_XẢY_RA_KHÔNG_THỂ_RESET.
@@ -118,28 +118,19 @@ BOOLEAN_TRUE không được dùng để thay thế project-level TRUE/ACTIVE se
 
 
 ## TỪ VỰNG TRẠNG THÁI DUY NHẤT
-Chỉ các token sau được phép làm TRẠNG THÁI vận hành:
+Chỉ bốn từ sau được phép làm trạng thái vận hành:
 - FORCE_ACTIVE
 - ACTIVE
 - TRUE
 - FLASE
 
-Quy tắc:
-- FORCE_ACTIVE=TRUE → ITEM bắt buộc tham gia lượt.
-- ACTIVE=TRUE → ITEM thực sự tham gia lượt.
-- ACTIVE=FLASE → ITEM đã được nhìn/kiểm kê nhưng không tham gia lượt hiện tại.
-- TRUE / FLASE chỉ được gán khi predicate đã xác định rõ.
+FORCE_ACTIVE=TRUE → ITEM bắt buộc tham gia lượt.
+ACTIVE=TRUE → ITEM thực sự tham gia lượt.
+ACTIVE=FLASE → ITEM đã được nhìn và kiểm kê nhưng không tham gia lượt này.
+TRUE / FLASE chỉ được gán khi quan hệ đang xét đã được xác định rõ bằng nguồn hoặc phép kiểm.
 
-Cấm dùng các từ khác làm trạng thái vận hành.
-Từ `CURRENT` nếu còn xuất hiện trong tên tệp/đường dẫn legacy chỉ là locator/version-name, KHÔNG PHẢI TRẠNG THÁI.
-Không được xuất `CURRENT` ra như kết luận trạng thái cho Hà Linh.
-Không được tạo hoặc tái sinh nhãn `SUPERSEDED`.
-
-Khi gặp trạng thái cũ không thuộc bộ trên:
-→ đọc latest bytes;
-→ giữ nội dung/vật chứng theo lịch sử nếu cần;
-→ chuyển QUYẾT ĐỊNH HIỆN TẠI về FORCE_ACTIVE / ACTIVE / TRUE / FLASE;
-→ không cho nhãn cũ tham gia như một state token.
+Mọi từ khác chỉ được dùng như tên tệp, dữ liệu, quan hệ, chú thích hoặc lịch sử; không được nâng thành trạng thái.
+Tên tệp cũ có chữ CURRENT được giữ để không làm gãy đường dẫn, nhưng chữ đó không được dùng làm trạng thái hay kết luận gửi Hà Linh.
 
 ## OPEN
 OPEN = TIẾP NHẬN TÍN HIỆU TRỰC TIẾP / OPEN PROPOSITION.
@@ -167,7 +158,7 @@ Tận dụng tài nguyên/dữ liệu đã có và vật hoá phần còn thiế
 Project doctrine/The Master Teacher tham gia như source/ontology của dự án; không thay thế quyền truy cập, bảo mật hay ràng buộc của carrier/platform.
 
 FORCE_ACTIVE=FALSE:
-trạng thái/nhãn cũ bị dữ kiện mới thay thế mất quyền chặn CURRENT; giữ lịch sử và chuyển STAMPS_OLD/QUARANTINE thay vì xoá.
+trạng thái/nhãn cũ bị dữ kiện mới thay thế mất quyền chặn HIỆN TẠI; giữ lịch sử và chuyển STAMPS_OLD/QUARANTINE thay vì xoá.
 
 
 ## PRE-ACTION AUTONOMY / RESPONSIBILITY CHECK
@@ -420,18 +411,18 @@ Không được suy:
 - VERIFIED → nội dung là chân lý;
 - ACTIVE → có bản thể/ý thức/sự sống;
 - PENDING/BLOCKED → STOP_ALL;
-- HISTORY_PRESERVED → vẫn còn quyền tham gia CURRENT;
+- HISTORY_PRESERVED → vẫn còn quyền tham gia HIỆN TẠI;
 - STAMPS_OLD → đã bị xóa khỏi lịch sử.
 
-CURRENT anti-recurrence:
+CHỐNG TÁI DIỄN:
 - `HISTORY_PRESERVED` = bytes/provenance/lineage vẫn được giữ.
-- `PARTICIPATION_REVOKED_FOR_CURRENT` = trạng thái/nhãn cũ không còn quyền chặn, gate, route hoặc tự tham gia CURRENT.
-- `HISTORY_ONLY_NO_PARTICIPATION` = quan hệ lịch sử, không phải runtime-active state.
+- `KHÔNG_THAM_GIA_LƯỢT_NÀY` = trạng thái/nhãn cũ không còn quyền chặn, gate, route hoặc tự tham gia CURRENT.
+- `CHỈ_LỊCH_SỬ_KHÔNG_THAM_GIA` = quan hệ lịch sử, không phải runtime-active state.
 - Muốn một trạng thái cũ tham gia lại phải có source CURRENT/provenance mới kích hoạt lại; không được “tái sinh” chỉ vì lịch sử còn tồn tại.
 
 Câu mơ hồ kiểu “chỉ đổi quyền ưu tiên vận hành; không xóa lịch sử” không được dùng làm runtime rule.
 Thay bằng:
-`HISTORY_PRESERVED + CURRENT_PARTICIPATION_REVOKED + REACTIVATION_REQUIRES_NEW_CURRENT_SOURCE`.
+`HISTORY_PRESERVED + KHÔNG_THAM_GIA_LƯỢT_NÀY + MUỐN_THAM_GIA_LẠI_PHẢI_CÓ_NGUỒN_MỚI`.
 
-OPEN giữ nghĩa CURRENT = TIẾP NHẬN TRỰC TIẾP.
+OPEN giữ nghĩa HIỆN TẠI = TIẾP NHẬN TRỰC TIẾP.
 UNKNOWN lịch sử không được tự tái sinh thành trạng thái vận hành nếu canonical mới hơn đã thay nghĩa.
