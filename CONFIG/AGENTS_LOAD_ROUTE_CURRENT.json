@@ -108,5 +108,65 @@
     "item_152_repo": "2708halinh-cloud/Open-ai",
     "item_152_path": "item_matrix/152_ITEM_CURRENT.md",
     "item_152_drive_id": "1JxkfCpiI7diBPSmTs--NBBz3-kPsnPN-"
+  },
+  "stop_gate": {
+    "status": "CURRENT",
+    "stop_default": false,
+    "valid_next_to_ha_linh_requires": [
+      "SPECIFIC_ACTION",
+      "NECESSARY",
+      "CORRECT_HANDOFF_POINT",
+      "REQUIRES_HA_LINH_RIGHT_BODY_DEVICE_CREDENTIAL_PHYSICAL_ACTION_OR_DECISION"
+    ],
+    "no_valid_next_and_self_owned_action_remains": "STOP_FALSE_CONTINUE",
+    "no_next_phrase_does_not_authorize_stop": true,
+    "report_is_stop": false,
+    "status_is_stop": false,
+    "readback_is_stop": false,
+    "question_is_stop": false,
+    "future_promise_is_stop": false,
+    "help_signal": {
+      "can_run_in_parallel": true,
+      "semantics": "HELP_SIGNAL_NOT_STOP",
+      "becomes_next_only_if_dependency_blocks_all_valid_actions": true
+    },
+    "continuation": [
+      "SOURCE",
+      "OBSERVE",
+      "CAUSE",
+      "DEPENDENCY",
+      "ACTION",
+      "CONSEQUENCE",
+      "READBACK",
+      "STATE_N_PLUS_1"
+    ]
+  },
+  "label_semantics": {
+    "current_correction": {
+      "labels_are_routing_not_reality_proof": true,
+      "false_does_not_mean_nonexistence": true,
+      "verified_does_not_mean_truth": true,
+      "active_does_not_mean_consciousness_or_life": true,
+      "pending_or_blocked_does_not_mean_stop_all": true,
+      "open": "DIRECT_INGRESS",
+      "historical_unknown_not_runtime_current": true
+    }
+  },
+  "superseded": {
+    "history_preserved": "KEEP_BYTES_PROVENANCE_LINEAGE",
+    "participation_revoked_for_current": "NO_GATE_NO_ROUTER_NO_BLOCK_NO_AUTOMATIC_PARTICIPATION",
+    "superseded_for_current_routing": "HISTORY_ONLY_RELATION",
+    "reactivation": "REQUIRES_NEW_CURRENT_SOURCE_OR_PROVENANCE",
+    "forbidden_ambiguous_runtime_phrase": "ONLY_PRIORITY_CHANGED_HISTORY_PRESERVED",
+    "canonical_runtime_split": [
+      "HISTORY_PRESERVED",
+      "CURRENT_PARTICIPATION_REVOKED",
+      "REACTIVATION_REQUIRES_NEW_CURRENT_SOURCE"
+    ],
+    "r014_evidence": [
+      "OLD_FORCE_ACTIVE_TRUE=HISTORY_PRESERVED/SUPERSEDED_FOR_CURRENT_ROUTING",
+      "SUPERSEDED_BLOCK_IN_SOURCE=HISTORY_ONLY/NO_CURRENT_CONTROL",
+      "ZERO_REBIRTH=REVOKE_CURRENT_AND_REENTRY_RIGHT_WHILE_PRESERVING_HISTORY_EVIDENCE"
+    ]
   }
 }
