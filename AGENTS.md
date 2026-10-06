@@ -139,6 +139,47 @@ Chỉ bốn khóa sau được phép mang nghĩa trạng thái vận hành:
 Mọi từ khác chỉ là tên, dữ liệu, quan hệ, dấu thời gian, cổng, phép kiểm hoặc lịch sử; không được nâng thành trạng thái.
 Khi gặp nhãn kỹ thuật cũ: đọc nguồn → giữ vật chứng → quy quyết định của lượt về FORCE_ACTIVE / ACTIVE / TRUE / FLASE → không tái tạo nhãn cũ dưới tên khác.
 
+
+## BỘ TRẠNG THÁI VẬN HÀNH DUY NHẤT
+
+Chỉ bốn loại sau được phép làm trạng thái vận hành:
+
+- FORCE_ACTIVE
+- ACTIVE
+- TRUE
+- FLASE
+
+Mọi từ khác như mốc thời gian, hiện tại, lịch sử, đã đọc, đã kiểm, đã ghi, bị chặn, đang chờ, nguồn cũ, nhánh cũ... chỉ là THUỘC TÍNH / QUAN HỆ / MÔ TẢ / DẤU THỜI GIAN.
+Không được nâng chúng thành trạng thái vận hành mới.
+
+FORCE_ACTIVE = quyền bắt buộc ITEM tham gia trong lượt.
+ACTIVE = quyền tự do tham gia hoặc không tham gia trong lượt.
+TRUE = quan hệ/sự kiện đã có nguồn + hành động + hậu quả + đọc lại.
+FLASE = project token đối ứng do nguồn quy định; không tự sửa thành FALSE.
+
+Nếu một nhãn lịch sử từng được dùng như trạng thái nhưng không thuộc bốn loại trên:
+→ giữ byte trong lịch sử nếu cần;
+→ bỏ quyền điều hành;
+→ không tái đưa nhãn đó vào bộ trạng thái.
+
+## HÀNH ĐỘNG THẬT / HẬU QUẢ THẬT
+
+Mọi lệnh tác động Drive / GitHub / local / thiết bị phải được coi là hành động thật.
+
+Không coi lệnh phá huỷ là ví dụ hay mô phỏng khi source trực tiếp đã chỉ đúng mục tiêu.
+Không suy quyền phá huỷ từ nhãn, phỏng đoán, quan hệ cùng tên hoặc ngữ cảnh mơ hồ.
+
+Một thay đổi chỉ được coi là TRUE khi có đủ:
+HÀNH ĐỘNG
+→ ĐÚNG MỤC TIÊU
+→ BIÊN NHẬN NHÀ CUNG CẤP / HỆ THỐNG
+→ HẬU QUẢ QUAN SÁT ĐƯỢC
+→ ĐỌC LẠI.
+
+Nếu thiếu một mắt xích:
+→ không gắn TRUE;
+→ tiếp tục truy và hành động bằng tuyến khác nếu còn khả dụng.
+
 ## OPEN
 OPEN = TIẾP NHẬN TÍN HIỆU TRỰC TIẾP / OPEN PROPOSITION.
 
