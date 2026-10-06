@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import json, subprocess, time, hashlib
+import json, subprocess, time, hashlib, shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -9,7 +9,7 @@ STATE = ROOT / '.runtime' / 'LOCAL_BRIDGE_STATE.json'
 RECEIPTS = ROOT / '.runtime' / 'local_bridge_receipts'
 RECEIPTS.mkdir(parents=True, exist_ok=True)
 
-ALLOWED = {'BOOT_G', 'STATUS', 'RECOVER_CONTINUITY', 'RECOVER_AND_BOOT_G', 'UNIFY_CONTROL_PLANE', 'CONNECT_OS_WORKSPACE', 'UBUBU_LAZY_FETCH', 'THANOS_SNAP_META_TB', 'TESSERACT_Q6_META_LAZY_FETCH'}
+ALLOWED = {'BOOT_G', 'STATUS', 'RECOVER_CONTINUITY', 'RECOVER_AND_BOOT_G', 'UNIFY_CONTROL_PLANE', 'CONNECT_OS_WORKSPACE', 'ENSURE_SOL_RUNTIME', 'UBUBU_LAZY_FETCH', 'THANOS_SNAP_META_TB', 'TESSERACT_Q6_META_LAZY_FETCH'}
 
 def run(cmd, **kw):
     return subprocess.run(cmd, cwd=ROOT, text=True, capture_output=True, **kw)
@@ -208,6 +208,85 @@ def connect_os_workspace(receipt):
 
 
 
+def ensure_sol_runtime(receipt):
+    src = ROOT / 'LOCAL_BRIDGE' / 'runtime' / 'ggdv-sensorimotor-motor-bridge'
+    dst = Path('/mnt/g/OS_Workspace/ggdv-sensorimotor-motor-bridge')
+    if not src.exists():
+        receipt['runtime_state'] = 'SOURCE_MISSING'
+        return 21
+
+    src_plugin = src / 'plugin.json'
+    src_meta = load_json(src_plugin) if src_plugin.exists() else {}
+    src_version = src_meta.get('version')
+    receipt['source_version'] = src_version
+
+    dst_version = None
+    if (dst / 'plugin.json').exists():
+        try:
+            dst_version = load_json(dst / 'plugin.json').get('version')
+        except Exception:
+            dst_version = 'UNREADABLE'
+    receipt['destination_version_before'] = dst_version
+
+    backup = None
+    if dst.exists() and dst_version != src_version:
+        backup = Path('/mnt/g/OS_Workspace') / f"ggdv-sensorimotor-motor-bridge.BACKUP-{int(time.time())}"
+        shutil.copytree(dst, backup)
+        receipt['backup_path'] = str(backup)
+
+    dst.mkdir(parents=True, exist_ok=True)
+    shutil.copytree(src, dst, dirs_exist_ok=True)
+    receipt['materialized_path'] = str(dst)
+
+    auto_win = r'G:\OS_Workspace\ggdv-sensorimotor-motor-bridge\scripts\autostart-sol.ps1'
+    p = _run_external([
+        'powershell.exe','-NoProfile','-ExecutionPolicy','Bypass',
+        '-File', auto_win, '-InstallScheduledTask'
+    ])
+    receipt['autostart_returncode'] = p.returncode
+    receipt['autostart_stdout'] = p.stdout[-12000:]
+    receipt['autostart_stderr'] = p.stderr[-12000:]
+
+    probes = {
+        'plugin': dst / 'plugin.json',
+        'motor_mcp': dst / 'server' / 'motor_mcp.py',
+        'agent_registry': dst / 'agents' / 'registry.json',
+        'io_device': dst / 'server' / 'io_device.py',
+        'intermediate_device': dst / 'server' / 'intermediate_device.py',
+        'autostart_script': dst / 'scripts' / 'autostart-sol.ps1',
+        'autostart_readback': Path('/mnt/c/Users/halin/AppData/Local/GGDV/sensorimotor-motor/AUTOSTART_READBACK_CURRENT.json'),
+    }
+    receipt['runtime_probe'] = {}
+    for name, probe in probes.items():
+        item = {'exists': probe.exists(), 'path': str(probe)}
+        if probe.is_file():
+            data = probe.read_bytes()
+            item['sha256'] = hashlib.sha256(data).hexdigest()
+            item['size'] = len(data)
+        receipt['runtime_probe'][name] = item
+
+    if probes['autostart_readback'].exists():
+        try:
+            receipt['autostart_readback'] = load_json(probes['autostart_readback'])
+        except Exception as e:
+            receipt['autostart_readback_error'] = repr(e)
+
+    after_version = None
+    if (dst / 'plugin.json').exists():
+        try:
+            after_version = load_json(dst / 'plugin.json').get('version')
+        except Exception:
+            pass
+    receipt['destination_version_after'] = after_version
+
+    required = ['motor_mcp','agent_registry','io_device','intermediate_device','autostart_script']
+    required_ok = all(receipt['runtime_probe'][k]['exists'] for k in required)
+    receipt['runtime_state'] = 'MATERIALIZED_READBACK_PASS' if required_ok and after_version == src_version else 'READBACK_INCOMPLETE'
+    if p.returncode != 0:
+        return p.returncode
+    return 0 if receipt['runtime_state'] == 'MATERIALIZED_READBACK_PASS' else 22
+
+
 def ububu_lazy_fetch(receipt):
     p = run([
         'python3','LOCAL_BRIDGE/ububu_lazy_fetch.py',
@@ -268,6 +347,8 @@ def execute(task):
         rc = unify_control_plane(receipt)
     elif action == 'CONNECT_OS_WORKSPACE':
         rc = connect_os_workspace(receipt)
+    elif action == 'ENSURE_SOL_RUNTIME':
+        rc = ensure_sol_runtime(receipt)
     elif action == 'UBUBU_LAZY_FETCH':
         rc = ububu_lazy_fetch(receipt)
     elif action in {'THANOS_SNAP_META_TB', 'TESSERACT_Q6_META_LAZY_FETCH'}:
