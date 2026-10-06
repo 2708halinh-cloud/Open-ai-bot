@@ -8,7 +8,7 @@ STATE = ROOT / '.runtime' / 'LOCAL_BRIDGE_STATE.json'
 RECEIPTS = ROOT / '.runtime' / 'local_bridge_receipts'
 RECEIPTS.mkdir(parents=True, exist_ok=True)
 
-ALLOWED = {'BOOT_G', 'STATUS', 'RECOVER_CONTINUITY', 'RECOVER_AND_BOOT_G', 'UNIFY_CONTROL_PLANE', 'CONNECT_OS_WORKSPACE', 'UBUBU_LAZY_FETCH', 'THANOS_SNAP_META_TB'}
+ALLOWED = {'BOOT_G', 'STATUS', 'RECOVER_CONTINUITY', 'RECOVER_AND_BOOT_G', 'UNIFY_CONTROL_PLANE', 'CONNECT_OS_WORKSPACE', 'UBUBU_LAZY_FETCH', 'THANOS_SNAP_META_TB', 'TESSERACT_Q6_META_LAZY_FETCH'}
 
 def run(cmd, **kw):
     return subprocess.run(cmd, cwd=ROOT, text=True, capture_output=True, **kw)
@@ -269,7 +269,7 @@ def execute(task):
         rc = connect_os_workspace(receipt)
     elif action == 'UBUBU_LAZY_FETCH':
         rc = ububu_lazy_fetch(receipt)
-    elif action == 'THANOS_SNAP_META_TB':
+    elif action in {'THANOS_SNAP_META_TB', 'TESSERACT_Q6_META_LAZY_FETCH'}:
         rc = thanos_snap_meta_tb(receipt, task)
     receipt['returncode'] = rc
     receipt['finished_at'] = time.time()
