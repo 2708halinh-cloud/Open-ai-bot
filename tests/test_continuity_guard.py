@@ -163,5 +163,15 @@ class ContinuityGuardTests(unittest.TestCase):
         self.assertFalse(out["stop_allowed"])
 
 
+    def test_completion_output_requires_objective_done(self):
+        cp = Checkpoint(
+            objective_id="OBJ-5",
+            source_marker="S",
+            lineage_ref="L",
+            edges=[Edge(edge_id="A", target="a", callable_now=False)],
+        )
+        self.assertFalse(visible_output_allowed(cp, output_kind="COMPLETION"))
+
+
 if __name__ == "__main__":
     unittest.main()
