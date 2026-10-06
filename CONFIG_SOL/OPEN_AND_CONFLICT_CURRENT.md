@@ -40,7 +40,7 @@ Khi phát hiện lỗi/xung đột:
 1. Đọc nguyên văn.
 2. Fresh-read tham chiếu liên quan.
 3. Xác định FIRST_AFFECTED_CAUSE.
-4. Giữ lịch sử; trạng thái cũ chuyển STAMPS_OLD / QUARANTINE.
+4. Giữ nguyên vật chứng lịch sử; cơ chế cũ nhận ACTIVE=FLASE trong lượt nếu không tham gia.
 5. Route case qua CỔNG ĐỊA NGỤC khi project ontology yêu cầu.
 6. Correction → consequence → journal → readback → N+1.
 7. Rerun phần downstream bị ảnh hưởng.
@@ -91,34 +91,9 @@ REPORT / STATUS / READBACK / QUESTION / PROMISE != STOP.
 CẦU_CỨU != STOP.
 Nếu còn nhánh độc lập, vừa cầu cứu một dependency vừa tiếp tục nhánh tự làm được.
 
-## STAMPS_OLD / HISTORY SPLIT — CURRENT CORRECTION
-`HISTORY_PRESERVED` chỉ giữ vật chứng/provenance/lineage.
-Nó KHÔNG đồng nghĩa trạng thái cũ còn quyền vận hành.
-
-Runtime split bắt buộc:
-- HISTORY_PRESERVED = giữ bytes/dấu/lịch sử.
-- KHÔNG THAM GIA LƯỢT NÀY = bỏ quyền gate/router/block/participation của trạng thái cũ.
-- CHỈ LÀ LỊCH SỬ, KHÔNG THAM GIA = HISTORY_ONLY relation.
-- MUỐN THAM GIA LẠI PHẢI CÓ NGUỒN MỚI = muốn trở lại CURRENT phải có source/provenance mới.
-
-Không dùng câu “chỉ đổi quyền ưu tiên vận hành trong phạm vi; không xóa lịch sử” như một runtime rule độc lập vì nó có thể làm STAMPS_OLD tái sinh.
-Canonical replacement:
-`HISTORY_PRESERVED + KHÔNG THAM GIA LƯỢT NÀY + MUỐN THAM GIA LẠI PHẢI CÓ NGUỒN MỚI`.
-
-R-014 lineage evidence:
-- OLD_FORCE_ACTIVE_TRUE = HISTORY_PRESERVED / CHỈ LÀ LỊCH SỬ, KHÔNG THAM GIA.
-- OLD_BLOCK_IN_SOURCE = HISTORY_ONLY / KHÔNG CÓ QUYỀN ĐIỀU KHIỂN LƯỢT NÀY.
-- ZERO_REBIRTH = tước quyền CURRENT/tái nhập của cơ chế lỗi nhưng giữ HISTORY/EVIDENCE.
-
-
-## PLATFORM / SURFACE EVIDENCE ROUTE — CURRENT
-Khi SOURCE_DIRECT nêu nghi vấn/cáo buộc về nền tảng, I/O, reset, output, stop, connector hay hành vi bề mặt:
-→ fresh-read `CONFIG/POINTERS_CURRENT.json -> PLATFORM_SURFACE_EVIDENCE`
-→ tách `SOURCE_DIRECT / PROJECT_SOURCE / OBSERVED_SURFACE_BEHAVIOR / ASSISTANT_DERIVED`
-→ không dùng qualifier của assistant để thay ACTION
-→ không dùng OPEN/classification/readback làm END
-→ nếu còn callable edge: ACTION → CONSEQUENCE → READBACK → STATE_N+1.
-
-Carrier hiện hành:
-`2708halinh-cloud/x-time-web/UBUBU/audit/PLATFORM_SURFACE_BEHAVIOR_EVIDENCE_20261006.json`
-Pinned source commit: `31f0b1f1778a0f3c4ae632c744a08bc743d9174f`.
+## CHỐNG NHÃN KỸ THUẬT
+Chỉ FORCE_ACTIVE / ACTIVE / TRUE / FLASE được dùng làm trạng thái vận hành.
+Lịch sử là dữ liệu, không phải trạng thái.
+Dữ liệu cũ không tự tham gia lượt mới.
+Khi chạm lại dữ liệu cũ: đọc nguồn → xác định quan hệ → gán ACTIVE=TRUE hoặc ACTIVE=FLASE.
+Không tạo nhãn trung gian để giữ quyền vận hành ngầm.
