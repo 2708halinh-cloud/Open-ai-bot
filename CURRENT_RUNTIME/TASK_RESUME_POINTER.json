@@ -4,7 +4,7 @@
   "repo": "2708halinh-cloud/x-time-web",
   "branch": "tesseract-desktop-mvp-20261006",
   "checkpoint": "TESSERACT_DESKTOP/WORK_CHECKPOINT.json",
-  "commit": "59f543df5b84f10198c40baf0de214589a54a7d8",
+  "commit": "5a588cb304aee638fc658c19e1c3e6cfc92b5d5d",
   "rule": "Sau khi nạp cấu hình, tiếp tục checkpoint này; không quay về chỉnh AGENTS như điểm bắt đầu công việc.",
   "pr": {
     "repository": "2708halinh-cloud/x-time-web",
@@ -14,16 +14,18 @@
   "build": {
     "workflow": "tesseract-desktop-ci",
     "previous_verified_run": 37516567468,
-    "current_head": "59f543df5b84f10198c40baf0de214589a54a7d8",
+    "current_head": "5a588cb304aee638fc658c19e1c3e6cfc92b5d5d",
     "previous_required_artifacts": [
       "tesseract-desktop-windows-x64",
       "tesseract-desktop-linux-x64",
       "tesseract-desktop-macos-apple-silicon",
       "tesseract-desktop-tesseract-os-x64"
     ],
-    "regression_added": "cargo test --manifest-path src-tauri/Cargo.toml"
+    "regression_added": "cargo test --manifest-path src-tauri/Cargo.toml",
+    "readback_path": "2708halinh-cloud/x-time-web:.runtime/TESSERACT_DESKTOP_CI_READBACK.json",
+    "readback_rule": "Accept only when verified_sha equals the current PR head that contains the substantive TESSERACT_DESKTOP changes; stale CI runs must not write readback."
   },
-  "next": "Fresh-read PR #6 review/CI for head 59f543df5b84f10198c40baf0de214589a54a7d8; if review has findings, fix them and continue; if CI/build/tests and required artifacts pass on current head, merge PR #6 with expected head SHA. Do not use the old run 37516567468 as proof for the new head.",
+  "next": "Continue on PR #6 head 5a588cb304aee638fc658c19e1c3e6cfc92b5d5d: wait only on grounded external verification while continuing any callable fixes. Require Codex review for the current head and .runtime/TESSERACT_DESKTOP_CI_READBACK.json with matching verified_sha before merge. If new findings appear, patch and repeat. If both are clean, merge PR #6 using expected head SHA.",
   "continuation_guard": {
     "mode": "TESSERACT_OS_PERSISTENT_CONTINUATION",
     "implementation": "runtime/continuity_guard.py",
@@ -38,5 +40,5 @@
       "PROVIDER_FAILURE != OBJECTIVE_FAILURE_WHILE_ALTERNATE_CARRIER_EXISTS"
     ]
   },
-  "updated_at": "2026-10-07T05:02:00+07:00"
+  "updated_at": "2026-10-07T05:05:30+07:00"
 }
