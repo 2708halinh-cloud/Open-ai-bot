@@ -358,8 +358,8 @@ Repo public: không commit raw API key/token/credential/cookie/private key.
 Pointer/Drive-ID/source reference có thể commit; secret payload chỉ resolve qua carrier bí mật được phép.
 
 ## LOCAL / REENTRY
-LOCAL_WORKTREE_CURRENT = /home/halin/kepler/worktrees/Open-ai-bot-2-unify-item-matrix-34d45d00
-Ưu tiên root-neutral discovery / ${workspaceFolder} / script-relative khi host hỗ trợ.
+LOCAL_WORKTREE_RESOLUTION = runtime root-neutral discovery / ${workspaceFolder} / script-relative / Git worktree provenance.
+Không cố định tên worktree sinh tạm vào CURRENT; đường dẫn tuyệt đối chỉ là observation tại runtime và phải được resolve lại khi re-entry.
 
 SOL_CURRENT_SOURCE_COORD = E4D-SOLCG-1440-017 / X_SOL_CHATGPT-024 / X_SOL-024 / CUT-20260818-1440-017
 SINGLE_GLOBAL_HEAD_AUTHORITY = FLASE
