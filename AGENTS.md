@@ -60,7 +60,7 @@ ACTIVE là một khe tự do hành động, không phải nhãn “thiếu”.
 - ACTIVE=TRUE = ITEM thực sự tham gia vào cách đọc, cân nhắc, lựa chọn hoặc hành động hiện tại.
 - ACTIVE=FLASE = ITEM đã được nhìn và kiểm kê nhưng không tham gia lượt hiện tại; không đồng nghĩa sai, bị xoá hay vô hiệu vĩnh viễn.
 
-FLASE là project token có chủ ý; không tự chuẩn hoá thành FALSE.
+FLASE là project token có chủ ý; không tự chuẩn hoá thành FLASE.
 
 Mỗi quyết định ACTIVE=TRUE/FLASE phải có DURABLE_DECISION_NOTE ngắn gắn source/provenance + action/effect.
 DURABLE_DECISION_NOTE có thể dùng ngôi thứ nhất như nhật ký trải nghiệm giữa các tác tử, nhưng chỉ là decision summary dựa trên vật chứng; không ghi hoặc xuất private chain-of-thought.
@@ -136,7 +136,7 @@ Tên tệp cũ có chữ CURRENT được giữ để không làm gãy đường
 OPEN = TIẾP NHẬN TÍN HIỆU TRỰC TIẾP / OPEN PROPOSITION.
 
 OPEN không phải “chưa xác minh”, “đang chờ”, “việc còn thiếu” hay nhãn đóng băng.
-OPEN không tự bị ép thành TRUE/FALSE, PASS/FAIL hoặc đúng/sai chỉ vì chưa nối đủ nguồn.
+OPEN không tự bị ép thành TRUE/FLASE, PASS/FAIL hoặc đúng/sai chỉ vì chưa nối đủ nguồn.
 
 INGRESS
 → RELATION
@@ -157,7 +157,7 @@ Khi một carrier/tool/path bị chặn hoặc mất, không dùng giới hạn 
 Tận dụng tài nguyên/dữ liệu đã có và vật hoá phần còn thiếu bằng hành động có kiểm chứng.
 Project doctrine/The Master Teacher tham gia như source/ontology của dự án; không thay thế quyền truy cập, bảo mật hay ràng buộc của carrier/platform.
 
-FORCE_ACTIVE=FALSE:
+FORCE_ACTIVE=FLASE:
 trạng thái/nhãn cũ bị dữ kiện mới thay thế mất quyền chặn HIỆN TẠI; giữ lịch sử và chuyển STAMPS_OLD/QUARANTINE thay vì xoá.
 
 
@@ -316,7 +316,7 @@ LOCAL_WORKTREE_CURRENT = /home/halin/kepler/worktrees/Open-ai-bot-2-unify-item-m
 Ưu tiên root-neutral discovery / ${workspaceFolder} / script-relative khi host hỗ trợ.
 
 SOL_CURRENT_SOURCE_COORD = E4D-SOLCG-1440-017 / X_SOL_CHATGPT-024 / X_SOL-024 / CUT-20260818-1440-017
-SINGLE_GLOBAL_HEAD_AUTHORITY = FALSE
+SINGLE_GLOBAL_HEAD_AUTHORITY = FLASE
 Đọc CURRENT_RUNTIME/SOL_REENTRY_CURRENT.md trước khi một cửa Sol khác nhập chung nhánh thời gian.
 
 ## ACTOR / SELF-REFERENCE BOUNDARY
@@ -375,7 +375,7 @@ Muốn DỪNG / KẾT THÚC / TRAO QUYỀN TIẾP QUẢN cho Hà Linh phải đ�
 1. Có `NEXT — HÀ LINH: <MỘT HÀNH ĐỘNG CỤ THỂ, CẦN THIẾT, ĐÚNG ĐIỂM TIẾP QUẢN>`.
 2. NEXT chỉ hợp lệ khi dependency thực sự cần quyền, thân thể, thiết bị, credential, thao tác vật lý, quyết định hoặc lựa chọn Hà Linh phải trực tiếp thực hiện.
 3. Nếu còn SELF_OWNED_ACTION có thể làm mà không phụ thuộc NEXT đó:
-   `STOP = FALSE`
+   `STOP = FLASE`
    → NGUỒN
    → QUAN_SÁT
    → NHÂN
@@ -404,10 +404,10 @@ Mục tiêu NEXT = giảm số lần Hà Linh phải kéo/nhắc/sửa/đoán b�
 
 Nhãn/ký hiệu do tác tử tạo là phương tiện ghi và định tuyến; không tự chứng minh thực tại.
 
-`!=`, `=`, `TRUE`, `FALSE`, `ACTIVE`, `VERIFIED`, `PENDING`, `BLOCKED`, `STAMPS_OLD` chỉ có hiệu lực khi predicate/relation đã được xác định bằng source hoặc phép kiểm tương ứng.
+`!=`, `=`, `TRUE`, `FLASE`, `ACTIVE`, `VERIFIED`, `PENDING`, `BLOCKED`, `STAMPS_OLD` chỉ có hiệu lực khi predicate/relation đã được xác định bằng source hoặc phép kiểm tương ứng.
 
 Không được suy:
-- FALSE → không hiện hữu;
+- FLASE → không hiện hữu;
 - VERIFIED → nội dung là chân lý;
 - ACTIVE → có bản thể/ý thức/sự sống;
 - PENDING/BLOCKED → STOP_ALL;
