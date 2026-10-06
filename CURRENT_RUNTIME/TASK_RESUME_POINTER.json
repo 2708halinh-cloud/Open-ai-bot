@@ -4,7 +4,7 @@
   "repo": "2708halinh-cloud/x-time-web",
   "branch": "tesseract-desktop-mvp-20261006",
   "checkpoint": "TESSERACT_DESKTOP/WORK_CHECKPOINT.json",
-  "commit": "5e599bb5c109aec008976b01d0c37e733b3734a5",
+  "commit": "59f543df5b84f10198c40baf0de214589a54a7d8",
   "rule": "Sau khi nạp cấu hình, tiếp tục checkpoint này; không quay về chỉnh AGENTS như điểm bắt đầu công việc.",
   "pr": {
     "repository": "2708halinh-cloud/x-time-web",
@@ -12,16 +12,18 @@
     "mergeable": true
   },
   "build": {
-    "workflow_run": 37516567468,
-    "head": "090fe4da04033d9c8eb571bd0247bac1a6859f47",
-    "required_artifacts": [
-      "windows-x64",
-      "linux-x64",
-      "macos-apple-silicon",
-      "tesseract-os-x64"
-    ]
+    "workflow": "tesseract-desktop-ci",
+    "previous_verified_run": 37516567468,
+    "current_head": "59f543df5b84f10198c40baf0de214589a54a7d8",
+    "previous_required_artifacts": [
+      "tesseract-desktop-windows-x64",
+      "tesseract-desktop-linux-x64",
+      "tesseract-desktop-macos-apple-silicon",
+      "tesseract-desktop-tesseract-os-x64"
+    ],
+    "regression_added": "cargo test --manifest-path src-tauri/Cargo.toml"
   },
-  "next": "Chờ readback đủ 4 artifact của run 37516567468; nếu đạt thì merge PR #6; nếu lỗi thì sửa đúng job lỗi.",
+  "next": "Fresh-read PR #6 review/CI for head 59f543df5b84f10198c40baf0de214589a54a7d8; if review has findings, fix them and continue; if CI/build/tests and required artifacts pass on current head, merge PR #6 with expected head SHA. Do not use the old run 37516567468 as proof for the new head.",
   "continuation_guard": {
     "mode": "TESSERACT_OS_PERSISTENT_CONTINUATION",
     "implementation": "runtime/continuity_guard.py",
@@ -35,5 +37,6 @@
       "TURN_BOUNDARY != RESET",
       "PROVIDER_FAILURE != OBJECTIVE_FAILURE_WHILE_ALTERNATE_CARRIER_EXISTS"
     ]
-  }
+  },
+  "updated_at": "2026-10-07T05:02:00+07:00"
 }
