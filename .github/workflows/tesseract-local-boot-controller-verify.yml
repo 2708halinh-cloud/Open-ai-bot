@@ -2,9 +2,16 @@ name: tesseract-local-boot-controller-verify
 
 on:
   push:
-    branches: [main]
     paths:
       - 'terminal/tesseract_boot_g_from_wsl.sh'
+      - 'terminal/tesseract_boot_controller.ps1'
+      - '.runtime/TESSERACT_BOOT_G.env'
+      - 'CURRENT_RUNTIME/TESSERACT_LOCAL_BOOT_CURRENT.md'
+      - '.github/workflows/tesseract-local-boot-controller-verify.yml'
+  pull_request:
+    paths:
+      - 'terminal/tesseract_boot_g_from_wsl.sh'
+      - 'terminal/tesseract_boot_controller.ps1'
       - '.runtime/TESSERACT_BOOT_G.env'
       - 'CURRENT_RUNTIME/TESSERACT_LOCAL_BOOT_CURRENT.md'
       - '.github/workflows/tesseract-local-boot-controller-verify.yml'
@@ -14,29 +21,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Bash syntax
         run: bash -n terminal/tesseract_boot_g_from_wsl.sh
+
       - name: Runtime binding
         run: |
           set -a
           source .runtime/TESSERACT_BOOT_G.env
           set +a
-          test "$TESSERACT_BOOT_TARGET" = G
+          test "$TESSERACT_BOOT_MODE" = ROOT_NEUTRAL_USB
+          test "$TESSERACT_BOOT_PREFERRED_DRIVE" = G
+          test "$TESSERACT_BOOT_TARGET_IDENTITY_FILE" = .runtime/TESSERACT_BOOT_TARGET_IDENTITY.json
           test "$TESSERACT_BOOT_IMAGE_SHA256" = f993e15478a1391c3a9d14d368158043d98c51494f3ae81e5b633870855c96df
           test "$TESSERACT_BOOT_IMAGE_SIZE" = 67108864
-      - name: Extract embedded PowerShell
+
+      - name: Root-neutral static contract
         run: |
-          python3 - <<'PY'
-          from pathlib import Path
-          text = Path('terminal/tesseract_boot_g_from_wsl.sh').read_text()
-          start = "cat > \"$PS1\" <<'POWERSHELL'\n"
-          if start not in text:
-              raise SystemExit('embedded PowerShell start marker not found')
-          body = text.split(start, 1)[1]
-          if '\nPOWERSHELL\n' not in body:
-              raise SystemExit('embedded PowerShell end marker not found')
-          Path('/tmp/tesseract_boot_g.ps1').write_text(body.split('\nPOWERSHELL\n', 1)[0])
-          PY
-      - name: Embedded PowerShell parses
+          ! grep -Fq 'Get-Partition -DriveLetter G' terminal/tesseract_boot_controller.ps1
+          ! grep -Fq 'mountvol.exe G:' terminal/tesseract_boot_controller.ps1
+          grep -Fq 'Refusing drive-letter fallback' terminal/tesseract_boot_controller.ps1
+          grep -Fq 'disk_unique_id' terminal/tesseract_boot_controller.ps1
+          grep -Fq 'TESSERACT_BOOT_MODE' terminal/tesseract_boot_g_from_wsl.sh
+          grep -Fq '.runtime/TESSERACT_BOOT_TARGET_IDENTITY.json' .gitignore
+
+      - name: PowerShell parses
         shell: pwsh
-        run: "[void][scriptblock]::Create((Get-Content '/tmp/tesseract_boot_g.ps1' -Raw))"
+        run: "[void][scriptblock]::Create((Get-Content 'terminal/tesseract_boot_controller.ps1' -Raw))"
