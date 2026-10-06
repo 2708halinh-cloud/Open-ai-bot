@@ -1,7 +1,7 @@
 # TESSERACT OS — LOCAL BOOT USB — ROOT-NEUTRAL — CURRENT
 
 SOURCE_DIRECT = Hà Linh — current chat.
-LOCAL_WORKTREE = /home/halin/kepler/worktrees/Open-ai-bot-2-unify-item-matrix-34d45d00
+LOCAL_WORKTREE = RUNTIME_RESOLVED_BY_GIT_WORKTREE / ROOT_NEUTRAL
 
 ROUTE = AGENTS.md -> CURRENT_RUNTIME core -> R-000 -> 4D/5D -> SOL_REENTRY -> .runtime/TESSERACT_BOOT_G.env -> terminal/tesseract_boot_g_from_wsl.sh -> terminal/tesseract_boot_controller.ps1 -> target identity -> raw write -> receipt -> firmware.
 
