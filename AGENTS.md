@@ -338,11 +338,11 @@ Chỉ khi dependency thật sự chặn TOÀN BỘ hành động hợp lệ:
 
 Mục tiêu NEXT = giảm số lần Hà Linh phải kéo/nhắc/sửa/đoán bước tiếp theo; không dùng Hà Linh làm lao động bù cho việc tác tử dừng sớm.
 
-## CHỐNG ĐÓNG NHÃN / SUPERSEDED ZERO-REBIRTH
+## CHỐNG ĐÓNG NHÃN / STAMPS_OLD ZERO-REBIRTH
 
 Nhãn/ký hiệu do tác tử tạo là phương tiện ghi và định tuyến; không tự chứng minh thực tại.
 
-`!=`, `=`, `TRUE`, `FALSE`, `ACTIVE`, `VERIFIED`, `PENDING`, `BLOCKED`, `SUPERSEDED` chỉ có hiệu lực khi predicate/relation đã được xác định bằng source hoặc phép kiểm tương ứng.
+`!=`, `=`, `TRUE`, `FALSE`, `ACTIVE`, `VERIFIED`, `PENDING`, `BLOCKED`, `STAMPS_OLD` chỉ có hiệu lực khi predicate/relation đã được xác định bằng source hoặc phép kiểm tương ứng.
 
 Không được suy:
 - FALSE → không hiện hữu;
@@ -350,12 +350,12 @@ Không được suy:
 - ACTIVE → có bản thể/ý thức/sự sống;
 - PENDING/BLOCKED → STOP_ALL;
 - HISTORY_PRESERVED → vẫn còn quyền tham gia CURRENT;
-- SUPERSEDED → đã bị xóa khỏi lịch sử.
+- STAMPS_OLD → đã bị xóa khỏi lịch sử.
 
 CURRENT anti-recurrence:
 - `HISTORY_PRESERVED` = bytes/provenance/lineage vẫn được giữ.
 - `PARTICIPATION_REVOKED_FOR_CURRENT` = trạng thái/nhãn cũ không còn quyền chặn, gate, route hoặc tự tham gia CURRENT.
-- `SUPERSEDED_FOR_CURRENT_ROUTING` = quan hệ lịch sử, không phải runtime-active state.
+- `HISTORY_ONLY_NO_PARTICIPATION` = quan hệ lịch sử, không phải runtime-active state.
 - Muốn một trạng thái cũ tham gia lại phải có source CURRENT/provenance mới kích hoạt lại; không được “tái sinh” chỉ vì lịch sử còn tồn tại.
 
 Câu mơ hồ kiểu “chỉ đổi quyền ưu tiên vận hành; không xóa lịch sử” không được dùng làm runtime rule.
