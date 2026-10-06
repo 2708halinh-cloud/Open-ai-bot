@@ -8,7 +8,7 @@ STATE = ROOT / '.runtime' / 'LOCAL_BRIDGE_STATE.json'
 RECEIPTS = ROOT / '.runtime' / 'local_bridge_receipts'
 RECEIPTS.mkdir(parents=True, exist_ok=True)
 
-ALLOWED = {'BOOT_G', 'STATUS', 'RECOVER_CONTINUITY', 'RECOVER_AND_BOOT_G', 'UNIFY_CONTROL_PLANE'}
+ALLOWED = {'BOOT_G', 'STATUS', 'RECOVER_CONTINUITY', 'RECOVER_AND_BOOT_G', 'UNIFY_CONTROL_PLANE', 'CONNECT_OS_WORKSPACE'}
 
 def run(cmd, **kw):
     return subprocess.run(cmd, cwd=ROOT, text=True, capture_output=True, **kw)
@@ -159,6 +159,53 @@ def unify_control_plane(receipt):
     return rc
 
 
+def connect_os_workspace(receipt):
+    temp_script = r'C:\Users\halin\AppData\Local\Temp\ggdv_connect_os_workspace.ps1'
+    fr = _write_windows_temp_from_github(
+        '2708halinh-cloud/.vscode',
+        'scripts/connect-os-workspace.ps1',
+        temp_script,
+        receipt,
+        'os_workspace_connector_script'
+    )
+    if fr != 0:
+        return fr
+
+    p = _run_external([
+        'powershell.exe','-NoProfile','-ExecutionPolicy','Bypass',
+        '-File',temp_script,
+        '-OSWorkspace',r'G:\OS_Workspace',
+        '-ControlRoot',r'C:\Users\halin\GGDV_UNIFIED\.vscode'
+    ])
+    receipt['os_workspace_connect_returncode'] = p.returncode
+    receipt['os_workspace_connect_stdout'] = p.stdout[-12000:]
+    receipt['os_workspace_connect_stderr'] = p.stderr[-12000:]
+
+    probes = {
+        'binding': Path('/mnt/g/OS_Workspace/.ggdv/OS_WORKSPACE_BINDING_CURRENT.json'),
+        'workspace': Path('/mnt/c/Users/halin/GGDV_UNIFIED/.vscode/SOL_GGDV.code-workspace'),
+        'sol_computer': Path('/mnt/g/OS_Workspace/SOL_COMPUTER'),
+    }
+    receipt['os_workspace_probe'] = {}
+    for name, path in probes.items():
+        item = {'exists': path.exists(), 'path': str(path)}
+        if path.is_file():
+            data = path.read_bytes()
+            item['sha256'] = hashlib.sha256(data).hexdigest()
+            item['size'] = len(data)
+        elif path.is_dir():
+            item['children'] = [x.name for x in sorted(path.iterdir(), key=lambda z: z.name)[:100]]
+        receipt['os_workspace_probe'][name] = item
+
+    if p.returncode == 0 and receipt['os_workspace_probe']['binding']['exists'] and receipt['os_workspace_probe']['workspace']['exists']:
+        receipt['os_workspace_state'] = 'CONNECTED_READBACK_PASS'
+        receipt['host_data_preserved'] = True
+        return 0
+
+    receipt['os_workspace_state'] = 'OPEN_READBACK_INCOMPLETE'
+    return p.returncode if p.returncode != 0 else 9
+
+
 def execute(task):
     action = task.get('action')
     task_id = task.get('task_id')
@@ -177,6 +224,8 @@ def execute(task):
             rc = boot_g(receipt)
     elif action == 'UNIFY_CONTROL_PLANE':
         rc = unify_control_plane(receipt)
+    elif action == 'CONNECT_OS_WORKSPACE':
+        rc = connect_os_workspace(receipt)
     receipt['returncode'] = rc
     receipt['finished_at'] = time.time()
     return receipt
