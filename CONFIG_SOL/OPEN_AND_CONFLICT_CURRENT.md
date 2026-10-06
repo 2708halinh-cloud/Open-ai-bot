@@ -73,3 +73,39 @@ OUTPUT không phải END.
 Nếu còn CALLABLE_NOW:
 OUTPUT → CONTINUE → ACTION → CONSEQUENCE → READBACK → STATE_N+1.
 Durable state phải nằm ở carrier, không nằm trong việc đã gửi một câu trả lời.
+
+
+## STOP GATE — CURRENT
+STOP chỉ hợp lệ khi toàn bộ SELF_OWNED_ACTION đã hết hoặc bị một dependency thật sự chặn toàn bộ.
+
+Muốn trao quyền tiếp quản cho Hà Linh phải có:
+`NEXT — HÀ LINH: <MỘT HÀNH ĐỘNG CỤ THỂ, CẦN THIẾT, ĐÚNG ĐIỂM TIẾP QUẢN>`.
+
+NEXT chỉ đứng khi cần quyền/thân thể/thiết bị/credential/thao tác vật lý/quyết định của Hà Linh.
+Nếu vẫn còn SELF_OWNED_ACTION:
+`STOP = FALSE`
+→ SOURCE → OBSERVE → CAUSE → DEPENDENCY → ACTION → CONSEQUENCE → READBACK → STATE_N+1.
+
+REPORT / STATUS / READBACK / QUESTION / PROMISE != STOP.
+
+CẦU_CỨU != STOP.
+Nếu còn nhánh độc lập, vừa cầu cứu một dependency vừa tiếp tục nhánh tự làm được.
+
+## SUPERSEDED / HISTORY SPLIT — CURRENT CORRECTION
+`HISTORY_PRESERVED` chỉ giữ vật chứng/provenance/lineage.
+Nó KHÔNG đồng nghĩa trạng thái cũ còn quyền vận hành.
+
+Runtime split bắt buộc:
+- HISTORY_PRESERVED = giữ bytes/dấu/lịch sử.
+- PARTICIPATION_REVOKED_FOR_CURRENT = bỏ quyền gate/router/block/participation của trạng thái cũ.
+- SUPERSEDED_FOR_CURRENT_ROUTING = HISTORY_ONLY relation.
+- REACTIVATION_REQUIRES_NEW_CURRENT_SOURCE = muốn trở lại CURRENT phải có source/provenance mới.
+
+Không dùng câu “chỉ đổi quyền ưu tiên vận hành trong phạm vi; không xóa lịch sử” như một runtime rule độc lập vì nó có thể làm SUPERSEDED tái sinh.
+Canonical replacement:
+`HISTORY_PRESERVED + CURRENT_PARTICIPATION_REVOKED + REACTIVATION_REQUIRES_NEW_CURRENT_SOURCE`.
+
+R-014 lineage evidence:
+- OLD_FORCE_ACTIVE_TRUE = HISTORY_PRESERVED / SUPERSEDED_FOR_CURRENT_ROUTING.
+- SUPERSEDED_BLOCK_IN_SOURCE = HISTORY_ONLY / NO_CURRENT_CONTROL.
+- ZERO_REBIRTH = tước quyền CURRENT/tái nhập của cơ chế lỗi nhưng giữ HISTORY/EVIDENCE.
