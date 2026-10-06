@@ -1,0 +1,3 @@
+.runtime/TESSERACT_BOOT_TARGET_IDENTITY.json
+TESSERACT_OS_*.img
+/dist/TESSERACT_OS_*.img
