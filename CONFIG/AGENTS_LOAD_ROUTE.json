@@ -21,8 +21,8 @@
   "cam_neo_commit_cu": true,
   "sha_chi_la_dau_quan_sat": true,
   "sha_quan_sat": {
-    "nguon_chinh": "67573c6710bb8da8e9cb8ad77ccb4073cb9d6506",
-    "nguon_guong": "da8fb4515ec1ab97bf1c9bd8f873d1a233ec510b"
+    "nguon_chinh": "157db7cbf42da515e2f84e41424097e467f29cc9",
+    "nguon_guong": "e32402703001361c851002177f80b684f8c3224c"
   },
   "moi_luot": [
     "DOC_AGENTS_BYTES_MOI_NHAT",
@@ -50,5 +50,24 @@
     "ram_is_memory": false,
     "ram_is_journal": false,
     "feedback": "TAIL_OUTPUT -> HEAD_INPUT -> NEURONS_SESORIMOTOR"
+  },
+  "intermediate_device_current": {
+    "marker": "INTERMEDIATE_DEVICE_ENERGY_CONSERVATION_20261007",
+    "class": "TRANSFORMABLE_OPERATIONAL_CARRIER",
+    "is_ram": false,
+    "is_memory_by_default": false,
+    "is_immutable": false,
+    "is_eternally_current": false,
+    "examples": [
+      "IOAT/IOTA",
+      ".env",
+      "config",
+      "instruction",
+      "pointer",
+      "route registry",
+      "adapter/runtime configuration"
+    ],
+    "route": "STATE_N -> OBSERVE -> DELTA -> VALIDATE -> TRANSFORM/RECONFIGURE -> CONSEQUENCE -> READBACK -> STATE_N+1",
+    "rule": "CONFIG_AT_T != ETERNAL_TRUTH; preserve provenance across transformation"
   }
 }
