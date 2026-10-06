@@ -245,14 +245,12 @@ if ($readbackSha -ne $ExpectedSha256.ToLowerInvariant()) {
 
 $receipt = [ordered]@{
   schema = "TESSERACT_OS_LOCAL_BOOT_RECEIPT/2.0"
-  target_identity_path = $IdentityPath
+  target_identity_path = ".runtime/TESSERACT_BOOT_TARGET_IDENTITY.json"
   target_resolution = $resolvedBy
   preferred_drive_letter = "$($PreferredDriveLetter.Trim().TrimEnd(':').ToUpperInvariant()):"
   bootstrap_used = $bootstrapUsed
   physical_disk = $diskNumber
-  disk_unique_id = $identityRecord.disk_unique_id
-  disk_serial_number = $identityRecord.disk_serial_number
-  usb_name = $identityRecord.disk_friendly_name
+  target_identity_bound = $true
   bus_type = [string]$disk.BusType
   drive_letters_before_write = $driveLetters
   image = $img.Name
