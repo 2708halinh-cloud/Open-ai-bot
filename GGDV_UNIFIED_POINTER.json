@@ -1,0 +1,16 @@
+{
+  "schema": "GGDV_UNIFIED_POINTER/1.0",
+  "control_plane": "2708halinh-cloud/.vscode",
+  "manifest": "GGDV_UNIFIED_REPOS.json",
+  "open_loop": "GGDV_OPEN_ACTION_LOOP.json",
+  "repo": "2708halinh-cloud/Open-ai-bot",
+  "role": [
+    "PUBLIC_BOT",
+    "LOCAL_BRIDGE",
+    "ITEM_RESCUE_PROJECTION"
+  ],
+  "relation": "MEMBER_OF_UNIFIED_GGDV_GRAPH",
+  "merge_policy": "POINTER_AND_RELATION_NOT_BLIND_COPY",
+  "history_preserved": true,
+  "no_reset": true
+}
