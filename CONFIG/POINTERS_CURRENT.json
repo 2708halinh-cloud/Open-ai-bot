@@ -38,6 +38,15 @@
         "CONFIG/OPEN_SOURCE_MAP_CURRENT.json"
       ],
       "cleanup": "MOVE_AND_RENAME_HISTORY_SAME_DRIVE_ID"
+    },
+    "MASTER_TEACHER_ARCHIVE_READBACK": {
+      "file_id": "1z12kJsMv-qHzHe1Tz60rlR-2122n65Rah0qXzfe_T5k",
+      "title": "90_HISTORY — 0000_THE_MASTER_TEACHER — ABSORBED — 20261007",
+      "parent_id": "10P1yYtQrK7-SvzN7c0BqO3geP-Rvr2Ag",
+      "old_parent_id": "1tZ5Dj3tH7EryQ-BBkC4TwaEUVOKgDA2Q",
+      "old_parent_contains_file": false,
+      "content_characters_observed_after_move": 207322,
+      "relation": "RAW_HISTORY_PRESERVED_CURRENT_OPERATION_DISTRIBUTED"
     }
   }
 }
