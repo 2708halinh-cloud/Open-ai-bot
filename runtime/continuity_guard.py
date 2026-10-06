@@ -147,7 +147,10 @@ def user_token(cp: Checkpoint) -> str | None:
 
 def visible_output_allowed(cp: Checkpoint, *, output_kind: str) -> bool:
     """Status/report/progress cannot substitute for unfinished callable action."""
-    if output_kind.upper() in {"REPORT", "STATUS", "PROGRESS", "COMPLETION"}:
+    kind = output_kind.upper()
+    if kind == "COMPLETION":
+        return cp.objective_done()
+    if kind in {"REPORT", "STATUS", "PROGRESS"}:
         return select_next_callable_edge(cp) is None
     if output_kind.upper() == "USER_DEPENDENCY_TOKEN":
         return user_token(cp) is not None
