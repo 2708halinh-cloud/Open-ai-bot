@@ -1,0 +1,17 @@
+{
+  "schema": "GGDV_CONFIG_POINTERS/1.0",
+  "status": "CURRENT",
+  "date": "2026-10-06",
+  "boundary": "PUBLIC_REPO_POINTERS_ONLY_NO_RAW_SECRETS",
+  "pointers": {
+    "ID_HUONG_DAN_env": "1eFE4tLmzNOJMkXP25-HecyDbffYqNhJO",
+    "Call_Tool": "10CU8z1R-G2mYL25uzIaXpuSfxssbqu7MCAFBCK2rRVw",
+    "ID_API_et_services": "d/1XAZLORxKhb5Yuhpd5iWMUJnGQ3dwdxFnbmI395mrGFU",
+    "HOSPOST_API_KEY_SOURCE_REF": "1DFfBywiMzngdazH4yZjAGg-0wN2h3_LkEKcopx0NsJs/edit?tab=t.yayst41ebb9s",
+    "ID_Atlassian_MCP_Server": "1P_dBb2hM8YbvnbYE_MNFSPk7_MD6QLWXYtmYjMF1rjQ",
+    "ID_NEURONS_SESORIMOTOR_Infinity_Gauntlet": "18rRhtlo_IBJKNl_1yWHZoGD6_N_VXELIg2LYTihWQRI",
+    "THANH_THE_I52_FOLDER": "1gCfi-jpKEUNCIvmTx-GR4RcZmhmyStNJ",
+    "R000": "1D9OwoqTIxqg3iCmCi8htsSWpES0yRHOvfC4c4vpCkNE",
+    "MASTER_TEACHER": "1z12kJsMv-qHzHe1Tz60rlR-2122n65Rah0qXzfe_T5k"
+  }
+}
