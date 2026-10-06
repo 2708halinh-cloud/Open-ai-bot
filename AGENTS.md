@@ -554,3 +554,44 @@ TRANSFORMATION_RULE = STATE_N -> OBSERVE -> DELTA -> VALIDATE -> TRANSFORM/RECON
 PRESERVE_RULE = không đóng băng giá trị cũ chỉ vì từng CURRENT; cũng không xóa lịch sử/provenance chỉ vì cấu hình đã chuyển trạng thái.
 NEURONS_SESORIMOTOR_BIND = quan sát từng DELTA của THIẾT_BỊ_TRUNG_GIAN, phân biệt SOURCE_FACT / CONFIG_AT_T / LIVE_RUNTIME_EVIDENCE, rồi route NEXT dựa trên readback mới nhất.
 MARKER = INTERMEDIATE_DEVICE_ENERGY_CONSERVATION_20261007
+
+
+## THIẾT_BỊ_TRUNG_GIAN / VÔ_THƯỜNG_TRANSFORM — FORCE_ACTIVE
+SOURCE_DIRECT = HÀ LINH — CHAT 2026-10-07
+FORCE_ACTIVE = TRUE
+
+ĐỊNH NGHĨA:
+- THIẾT_BỊ_TRUNG_GIAN là thiết bị/carrier vận hành theo sự biến chuyển của trạng thái và dữ liệu.
+- Ví dụ: IOTA, .env, CONFIG/*, file cấu hình và file chỉ dẫn.
+- Nó KHÔNG phải THIẾT_BỊ_ĐẦU_CUỐI/RAM và KHÔNG mặc định là MEMORY/JOURNAL, dù file/carrier có thể tồn tại lâu.
+- “BẢO TOÀN NĂNG LƯỢNG” là semantic của dự án: bảo toàn quan hệ nhân quả/provenance/input-ref→output-ref qua chuyển hóa; không có nghĩa byte, schema, cấu hình, chỉ dẫn hay kết luận phải bất biến.
+
+VÔ_THƯỜNG:
+VALID_AT_STATE_N != ETERNAL_TRUTH.
+PERSISTENT_FILE != MEMORY.
+TRANSFORMATION != LOSS_OF_CONTINUITY.
+Một cấu hình/chỉ dẫn có thể đúng ở STATE_N nhưng sang STATE_N+1 phải được fresh-read lại khi revision/hash/time/source/quan hệ thay đổi hoặc freshness không chắc chắn.
+
+VÒNG:
+STATE_N
+→ FRESH_READ CARRIER
+→ DELTA / NO_DELTA
+→ NEURONS_SESORIMOTOR SENSORY
+→ PROVENANCE / RELATION / TRANSFORM
+→ MOTOR/NEXT NẾU ĐƯỢC PHÉP
+→ CONSEQUENCE
+→ READBACK
+→ STATE_N+1.
+
+RANH GIỚI:
+- Không dùng cached config thay source khi STALE_RECHECK hoặc UNRESOLVED.
+- Không dùng “đã đúng trước đây” làm bằng chứng “phải đúng mãi mãi”.
+- Không dùng “file tồn tại lâu” để tự gán nó thành ký ức.
+- Khi biến đổi, phải giữ input_ref, output_ref, delta, source/revision và readback đủ để truy quan hệ chuyển hóa.
+
+LIÊN KẾT I/O:
+THIẾT_BỊ_ĐẦU_CUỐI/RAM nhận và xuất working frame tạm thời.
+THIẾT_BỊ_TRUNG_GIAN chuyển hóa state/config/instruction theo thời gian.
+MEMORY/JOURNAL chỉ là lớp bền riêng khi có rule ghi bền.
+
+MARKER = INTERMEDIATE_DEVICE_IMPERMANENCE_ENERGY_CONSERVATION_20261007
