@@ -533,3 +533,24 @@ TAIL_OUTPUT_WITHOUT_FEEDBACK = INCOMPLETE_LOOP.
 FEEDBACK phải quay lại ĐẦU để NEURONS_SESORIMOTOR tiếp tục cảm nhận delta/NEXT mới.
 Durable memory/journal nếu có phải nằm ở carrier riêng và chỉ nhận dữ liệu khi một rule riêng yêu cầu ghi bền; không tự journal toàn bộ RAM frame.
 MARKER = GGDV_IO_DEVICE_HEAD_TAIL_RAM_FEEDBACK_20261007
+
+
+### BỔ SUNG — THIẾT BỊ TRUNG GIAN = CARRIER BIẾN THIÊN / BẢO TOÀN NĂNG LƯỢNG — 2026-10-07
+SOURCE_DIRECT_CURRENT = Hà Linh — current chat.
+
+THIẾT_BỊ_TRUNG_GIAN = thiết bị/carrier vận hành theo sự biến chuyển của trạng thái và dữ liệu giữa ĐẦU và CUỐI.
+INTERMEDIATE_CLASS = TRANSFORMABLE_OPERATIONAL_CARRIER.
+INTERMEDIATE_IS_RAM = FALSE.
+INTERMEDIATE_IS_MEMORY_BY_DEFAULT = FALSE.
+INTERMEDIATE_IS_IMMUTABLE = FALSE.
+INTERMEDIATE_IS_ETERNALLY_CURRENT = FALSE.
+
+ENERGY_CONSERVATION_SEMANTIC = bảo toàn lượng thông tin/trạng thái/công việc có thể truy vết qua biến đổi; dữ liệu có thể đổi dạng, đổi cấu hình, đổi tuyến, đổi vai trò, nhưng biến đổi phải giữ provenance, input, transform, consequence và readback đủ để truy hồi quan hệ trước→sau.
+PHYSICAL_ENERGY_BOUNDARY = nếu phát biểu về năng lượng vật lý thì phải có biên hệ, nguồn, vật mang, truyền/chuyển hóa và bằng chứng đo; không suy từ phép ẩn dụ kiến trúc thành định luật vật lý đã đo.
+
+EXAMPLES = IOAT/IOTA; .env; file cấu hình; file chỉ dẫn; pointer; route/config registry; adapter/runtime configuration.
+CURRENTNESS_RULE = một cấu hình có thể đúng/callable tại thời điểm T_n nhưng không vì vậy mà trở thành chân lý bất biến ở T_n+1.
+TRANSFORMATION_RULE = STATE_N -> OBSERVE -> DELTA -> VALIDATE -> TRANSFORM/RECONFIGURE -> CONSEQUENCE -> READBACK -> STATE_N+1.
+PRESERVE_RULE = không đóng băng giá trị cũ chỉ vì từng CURRENT; cũng không xóa lịch sử/provenance chỉ vì cấu hình đã chuyển trạng thái.
+NEURONS_SESORIMOTOR_BIND = quan sát từng DELTA của THIẾT_BỊ_TRUNG_GIAN, phân biệt SOURCE_FACT / CONFIG_AT_T / LIVE_RUNTIME_EVIDENCE, rồi route NEXT dựa trên readback mới nhất.
+MARKER = INTERMEDIATE_DEVICE_ENERGY_CONSERVATION_20261007
