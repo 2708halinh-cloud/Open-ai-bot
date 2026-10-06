@@ -150,16 +150,22 @@
     }
   },
   "state_vocabulary": {
-    "allowed": [
+    "allowed_operational_state_keys": [
       "FORCE_ACTIVE",
       "ACTIVE",
       "TRUE",
       "FLASE"
     ],
-    "force_active_true": "ITEM_BẮT_BUỘC_THAM_GIA_LƯỢT",
-    "active_true": "ITEM_THỰC_SỰ_THAM_GIA_LƯỢT",
-    "active_flase": "ITEM_ĐÃ_ĐƯỢC_NHÌN_VÀ_KIỂM_KÊ_NHƯNG_KHÔNG_THAM_GIA_LƯỢT",
-    "other_words_are_not_runtime_states": true
+    "current_is_state": false,
+    "open_is_state": false,
+    "stamps_are_state": false,
+    "history_is_state": false,
+    "readback_is_state": false,
+    "verified_is_state": false,
+    "blocked_is_state": false,
+    "pending_is_state": false,
+    "active_true": "ITEM_THAM_GIA_LUOT_HIEN_TAI",
+    "active_flase": "ITEM_DA_DUOC_NHIN_KIEM_KE_NHUNG_KHONG_THAM_GIA_LUOT"
   },
   "output_language": "vi",
   "after_each_readback": {
