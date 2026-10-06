@@ -29,11 +29,19 @@ jobs:
           python3 - <<'PY'
           import json
           q=json.load(open('LOCAL_BRIDGE/QUEUE_CURRENT.json'))
-          assert q['action'] in {'BOOT_G','STATUS','RECOVER_CONTINUITY','RECOVER_AND_BOOT_G','UNIFY_CONTROL_PLANE'}
-          assert q['target']=='G:'
-          assert q['require_usb'] is True
-          assert q['forbid_windows_boot_or_system_disk'] is True
-          assert q['image_sha256']=='f993e15478a1391c3a9d14d368158043d98c51494f3ae81e5b633870855c96df'
+          action=q['action']
+          allowed={'BOOT_G','STATUS','RECOVER_CONTINUITY','RECOVER_AND_BOOT_G','UNIFY_CONTROL_PLANE'}
+          assert action in allowed
+          if action in {'BOOT_G','RECOVER_AND_BOOT_G'}:
+              assert q['target']=='G:'
+              assert q['require_usb'] is True
+              assert q['forbid_windows_boot_or_system_disk'] is True
+              assert q['image_sha256']=='f993e15478a1391c3a9d14d368158043d98c51494f3ae81e5b633870855c96df'
+          elif action == 'UNIFY_CONTROL_PLANE':
+              assert q.get('history_preserved') is True
+              assert q.get('no_reset') is True
+              assert q.get('secrets',{}).get('echo_values') is False
+              assert q.get('secrets',{}).get('commit_values') is False
           PY
       - name: Recovery contract
         run: |
