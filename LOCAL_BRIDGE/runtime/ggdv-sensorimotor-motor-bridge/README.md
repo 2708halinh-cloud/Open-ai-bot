@@ -15,8 +15,7 @@ The package itself does not prove the machine is connected. Install it in a desk
 
 State-changing tools default OFF. Start the local MCP process with `GGDV_MOTOR_ENABLE=1` only after authorizing machine mutations. `adb` must be available on PATH (or set `GGDV_ADB_PATH`). Set `GGDV_APP_ADAPTER` to the current local `.vscode/scripts/app_adapters.py` path when auto-discovery cannot find it.
 
-The user's current project path can be reached through WSL with:
-`/home/halin/kepler/worktrees/Open-ai-bot-2-unify-item-matrix-34d45d00`.
+Resolve the current project path at runtime from `GGDV_REPO_PATH`, the active workspace, or Git worktree provenance. Do not pin a generated worktree directory name into the plugin.
 
 ## Journal
 
