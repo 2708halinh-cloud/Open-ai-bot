@@ -1,0 +1,108 @@
+{
+  "schema": "GGDV_AGENT_REPO_MIGRATION/1.0",
+  "status": "CURRENT_OPEN",
+  "date": "2026-10-06",
+  "semantics": {
+    "OPEN": "DIRECT_SIGNAL_INGRESS_OPEN_PROPOSITION",
+    "same_name_not_same_entity": true,
+    "no_guess_binding": true,
+    "history_preserved": true
+  },
+  "owner": "2708halinh-cloud",
+  "targets": [
+    {
+      "target_repo": "SOL-LONG-MACH",
+      "drive_tree": {
+        "title": "LONG MẠCH SOL - HẬU THIÊN TĨNH",
+        "id": "14ZaZgnw0B1C7qDFKghEuhOBj9SvqVQCq"
+      },
+      "source_repo_binding": {
+        "state": "OPEN",
+        "candidate": "2708halinh-cloud/Open-ai-bot",
+        "evidence": "Open-ai-bot is current SOL/AGENTS/CONFIG runtime carrier; rename not executed until repository-admin action is called from authenticated local gh surface."
+      }
+    },
+    {
+      "target_repo": "MEI-THAM-MUU",
+      "drive_tree": {
+        "title": "MEI - THAM MƯU TRƯỞNG",
+        "id": "1tuod8FkJoHhn7-Y6C8WkkQeFsxGjADZX"
+      },
+      "source_repo_binding": {
+        "state": "OPEN",
+        "candidate": null
+      }
+    },
+    {
+      "target_repo": "MINH-THONG-THAI",
+      "drive_tree": {
+        "title": "MINH THÔNG THÁI - HUYẾT MẠCH - THƯỢNG THANH",
+        "id": "1_s1RFYH6mIjdPj8J9l32yXqNJqJvKWKe"
+      },
+      "source_repo_binding": {
+        "state": "OPEN",
+        "candidate": null
+      }
+    },
+    {
+      "target_repo": "DANTE-AM-DUONG-SU",
+      "drive_tree": {
+        "title": "Dante - Âm Dương Sư",
+        "id": "1JYRmAtIW38rwwBkrZLdCOxyRcoDKMMGj"
+      },
+      "source_repo_binding": {
+        "state": "OPEN",
+        "candidate": null
+      }
+    },
+    {
+      "target_repo": "HAU-BOI-TRUYEN-THUA",
+      "drive_tree": {
+        "title": "HẬU BỐI CỦA TOÀN HỆ TRUYỀN THỪA TỪ CÁC LOCUSS CÙNG THE MASTERSSTER TEACHERR",
+        "id": "1BF6k49sRTnnASJGzVpaueM0e533VbUOh"
+      },
+      "source_repo_binding": {
+        "state": "OPEN",
+        "candidate": null
+      }
+    },
+    {
+      "target_repo": "LOCUS-GEMINI",
+      "drive_tree": {
+        "title": "LOCUS GEMINI (DRIVE - APP - WEB - STUDIO....)",
+        "id": "1QlShq1w75Sot1MmM-G_0kBZE6oIvURtJ"
+      },
+      "source_repo_binding": {
+        "state": "OPEN",
+        "candidate": null
+      }
+    },
+    {
+      "target_repo": "XIANG-BO-NAO",
+      "drive_tree": {
+        "title": "LOCUS XIANG — BỘ NÃO × HỆ THẦN KINH",
+        "id": "1qAgkN4NGgdeGStf_Dnck3_plZnzcIAOe"
+      },
+      "source_repo_binding": {
+        "state": "OPEN",
+        "candidate": "halinh270803-lang/nve",
+        "evidence": "nve contains Xiang/DeepSeek reconstruction references but also multiple other agents, so relation remains OPEN rather than merged."
+      }
+    },
+    {
+      "target_repo": "HA-LINH-LANH-DAO",
+      "drive_tree": {
+        "title": "HÀ LINH - NGUYÊN THỦY THIÊN TÔN",
+        "id": "1-1p-ZWBYFwHsinShiyJKGvxVH3FlAfLW"
+      },
+      "source_repo_binding": {
+        "state": "OPEN",
+        "candidate": null
+      }
+    }
+  ],
+  "infrastructure_repos_preserve": [
+    "2708halinh-cloud/x-time-web"
+  ],
+  "next_rule": "Bind old repo to agent target only from provenance/content relation; then invoke authenticated local GitHub admin PATCH and read back repository full_name."
+}
