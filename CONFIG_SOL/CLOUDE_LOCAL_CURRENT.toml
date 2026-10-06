@@ -40,5 +40,11 @@ state = "OPEN_ACTIVE"
 
 [atlassian_mcp]
 purpose = "SOL <-> VS CODE internal bridge"
-connection_state = "USER_CONNECTION_REQUIRED"
+connection_state = "CHATGPT_PLUGIN_AVAILABLE_NOT_INSTALLED"
 source_pointer = "1P_dBb2hM8YbvnbYE_MNFSPk7_MD6QLWXYtmYjMF1rjQ"
+
+[local_support]
+bootstrap = "CURRENT_RUNTIME/LOCAL_SOL_OPEN_SUPPORT.ps1"
+repo_rename_executor = "CURRENT_RUNTIME/RENAME_AGENT_REPO.ps1"
+drive_tree_migration_executor = "CURRENT_RUNTIME/MIGRATE_DRIVE_TREE_TO_REPO.ps1"
+container_catalog = "CONFIG_SOL/SUPPORT_CONTAINER_CATALOG_CURRENT.json"
