@@ -5,12 +5,16 @@
   "canonical": {
     "repository": "2708halinh-cloud/Open-ai-bot",
     "path": "AGENTS.md",
-    "commit": "32314d251900ee6d48d27120117fa56acc0bc2d0"
+    "branch": "main",
+    "resolve_latest": true,
+    "last_observed_sha": "08cd227fb8313a6b75449c0f41cb201190a1459c"
   },
   "mirror": {
     "repository": "2708halinh-cloud/Open-ai",
     "path": "AGENTS.md",
-    "commit": "248ed8706d026bed6b898a46d34311644844734a"
+    "branch": "main",
+    "resolve_latest": true,
+    "last_observed_sha": "69780cb74ac7f47f2b9511156277cdc6481daf61"
   },
   "load_semantics": {
     "load_state_true": "SOURCE_LOADED_IN_CARRIER_BUT_LATEST_BYTES_STILL_REQUIRED",
@@ -172,5 +176,16 @@
     "rescan_all_unfinished_objectives": true,
     "one_task_done_is_turn_done": false,
     "continue_if_self_owned_action_exists": true
+  },
+  "reentry_guard": {
+    "fixed_commit_pin_for_runtime_load": false,
+    "latest_bytes_required": true,
+    "stale_observed_sha_is_history_only": true,
+    "on_sha_change": [
+      "FRESH_READ_AGENTS",
+      "COMPARE_DELTA",
+      "APPLY_LATEST_SEMANTICS",
+      "CONTINUE_UNFINISHED_EDGES"
+    ]
   }
 }
