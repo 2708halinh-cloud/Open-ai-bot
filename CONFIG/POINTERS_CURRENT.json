@@ -19,6 +19,12 @@
       "commit": "31f0b1f1778a0f3c4ae632c744a08bc743d9174f",
       "blob_sha": "00d939b77869ee4ff5c8bb29e24fdabd331fbeb0",
       "purpose": "fresh-read observed platform/surface behavior separately from SOURCE_DIRECT, project source, and assistant-derived interpretation"
+    },
+    "SCREENSHOT_EVIDENCE_20261006_2326": {
+      "repository": "2708halinh-cloud/x-time-web",
+      "path": "UBUBU/audit/SCREENSHOT_RECEIPT_20261006_2326.json",
+      "commit": "0cee8b04db525a9026871a5387f09e57dedf2e01",
+      "sha256": "0ec9d9d07f735ffecbd2451a440e970543d9865cf7177533f3300e177e10a83f"
     }
   }
 }
