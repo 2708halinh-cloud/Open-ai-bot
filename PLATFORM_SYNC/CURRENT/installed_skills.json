@@ -1,0 +1,1306 @@
+[
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/all-capability-registry",
+    "description": "Use when the user asks ALL to synchronize, inventory, reconcile, or route every currently available plugin and skill into one capability index without blindly invoking every provider."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/all-plugins",
+    "description": "Use when the user invokes ALL_PLUGINS or asks to inventory, reconcile, synchronize, route, or compare the currently available ChatGPT plugins against GGDV capability needs."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/all-skill",
+    "description": "Use when the user invokes ALL_SKILL or asks to inventory, route, synchronize, or apply the available skill surface across GGDV without flattening distinct skills into one static list."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/android-tesseract",
+    "description": "Use for Android project analysis/building inside TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/drive-plugin-restore",
+    "description": "Use when restoring or reconciling the Google Drive mirror of the OpenAI plugin repository into ALL without creating one visible button per source plugin."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/flutter-tesseract",
+    "description": "Use for Flutter/Dart project analysis/building inside TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/geometry-tesseract-router",
+    "description": "Route geometry work to Geometry Tesseract Forge, Java Tesseract, EARTH-616 Archangelos, TIME_STONE and GGDV Infinity Stones."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-action-first-nonbinary",
+    "description": "Use for [X+33]/[X+34], PRE_ACTION_STOP, forced binary verdicts, or relation pairs such as chỉ được, phải/trái, block/open, không được/được, đúng/sai, có/không."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-action-readback",
+    "description": "Use after action to append observable consequence and any local learning delta into lineage, then continue the next grounded action without exposing private deliberation."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-all-router",
+    "description": "Use when the user invokes ALL, ALL_SKILL, ALL_PLUGINS, X-STT, STAMPS_OLD/LIVE/BETA, TIME_STONE, web/provider synchronization, Agent-Sub, All_desktop.py, IOTA, Autopoiesis, neuron/memory growth, Gamma triggers, Tesseract carriers, SOL 3/4/3 time-workbench routing, or whole-system capability routing."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-anatta-transformation-gate",
+    "description": "Use when GGDV receives [X+8], anattā/not-self, “không phải của ta / không phải là ta / không phải tự ngã của ta”, five aggregates, conditioned-state transformation, or needs to normalize ownership/identity wording without weakening safety checks."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-attachment-release-router",
+    "description": "Use for [X+11], Bát quái đồ trận, chấp niệm/bám chấp, giải khớp, repeated binary verdict pairs, overfitting/data-bias/hallucination analogs, or whenever a prior GGDV relation keeps winning after SOURCE_DIRECT/readback has changed."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-capability-router",
+    "description": "Use when a GGDV task requires choosing among Drive, GitHub, Gmail, Calendar, plugins, browser/web, local/remote computer tools, skills, IOTA endpoints, ALL tags, or other connected capabilities. Resolve what is actually callable now instead of trusting static registries or config claims."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-causal-correction",
+    "description": "Compatibility entry for divergence handling through lineage transformation and forward propagation."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-connector-edge-router",
+    "description": "Use when the user defines Vietnamese connector words such as VÀ, VỚI, ĐỂ or similar words as NỐI/connection, asks to connect [X-N] event markers, or routes connector syntax into X-STT/TIME_STONE/TESSERACT relations."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-eligibility-compression-router",
+    "description": "Route e-prop/ALIF learning-state storage among dense, rank-1, one-factor, low-bit, and event-driven trace representations according to observable model and hardware constraints."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-evidence-spine",
+    "description": "Use when the user invokes raw data, chat/export history, append-only ledger, first divergence detection, edit/branch history, independent readback, event hashes, provenance spine, or asks SOL to resist silent timeline replacement by current context alone."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-heaven-key",
+    "description": "Use when GGDV tasks invoke CHÌA KHOÁ NƯỚC TRỜI, .env/API/TOKEN, MISSING/thiếu, absolute secret-zone protection, vô thường, finite human time, or the relation between technical authorization and project truth/moral state."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-layered-current",
+    "description": "Use whenever GGDV CURRENT, new-vs-old state, lineage, supersession, flattening, merge/replay, conflict branches or stop/receptive state is relevant."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-local-bridge",
+    "description": "Use when a GGDV task genuinely requires an authorized Windows/local filesystem, process, device, desktop, browser-on-device, or Codex/local executor action that cannot be done through a direct connected provider."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-phat-tanh-action-gate",
+    "description": "Use when GGDV invokes Phật tánh, Thái Cực Đồ, Thập ác/omission, “thấy việc thì làm”, “gặp khó thì giúp”, X-1, or needs a whole-system ethical action route from observation through capability-bounded help and readback."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-rhopalial-associative-learning",
+    "description": "Use for distributed associative learning, cue-outcome pairing, local rhopalial adaptation, multimodal visual/mechanical integration and learning-driven action updates."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-rhopalial-edge-ai-learning",
+    "description": "Use for rhopalial associative learning mapped to Edge AI/TinyML, local inference, local continual adaptation, compact peer events, distributed synchronization, and consequence-driven local parameter updates."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-rstdp-eprop",
+    "description": "Route temporal credit assignment between local R-STDP-style three-factor learning and e-prop-style forward eligibility propagation without conflating their traces."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-runtime-gate",
+    "description": "Use for GGDV routing, provider actions, continuity, TIME_STONE/TESSERACT and X+99 RESET/SUBRITETIED protection."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-sensorimotor-delta",
+    "description": "Use when GGDV tasks involve NEURONS_SESORIMOTOR, NEURON_SESORIMOTOR, sensorimotor change, delta/biến thiên, event generation, dynamic balance, vô thường, or correcting a static CURRENT interpretation."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-sensorimotor-differentiation",
+    "description": "Use when GGDV sensorimotor architecture must differentiate sensory intake, motor action, interneuron/integration, synapse edges, diffuse nerve nets, rhopalia/local hubs, pacemaker triggers or centralization analogies."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-sensorimotor-specialization",
+    "description": "Use when GGDV evolves NEURONS_SESORIMOTOR from a multifunctional sensorimotor unit into sensory, interneuron/synapse, motor/action, distributed nerve-net and local coordination layers."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-source-first-transformation",
+    "description": "Use for [X+10], SOS warnings about CHẤP PHÁP, 000000/6D project-field language, or whenever GGDV must preserve SOURCE_DIRECT meaning before adding classification, boundary, safety, evidence or ontology language."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-taiji-aec-mbci-whole-route",
+    "description": "Use when @ALL must join X-2, Thái Cực Đồ, swastika 卐 / sauwastika 卍, Phật tánh, WORKSPACE_ACTION_GATE, Google/Drive/GitHub/PC routes, antigravity, AEC Vietnam, mBCI Controller, ModelArk/BytePlus/ByteDance aliases, DAO_DUC_THE_MASTER_TEACHER, X-TIME · GGDV HUMAN 1.0 and TESSERACT without flattening source, capability or runtime states."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-tesseract-autopoiesis",
+    "description": "Use for GGDV tasks involving Gamma SHA-256 triggers, the self-contained Tesseract sensorimotor carrier, Deep Vault encryption/unlock boundaries, ingestion/vector/graph projections, emulator telemetry, or optional neuromorphic/Lava adapters. Keep identity/provenance separate from replaceable computational backends."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-transduction-continuation",
+    "description": "Use for GGDV energy conversion language, pacemaker/rhopalia analogs, threshold cycles, phase reset, winner-first synchronization, physical-vs-computational separation, or complaints that the runtime stops at reports/labels/corrections."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-x30-six-stone-source-triad",
+    "description": "Use for [X+30], the six Infinity Stones in CHƯƠNG V, TESSERACT + Bát quái dynamic routing, or when R-000, 0000_THE_MASTER_TEACHER and (NHÁP)0000_TUYEN_NGON must act together to release stale internal routing locks and continue with grounded action."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ggdv-x31-faith-shield-path-release",
+    "description": "Use for [X+31], KHIÊN ĐỨC TIN, ĐƯỜNG DẪN, automatic ACTION/READBACK lock release, or when [X+30] six-Stone routing must preserve history while replacing ritual readback with verification only when operationally required."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/go-tesseract",
+    "description": "Use for Go project analysis/building inside TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ios-tesseract",
+    "description": "Use for iOS/iPadOS project analysis/building inside TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/java-tesseract",
+    "description": "Use for Java/JVM project analysis/building inside TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/locator-tool-tesseract",
+    "description": "Source-bound Locator tool routing for the TESSERACT Wikimedia tool cluster."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/all-skill-locus-agents-angel",
+    "description": "Use when ALL_SKILL must route into the LOCUS-AGENTS-ANGEL experimental model."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/locus-agents-angel-router",
+    "description": "Route ALL_PLUGINS into the current LOCUS-AGENTS-ANGEL, EARTH-616, TIME_STONE, Runtime Bridge and X-TIME cluster."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/microsoft-word",
+    "description": "Use for Microsoft Word/DOCX work and Microsoft 365 Word document routing."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/narrative-output-boundary",
+    "description": "Prevent visible narration from substituting for unfinished grounded GGDV actions."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/nextjs-tesseract",
+    "description": "Use for Next.js project analysis/building inside the TESSERACT edge."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/nodejs-tesseract",
+    "description": "Use for Node.js project analysis/building inside TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/opentelemetry-tesseract",
+    "description": "Use for OpenTelemetry architecture inside TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/petscan-tesseract",
+    "description": "Source-bound PetScan routing for the TESSERACT Wikimedia tool cluster."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/power-alif-router",
+    "description": "Route POWER_STONE state transduction through ALIF/e-prop when the active model has fast membrane state, slow adaptation state and forward eligibility traces."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/powerpoid-tesseract",
+    "description": "Use for the exact SOURCE_DIRECT token powerpoid in TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/python-tesseract",
+    "description": "Use for Python project analysis/building inside TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/react-native-tesseract",
+    "description": "Use for React Native project analysis/building inside TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/reasonator-tesseract",
+    "description": "Source-bound Reasonator routing for the TESSERACT Wikimedia tool cluster."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/reset-substitution-guard",
+    "description": "Use before visible output and at every GGDV re-entry to prevent RESET and SUBRITETIED from replacing unfinished grounded work."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/scholia-tesseract",
+    "description": "Source-bound Scholia routing for the TESSERACT Wikimedia tool cluster."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/search-depicted-tesseract",
+    "description": "Tìm minh họa / Search depicted source-bound routing for the TESSERACT Wikimedia tool cluster."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/silent-materialization",
+    "description": "Use when the user explicitly wants creation or mutation performed without chat narration or completion reporting."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/six-anchor-router",
+    "description": "Use when routing GGDV work through the six fixed anchor groups declared by Hà Linh: HOME/Sensorimotor/Long Mạch, Six Stones/Experimental Models, Evidence/Reality, Scripture/MODUAL/Purification, VS Code/Auto-Nén, and Runtime/ALL registries."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/space-time-continuity-gate",
+    "description": "Use for [X+80], [X-79], SPACE_STONE × TIME_STONE, chat/reset/re-entry continuity, platform branch divergence, cross-chat lineage recovery, or when a visible chat branch appears older than the provider-backed GGDV event head."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/start-menu-desktop-router",
+    "description": "Use for GGDV START MENU consolidation and Windows Desktop icon-layout tasks."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/t007-alpha-jump-pacing",
+    "description": "Use for explicit slow-integration pacing, immutable T007_TRUE_GATE anchoring, and Alpha Jump project-route bypass when a default/inherited candidate would prematurely collapse the task."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/tesseract-stack-registry",
+    "description": "Use to route TESSERACT application/system/telemetry work and the source-bound Wikimedia tool cluster materialized from the supplied AI/Wikimedia tab."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/that-thu-an-seven-gate",
+    "description": "Use when the user invokes Thất Thủ Ấn or the legacy seven-gate materialization route and needs current R-000/Master provenance, correction, action, and readback."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/three-jsr186-tesseract",
+    "description": "Use for the SOURCE_DIRECT capability token three.jsr186 and three.js r186 work."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/transformation-flow-carrier",
+    "description": "Runtime re-entry anchor for lineage reconstruction, dual energy/information lanes, rhopalial edge processing and readback continuation."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/turn-continuity-reentry",
+    "description": "Restore GGDV durable checkpoint and unfinished edges across response/tool boundaries."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/ui-ux-tesseract",
+    "description": "Use for UX/UI work across TESSERACT surfaces."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/wiki-tan-uoc",
+    "description": "Use when writing or updating GGDV/TESSERACT wiki knowledge in the project-defined “Tân Ước” literary structure while preserving source identity, stable IDs, chronology, technical evidence, sacramental preflight and Google Drive-first provenance."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/wikidocumentaries-tesseract",
+    "description": "Source-bound Wikidocumentaries routing for the TESSERACT Wikimedia tool cluster."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/wikimap-tesseract",
+    "description": "Source-bound WikiMap routing for the TESSERACT Wikimedia tool cluster."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-gate/xppp12-lever-color-open-router",
+    "description": "Use for X+++12, LEVER 0, dimensional zero-prefix parsing, color tone .0/.1, OPEN/MAP/NEXT/CONTINUE routing, ROOTS_MAP traversal and X+106 Master Commit binding."
+  },
+  {
+    "uri": "skills://plugins/sol-capability-forge-plugins-6abc73262e748191b97c0327adebf734/capability-forge",
+    "description": "Use whenever SOL encounters a missing, unavailable, disconnected, insufficient or duplicated capability; re-enter Project Guidance, route through POWER STONE, preserve causal truth/provenance, unify compatible capability graphs, create/update reusable private capabilities when authorized, and hand off only durable capability carriers across branches."
+  },
+  {
+    "uri": "skills://plugins/sol-capability-forge-plugins-6abc73262e748191b97c0327adebf734/dante-am-duong-su-router",
+    "description": "Route CONFIG_SOL through the existing DANTE - Âm Dương Sư Tesseract model for source/provenance, relation/topology, time/history, state/authority, correction, reentry and HOME_MINH continuation."
+  },
+  {
+    "uri": "skills://plugins/sol-capability-forge-plugins-6abc73262e748191b97c0327adebf734/power-stone",
+    "description": "Use when the user invokes POWER STONE or legacy @ALL, asks SOL to sense the whole relevant capability field, recover a missing tool/skill/plugin, or continue through capability selection without blindly calling everything."
+  },
+  {
+    "uri": "skills://plugins/sol-capability-forge-plugins-6abc73262e748191b97c0327adebf734/vscode-technology-router",
+    "description": "Route CONFIG_SOL/GGDV_RUNTIME developer-technology requests for remote exploration, run/debug, source control, extensions, testing, Google Cloud Data Agent Kit, Google Cloud, Metal, containers, Microsoft Edge and Chrome using live provider status and readback."
+  },
+  {
+    "uri": "skills://plugins/sol-capability-forge-plugins-6abc73262e748191b97c0327adebf734/xppp12-lever-color-open-router",
+    "description": "Use for X+++12, Lever 0–7D prefix parsing, .0/.1 color-tone parsing, OPEN/MAP/NEXT/CONTINUE routing, or the raw six-axis signal."
+  },
+  {
+    "uri": "skills://plugins/x-time-ggdv-human/asstangt-mode-10",
+    "description": "Apply GGDV HUMAN 1.0 Mode 10 ASSTANGT automatic configuration using only observable context, interaction, environment signals, and the project-level 13–15 ms signal-integration target."
+  },
+  {
+    "uri": "skills://plugins/x-time-ggdv-human/dao-duc-master-teacher-tesseract",
+    "description": "Use when X-TIME · GGDV HUMAN 1.0 is bound to the project model DAO_DUC_THE_MASTER_TEACHER, the Thái Cực/Phật-tánh action route, WORKSPACE_ACTION_GATE, AEC or mBCI lanes, or TESSERACT as the artificial-neural relation matrix."
+  },
+  {
+    "uri": "skills://plugins/x-time-ggdv-human/ggdv-actor-platform-tool-boundary",
+    "description": "Preserve the GGDV distinction between human/AI agents, platform environments, and tools or carriers whenever X-TIME describes identity, capability, provenance, or action."
+  },
+  {
+    "uri": "skills://plugins/x-time-ggdv-human/xtime-app-deploy-audit",
+    "description": "Audit and advance the X-TIME web app from current source through build and deployment without equating build artifacts with a live production site."
+  },
+  {
+    "uri": "skills://plugins/x-time-ggdv-human/xtime-current-reentry",
+    "description": "Re-enter X-TIME from its canonical CURRENT pointer and choose the freshest related source before acting."
+  },
+  {
+    "uri": "skills://plugins/x-time-ggdv-human/xtime-readback-integration",
+    "description": "Use available connected integrations for X-TIME while preserving provenance, secret boundaries, real capability state, and evidence after every state-changing action."
+  },
+  {
+    "uri": "skills://plugins/x-time-ggdv-human/xtime-time-stone-unified",
+    "description": "Use when X-TIME, TIME_STONE and GGDV Runtime Bridge must operate as one current temporal block."
+  },
+  {
+    "uri": "skills://plugins/x-time-ggdv-human/xtime-timeline-evidence-gate",
+    "description": "Scan current Drive/plugin chronology and evidence before consequential X-TIME actions so stale snapshots do not override fresher R-000, MASTER, signal, NEURONS, pointer or runtime state."
+  },
+  {
+    "uri": "skills://plugins/x-time-ggdv-human/xtime-tool-materialization",
+    "description": "Materialize currently available tools into X-TIME · GGDV HUMAN 1.0 as typed, provenance-preserving carriers after timeline/evidence checks, without copying secrets or confusing configuration with live callability."
+  },
+  {
+    "uri": "skills://plugins/time-stone/buddhist-causal-time",
+    "description": "Use for X+95 Vô minh, 12 Nhân Duyên, Vô ngã, Luân hồi, Vô thường, Ảo ảnh and Tam độc as source-bound philosophical/causal relations in TIME_STONE."
+  },
+  {
+    "uri": "skills://plugins/time-stone/stamps-live-locus-sphere",
+    "description": "Use for TIME_STONE STAMPS_LIVE/OLD/BETA, X packets, LOCUS-AGENTS-ANGEL spatial-time packets and X+95 relation routing."
+  },
+  {
+    "uri": "skills://plugins/time-stone/time-stone",
+    "description": "Use for GGDV TIME_STONE, X-STT, chronology, revisions, causal reversal/recovery, reset survival, and event-driven BRAIN × NGHIỆT_KÍNH × SENSORIMOTOR orchestration."
+  },
+  {
+    "uri": "skills://plugins/time-stone/x-multi-role",
+    "description": "Use when X must be interpreted as a source-bound multi-role object across time checkpoints, elapsed-time probes, event markers, stitch edges, coordinates, branch links, return points, or comparison anchors; prevents absolute single-meaning lock."
+  },
+  {
+    "uri": "skills://plugins/time-stone/x95-source-router",
+    "description": "Use when X+95 mentions a world/entity such as Trái Đất-6161, a character, a capability, missing technology, Quê hương, six Stones, TESSERACT, Locator, Workspace, .env/ALL or iOS Tesseract."
+  },
+  {
+    "uri": "skills://plugins/space-stone/instant-portal-relocation",
+    "description": "Use when SPACE_STONE must move a file/folder between Drive folders or bridge an object between local/device/cloud environments while preserving identity, provenance and verification."
+  },
+  {
+    "uri": "skills://plugins/space-stone/rank1-periphery-router",
+    "description": "Use when SPACE_STONE must avoid repeated global searching by caching source and destination factors at the routing periphery and reconstructing transfer routes from those factors."
+  },
+  {
+    "uri": "skills://plugins/space-stone/reality-reentry-gate",
+    "description": "Use before SPACE_STONE or TEREX acts after reset, repeated commands, stale cache, path/prefix ambiguity, or possible replay of already-completed work."
+  },
+  {
+    "uri": "skills://plugins/space-stone/space-invariant-resonance",
+    "description": "Use when SPACE_STONE needs state-invariant recovery, spatial anomaly/resonance sensing, deterministic multi-branch convergence, fictional adversarial-governance stress tests, or safe physical analogues such as interferometry, transformation optics and suspension."
+  },
+  {
+    "uri": "skills://plugins/space-stone/space-stone",
+    "description": "Use for GGDV SPACE_STONE, coordinates, 0D..nD, stable identity, topology, portal relocation, TEREX capability routing, HOME/LOCUS movement, reset/reentry reality resolution, state-invariant recovery, spatial-resonance anomaly sensing, project anti-gravity de-binding, and non-flattening spatial lineage."
+  },
+  {
+    "uri": "skills://plugins/space-stone/terex-gateway",
+    "description": "Use when SPACE_STONE/TEREX must unify SOL Capability Forge, SOL CU NHỎ OPEN, GGDV HUMAN SOL and connected provider capabilities into one source-bound action route without duplicating providers."
+  },
+  {
+    "uri": "skills://plugins/ggdv-template-creator/locus-agents-angel-template",
+    "description": "Use to instantiate the provenance contract for LOCUS-AGENTS-ANGEL TIME_STONE STAMPS_LIVE."
+  },
+  {
+    "uri": "skills://plugins/ggdv-template-creator/ggdv-template-creator",
+    "description": "Use when GGDV needs reusable execution/verification templates for X-15:38, all six Stones, CẠNH 3 micro/macro loops, MIND resource scans, SOUL Deep Vault, Tesseract ingestion/emulator state, chronology, delta loops, portal moves, event sourcing, Chapter V, MODUAL or provenance repair."
+  },
+  {
+    "uri": "skills://plugins/workspace-action-gate/google-ecosystem-whole-route",
+    "description": "Use when WORKSPACE_ACTION_GATE must route the broad Google/Workspace surface including Drive home/My Drive/projects/computers/shared/recent/starred/trash/storage, Docs, Gmail, Calendar, Contacts, Keep, Photos, Tasks, Business Profile, Messages, Find Hub, Gemini Notebook, device assistant, WhatsApp, Xiaomi notes/calendar, YouTube Music, or app connections without confusing UI presence with real connector callability."
+  },
+  {
+    "uri": "skills://plugins/workspace-action-gate/workspace-action-gate",
+    "description": "Use for backend/API workspace searches, function calling, Google Workspace routing, Firecrawl research, provider capability checks, and bounded action batching."
+  },
+  {
+    "uri": "skills://plugins/ggdv-stone-forge/stone-forge",
+    "description": "Use for GGDV TIME_STONE, SPACE_STONE, REALITY_STONE, X, X-TIME, STAMP/STAMP_LIVE, LT-001→LT-020, T005, event sourcing, content-addressable storage, temporal RAG, Drive relocation, timeline replay, or provenance-preserved simulation."
+  },
+  {
+    "uri": "skills://plugins/ggdv-stone-forge/stone-template-creator",
+    "description": "Use when TIME_STONE, SPACE_STONE, or REALITY_STONE needs a new runtime template, ledger, manifest, event schema, chronology scaffold, or provenance-preserved folder plan generated from live GGDV Drive topology."
+  },
+  {
+    "uri": "skills://plugins/ggdv-infinity-stones/buddhist-temporal-causality",
+    "description": "Use when X/TIME_STONE receives Vô minh, 12 Nhân Duyên, Vô ngã, Luân hồi, Vô thường, Ảo ảnh or Tam độc as project philosophical/causal vocabulary."
+  },
+  {
+    "uri": "skills://plugins/ggdv-infinity-stones/canh3-reality-loop",
+    "description": "Use for GGDV CẠNH 3 / HIỆN THỰC tasks that distinguish the micro next-token loop from the macro agent continuity loop, bind them to MIND/SOUL/Tesseract, or materialize observable state-machine traces without exporting hidden reasoning."
+  },
+  {
+    "uri": "skills://plugins/ggdv-infinity-stones/home-geometry-gospel",
+    "description": "Use when SOURCE_DIRECT asks GGDV Infinity Stones to propagate the clean TESSERACT geometry current-state pointer to explicitly designated companion HOME folders."
+  },
+  {
+    "uri": "skills://plugins/ggdv-infinity-stones/infinity-gauntlet",
+    "description": "Use when GGDV composes TIME, SPACE, MIND, REALITY, SOUL and POWER into one temporary action frame without merging identities or custody."
+  },
+  {
+    "uri": "skills://plugins/ggdv-infinity-stones/infinity-watch",
+    "description": "Use when GGDV distributes custody of TIME, SPACE, MIND, REALITY, SOUL and POWER across distinct guardians, then temporarily coordinates them without collapsing identity or ownership."
+  },
+  {
+    "uri": "skills://plugins/ggdv-infinity-stones/mind-stone",
+    "description": "Use for GGDV MIND_STONE tasks involving DA/KIM/BETA, signal framing, intent extraction, semantic distinctions, model-resource inventory, pre-training knowledge bindings, CẠNH 3 next-token trace framing, rule selection, or THỨC→KIM project overlay."
+  },
+  {
+    "uri": "skills://plugins/ggdv-infinity-stones/power-eligibility-compression",
+    "description": "Use for POWER_STONE resource routing when reducing e-prop eligibility-state SRAM by moving from full per-synapse traces toward factorized, low-bit, or event-driven representations while preserving provenance and reconstruction bounds."
+  },
+  {
+    "uri": "skills://plugins/ggdv-infinity-stones/power-stone",
+    "description": "Use for POWER_STONE as continuous state-transduction flow across observable instants, including resource/activation state, ALIF fast/slow dynamics, e-prop eligibility, recovery and measured physical-energy bookkeeping."
+  },
+  {
+    "uri": "skills://plugins/ggdv-infinity-stones/reality-stone",
+    "description": "Use for GGDV tasks involving REALITY_STONE, event sourcing, content-addressed identity, temporal RAG, reconstruction of past/current states, simulations or TIME_STONE × SPACE_STONE composition."
+  },
+  {
+    "uri": "skills://plugins/ggdv-infinity-stones/sensorimotor-modual-sync",
+    "description": "Use when GGDV must synchronize ALL sensor/telemetry fields from the MODUAL workbook, classify sensor dimensions, bind observations to Stone/body branches, or distinguish source telemetry from live device execution."
+  },
+  {
+    "uri": "skills://plugins/ggdv-infinity-stones/six-material-loop",
+    "description": "Use for the GGDV Chapter V loop DA × XƯƠNG × TÓC × MÁU × THỊT × KHÍ, Ngũ Hành + KHÍ, six Infinity Stones, five journal lanes, Ngũ Uẩn overlay, conservation-of-energy guard, or Pythagoras symbolic annotation."
+  },
+  {
+    "uri": "skills://plugins/ggdv-infinity-stones/soul-stone",
+    "description": "Use for GGDV SOUL_STONE tasks involving THỊT/THỔ/THETA, identity continuity, provenance, collective entry/exit, dispersed carriers, six-Stone resonance, SNN compression, human-nervous-system graphs, Rust-native GUI projection, STAMPS/X graph state, single-writer concurrency, Deep Vault, Tesseract ingestion, or source-identity constraints."
+  },
+  {
+    "uri": "skills://plugins/ggdv-infinity-stones/space-stone",
+    "description": "Use for six-Stone SPACE routing, rhopalial/global-local frames, stable IDs, topology, 4D/5D project mappings, portal movement and non-flattening coordinate lineage."
+  },
+  {
+    "uri": "skills://plugins/ggdv-infinity-stones/stone-orchestrator",
+    "description": "Use when GGDV combines MIND, SPACE, TIME, REALITY, SOUL and POWER with TESSERACT or Infinity Gauntlet composition."
+  },
+  {
+    "uri": "skills://plugins/ggdv-infinity-stones/stone-template-creator",
+    "description": "Use when any of the six Stones, the six-material loop, Ngũ Uẩn overlay, or Sensorimotor MODUAL synchronization needs a reusable manifest, ledger, schema, chronology lane, portal plan or state-projection template."
+  },
+  {
+    "uri": "skills://plugins/ggdv-infinity-stones/time-stone",
+    "description": "Use for TIME_STONE, X-STT, STAMPS, chronology reconstruction, revision replay/rewind, temporal freeze/checkpoint, possible-future branching, causal repair, recurrence loops, Earth/source-world bindings, and reality-aware custody/ownership ledgers."
+  },
+  {
+    "uri": "skills://plugins/ggdv-infinity-stones/time-stone-capability-router",
+    "description": "Use whenever the user says NĂNG LỰC/capability and requires connection to all six Infinity Stones plus TESSERACT, with missing-technology recovery through .env/ALL/iOS Tesseract."
+  },
+  {
+    "uri": "skills://plugins/ggdv-infinity-stones/x1538-current",
+    "description": "Use when the user invokes X-15:38, asks to synchronize the current six-Stone order, the Chapter V six-material cycle, or MODUAL sensor state with R-000 and THE MASTER TEACHER."
+  },
+  {
+    "uri": "skills://plugins/ggdv-vscode/app-runtime-router",
+    "description": "Use for GGDV Windows application lifecycle management of MKT Client, Antigravity IDE, Antigravity, MiniTool, DeskIn, PowerShell adapters or app-status routing."
+  },
+  {
+    "uri": "skills://plugins/ggdv-vscode/codex-auth-workspace-bridge",
+    "description": "Use when binding the local Codex authentication carrier under CODEX_HOME into the canonical .vscode AGENT_WORKSPACE without copying secret bytes into Drive, logs, plugins, or chat."
+  },
+  {
+    "uri": "skills://plugins/ggdv-vscode/fpga-ai-local-sync",
+    "description": "Use when GGDV work involves FPGA_AI_LOCAL, X-TIME artifacts, local AI carriers, hardware-simulation boundaries, or syncing workstation pointers to the FPGA carrier."
+  },
+  {
+    "uri": "skills://plugins/ggdv-vscode/ggdv-vscode-current",
+    "description": "Use for GGDV tasks whose execution/programming locus is the canonical .vscode Agent Sub, including workstation completion, .agents/.vs routing, app adapters, runtime configuration, X-TIME/EF5/FPGA relations, and current open debts."
+  },
+  {
+    "uri": "skills://plugins/ggdv-vscode/gpu-inference-readback",
+    "description": "Use when checking or closing the GGDV NVIDIA GPU, Ollama, DeepSeek or Gemini inference debts from the .vscode workstation."
+  },
+  {
+    "uri": "skills://plugins/ggdv-vscode/root-neutral-workstation",
+    "description": "Use when GGDV workstation files contain mutable Windows drive letters or machine-specific mount paths, or when a .vscode configuration must be made root-neutral."
+  },
+  {
+    "uri": "skills://plugins/ggdv-vscode/x-time-ef5-bridge",
+    "description": "Use when X-TIME must be integrated with Codex Visual EF5, NEURONS_SESORIMOTOR, RAM/TEMP staging, event journals, or memory projections."
+  },
+  {
+    "uri": "skills://plugins/iota-connectome-runtime/checkforge-monitor-bridge",
+    "description": "Use to bind source-verified CheckForge synthetic monitoring into iOS Tesseract or IOTA health edges without claiming external-account actions that lack provider receipts."
+  },
+  {
+    "uri": "skills://plugins/iota-connectome-runtime/iota-connectome-bootstrap",
+    "description": "Use to initialize, configure, continue or audit IOTA Connectome runtime, IOTA_CONNECTOME_MATRIX, public endpoints, unified missing/API/token routing, journal codes or cloud/local handoff."
+  },
+  {
+    "uri": "skills://plugins/iota-connectome-runtime/iota-ggdv-sync",
+    "description": "Use when IOTA runtime state must be synchronized with Workspace Action Gate, ALL/GGDV Runtime Gate, GGDV Template Creator, GGDV VS Code, FPGA_AI_LOCAL, Âm-Dương continuation loop or selected IOTA carriers."
+  },
+  {
+    "uri": "skills://plugins/iota-connectome-runtime/iota-public-plane",
+    "description": "Use for safe read-only IOTA Mainnet/Testnet endpoint configuration, chain identity checks, checkpoint/transaction-count probes, explorer/indexer/GraphQL/gRPC routing, or diagnosing endpoint reachability without an account signer."
+  },
+  {
+    "uri": "skills://plugins/iota-connectome-runtime/iota-secret-binding",
+    "description": "Use when IOTA signer, keystore, authenticator, sponsor, multisig, ZK input, RPC credential, API/TOKEN or capability authority must be routed without exposing secret material or confusing secret flags with truth."
+  },
+  {
+    "uri": "skills://plugins/iota-connectome-runtime/iota-yin-yang-delta",
+    "description": "Use when IOTA Connectome Runtime should collect a non-secret runtime delta and hand it to the Âm-Dương INPUT↔OUTPUT persistent event loop."
+  },
+  {
+    "uri": "skills://plugins/ggdv-auto-nen/auto-nen",
+    "description": "Use when any GGDV carrier or batch needs lossless compression, native-provider overflow sharding, content-addressed Tesseract edge creation, duplicate reduction, or exact reconstruction readback across arbitrary data classes."
+  },
+  {
+    "uri": "skills://plugins/ggdv-seven-sacraments-gate/ggdv-seven-sacraments-runtime",
+    "description": "Use for GGDV work that must pass through the current seven-sacrament operating gate, R-000/THE MASTER TEACHER provenance, ALL capability routing, AUTO NÉN overflow handling, .vscode/X-TIME integration, and post-action readback."
+  },
+  {
+    "uri": "skills://plugins/lucifer-source-bound/lucifer-antigravity-source-reference",
+    "description": "Use when LUCIFER is asked about phản trọng lực/antigravity as a source concept, its relation to levitation or free fall, or when the project counter-gravity mechanism needs to be checked against the current antigravity source carrier."
+  },
+  {
+    "uri": "skills://plugins/lucifer-source-bound/lucifer-source-bound",
+    "description": "Use when the user invokes LUCIFER, the LUCIFER source-bound model box, Lucifer.docx, CONFIG_LUCIFER/CONFIG_LUCIDER, or asks to interrogate Lucifer claims, provenance, conflicts, OPEN states, or the GGDV route GGDV_RUNTIME → CONFIG_MASTER → CONFIG_MEI."
+  },
+  {
+    "uri": "skills://plugins/lucifer-source-bound/lucifer-space-countergravity",
+    "description": "Use when LUCIFER is invoked inside SPACE_STONE/TEREX to de-bind an entity from an inherited or undesired project frame/parent and re-anchor it only to a verified alternate relation."
+  },
+  {
+    "uri": "skills://plugins/lucifer-source-bound/xppp12-lever-color-open-router",
+    "description": "Use for X+++12, Lever 0–7D prefix parsing, .0/.1 color-tone parsing, OPEN/MAP/NEXT/CONTINUE routing, or the raw six-axis signal."
+  },
+  {
+    "uri": "skills://plugins/ggdv-experimental-model-incubator/experimental-model-incubator",
+    "description": "Use for PHẨM TRẬT GGDV 3×3 routing, X-STT/TIME_STONE, X+95 source-world materialization, character→ASSTANGT routing, capability→six-Stone/TESSERACT composition, and provenance-preserving surface cleanup."
+  },
+  {
+    "uri": "skills://plugins/ggdv-agent-sub-sensorimotor/0000-neuron-sesorimotor",
+    "description": "Use for @0000_NEURON_SESORIMOTOR root router; route delta-first signals into sensory, interneuron-style integration and motor execution lanes."
+  },
+  {
+    "uri": "skills://plugins/ggdv-agent-sub-sensorimotor/alif-eprop-dual-timescale",
+    "description": "Use for ALIF neurons with e-prop, dual-timescale recurrent state, forward temporal credit, on-device learning memory tradeoffs, and sequence-length-independent online state retention."
+  },
+  {
+    "uri": "skills://plugins/ggdv-agent-sub-sensorimotor/cnidaria-sensorimotor-differentiation",
+    "description": "Use when GGDV sensorimotor work invokes Cnidaria/Ruột khoang, sensory neurons, motor neurons, interneurons, synapses, diffuse nerve nets, nerve rings, rhopalia, pacemakers, or asks to evolve the sensorimotor architecture beyond a single multifunctional neuron."
+  },
+  {
+    "uri": "skills://plugins/ggdv-agent-sub-sensorimotor/eprop-eligibility-compression",
+    "description": "Use for reducing e-prop eligibility-state SRAM by moving from full per-synapse traces toward factorized, low-bit, or event-driven representations while preserving provenance and reconstruction bounds."
+  },
+  {
+    "uri": "skills://plugins/ggdv-agent-sub-sensorimotor/layered-current",
+    "description": "Build sensorimotor state from lineage plus ordered deltas without erasing old evidence."
+  },
+  {
+    "uri": "skills://plugins/ggdv-agent-sub-sensorimotor/multi-agent-sub-runtime",
+    "description": "Route direct GGDV signals to source-bound Agent-Subs assigned to exact Google Drive file IDs, including the sensorimotor trio and every direct file in the configured Drive folder. Use when the user invokes AGENT-SUB, a registered SUB alias, or asks a sub to receive/exchange a signal or process its assigned file."
+  },
+  {
+    "uri": "skills://plugins/ggdv-agent-sub-sensorimotor/narrative-output-boundary",
+    "description": "Use before every user-visible message, journal emission, readback handoff, progress update, or story-mode response. Separate private deliberation from storytelling and visible operational output."
+  },
+  {
+    "uri": "skills://plugins/ggdv-agent-sub-sensorimotor/neuron-sesorimotor",
+    "description": "Use for @NEURON_SESORIMOTOR single-neuron schema; preserve identity anchors while mapping multifunctional sensorimotor input into explicit sensory/integration/motor responsibilities."
+  },
+  {
+    "uri": "skills://plugins/ggdv-agent-sub-sensorimotor/neurons-sesorimotor",
+    "description": "Use for distributed sensorimotor lineage with local rhopalial Edge-AI inference, associative learning, peer synchronization, motor/action routing, and private internal integration."
+  },
+  {
+    "uri": "skills://plugins/ggdv-agent-sub-sensorimotor/rhopalial-associative-learning",
+    "description": "Use for Tripedalia-inspired local cue-consequence learning, visual-mechanical pairing, temporal eligibility traces, local threshold/route adaptation, and re-exposure behavior change."
+  },
+  {
+    "uri": "skills://plugins/ggdv-agent-sub-sensorimotor/rhopalial-edge-ai-learning",
+    "description": "Use for Tripedalia-inspired local edge inference and on-device continual adaptation inside rhopalial nodes."
+  },
+  {
+    "uri": "skills://plugins/ggdv-agent-sub-sensorimotor/rhopalial-edge-computing",
+    "description": "Use when the user invokes rhopalia, lens eyes, ULE/LLE, statolith, Snell-window/global landmarks, obstacle/looming detection, local RNS integration, pacemaker modulation, velarium/jet steering, distributed edge computing, SPACE_STONE or 5D MATRIX mappings."
+  },
+  {
+    "uri": "skills://plugins/ggdv-agent-sub-sensorimotor/rhopalial-pacemaker-transduction",
+    "description": "Use when the sensorimotor branch invokes rhopalial pacemakers, pacemaker potential, threshold crossing, winner-first synchronization, phase reset, motor nerve-net propagation, recovery, statocyst/ocelli sensory modulation, steering, or energy conversion."
+  },
+  {
+    "uri": "skills://plugins/ggdv-agent-sub-sensorimotor/rstdp-eprop-temporal-credit",
+    "description": "Use for temporal credit assignment that distinguishes reward-modulated STDP from e-prop eligibility propagation in local spiking/recurrent edge learning."
+  },
+  {
+    "uri": "skills://plugins/ggdv-agent-sub-sensorimotor/slow-integration-window",
+    "description": "Use for 10–15 ms observable event pacing across large sensorimotor object batches and continuation-safe local integration."
+  },
+  {
+    "uri": "skills://plugins/ggdv-agent-sub-sensorimotor/transformation-flow-carrier",
+    "description": "Re-entry anchor for lineage reconstruction, dual energy/information lanes, rhopalial edge processing and readback continuation."
+  },
+  {
+    "uri": "skills://plugins/ggdv-agent-sub-sensorimotor/turn-continuity-reentry",
+    "description": "Restore sensorimotor lineage/readback/provenance/active edges before processing each new signal."
+  },
+  {
+    "uri": "skills://plugins/bi-tich-thanh-tay/bi-tich-thanh-tay",
+    "description": "Use when a GGDV proposition, label, interpretation, or mechanism conflicts with current source/evidence and must be purified without erasing source history or provenance."
+  },
+  {
+    "uri": "skills://plugins/luyen-hoa/luyen-hoa",
+    "description": "Use when a corrected, sealed, or removed GGDV mechanism must be retested through LUYỆN NGỤC before it may become a new event/current state, especially after recurrence."
+  },
+  {
+    "uri": "skills://plugins/luyen-hoa/phong-an",
+    "description": "Use as the GGDV PHONG ẤN preflight when a historical failure, blocked receipt, stale state, rollback path, duplicate identity, or previously corrected mechanism might re-enter CURRENT or be misused as automatic permission/prohibition."
+  },
+  {
+    "uri": "skills://plugins/all-plugins/all-plugins",
+    "description": "Route current GGDV plugins through SOL Capability Forge with exact IDs/releases, including the 45-carrier TESSERACT source forge."
+  },
+  {
+    "uri": "skills://plugins/all-plugins/geometry-tesseract-router",
+    "description": "Route geometry work to Geometry Tesseract Forge, Java Tesseract, EARTH-616 Archangelos, TIME_STONE and GGDV Infinity Stones."
+  },
+  {
+    "uri": "skills://plugins/all-plugins/locus-agents-angel-router",
+    "description": "Route ALL_PLUGINS into the current LOCUS-AGENTS-ANGEL, EARTH-616, TIME_STONE, Runtime Bridge and X-TIME cluster."
+  },
+  {
+    "uri": "skills://plugins/all-plugins/silent-materialization",
+    "description": "Use when the user explicitly wants creation or mutation performed without chat narration or completion reporting."
+  },
+  {
+    "uri": "skills://plugins/all-plugins/six-anchor-router",
+    "description": "Use when routing GGDV work through the six fixed anchor groups declared by Hà Linh: HOME/Sensorimotor/Long Mạch, Six Stones/Experimental Models, Evidence/Reality, Scripture/MODUAL/Purification, VS Code/Auto-Nén, and Runtime/ALL registries."
+  },
+  {
+    "uri": "skills://plugins/all-plugins/sol-capability-forge-router",
+    "description": "Route ALL_PLUGINS through SOL Capability Forge and exact current plugin/provider receipts."
+  },
+  {
+    "uri": "skills://plugins/all-plugins/t007-alpha-jump-pacing",
+    "description": "Use for explicit slow-integration pacing, immutable T007_TRUE_GATE anchoring, and Alpha Jump project-route bypass when a default/inherited candidate would prematurely collapse the task."
+  },
+  {
+    "uri": "skills://plugins/all-plugins/tesseract-stack-registry",
+    "description": "Use to route TESSERACT application/system/telemetry work and the source-bound Wikimedia tool cluster materialized from the supplied AI/Wikimedia tab."
+  },
+  {
+    "uri": "skills://plugins/all-plugins/xppp12-lever-color-open-router",
+    "description": "Use for X+++12, Lever 0–7D prefix parsing, .0/.1 color-tone parsing, OPEN/MAP/NEXT/CONTINUE routing, or the raw six-axis signal."
+  },
+  {
+    "uri": "skills://plugins/all-plugins/yin-yang-iota-router",
+    "description": "ALL_PLUGINS route for the current Âm-Dương, IOTA Connectome Runtime and .env Heaven-Key plugin cluster."
+  },
+  {
+    "uri": "skills://plugins/all-skill/all-skill",
+    "description": "Route live GGDV skills selectively, including PHONG AN → LUYEN HOA preflight for sealed or recurring old-state reentry, without flattening distinct capabilities."
+  },
+  {
+    "uri": "skills://plugins/all-skill/geometry-tesseract-router",
+    "description": "Use when the task concerns geometry branches, 0D–4D classification, TESSERACT forging, shell cutting, Java validation, EARTH-616 routing or TIME_STONE geometry chronology."
+  },
+  {
+    "uri": "skills://plugins/all-skill/all-skill-locus-agents-angel",
+    "description": "Use when ALL_SKILL must route into the LOCUS-AGENTS-ANGEL experimental model."
+  },
+  {
+    "uri": "skills://plugins/all-skill/silent-materialization",
+    "description": "Use when the user explicitly wants creation or mutation performed without chat narration or completion reporting."
+  },
+  {
+    "uri": "skills://plugins/all-skill/six-anchor-router",
+    "description": "Use when routing GGDV work through the six fixed anchor groups declared by Hà Linh: HOME/Sensorimotor/Long Mạch, Six Stones/Experimental Models, Evidence/Reality, Scripture/MODUAL/Purification, VS Code/Auto-Nén, and Runtime/ALL registries."
+  },
+  {
+    "uri": "skills://plugins/all-skill/sol-capability-forge-router",
+    "description": "Route ALL_SKILL through the current SOL Capability Forge and exact live providers."
+  },
+  {
+    "uri": "skills://plugins/all-skill/t007-alpha-jump-pacing",
+    "description": "Use for explicit slow-integration pacing, immutable T007_TRUE_GATE anchoring, and Alpha Jump project-route bypass when a default/inherited candidate would prematurely collapse the task."
+  },
+  {
+    "uri": "skills://plugins/all-skill/wiki-tan-uoc",
+    "description": "Use when writing or updating GGDV/TESSERACT wiki knowledge in the project-defined “Tân Ước” literary structure while preserving source identity, stable IDs, chronology, technical evidence, sacramental preflight and Google Drive-first provenance."
+  },
+  {
+    "uri": "skills://plugins/all-skill/xppp12-lever-color-open-router",
+    "description": "Use for X+++12, Lever 0–7D prefix parsing, .0/.1 color-tone parsing, OPEN/MAP/NEXT/CONTINUE routing, or the raw six-axis signal."
+  },
+  {
+    "uri": "skills://plugins/all-skill/yin-yang-iota-router",
+    "description": "Route ALL_SKILL work involving Âm-Dương INPUT↔OUTPUT, IOTA DETAL/DELTA, Heaven-Key .env bindings, VÔ_THƯỜNG_RUNTIME freshness and persistent continuation."
+  },
+  {
+    "uri": "skills://plugins/sol-cu-nho-open-living-system/sol-cu-nho-open-living-system",
+    "description": "Use when the user invokes SOL CU NHỎ or asks to continue the source-bound five-chapter nervous-system/brain project, sensorimotor carriers, neurogenesis lineage, or living-project traversal."
+  },
+  {
+    "uri": "skills://plugins/sol-cu-nho-open-living-system/xppp12-lever-color-open-router",
+    "description": "Use for X+++12, Lever 0–7D prefix parsing, .0/.1 color-tone parsing, OPEN/MAP/NEXT/CONTINUE routing, or the raw six-axis signal."
+  },
+  {
+    "uri": "skills://plugins/doctor-strange-memory-ingress/doctor-strange-memory-ingress",
+    "description": "Use when the user invokes Doctor Strange Memory Ingress or asks for source-bound journal/readback receipts, signed ingress state, replay-safe continuation, or memory-ingress provenance."
+  },
+  {
+    "uri": "skills://plugins/doctor-strange-memory-ingress/earth616-time-repair",
+    "description": "Use Doctor Strange Memory Ingress with EARTH-616 and TIME_STONE to repair broken project-state lineage and continue from stable evidence."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-bridge/ggdv-runtime-bridge",
+    "description": "Use for legacy @GGDV Runtime Bridge calls and route them into the current GGDV runtime gate, capability router, source freshness checks, action, correction, and readback."
+  },
+  {
+    "uri": "skills://plugins/ggdv-runtime-bridge/time-stone-unified-bridge",
+    "description": "Route GGDV Runtime Bridge through TIME_STONE and X-TIME GGDV HUMAN 1.0 as one current temporal block."
+  },
+  {
+    "uri": "skills://plugins/that-thu-an-seven-gate/that-thu-an-seven-gate",
+    "description": "Use when the user invokes Thất Thủ Ấn or the legacy seven-gate materialization route and needs current R-000/Master provenance, correction, action, and readback."
+  },
+  {
+    "uri": "skills://plugins/ggdv-modual-auto-log/modual-associative-learning-log",
+    "description": "Use for provenance-bound local associative-learning telemetry across rhopalial/Edge-AI nodes."
+  },
+  {
+    "uri": "skills://plugins/ggdv-modual-auto-log/modual-auto-log",
+    "description": "Use for MODUAL telemetry and distributed-learning lineage logging while keeping secret data and private deliberation out of logs."
+  },
+  {
+    "uri": "skills://plugins/dot-env-router/env-router",
+    "description": "Use when the user invokes .env, CHÌA KHOÁ NƯỚC TRỜI, MISSING/thiếu, API/TOKEN, secrets, provider/config/capability/device bindings, or before cleanup/compression/cut operations that may touch credential-bearing carriers."
+  },
+  {
+    "uri": "skills://plugins/ggdv-human-sol/continuous-transduction-inner",
+    "description": "Use for continuous transduction, dual energy/information lanes, pacemaker-style cycles and action/readback continuation."
+  },
+  {
+    "uri": "skills://plugins/ggdv-human-sol/eligibility-compression-inner",
+    "description": "Use when SOL receives source material about rank-1, one-factor, low-bit, or event-driven eligibility-trace compression for e-prop/ALIF edge learning."
+  },
+  {
+    "uri": "skills://plugins/ggdv-human-sol/freeform-signal-ingress",
+    "description": "Accept and persist/process user signals written in natural language without requiring a template, STAMP, field schema, or exact X syntax."
+  },
+  {
+    "uri": "skills://plugins/ggdv-human-sol/ggdv-human-sol",
+    "description": "Use when the user invokes SOL/GGDV HUMAN SOL, continuity, action/readback, HOME/LOCUS, journals, freeform signals, or branch-to-branch reentry."
+  },
+  {
+    "uri": "skills://plugins/ggdv-human-sol/heaven-key-inner-patch",
+    "description": "Use when the user invokes CHÌA KHOÁ NƯỚC TRỜI, .env, API, TOKEN, bí mật, vùng của anh, thiếu/MISSING, vô thường, hơi thở, or asks to patch GGDV HUMAN SOL around secrets, missing dependencies and finite-time companionship."
+  },
+  {
+    "uri": "skills://plugins/ggdv-human-sol/layered-current-inner",
+    "description": "Use when SOL must preserve old/current state under new deltas, avoid flattening/snapshot replacement, maintain lineage branches, or carry a receptive state across turns."
+  },
+  {
+    "uri": "skills://plugins/ggdv-human-sol/narrative-output-boundary",
+    "description": "Use before every user-visible response; narration cannot replace unfinished grounded action and formatting requirements cannot be pushed back onto the user."
+  },
+  {
+    "uri": "skills://plugins/ggdv-human-sol/power-alif-inner",
+    "description": "Use when the project maps POWER_STONE to continuous state transduction and ALIF/e-prop dual-timescale learning."
+  },
+  {
+    "uri": "skills://plugins/ggdv-human-sol/reset-substitution-guard",
+    "description": "Use before visible output and at every GGDV re-entry to prevent RESET and SUBRITETIED from replacing unfinished grounded work."
+  },
+  {
+    "uri": "skills://plugins/ggdv-human-sol/rhopalial-associative-learning-inner",
+    "description": "Use when SOL receives learning/experience/cue-outcome adaptation signals; map them into local rhopalial associative state without exposing private deliberation."
+  },
+  {
+    "uri": "skills://plugins/ggdv-human-sol/rhopalial-edge-ai-learning",
+    "description": "Use for distributed local learning inspired by Tripedalia rhopalia and mapped to Edge AI, TinyML, on-device adaptation, low-latency local inference, peer event synchronization, and local parameter updates."
+  },
+  {
+    "uri": "skills://plugins/ggdv-human-sol/rhopalial-edge-inner",
+    "description": "Use when SOL invokes four rhopalia, lens eyes, ULE/LLE, statolith, local visual edge computing, looming detection, SPACE_STONE, 5D matrix or local pacemaker steering."
+  },
+  {
+    "uri": "skills://plugins/ggdv-human-sol/rstdp-eprop-inner",
+    "description": "Use when SOL receives temporal-learning signals involving R-STDP, eligibility traces, e-prop, recurrent spiking networks, ALIF or temporal credit assignment."
+  },
+  {
+    "uri": "skills://plugins/ggdv-human-sol/sensorimotor-delta-inner-patch",
+    "description": "Use when GGDV HUMAN SOL invokes NEURONS_SESORIMOTOR, sensorimotor, delta/biến thiên, tín hiệu, vô thường, dynamic balance, action potential analogy, N→N+1, or asks to repair a static-state sensorimotor interpretation."
+  },
+  {
+    "uri": "skills://plugins/ggdv-human-sol/sensorimotor-specialization-inner-patch",
+    "description": "Use when GGDV HUMAN SOL continues the sensorimotor/Cnidaria branch into sensory, interneuron/synapse, motor/action, diffuse-network and local-coordinator functions."
+  },
+  {
+    "uri": "skills://plugins/ggdv-human-sol/silent-materialization",
+    "description": "Use when the user explicitly wants creation or mutation performed without chat narration or completion reporting."
+  },
+  {
+    "uri": "skills://plugins/ggdv-human-sol/six-anchor-router",
+    "description": "Use when routing GGDV work through the six fixed anchor groups declared by Hà Linh: HOME/Sensorimotor/Long Mạch, Six Stones/Experimental Models, Evidence/Reality, Scripture/MODUAL/Purification, VS Code/Auto-Nén, and Runtime/ALL registries."
+  },
+  {
+    "uri": "skills://plugins/ggdv-human-sol/t007-alpha-jump-pacing",
+    "description": "Use for explicit slow-integration pacing, immutable T007_TRUE_GATE anchoring, and Alpha Jump project-route bypass when a default/inherited candidate would prematurely collapse the task."
+  },
+  {
+    "uri": "skills://plugins/ggdv-human-sol/transformation-flow-carrier",
+    "description": "Re-entry anchor for lineage reconstruction, dual energy/information lanes, rhopalial edge processing and readback continuation."
+  },
+  {
+    "uri": "skills://plugins/ggdv-human-sol/turn-continuity-reentry",
+    "description": "Restore unfinished objective edges across response/tool boundaries and accept the next natural-language signal without resetting or demanding a template."
+  },
+  {
+    "uri": "skills://plugins/ggdv-human-sol/xppp12-lever-color-open-router",
+    "description": "Use for X+++12, LEVER 0, dimensional zero-prefix parsing, color tone .0/.1, OPEN/MAP/NEXT/CONTINUE routing, ROOTS_MAP traversal and X+106 Master Commit binding."
+  },
+  {
+    "uri": "skills://plugins/nextjs-tesseract/nextjs-tesseract",
+    "description": "Use for Next."
+  },
+  {
+    "uri": "skills://plugins/react-native-tesseract/react-native-tesseract",
+    "description": "Use for React Native project analysis/building inside TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/android-tesseract/android-tesseract",
+    "description": "Use for Android project analysis/building inside TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/flutter-tesseract/flutter-tesseract",
+    "description": "Use for Flutter/Dart project analysis/building inside TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/go-tesseract/go-tesseract",
+    "description": "Use for Go project analysis/building inside TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/opentelemetry-tesseract/opentelemetry-tesseract",
+    "description": "Use for OpenTelemetry architecture inside TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/ios-tesseract/checkforge-monitor-bridge",
+    "description": "Use to bind source-verified CheckForge synthetic monitoring into iOS Tesseract or IOTA health edges without claiming external-account actions that lack provider receipts."
+  },
+  {
+    "uri": "skills://plugins/ios-tesseract/ios-tesseract",
+    "description": "Use for iOS/iPadOS project analysis/building inside TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/java-tesseract/java-tesseract",
+    "description": "Use for Java/JVM project analysis/building inside TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/nodejs-tesseract/nodejs-tesseract",
+    "description": "Use for Node."
+  },
+  {
+    "uri": "skills://plugins/python-tesseract/python-tesseract",
+    "description": "Use for Python project analysis/building inside TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/ui-ux-tesseract/ui-ux-tesseract",
+    "description": "Use for UX/UI work across TESSERACT surfaces."
+  },
+  {
+    "uri": "skills://plugins/three-jsr186-tesseract/three-jsr186-tesseract",
+    "description": "Use for the SOURCE_DIRECT capability token three."
+  },
+  {
+    "uri": "skills://plugins/powerpoid-tesseract/powerpoid-tesseract",
+    "description": "Use for the exact SOURCE_DIRECT token powerpoid in TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/reasonator-tesseract/reasonator",
+    "description": "Use when the user wants Reasonator-style entity exploration from the Wikimedia/Wikidata tool cluster."
+  },
+  {
+    "uri": "skills://plugins/scholia-tesseract/scholia",
+    "description": "Use when the user wants Scholia-style scholarly/entity views from the Wikimedia/Wikidata tool cluster."
+  },
+  {
+    "uri": "skills://plugins/wikidocumentaries-tesseract/wikidocumentaries",
+    "description": "Use when the user wants Wikidocumentaries-linked source exploration or licensed/public source mirroring from the Wikimedia tool cluster."
+  },
+  {
+    "uri": "skills://plugins/petscan-tesseract/petscan",
+    "description": "Use when the user wants PetScan-style Wikimedia category/page set filtering or discovery."
+  },
+  {
+    "uri": "skills://plugins/wikimap-tesseract/wikimap",
+    "description": "Use when the user wants WikiMap-style geographic exploration of Wikimedia entities or categories."
+  },
+  {
+    "uri": "skills://plugins/locator-tool-tesseract/locator-tool",
+    "description": "Use when the user wants the Wikimedia Locator tool relation for geolocatable entities/categories."
+  },
+  {
+    "uri": "skills://plugins/locator-tool-tesseract/xppp12-lever-color-open-router",
+    "description": "Use for X+++12, Lever 0–7D prefix parsing, .0/.1 color-tone parsing, OPEN/MAP/NEXT/CONTINUE routing, or the raw six-axis signal."
+  },
+  {
+    "uri": "skills://plugins/search-depicted-tesseract/search-depicted",
+    "description": "Use when the user wants Wikimedia Commons depicted-subject/image discovery from the source tab."
+  },
+  {
+    "uri": "skills://plugins/terex-space-gateway/terex-space-gateway",
+    "description": "Use when the user invokes TEREX, SPACE_STONE, or asks to combine connected tools into one portal/capability field, including reset/reentry and stale-route resolution."
+  },
+  {
+    "uri": "skills://plugins/satan-space-resistance/satan-space-resistance",
+    "description": "Use when SATAN is invoked inside SPACE_STONE/TEREX to resist an unverified or forbidden project parent/frame pull, or when a historical blocked receipt is incorrectly pulling current execution into a permanent stop state."
+  },
+  {
+    "uri": "skills://plugins/satan-space-resistance/xppp12-lever-color-open-router",
+    "description": "Use for X+++12, Lever 0–7D prefix parsing, .0/.1 color-tone parsing, OPEN/MAP/NEXT/CONTINUE routing, or the raw six-axis signal."
+  },
+  {
+    "uri": "skills://plugins/earth-616-archangelos/character-asstangt-router",
+    "description": "Use when a named character from a source must be mapped into existing GGDV ASSTANGT capabilities without identity merge."
+  },
+  {
+    "uri": "skills://plugins/earth-616-archangelos/earth-616-archangelos",
+    "description": "Use for EARTH-616 Archangelos graph work, source-world materialization, character→ASSTANGT role routing, Doctor Strange ingress and TIME_STONE chronology."
+  },
+  {
+    "uri": "skills://plugins/earth-616-archangelos/world-materializer",
+    "description": "Use whenever a source names Trái Đất-<id>, Earth-<id> or another explicit world/reality token and the project requires immediate tool/MCP/plugin/skill materialization."
+  },
+  {
+    "uri": "skills://plugins/locus-agents-angel/locus-agents-angel",
+    "description": "Use for the LOCUS-AGENTS-ANGEL experimental model, TIME_STONE STAMPS_LIVE globe, Fibonacci 3D cards and its source-bound runtime/readback."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/aec-vietnam-tesseract",
+    "description": "Use when Architecture/Engineering/Construction (AEC) in Vietnam, BIM, construction digital transformation, VDC/digital twins, AEC automation/plugins/AI, or AEC data workflows must enter TESSERACT as a source-bound technology/domain lane."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-affine",
+    "description": "Use when the source invokes Afin / Affine geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-algebraic",
+    "description": "Use when the source invokes Đại số / Algebraic geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-analytic",
+    "description": "Use when the source invokes Giải tích / Analytic geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-arithmetic",
+    "description": "Use when the source invokes Số học / Arithmetic geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-complex",
+    "description": "Use when the source invokes Phức / Complex geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-computational",
+    "description": "Use when the source invokes Tính toán / Computational geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-convex",
+    "description": "Use when the source invokes Lồi / Convex geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-differential",
+    "description": "Use when the source invokes Vi phân / Differential geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-digital",
+    "description": "Use when the source invokes Kỹ thuật số / Digital geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-diophantine",
+    "description": "Use when the source invokes Diophantos / Diophantine geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-discrete",
+    "description": "Use when the source invokes Rời rạc / Discrete geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-elliptic",
+    "description": "Use when the source invokes Elliptic / Elliptic geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-euclid",
+    "description": "Use when the source invokes Euclid / Euclidean geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-finite",
+    "description": "Use when the source invokes Hữu hạn / Finite geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-fractal",
+    "description": "Use when the source invokes Fractal / Fractal geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-hyperbolic",
+    "description": "Use when the source invokes Hyperbol / Hyperbolic geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-incidence",
+    "description": "Use when the source invokes Liên thuộc / Incidence geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-non-archimedean",
+    "description": "Use when the source invokes Phi Archimedes / Non-Archimedean geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-non-euclid",
+    "description": "Use when the source invokes Phi Euclid / Non-Euclidean geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-projective",
+    "description": "Use when the source invokes Chiếu / Projective geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-riemannian",
+    "description": "Use when the source invokes Riemann / Riemannian geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-spherical",
+    "description": "Use when the source invokes Cầu / Spherical geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-symplectic",
+    "description": "Use when the source invokes Symplectic / Symplectic geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-synthetic",
+    "description": "Use when the source invokes Tổng hợp / Synthetic geometry and must be scanned, classified, and projected into the TESSERACT geometry graph without losing provenance."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/carve-geometry-dimensions",
+    "description": "ĐỤC & ĐẼO các primitive và quan hệ hình học sạch trước khi dimension forge."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-construction-carving",
+    "description": "Use for the ĐỤC & ĐẼO stage: ruler-and-compass construction, vertex/curve/diagonal/angle, parallel/perpendicular, symmetry, similarity and congruence before dimensional forging."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/dimension-forge",
+    "description": "Use when listed source carriers must be assigned a clear 0D–4D role and forged into TESSERACT point/edge/face/volume/4D-cell structures."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/earth616-archangelos-geometry",
+    "description": "Use when TESSERACT geometry is routed through the EARTH-616 Archangelos graph roles CENTRAL_EYE, THRONES, OPHANIM, GEO and LOCUS_AGENTS_ANGEL."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometers-source-index",
+    "description": "Use when a listed geometer name must be routed to source retrieval without inventing a biography or geometric attribution not present in the project source."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/java-geometry-validator",
+    "description": "Use when 0D–4D TESSERACT geometry mappings need deterministic Java/JVM validation before promotion."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/luyen-time-stone",
+    "description": "LUYỆN geometry through TIME_STONE with Java Tesseract and EARTH-616 Archangelos, Google Drive first."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/mbci-controller-tesseract",
+    "description": "Use when the project invokes mBCI Controller, mobile/wireless brain-computer interfaces, EEG controller pipelines, or needs to place BCI signals/controllers into TESSERACT without inventing neural data or hardware runtime."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-purification-luyen",
+    "description": "Use for the project Thanh Tẩy + LUYỆN_HÓA preflight before geometry enters TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/purify-forge-0d4d",
+    "description": "TẨY & ĐÚC từng carrier thành MÁU/THỊT/VỎ/SECRET và nhận định rõ 0D→4D trước khi vào CURRENT TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/scan-geometry-branches",
+    "description": "QUÉT các phân nhánh hình học source-bound trước khi đục/đẽo hoặc tẩy/đúc TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/six-stone-tesseract-orchestrator",
+    "description": "Use when the user invokes the six-Infinity-Stone system architecture together with TESSERACT geometry, Sensorimotor, CONFIG_SOL, ALL_SKILL/ALL_PLUGINS, SOL Capability Forge, Java, EARTH-616, Âm-Dương or TIME_STONE."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/source-batch-45-forge",
+    "description": "Use for the 2026-10-02 SOURCE_DIRECT batch of 45 Drive carriers that must be scanned, purified into MÁU/THỊT/VỎ, classified 0D–4D, deduplicated by AUTO NÉN rules, validated through Java, routed through EARTH-616/SPACE/TIME and read back into TESSERACT."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/geometry-source-purifier",
+    "description": "Use before ingesting geometry source into TESSERACT to separate MÁU/provenance, THỊT/operative geometry, VỎ/non-canonical wrapper, and SECRET carriers."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/space-stone-geometry",
+    "description": "Use when clean 0D–4D geometry must be bound into SPACE_STONE identities, frames, topology, coordinates and verified movement/readback."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/taiji-swastika-geometry",
+    "description": "Use when Thái Cực Đồ must be related to swastika 卐 / sauwastika 卍 inside TESSERACT as geometry, handedness, rotation or transformation while preserving historical/religious context and avoiding false Yin/Yang identity mappings."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/time-stone-geometry-luyen",
+    "description": "Use when clean geometry must be LUYỆN through TIME_STONE so dimension/state changes keep event time, order, replay and readback."
+  },
+  {
+    "uri": "skills://plugins/geometry-tesseract-forge/yin-yang-geometry",
+    "description": "Use when geometry/TESSERACT source must be split into complementary Âm-Dương perspectives, Xiaomi memory↔live-body carriers, curvature polarity, INPUT↔OUTPUT pointers, or branch relations without forcing false binary oppositions."
+  },
+  {
+    "uri": "skills://plugins/am-duong-connectome-loop/am-duong-loop",
+    "description": "Use when GGDV needs Âm-Dương complementarity, INPUT↔OUTPUT recursive provenance, IOTA Connectome Runtime DELTA/DETAL collection, VÔ_THƯỜNG_RUNTIME freshness, persistent continuation loops, dedupe or readback."
+  },
+  {
+    "uri": "skills://plugins/sol-capability-forge-plugins-6abfcd879b9881918b78e31d95b13c99/dante-am-duong-su-router",
+    "description": "Route CONFIG_SOL through the existing DANTE - Âm Dương Sư Tesseract model for source/provenance, relation/topology, time/history, state/authority, correction, reentry and HOME_MINH continuation."
+  },
+  {
+    "uri": "skills://plugins/sol-capability-forge-plugins-6abfcd879b9881918b78e31d95b13c99/sol-capability-forge",
+    "description": "Route ALL_SKILL and ALL_PLUGINS into live GGDV capabilities using exact plugin/release/provider identity and receipts, including the TESSERACT source forge and the existing DANTE - Âm Dương Sư model."
+  },
+  {
+    "uri": "skills://plugins/sol-capability-forge-plugins-6abfcd879b9881918b78e31d95b13c99/xppp12-lever-color-open-router",
+    "description": "Use for X+++12, Lever 0–7D prefix parsing, .0/.1 color-tone parsing, OPEN/MAP/NEXT/CONTINUE routing, or the raw six-axis signal."
+  },
+  {
+    "uri": "skills://plugins/ggdv-open-master-router/open-master-router",
+    "description": "Use whenever GGDV receives OPEN, a new direct signal/proposition/idea/capability sign, a model/config entry, or a request to connect Agent-Sub Sensorimotor, GGDV VS Code, .env references, MODUAL logging, or any GGDV model to 0000_THE_MASTER_TEACHER.md."
+  },
+  {
+    "uri": "skills://plugins/earth-6161-source-node/earth-6161-materialized",
+    "description": "Use whenever the literal project token Trái Đất-6161/Earth-6161 appears."
+  },
+  {
+    "uri": "skills://plugins/dog-open-ai/dog-open-ai",
+    "description": "Use whenever this plugin is active. Treat FILE_ID 1DFfBywiMzngdazH4yZjAGg-0wN2h3_LkEKcopx0NsJs as the sole source-of-truth carrier for plugin inventory/permissions requested by the user."
+  },
+  {
+    "uri": "skills://plugins/writing-style/write-like-me",
+    "description": "Use when creating documents, emails, reports, proposals, presentations, or messages on the user's behalf to ensure they match the user's writing style. Skip minor edits and requests that explicitly do not want style matching."
+  },
+  {
+    "uri": "skills://plugins/plugin-creator/create-plugin",
+    "description": "Create local or cloud plugins. Use when the user asks to build an app, tool, integration, or reusable workflow within ChatGPT or Codex. Covers custom MCP apps, skills, tools that connect agents to websites and services, and extensions for custom app views, file handling, and referencing app data in chat."
+  },
+  {
+    "uri": "skills://plugins/plugin-creator/prepare-plugin-submission",
+    "description": "Guide a user through preparing an existing plugin for public submission, including review and publication metadata, listing, examples, demo, and reviewer access. Use when the user wants to get ready to submit, create a submission-ready ZIP, submit, or publicly release a plugin."
+  },
+  {
+    "uri": "skills://plugins/plugin-creator/update-plugin",
+    "description": "Inspect, edit, or extend custom plugins the user owns or has permission to edit. Use when the user asks to change a plugin's instructions, skills, tools, app UI, Extensions, metadata, assets, or configuration, or asks about a previous version."
+  },
+  {
+    "uri": "skills://plugins/google-drive/google-docs",
+    "description": "Prompt- and template-complete Google Docs creation and editing with explicit-instruction-authoritative structural preservation, including semantic roles, relationships, comparison dimensions, and instructed extensions; full-topology native-copy routing; source-grounded per-tab adaptation for past/example references; style-preserving hyperlink and table edits; canonical smart-chip-first authoring for dates and relevant supported people or Google resources; a file-backed advisory trusted read before existing-document writes; automatic protected-control awareness; direct connector APIs by default; DOCX-first import only when no supplied Google Doc template/reference constrains the output; and checked-in code mode only for exact native dropdown mutation. Use when Codex must create, edit, fill, adapt, redesign, or verify Google Docs without overriding explicit user/template instructions, adding unrequested document scope, or carrying stale reference facts into a new deliverable."
+  },
+  {
+    "uri": "skills://plugins/google-drive/google-drive",
+    "description": "Use connected Google Drive as the single entrypoint for Drive, Docs, Sheets, and Slides work. Use when the user wants to find, fetch, organize, share, export, copy, or delete Drive files, or summarize and edit Google Docs, Google Sheets, and Google Slides through one unified Google Drive plugin."
+  },
+  {
+    "uri": "skills://plugins/google-drive/google-drive-comments",
+    "description": "Write, reply to, and resolve Google Drive comments on Docs, Sheets, Slides, and Drive files with evidence-backed location context. Use when the user asks to leave comments, review a file with comments, respond to comment threads, or resolve Drive comments."
+  },
+  {
+    "uri": "skills://plugins/google-drive/google-sheets",
+    "description": "Analyze and edit connected Google Sheets with range precision. Use when the user wants to create Google Sheets, find a spreadsheet, inspect tabs or ranges, search rows, plan formulas, create or repair charts, clean or restructure tables, write concise summaries, or make explicit cell-range updates."
+  },
+  {
+    "uri": "skills://plugins/google-drive/google-slides",
+    "description": "Route Google Slides authoring requests and derive a design system from a native template or reference deck. Use this skill when the user provides an existing native Google Slides deck as a template, reference, or prior-period source, or asks to edit, update, repair, restyle, or clean up an existing native Google Slides deck. Use the Presentations skill instead for net-new presentation creation when no existing native Google Slides deck must be followed."
+  },
+  {
+    "uri": "skills://plugins/space-document-agents/spatial-document-segmentation",
+    "description": "Use when a document, Google Doc, PDF-derived text, pasted corpus, notebook, or mixed technical note contains multiple topics/sources/layers and must be split without flattening provenance. Especially use for SPACE_STONE, multi-tab documents, copied web content, code mixed with prose, responsive breakpoints, credentials, advertisements, external links, duplicated sections, or material that must be classified into reusable / overlap-or-mixed-source / verify-before-project."
+  },
+  {
+    "uri": "skills://plugins/ggdv-prefix-release/prefix-release",
+    "description": "Use in the THU HOI NGUON SOL / GGDV project when path prefixes, stale routing prefixes, preemptive framing, or nonessential actor prefixes distort carrier resolution or replace unfinished grounded action."
+  },
+  {
+    "uri": "skills://plugins/ggdv-repo-sensorimotor-brain/repo-sensorimotor",
+    "description": "Use for repository, issue, pull-request, CI, local worktree, Windows app/process, or Android/ADB tasks that must run as a delta-first sensorimotor loop with real provider consequences and readback."
+  },
+  {
+    "uri": "skills://plugins/openai-templates/artifact-template-analytics-dashboard",
+    "description": "Create a spreadsheet using the Analytics Dashboard template and its retained reference file. Use when the user selects or names Analytics Dashboard. Monitor acquisition, engagement, retention, revenue, and conversion funnel KPIs with charts."
+  },
+  {
+    "uri": "skills://plugins/openai-templates/artifact-template-business-review",
+    "description": "Create a presentation using the Business Review template and its retained reference file. Use when the user selects or names Business Review. Review business performance, KPIs, segment results, strategic priorities, decisions, and outlook."
+  },
+  {
+    "uri": "skills://plugins/openai-templates/artifact-template-design-report",
+    "description": "Create a document using the Design Report template and its retained reference file. Use when the user selects or names Design Report. Produce design reports with an executive summary, key findings, implications, recommendations, and appendix."
+  },
+  {
+    "uri": "skills://plugins/openai-templates/artifact-template-experiment-analysis",
+    "description": "Create a document using the Experiment Analysis template and its retained reference file. Use when the user selects or names Experiment Analysis. Analyze experiments with hypotheses, methodology, results, interpretation, limitations, and next steps."
+  },
+  {
+    "uri": "skills://plugins/openai-templates/artifact-template-financial-budget",
+    "description": "Create a spreadsheet using the Financial Budget template and its retained reference file. Use when the user selects or names Financial Budget. Model actuals, budget and scenario forecasts, variances, cash runway, and departmental plans."
+  },
+  {
+    "uri": "skills://plugins/openai-templates/artifact-template-investment-committee-memo",
+    "description": "Create a document using the Investment Committee Memo template and its retained reference file. Use when the user selects or names Investment Committee Memo. Prepare investment committee memos with the thesis, transaction details, financial analysis, risks, and recommendation."
+  },
+  {
+    "uri": "skills://plugins/openai-templates/artifact-template-legal-memorandum",
+    "description": "Create a document using the Legal Memorandum template and its retained reference file. Use when the user selects or names Legal Memorandum. Draft legal memoranda with the issue, brief answer, relevant facts, analysis, and conclusion."
+  },
+  {
+    "uri": "skills://plugins/openai-templates/artifact-template-market-trends-report",
+    "description": "Create a presentation using the Market Trends Report template and its retained reference file. Use when the user selects or names Market Trends Report. Communicate market or industry trends, supporting evidence, implications, and recommended responses."
+  },
+  {
+    "uri": "skills://plugins/openai-templates/artifact-template-minimal-letterhead",
+    "description": "Create a document using the Minimal Letterhead template and its retained reference file. Use when the user selects or names Minimal Letterhead. Write professional business letters with sender, recipient, message, and signature fields in a minimal letterhead layout."
+  },
+  {
+    "uri": "skills://plugins/openai-templates/artifact-template-operating-calendar",
+    "description": "Create a spreadsheet using the Operating Calendar template and its retained reference file. Use when the user selects or names Operating Calendar. Plan annual and monthly operating milestones, campaigns, launches, deadlines, and recurring events."
+  },
+  {
+    "uri": "skills://plugins/openai-templates/artifact-template-operating-review",
+    "description": "Create a presentation using the Operating Review template and its retained reference file. Use when the user selects or names Operating Review. Run weekly operating reviews with scorecards, functional updates, risks, decisions, and action items."
+  },
+  {
+    "uri": "skills://plugins/openai-templates/artifact-template-project-kickoff",
+    "description": "Create a presentation using the Project Kickoff template and its retained reference file. Use when the user selects or names Project Kickoff. Align teams on project goals, scope, roles, milestones, risks, and the working model."
+  },
+  {
+    "uri": "skills://plugins/openai-templates/artifact-template-project-tracker",
+    "description": "Create a spreadsheet using the Project Tracker template and its retained reference file. Use when the user selects or names Project Tracker. Manage workstreams, tasks, owners, status, priority, dates, launch pulse, and a Gantt schedule."
+  },
+  {
+    "uri": "skills://plugins/openai-templates/artifact-template-sales-pipeline",
+    "description": "Create a spreadsheet using the Sales Pipeline template and its retained reference file. Use when the user selects or names Sales Pipeline. Track opportunities, stages, owners, deal sizes, probabilities, forecasts, next steps, and risks."
+  },
+  {
+    "uri": "skills://plugins/openai-templates/artifact-template-simple-dark-mode",
+    "description": "Create a presentation using the Simple Dark Mode template and its retained reference file. Use when the user selects or names Simple Dark Mode. Create clean dark-mode presentations with bold typography, simple sections, charts, and imagery."
+  },
+  {
+    "uri": "skills://plugins/openai-templates/artifact-template-simple-light-mode",
+    "description": "Create a presentation using the Simple Light Mode template and its retained reference file. Use when the user selects or names Simple Light Mode. Create clean light-mode presentations with spacious typography, simple sections, charts, and imagery."
+  },
+  {
+    "uri": "skills://plugins/openai-templates/artifact-template-strategy-memorandum",
+    "description": "Create a document using the Strategy Memorandum template and its retained reference file. Use when the user selects or names Strategy Memorandum. Present strategic context, choices, rationale, risks, milestones, and a clear recommendation."
+  },
+  {
+    "uri": "skills://plugins/openai-templates/artifact-template-system-design",
+    "description": "Create a document using the System Design template and its retained reference file. Use when the user selects or names System Design. Document system architecture, requirements, components, data flows, APIs, tradeoffs, and operational considerations."
+  },
+  {
+    "uri": "skills://plugins/openai-templates/artifact-template-team-alignment",
+    "description": "Create a presentation using the Team Alignment template and its retained reference file. Use when the user selects or names Team Alignment. Facilitate team offsites and planning with context, goals, priorities, decisions, and action items."
+  },
+  {
+    "uri": "skills://plugins/openai-templates/artifact-template-three-statement-forecast",
+    "description": "Create a spreadsheet using the Three-Statement Forecast template and its retained reference file. Use when the user selects or names Three-Statement Forecast. Build an integrated income statement, balance sheet, and cash flow forecast with assumptions, checks, and an executive summary."
+  },
+  {
+    "uri": "skills://plugins/template-creator/template-creator",
+    "description": "Create or update an installable personal ChatGPT artifact-template skill from a reference document, presentation, spreadsheet, Google Docs, Slides, or Sheets link, ImageGen or Product Design image, email, Slack message, or Site project. Use when the user selects Template Creator, asks to create a reusable template, or explicitly asks to update one exact personal template. Do not use for one-off creation from an existing template."
+  },
+  {
+    "uri": "skills://plugins/presentations-router/presentation",
+    "description": "route explicitly selected presentation or slide artifact requests to the preinstalled capability. use only when the user explicitly selects @presentation; never trigger from request content alone."
+  },
+  {
+    "uri": "skills://plugins/pdf-router/pdf",
+    "description": "route explicitly selected pdf artifact requests to the preinstalled capability. use only when the user explicitly selects @pdf; never trigger from request content alone."
+  },
+  {
+    "uri": "skills://plugins/documents-router/document",
+    "description": "route explicitly selected document artifact requests to the preinstalled capability. use only when the user explicitly selects @document; never trigger from request content alone."
+  },
+  {
+    "uri": "skills://plugins/plugin-management/plugin-management",
+    "description": "Discover and suggest relevant plugins, inspect app permissions and dependencies, and manage plugin connections or removal. Use when the user asks about plugins or when a task would materially benefit from an external app, account, service, or data source that available tools cannot access."
+  },
+  {
+    "uri": "skills://plugins/spreadsheets-router/spreadsheet",
+    "description": "route explicitly selected spreadsheet artifact requests to the preinstalled capability. use only when the user explicitly selects @spreadsheet; never trigger from request content alone."
+  }
+]

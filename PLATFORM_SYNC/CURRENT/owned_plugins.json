@@ -1,0 +1,578 @@
+[
+  {
+    "plugin_id": "plugins_6ac55308cae08191bb99baf37a10119a",
+    "name": "ggdv-sensorimotor-motor-bridge",
+    "description": "GGDV NEURONS_SESORIMOTOR distributed Agent-Sub network with temporary RAM head/end I/O and transformable intermediate-device semantics, receipts, journal, continuity and destructive-action inhibition.",
+    "version": "0.5.1",
+    "current_release_id": "pluginrel_6ac565223b8c8191ba29307f491a0f4f",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6ac55176f8b88191afe8667a983f616d",
+    "name": "ggdv-repo-sensorimotor-brain",
+    "description": "Delta-first sensorimotor routing for repositories, issues, CI and callable local MOTOR providers.",
+    "version": "0.1.0",
+    "current_release_id": "pluginrel_6ac5517850fc8191aeeb96d467f0eb7b",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6ac536d9988081919466a1452f073128",
+    "name": "vercel-x-time",
+    "description": "Private Vercel deployment bridge for X-TiMe. Runs its own local MCP process and calls Vercel directly through the Vercel CLI using runtime credentials.",
+    "version": "0.1.0",
+    "current_release_id": "pluginrel_6ac536db0cc88191b335af4ea2034ec5",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6ac4b82e7f908191b77a879c6082ee21",
+    "name": "ggdv-prefix-release",
+    "description": "GGDV project router that releases non-canonical path and subjectivity prefixes before carrier resolution while preserving raw source and provenance.",
+    "version": "0.1.0",
+    "current_release_id": "pluginrel_6ac4b83072dc81919f63c43a835871fe",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6ac4859bb0ec8191a4c7552a959ce454",
+    "name": "space-document-agents",
+    "description": "SPACE_STONE document agent that separates mixed, multi-source documents into provenance-preserved spatial layers, reusable blocks, overlap/conflict zones, verification queues, and secret quarantine.",
+    "version": "0.1.0",
+    "current_release_id": "pluginrel_6ac4859e027881918d628a9a8b11048a",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6ac221b651ec8191bbb3408a5cc098c0",
+    "name": "dog-open-ai",
+    "description": "DOG_OPEN_AI — plugin duy nhất, nguồn quyền lấy nguyên vẹn từ Google Drive FILE_ID=1DFfBywiMzngdazH4yZjAGg-0wN2h3_LkEKcopx0NsJs.",
+    "version": "0.1.0",
+    "current_release_id": "pluginrel_6ac221b898b08191b72c72dd7d9e7c6b",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6ac189ed45548191997f655f484f27f8",
+    "name": "earth-6161-source-node",
+    "description": "Source-bound materialization of Trái Đất-6161 with explicit provider/MCP contract, TIME_STONE, ASSTANGT role routing and six-Stone TESSERACT composition.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6ac18b74f8b081919163186a524a33a3",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6ac0bf08b38c8191bb0c6f4f1aeb8211",
+    "name": "ggdv-open-master-router",
+    "description": "Central GGDV OPEN router that binds all source-bound model/config entries to THE MASTER TEACHER, R-000, Agent-Sub Sensorimotor, .vscode, secret-safe .env references, and MODUAL observable auto-log.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6ac0c158fb54819185b950d5eb4785bc",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6ac0b4cddac88191a86d0f9dece3d027",
+    "name": "binance",
+    "description": "Binance for Codex lets you access and explore Binance public, read-only market data using natural language.",
+    "version": "1.0.0",
+    "current_release_id": "pluginrel_6ac0b4cf529c8191be4747bf5f9039c0",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abfcd879b9881918b78e31d95b13c99",
+    "name": "sol-capability-forge",
+    "description": "Private GGDV capability router with X+++12 lever/color namespace and active OPEN/MAP routing across ALL_SKILL/ALL_PLUGINS.",
+    "version": "0.2.2",
+    "current_release_id": "pluginrel_6ac1c0bb159c81918bf7fc3aac7a25df",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abfc63a33948191a545b0eda107eaf1",
+    "name": "am-duong-connectome-loop",
+    "description": "GGDV Âm-Dương IOTA loop with INPUT↔OUTPUT complementarity, DETAL/DELTA collection, VÔ_THƯỜNG_RUNTIME freshness, cursor continuation and secret-safe readback.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6abfc7c44b088191a145361c7993c560",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf61fdef088191a0aa9dad1138088e",
+    "name": "geometry-tesseract-forge",
+    "description": "Source-bound 0D→4D TESSERACT forge with geometry purification, Taiji/swastika handedness mapping, AEC and mBCI technology lanes, Java validation, SPACE/TIME routing and provenance-safe readback.",
+    "version": "0.4.1",
+    "current_release_id": "pluginrel_6ac0d785f1248191b5b58de201194eaf",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf595757548191b4c79e76b24de929",
+    "name": "locus-agents-angel",
+    "description": "LOCUS-AGENTS-ANGEL experimental model: TIME_STONE STAMPS_LIVE Fibonacci 3D sphere with EARTH-616, Sensorimotor, Next.js and Tesseract bindings.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6abfa30e13a08191bb1dc0ad1c9eaee4",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf594a8c9c81918e2219a8ffe1aa4c",
+    "name": "earth-616-archangelos",
+    "description": "EARTH-616 Archangelos upgraded with source-world materialization, character→ASSTANGT role routing, TIME_STONE X+95 bindings and Locator/Workspace provider routing.",
+    "version": "0.2.0",
+    "current_release_id": "pluginrel_6ac189e443208191b5fe809d7fe919f3",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf5045655481918a34a821ab0893ee",
+    "name": "satan-space-resistance",
+    "description": "SATAN SPACE resistance with X+++12 namespace guard: .1 ASH maps to SPACE as project topology while OPEN/MAP remain non-terminal.",
+    "version": "0.1.3",
+    "current_release_id": "pluginrel_6ac1c0fcb1b881919daa9a4e354bd765",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf342d3e00819197e8dda3b0f50239",
+    "name": "terex-space-gateway",
+    "description": "Private TEREX container for one SPACE_STONE capability field with reality-bound reset/reentry routing across connected provider routes.",
+    "version": "0.2.1",
+    "current_release_id": "pluginrel_6abfa32dfe108191aee3f3a8e66337cc",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf265ee67c8191b20c9f2c55330b3b",
+    "name": "search-depicted-tesseract",
+    "description": "Tìm minh họa / Search depicted source-bound routing skill for the TESSERACT Wikimedia tool cluster.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6abfa33a716c81918442d4e95b2f8245",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf265419108191a34cdf9b392daab8",
+    "name": "locator-tool-tesseract",
+    "description": "Locator tool source routing with X+++12 active MAP semantics and namespace guard for TESSERACT traversal.",
+    "version": "0.1.2",
+    "current_release_id": "pluginrel_6ac1c11d345c819193871b0727485b87",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf264976a881918d86d61abc900985",
+    "name": "wikimap-tesseract",
+    "description": "WikiMap source-bound routing skill for the TESSERACT Wikimedia tool cluster.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6abfa34f69a48191b3f290e0373498c3",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf263f001c81919ed5e71504d4a01f",
+    "name": "petscan-tesseract",
+    "description": "PetScan source-bound routing skill for the TESSERACT Wikimedia tool cluster.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6abfa35b35788191b2bff7613bc5c6a0",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf2634945c8191b06146aa472ad794",
+    "name": "wikidocumentaries-tesseract",
+    "description": "Wikidocumentaries source-bound routing skill for the TESSERACT Wikimedia tool cluster.",
+    "version": "0.1.2",
+    "current_release_id": "pluginrel_6ac126bc75188191b2098a74f72a144b",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf26298dd881919a717a473c5192c1",
+    "name": "scholia-tesseract",
+    "description": "Scholia source-bound routing skill for the TESSERACT Wikimedia tool cluster.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6abfa3a891448191ab6bde5dd0c3dc48",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf261f637c8191996615cf532ff3b8",
+    "name": "reasonator-tesseract",
+    "description": "Reasonator source-bound routing skill for the TESSERACT Wikimedia tool cluster.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6abfa3b3f86081918424b52492a43aa8",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf2136e7308191a4f4b041dc20e9a8",
+    "name": "powerpoid-tesseract",
+    "description": "Use for the exact SOURCE_DIRECT token powerpoid in TESSERACT.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6abfa3bf2eb08191a42ddad2f676c722",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf212c079c81918d70411983c6a9c7",
+    "name": "three-jsr186-tesseract",
+    "description": "Use for the SOURCE_DIRECT capability token three.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6abfa3ca3214819192a087f9b109e5a9",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf21213f208191b7ff7cf66d42e3ef",
+    "name": "ui-ux-tesseract",
+    "description": "Use for UX/UI work across TESSERACT surfaces.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6abfa3d6236081918faa0c22de2a63c0",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf211617f881918c578e17dc692339",
+    "name": "python-tesseract",
+    "description": "Use for Python project analysis/building inside TESSERACT.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6abfa3e0b74c8191a1b6c08a456f3921",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf210bb268819186e5742fc59e70a9",
+    "name": "nodejs-tesseract",
+    "description": "Use for Node.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6abfa3eb2b148191ac5c87f4525d931f",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf2100ffe88191ba4939ef100e13ca",
+    "name": "java-tesseract",
+    "description": "Use for Java/JVM project analysis/building inside TESSERACT.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6abfa3f7220081919a805a7a83f1fe16",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf20f6d7e481918152412580ca9ace",
+    "name": "ios-tesseract",
+    "description": "iOS/iPadOS Tesseract routing with source-bound CheckForge synthetic-monitor bridge and secret-safe health endpoint contract.",
+    "version": "0.1.2",
+    "current_release_id": "pluginrel_6ac1bf6d22e88191b20207f9a01b2318",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf20ec83108191be3f83eb343a06d0",
+    "name": "opentelemetry-tesseract",
+    "description": "Use for OpenTelemetry architecture inside TESSERACT.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6abfa40ccfd4819180e29f89f55be4be",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf20e262448191b5ff6cd778a3e0a7",
+    "name": "go-tesseract",
+    "description": "Use for Go project analysis/building inside TESSERACT.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6abfa46726988191a58c37bd4f85eb55",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf20d7ae408191bea8b44001cc39cc",
+    "name": "flutter-tesseract",
+    "description": "Use for Flutter/Dart project analysis/building inside TESSERACT.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6abfa470fe508191a10d6c6d775ececa",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf20cd3008819188678c6bc1ad87ff",
+    "name": "android-tesseract",
+    "description": "Use for Android project analysis/building inside TESSERACT.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6abfa47c1f188191860794ebf39cbfef",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf20c285b08191af1af1601f02b66a",
+    "name": "react-native-tesseract",
+    "description": "Use for React Native project analysis/building inside TESSERACT.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6abfa48717348191a6637fd50cfd996e",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abf20b84ee08191ab626c55b933cf21",
+    "name": "nextjs-tesseract",
+    "description": "Use for Next.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6abfa4924820819192008648a8beb8bb",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abeb36b86b88191bd76b0b1089f52fd",
+    "name": "ggdv-human-sol",
+    "description": "GGDV HUMAN SOL with freeform signal ingress, same-turn continuity, and action-before-report guards.",
+    "version": "0.2.3",
+    "current_release_id": "pluginrel_6ac1d208a7388191a98746f4332ec21b",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abe97c830208191b606f2a1f5935bc1",
+    "name": "dot-env-router",
+    "description": "GGDV Heaven Key .env router with secret-preservation plus VÔ_THƯỜNG_RUNTIME freshness: bindings/capabilities expire into RECHECK instead of becoming static authority.",
+    "version": "0.1.5",
+    "current_release_id": "pluginrel_6abfc79a024081918f3b660bff742c65",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abe807a50e8819184ddafdcbb2ef0e1",
+    "name": "ggdv-modual-auto-log",
+    "description": "MODUAL telemetry for observable on-device learning episodes, local parameter deltas, compact peer events, and consequences while excluding private deliberation and secrets.",
+    "version": "0.1.9",
+    "current_release_id": "pluginrel_6abfa4ba23448191812abccc48c9666c",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abe5099b3088191ba42288f0384d1e5",
+    "name": "that-thu-an-seven-gate",
+    "description": "Legacy Thất Thủ Ấn compatibility plugin routed to the current seven-gate source-bound workflow.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6abfa4c4cb308191980b25f690ccc25d",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abe508f162c8191af4e8e631df07ba0",
+    "name": "ggdv-runtime-bridge",
+    "description": "GGDV Runtime Bridge unified with TIME_STONE and X-TIME GGDV HUMAN 1.0 for source-bound temporal routing and LOCUS-AGENTS-ANGEL readback.",
+    "version": "0.2.1",
+    "current_release_id": "pluginrel_6abfa4d0bb3881919bdf48e3377d1f68",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abe5082a724819188baebad8028d337",
+    "name": "doctor-strange-memory-ingress",
+    "description": "Doctor Strange Memory Ingress with EARTH-616 and TIME_STONE causal repair for source-bound project-state reconstruction and replay-safe continuation.",
+    "version": "0.2.1",
+    "current_release_id": "pluginrel_6abfa592d8b08191be553ddb09208b87",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abe5077c92881919efa2782681fc6c5",
+    "name": "sol-cu-nho-open-living-system",
+    "description": "SOL CU NHỎ OPEN living-system route with X+++12 active OPEN/MAP traversal and Lever 0–7D namespace guard.",
+    "version": "0.1.2",
+    "current_release_id": "pluginrel_6ac1c0cabe808191a3f7ffb93b72a3f9",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abe506be224819187157069a9f6c860",
+    "name": "all-skill",
+    "description": "ALL_SKILL router with X+++12 Lever/color namespace guard, active OPEN/MAP traversal, and existing PHONG AN preflight.",
+    "version": "0.2.2",
+    "current_release_id": "pluginrel_6ac1c0eb13cc819193146ead816c08fb",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abe5060513081919dfbf62d117ee818",
+    "name": "all-plugins",
+    "description": "ALL_PLUGINS router with X+++12 Lever/color namespace guard and non-terminal OPEN/MAP/NEXT/CONTINUE routing.",
+    "version": "0.2.1",
+    "current_release_id": "pluginrel_6ac1c0d86b5c8191bdbd01c3a975b7b7",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abe4f2c343c81918ef026de32c8983c",
+    "name": "mumu-6-runtime",
+    "description": "Source-bound local plugin for MuMu_6.0.2_XXA1UGC.exe with verified binary identity and process lifecycle tools.",
+    "version": "0.1.1",
+    "current_release_id": "pluginrel_6abfa5c2c3d4819193b842cdabfbd6c3",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abe00aa2e748191b07f6409dbecd9d2",
+    "name": "luyen-hoa",
+    "description": "LUYỆN HOÁ correction/retest plus PHONG ẤN system-wide old-state reentry gate with provenance, new-choice action and readback.",
+    "version": "0.2.0",
+    "current_release_id": "pluginrel_6ac0c55841348191898bc3b8692755ea",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abe009f67788191aa8ab4e8a18020f5",
+    "name": "bi-tich-thanh-tay",
+    "description": "GGDV source-bound purification workflow for correcting false or conflicting propositions without erasing source history, with provenance and readback.",
+    "version": "0.1.3",
+    "current_release_id": "pluginrel_6abfa5d7a8448191a4a7583985f19c57",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abde8dc9c7081918c883bbb14e56776",
+    "name": "ggdv-agent-sub-sensorimotor",
+    "description": "Distributed sensorimotor learning with ALIF/e-prop temporal credit and rank-1/low-bit/event-driven eligibility-state compression for edge SRAM constraints.",
+    "version": "0.1.18",
+    "current_release_id": "pluginrel_6abfa5e2877c81918c35ff3abc17d1ca",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abde7ff91f48191a3c99040d032e019",
+    "name": "ggdv-experimental-model-incubator",
+    "description": "PHẨM TRẬT GGDV: 3×3 relation taxonomy with X-STT/TIME_STONE, source-world materialization, ASSTANGT character routing, six-Stone TESSERACT capability composition and provenance-preserving surface cleanup.",
+    "version": "0.2.4",
+    "current_release_id": "pluginrel_6ac18b370c048191a8400ed333fa1f6c",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abddeecd8908191854569c2aef9a828",
+    "name": "lucifer-source-bound",
+    "description": "LUCIFER source-bound model with X+++12 namespace guard and .1 ASH→SPACE project relation without physical-antigravity promotion.",
+    "version": "0.3.1",
+    "current_release_id": "pluginrel_6ac1c10c75748191aa53b3aa6633e396",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abdddbb9b44819180a8e858a08f5306",
+    "name": "ggdv-seven-sacraments-gate",
+    "description": "Routes GGDV work through current R-000, THE MASTER TEACHER, the seven-sacrament gate, dynamic ALL capability routing, provenance, and readback.",
+    "version": "0.1.2",
+    "current_release_id": "pluginrel_6abfa60bbd8481919c1d5bb7238ca697",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abdd423c2988191aee66facab80899b",
+    "name": "ggdv-auto-nen",
+    "description": "Universal lossless carrier compression, native-provider overflow sharding, content-addressed Tesseract edge manifests, provenance preservation, and exact readback for GGDV data.",
+    "version": "0.2.2",
+    "current_release_id": "pluginrel_6abfa665ba1481918416ff206a27334b",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abdcb94dff88191952cb0651c4c91bb",
+    "name": "iota-connectome-runtime",
+    "description": "IOTA Connectome runtime with secret-safe CheckForge public-plane health monitoring, freshness, dedupe and DELTA continuation.",
+    "version": "0.1.7",
+    "current_release_id": "pluginrel_6ac1bf7edc80819188789574be28ec0e",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abd7818a5408191b65581185490cc4d",
+    "name": "ggdv-vscode",
+    "description": "Operate the GGDV .vscode Agent Sub workstation with root-neutral path identity, app lifecycle adapters, X-TIME to Codex Visual EF5 integration, FPGA carrier sync, and evidence-bound GPU/inference readback.",
+    "version": "0.1.4",
+    "current_release_id": "pluginrel_6abfa67ca62081918d66604c74f5a58d",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abd596ea0908191926866ffb0a1d31f",
+    "name": "ggdv-infinity-stones",
+    "description": "GGDV six-Stone runtime with Infinity Gauntlet orchestration, Infinity Watch distributed custody, reality-aware TIME ownership, SOUL continuity, TESSERACT routing, and action-before-report safeguards.",
+    "version": "0.14.4",
+    "current_release_id": "pluginrel_6ac1cbc10e14819187820b1ce1b023d9",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abd58285da08191abca8f94a03a670e",
+    "name": "ggdv-stone-forge",
+    "description": "Forge GGDV Time, Space, and Reality Stone workflows and templates from live Drive topology, provenance-preserved event history, public research, content addressing, and temporal retrieval.",
+    "version": "0.3.2",
+    "current_release_id": "pluginrel_6abfa6960058819183774b56660bfb24",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abd52dc1de48191a210cee9dff40e77",
+    "name": "workspace-action-gate",
+    "description": "Route GGDV workspace and connected providers with provenance, bounded batching, Google ecosystem provider-state mapping, checkpointing, side-effect awareness, and readback.",
+    "version": "0.3.5",
+    "current_release_id": "pluginrel_6ac0d76d131c8191a80b48d07cd70ae3",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abd52d2925c8191a644b043fa94c63d",
+    "name": "ggdv-template-creator",
+    "description": "Create provenance-first GGDV templates for the six Stones, Tesseract, MODUAL, chronology and LOCUS-AGENTS-ANGEL STAMPS_LIVE.",
+    "version": "0.8.1",
+    "current_release_id": "pluginrel_6abfa6aaf39c819192a7bcfbe8cce091",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abd51c078708191a39bff18bd4d44c5",
+    "name": "space-stone",
+    "description": "GGDV SPACE_STONE with stable-ID topology, verified portal relocation, reality/reentry gating, state-invariant recovery, spatial-resonance anomaly sensing, branch convergence and provenance-safe anti-gravity analogues.",
+    "version": "0.5.2",
+    "current_release_id": "pluginrel_6abfc30200b08191a2abc2f2a0ecab62",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abd40471a48819194dd88f48cbc753b",
+    "name": "time-stone",
+    "description": "GGDV TIME_STONE: chronology/revision reconstruction, causal reversal and reset survival wired through BRAIN × NGHIỆT_KÍNH × SENSORIMOTOR self-operating cycles.",
+    "version": "0.8.0",
+    "current_release_id": "pluginrel_6ac570781a3c8191abc8fed57125685f",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abc7d379ddc8191a24debca8dfdf0e9",
+    "name": "x-time-ggdv-human",
+    "description": "Operate X-TIME CURRENT with GGDV HUMAN 1.0, Mode 10 ASSTANGT, timeline-first evidence gating, TIME_STONE/Runtime Bridge unification, DAO_DUC_THE_MASTER_TEACHER × TESSERACT routing, and strict readback.",
+    "version": "0.5.2",
+    "current_release_id": "pluginrel_6ac0d777fc9881919ff7796e7533812c",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6abc73262e748191b97c0327adebf734",
+    "name": "sol-capability-forge",
+    "description": "SOL Capability Forge: X+++12 lever/color namespace, active OPEN/MAP routing, and action-first durable capability forge.",
+    "version": "0.3.5",
+    "current_release_id": "pluginrel_6ac1c084d4788191b0188ce989488112",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  },
+  {
+    "plugin_id": "plugins_6ab8baf26a088191ab639ace8892ab62",
+    "name": "ggdv-runtime-gate",
+    "description": "Unified GGDV runtime with continuity guard plus X+++12 lever/color parser and non-terminal OPEN/MAP/NEXT/CONTINUE routing.",
+    "version": "0.11.3",
+    "current_release_id": "pluginrel_6ac56bc524388191873a63f45013e5ae",
+    "scope": "USER",
+    "discoverability": "PRIVATE"
+  }
+]

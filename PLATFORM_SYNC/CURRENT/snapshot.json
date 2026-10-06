@@ -1,0 +1,11 @@
+{
+  "schema": "GGDV_PLATFORM_SYNC_V1",
+  "snapshot_date": "2026-10-07",
+  "target_repo": "2708halinh-cloud/Open-ai-bot",
+  "security_policy": "NO_SECRET_EXPORT_ON_PUBLIC_GIT",
+  "installed_skill_count": 326,
+  "skill_namespace_count": 70,
+  "owned_plugin_count": 64,
+  "project_carrier_count": 38,
+  "callable_tool_count": 196
+}
