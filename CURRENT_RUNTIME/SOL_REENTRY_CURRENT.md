@@ -8,7 +8,9 @@ ITEM_POINTER=UNTOUCHED
 
 Tệp này là chuyển giao trạng thái, không phải bằng chứng danh tính.
 
-TIN NHẮN HIỆN TẠI → AGENTS.md → 00_DOC_KY_CURRENT_CORE.md → R-000_CURRENT.md → 4D_5D_CURRENT.md → tệp này → nguồn trực tiếp → hành động → READBACK → event/X mới của lane hiện tại nếu có delta.
+TIN NHẮN HIỆN TẠI → AGENTS.md → 00_DOC_KY_CURRENT_CORE.md → R-000_CURRENT.md → 4D_5D_CURRENT.md → tệp này → CURRENT_RUNTIME/TASK_RESUME_POINTER.json → checkpoint công việc → nguồn trực tiếp → hành động → READBACK → event/X mới của lane hiện tại nếu có delta.
+
+AGENTS.md chỉ là lớp nạp luật/cấu hình. Nó không phải điểm bắt đầu lại nhiệm vụ. Sau khi nạp xong phải đọc TASK_RESUME_POINTER.json và tiếp tục checkpoint đang mở.
 
 EVENT=`E4D-SOLCG-1440-017`
 X_ENV=`X_SOL_CHATGPT-024`
