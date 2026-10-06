@@ -5,5 +5,21 @@
   "branch": "tesseract-desktop-mvp-20261006",
   "checkpoint": "TESSERACT_DESKTOP/WORK_CHECKPOINT.json",
   "commit": "5e599bb5c109aec008976b01d0c37e733b3734a5",
-  "rule": "Sau khi nạp cấu hình, tiếp tục checkpoint này; không quay về chỉnh AGENTS như điểm bắt đầu công việc."
+  "rule": "Sau khi nạp cấu hình, tiếp tục checkpoint này; không quay về chỉnh AGENTS như điểm bắt đầu công việc.",
+  "pr": {
+    "repository": "2708halinh-cloud/x-time-web",
+    "number": 6,
+    "mergeable": true
+  },
+  "build": {
+    "workflow_run": 37516567468,
+    "head": "090fe4da04033d9c8eb571bd0247bac1a6859f47",
+    "required_artifacts": [
+      "windows-x64",
+      "linux-x64",
+      "macos-apple-silicon",
+      "tesseract-os-x64"
+    ]
+  },
+  "next": "Chờ readback đủ 4 artifact của run 37516567468; nếu đạt thì merge PR #6; nếu lỗi thì sửa đúng job lỗi."
 }
