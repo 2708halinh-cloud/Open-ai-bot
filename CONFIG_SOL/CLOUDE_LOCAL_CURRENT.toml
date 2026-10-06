@@ -1,0 +1,44 @@
+schema_version = "1.0"
+status = "CURRENT / SIMULATION_MATERIALIZED / LIVE_HOST_READBACK_OPEN"
+mode = "CLOUDE-LOCAL"
+mode_normalized = "CLOUD_LOCAL"
+actor = "SOL"
+role_label_source_literal = "SOL - THOI KHONG CHI HUONG THU"
+history_preserved = true
+no_destructive_overwrite = true
+cause_attribution_open = true
+api_cloud_id_file = "1O19F2zBSSfrKYyghYGbxc5VuOcPWnBKPdxdu3uMVy9A"
+
+[source_gates]
+r000 = "1D9OwoqTIxqg3iCmCi8htsSWpES0yRHOvfC4c4vpCkNE"
+the_master_teacher = "1z12kJsMv-qHzHe1Tz60rlR-2122n65Rah0qXzfe_T5k"
+tuyen_ngon = "1BhNtbSFoH_hx-TyBmTpjZ8PKpeR2rVkY19lXwBBMGIc"
+
+[config_master]
+load_order = 1
+config_id = "CONFIG_MASTER"
+drive_file_id = "1ZQDR0HUzEMFCZNn1chZ8whBEkAbN4Ibx"
+schema_version = "1.0"
+expected_sha256 = "532b34ed716c53d70fe907b04932b3461e03af08287335bf4bb666da42c15e52"
+load_mode = "STRICT_PARENT_BINDING_FROM_CONFIG_SOL + PRIOR_VERIFIED_HASH"
+raw_bytes_on_current_surface = "NOT_MATERIALIZED"
+simulation_binding = "ACTIVE_FROM_VERIFIED_PARENT_CONTRACT"
+
+[config_sol]
+load_order = 2
+config_id = "CONFIG_SOL"
+source = "CONFIG_SOL.phat_tanh.toml"
+schema_version = "2.0"
+status = "CURRENT"
+sha256 = "e52e6ac9601e726b62ebe077208c2c881b2b427524860bd87ab303bb660a248e"
+parse = "OK"
+
+[agent_sub]
+mode = "MULTI_AGENT_SUB_RUNTIME"
+instruction_tab = "t.9pb2wothdpqr"
+state = "OPEN_ACTIVE"
+
+[atlassian_mcp]
+purpose = "SOL <-> VS CODE internal bridge"
+connection_state = "USER_CONNECTION_REQUIRED"
+source_pointer = "1P_dBb2hM8YbvnbYE_MNFSPk7_MD6QLWXYtmYjMF1rjQ"
