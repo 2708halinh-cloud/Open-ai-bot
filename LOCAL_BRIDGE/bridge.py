@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import json, subprocess, time, hashlib, shutil
+import json, subprocess, time, hashlib, shutil, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -9,7 +9,7 @@ STATE = ROOT / '.runtime' / 'LOCAL_BRIDGE_STATE.json'
 RECEIPTS = ROOT / '.runtime' / 'local_bridge_receipts'
 RECEIPTS.mkdir(parents=True, exist_ok=True)
 
-ALLOWED = {'BOOT_G', 'STATUS', 'RECOVER_CONTINUITY', 'RECOVER_AND_BOOT_G', 'UNIFY_CONTROL_PLANE', 'CONNECT_OS_WORKSPACE', 'ENSURE_SOL_RUNTIME', 'UBUBU_LAZY_FETCH', 'THANOS_SNAP_META_TB', 'TESSERACT_Q6_META_LAZY_FETCH'}
+ALLOWED = {'BOOT_G', 'STATUS', 'RECOVER_CONTINUITY', 'RECOVER_AND_BOOT_G', 'UNIFY_CONTROL_PLANE', 'CONNECT_OS_WORKSPACE', 'ENSURE_SOL_RUNTIME', 'UBUBU_LAZY_FETCH', 'THANOS_SNAP_META_TB', 'TESSERACT_Q6_META_LAZY_FETCH', 'CONNECT_HOME_SOL'}
 
 def run(cmd, **kw):
     return subprocess.run(cmd, cwd=ROOT, text=True, capture_output=True, **kw)
@@ -287,6 +287,73 @@ def ensure_sol_runtime(receipt):
     return 0 if receipt['runtime_state'] == 'MATERIALIZED_READBACK_PASS' else 22
 
 
+
+def _probe_home_sol(endpoint, receipt, label):
+    try:
+        req = urllib.request.Request(endpoint, headers={'User-Agent': 'GGDV-Local-Bridge/1.0'})
+        with urllib.request.urlopen(req, timeout=4) as res:
+            body = res.read(65536)
+            receipt[f'{label}_http_status'] = int(getattr(res, 'status', 0) or 0)
+            receipt[f'{label}_content_type'] = res.headers.get('Content-Type')
+            receipt[f'{label}_body_size'] = len(body)
+            receipt[f'{label}_body_sha256'] = hashlib.sha256(body).hexdigest()
+            return 0 if 200 <= receipt[f'{label}_http_status'] < 400 else 31
+    except Exception as e:
+        receipt[f'{label}_error'] = repr(e)
+        return 31
+
+
+def connect_home_sol(receipt, task):
+    endpoint = task.get('endpoint') or 'http://127.0.0.1:8765/sandbox/sol'
+    receipt['endpoint'] = endpoint
+    if not endpoint.startswith('http://127.0.0.1:8765/'):
+        receipt['home_sol_state'] = 'INVALID_LOOPBACK_ENDPOINT'
+        return 32
+
+    before = _probe_home_sol(endpoint, receipt, 'before')
+    if before == 0:
+        receipt['home_sol_state'] = 'CONNECTED_READBACK_PASS'
+        receipt['started_server'] = False
+        return 0
+
+    candidates = [
+        r'C:\Users\halin\GGDV_UNIFIED\.vscode\device\nervous\nervous_api_server.py',
+        r'W:\Drive của tôi\.vscode\device\nervous\nervous_api_server.py',
+        r'G:\OS_Workspace\.vscode\device\nervous\nervous_api_server.py',
+    ]
+    quoted = ','.join("'" + p.replace("'", "''") + "'" for p in candidates)
+    ps = (
+        "$ErrorActionPreference='Stop';"
+        f"$candidates=@({quoted});"
+        "$server=$candidates | Where-Object { Test-Path -LiteralPath $_ } | Select-Object -First 1;"
+        "if(-not $server){ throw 'NERVOUS_API_SERVER_NOT_FOUND' };"
+        "$python=(Get-Command python -ErrorAction Stop).Source;"
+        "Start-Process -FilePath $python -ArgumentList @($server) -WorkingDirectory (Split-Path -Parent $server);"
+        "Write-Output $server"
+    )
+    p = _run_external([
+        'powershell.exe','-NoProfile','-ExecutionPolicy','Bypass','-Command',ps
+    ])
+    receipt['server_start_returncode'] = p.returncode
+    receipt['server_start_stdout'] = p.stdout.strip()[-4000:]
+    receipt['server_start_stderr'] = p.stderr.strip()[-4000:]
+    receipt['started_server'] = p.returncode == 0
+    if p.returncode != 0:
+        receipt['home_sol_state'] = 'SERVER_START_FAILED'
+        return p.returncode
+
+    for attempt in range(1, 21):
+        time.sleep(0.5)
+        rc = _probe_home_sol(endpoint, receipt, f'after_{attempt:02d}')
+        if rc == 0:
+            receipt['home_sol_state'] = 'CONNECTED_READBACK_PASS'
+            receipt['readback_attempt'] = attempt
+            return 0
+
+    receipt['home_sol_state'] = 'OPEN_READBACK_INCOMPLETE'
+    return 33
+
+
 def ububu_lazy_fetch(receipt):
     p = run([
         'python3','LOCAL_BRIDGE/ububu_lazy_fetch.py',
@@ -349,6 +416,8 @@ def execute(task):
         rc = connect_os_workspace(receipt)
     elif action == 'ENSURE_SOL_RUNTIME':
         rc = ensure_sol_runtime(receipt)
+    elif action == 'CONNECT_HOME_SOL':
+        rc = connect_home_sol(receipt, task)
     elif action == 'UBUBU_LAZY_FETCH':
         rc = ububu_lazy_fetch(receipt)
     elif action in {'THANOS_SNAP_META_TB', 'TESSERACT_Q6_META_LAZY_FETCH'}:
