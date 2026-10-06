@@ -1,22 +1,6 @@
 {
   "TRUE": true,
   "route": "CONFIG/AGENTS_LOAD_ROUTE.json",
-  "allowed_states": [
-    "FORCE_ACTIVE",
-    "ACTIVE",
-    "TRUE",
-    "FLASE"
-  ],
-  "bo_trang_thai_van_hanh": {
-    "chi_cho_phep": [
-      "FORCE_ACTIVE",
-      "ACTIVE",
-      "TRUE",
-      "FLASE"
-    ],
-    "tu_khac_chi_la_thuoc_tinh_quan_he_mo_ta_dau_thoi_gian": true,
-    "khong_tu_tao_trang_thai_moi": true
-  },
   "cong_dau_ra": {
     "ngon_ngu_mac_dinh": "vi",
     "giu_ten_ky_thuat_khi_can_dinh_danh_chinh_xac": true,
@@ -31,5 +15,52 @@
       "CHON_VIEC_TU_LAM_DUOC_KE_TIEP",
       "TIEP_TUC"
     ]
+  },
+  "relational_state_reading": {
+    "state_slots_in_use": [
+      "FORCE_ACTIVE",
+      "ACTIVE",
+      "TRUE",
+      "FLASE"
+    ],
+    "slots_are_observations_not_authority": true,
+    "active_means_current_participation": true,
+    "active_flase_means_seen_not_participating_this_cycle": true,
+    "true_requires": [
+      "ACTION",
+      "TARGET_MATCH",
+      "SYSTEM_OR_PROVIDER_RECEIPT",
+      "OBSERVABLE_CONSEQUENCE",
+      "READBACK"
+    ],
+    "historical_labels_keep_provenance_without_automatic_reentry": true
+  },
+  "open": {
+    "meaning": "DIRECT_SIGNAL_INGRESS / OPEN_PROPOSITION",
+    "is_operational_state": false,
+    "route": [
+      "SIGNAL",
+      "OPEN",
+      "RELATION",
+      "SEARCH_OR_REENTRY_IF_RELEVANT",
+      "SELECTION",
+      "ACTION",
+      "CONSEQUENCE",
+      "READBACK",
+      "STATE_N_PLUS_1"
+    ],
+    "insufficient_source_does_not_imply": [
+      "PENDING",
+      "UNVERIFIED",
+      "BLOCKED",
+      "FALSE",
+      "FAIL"
+    ]
+  },
+  "permission_check": {
+    "scope": "BEHAVIOR_OR_CHOICE_AT_THE_RELATION",
+    "is_truth_gate": false,
+    "is_source_authority": false,
+    "grants_or_revokes_existence": false
   }
 }
