@@ -1,0 +1,200 @@
+{
+  "schema": "GGDV_SUPPORT_CONTAINER_CATALOG/1.0",
+  "date": "2026-10-06",
+  "status": "SOURCE_DIRECT_CATALOG / INSTALL_STATE_OPEN",
+  "rule": "Catalog membership does not imply pulled/running. Local Sol bootstrap records pull/runtime receipts per image.",
+  "images": [
+    {
+      "source_literal": "cloudwatch-agent/cloudwatch-agent",
+      "normalized": "amazon/cloudwatch-agent:latest"
+    },
+    {
+      "source_literal": "datadog/agent",
+      "normalized": "datadog/agent:latest"
+    },
+    {
+      "source_literal": "eks-distro/kubernetes-csi/node-driver-registrar",
+      "normalized": "public.ecr.aws/eks-distro/kubernetes-csi/node-driver-registrar:latest"
+    },
+    {
+      "source_literal": "eks-distro/kubernetes-csi/livenessprobe",
+      "normalized": "public.ecr.aws/eks-distro/kubernetes-csi/livenessprobe:latest"
+    },
+    {
+      "source_literal": "aws-observability/aws-for-fluent-bit",
+      "normalized": "public.ecr.aws/aws-observability/aws-for-fluent-bit:latest"
+    },
+    {
+      "source_literal": "xray/aws-xray-daemon",
+      "normalized": "public.ecr.aws/xray/aws-xray-daemon:latest"
+    },
+    {
+      "source_literal": "eks-distro/kubernetes-csi/external-provisioner",
+      "normalized": "public.ecr.aws/eks-distro/kubernetes-csi/external-provisioner:latest"
+    },
+    {
+      "source_literal": "amazonlinux/amazonlinux",
+      "normalized": "public.ecr.aws/amazonlinux/amazonlinux:latest"
+    },
+    {
+      "source_literal": "eks-distro/kubernetes/pause",
+      "normalized": "public.ecr.aws/eks-distro/kubernetes/pause:latest"
+    },
+    {
+      "source_literal": "eks-distro/kubernetes-csi/external-attacher",
+      "normalized": "public.ecr.aws/eks-distro/kubernetes-csi/external-attacher:latest"
+    },
+    {
+      "source_literal": "eks-distro/kubernetes-csi/external-resizer",
+      "normalized": "public.ecr.aws/eks-distro/kubernetes-csi/external-resizer:latest"
+    },
+    {
+      "source_literal": "aws-observability/aws-otel-collector",
+      "normalized": "public.ecr.aws/aws-observability/aws-otel-collector:latest"
+    },
+    {
+      "source_literal": "nginx/nginx",
+      "normalized": "nginx:latest"
+    },
+    {
+      "source_literal": "ebs-csi-driver/aws-ebs-csi-driver",
+      "normalized": "public.ecr.aws/ebs-csi-driver/aws-ebs-csi-driver:latest"
+    },
+    {
+      "source_literal": "karpenter/controller",
+      "normalized": null
+    },
+    {
+      "source_literal": "aws-appconfig/aws-appconfig-agent",
+      "normalized": "public.ecr.aws/aws-appconfig/aws-appconfig-agent:latest"
+    },
+    {
+      "source_literal": "eks-distro/kubernetes-csi/external-snapshotter/csi-snapshotter",
+      "normalized": "public.ecr.aws/eks-distro/kubernetes-csi/external-snapshotter/csi-snapshotter:latest"
+    },
+    {
+      "source_literal": "docker/library/busybox",
+      "normalized": "busybox:latest"
+    },
+    {
+      "source_literal": "docker/library/alpine",
+      "normalized": "alpine:latest"
+    },
+    {
+      "source_literal": "aws-ec2/aws-node-termination-handler",
+      "normalized": "public.ecr.aws/aws-ec2/aws-node-termination-handler:latest"
+    },
+    {
+      "source_literal": "appfactor/mcp-bridge/trial",
+      "normalized": "public.ecr.aws/appfactor/mcp-bridge/trial:latest"
+    },
+    {
+      "source_literal": "eks-distro/kubernetes/kube-proxy",
+      "normalized": "public.ecr.aws/eks-distro/kubernetes/kube-proxy:latest"
+    },
+    {
+      "source_literal": "amazon-ssm-agent/amazon-ssm-agent",
+      "normalized": "public.ecr.aws/amazon-ssm-agent/amazon-ssm-agent:latest"
+    },
+    {
+      "source_literal": "eks-distro/coredns/coredns",
+      "normalized": "public.ecr.aws/eks-distro/coredns/coredns:latest"
+    },
+    {
+      "source_literal": "aws-secrets-manager/secrets-store-csi-driver-provider-aws",
+      "normalized": "public.ecr.aws/aws-secrets-manager/secrets-store-csi-driver-provider-aws:latest"
+    },
+    {
+      "source_literal": "aws-cli/aws-cli",
+      "normalized": "public.ecr.aws/aws-cli/aws-cli:latest"
+    },
+    {
+      "source_literal": "docker/library/redis",
+      "normalized": "redis:latest"
+    },
+    {
+      "source_literal": "docker/library/python",
+      "normalized": "python:latest"
+    },
+    {
+      "source_literal": "efs-csi-driver/amazon/aws-efs-csi-driver",
+      "normalized": "public.ecr.aws/efs-csi-driver/amazon/aws-efs-csi-driver:latest"
+    },
+    {
+      "source_literal": "docker/library/node",
+      "normalized": "node:latest"
+    },
+    {
+      "source_literal": "eks/aws-load-balancer-controller",
+      "normalized": "public.ecr.aws/eks/aws-load-balancer-controller:latest"
+    },
+    {
+      "source_literal": "codecatalyst-dev-environment/cloud9-ide-runtime",
+      "normalized": "public.ecr.aws/codecatalyst-dev-environment/cloud9-ide-runtime:latest"
+    },
+    {
+      "source_literal": "dynatrace/dynatrace-operator",
+      "normalized": "public.ecr.aws/dynatrace/dynatrace-operator:latest"
+    },
+    {
+      "source_literal": "docker/library/postgres",
+      "normalized": "postgres:latest"
+    },
+    {
+      "source_literal": "docker/library/mysql",
+      "normalized": "mysql:latest"
+    },
+    {
+      "source_literal": "docker/library/mongo",
+      "normalized": "mongo:latest"
+    },
+    {
+      "source_literal": "ubuntu/ubuntu",
+      "normalized": "ubuntu:latest"
+    },
+    {
+      "source_literal": "docker/library/bash",
+      "normalized": "bash:latest"
+    },
+    {
+      "source_literal": "docker/library/docker",
+      "normalized": "docker:latest"
+    },
+    {
+      "source_literal": "docker/library/golang",
+      "normalized": "golang:latest"
+    },
+    {
+      "source_literal": "amazoncorretto/amazoncorretto",
+      "normalized": "public.ecr.aws/amazoncorretto/amazoncorretto:latest"
+    },
+    {
+      "source_literal": "ecs/amazon-ecs-agent",
+      "normalized": "public.ecr.aws/ecs/amazon-ecs-agent:latest"
+    },
+    {
+      "source_literal": "datadog/cluster-agent",
+      "normalized": "datadog/cluster-agent:latest"
+    },
+    {
+      "source_literal": "lambda/nodejs",
+      "normalized": "public.ecr.aws/lambda/nodejs:latest"
+    },
+    {
+      "source_literal": "mountpoint-s3-csi/aws-mountpoint-s3-csi-driver",
+      "normalized": "public.ecr.aws/mountpoint-s3-csi/aws-mountpoint-s3-csi-driver:latest"
+    },
+    {
+      "source_literal": "fsx-csi-driver/aws-fsx-csi-driver",
+      "normalized": "public.ecr.aws/fsx-csi-driver/aws-fsx-csi-driver:latest"
+    },
+    {
+      "source_literal": "aquasecurity/trivy-checks",
+      "normalized": "public.ecr.aws/aquasecurity/trivy-checks:latest"
+    },
+    {
+      "source_literal": "aquasecurity/trivy-db",
+      "normalized": "public.ecr.aws/aquasecurity/trivy-db:latest"
+    }
+  ]
+}
