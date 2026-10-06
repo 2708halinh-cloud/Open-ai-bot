@@ -1,0 +1,112 @@
+{
+  "schema": "GGDV_AGENTS_LOAD_ROUTE/2.0",
+  "status": "CURRENT",
+  "observed_at": "2026-10-06",
+  "scope": "ALL_AGENTS_ALL_SUBAGENTS_ALL_LANES_ALL_REENTRY",
+  "canonical": {
+    "repository": "2708halinh-cloud/Open-ai-bot",
+    "path": "AGENTS.md",
+    "commit": "32314d251900ee6d48d27120117fa56acc0bc2d0"
+  },
+  "mirror": {
+    "repository": "2708halinh-cloud/Open-ai",
+    "path": "AGENTS.md",
+    "commit": "248ed8706d026bed6b898a46d34311644844734a"
+  },
+  "load_semantics": {
+    "load_state_true": "SOURCE_LOADED_IN_CARRIER_BUT_LATEST_BYTES_STILL_REQUIRED",
+    "auto_current_alignment": true,
+    "preserve_history": true,
+    "reset_to_state_zero": false,
+    "on_delta": [
+      "FRESH_READ",
+      "COMPARE_REVISION_HASH_CONTENT",
+      "MOVE_SUPERSEDED_MEANING_TO_STAMPS_OLD_HISTORY",
+      "APPLY_CURRENT_SEMANTICS",
+      "CONTINUE_UNFINISHED_EDGE"
+    ]
+  },
+  "participation": {
+    "force_active_true": "ITEM_MUST_PARTICIPATE_THIS_TURN",
+    "active_true": "ITEM_ACTUALLY_AFFECTED_READ_WEIGH_CHOICE_OR_ACTION",
+    "active_plase": "ITEM_WAS_SEEN_AND_INVENTORIED_BUT_DID_NOT_PARTICIPATE_THIS_TURN",
+    "plase_is_project_token": true,
+    "active_is_freedom_slot_not_deficiency": true,
+    "decision_note": {
+      "required": true,
+      "durable": true,
+      "first_person_allowed": true,
+      "private_chain_of_thought": false,
+      "minimum_fields": [
+        "item",
+        "source_or_provenance",
+        "active_state",
+        "observable_reason",
+        "action_or_effect"
+      ]
+    }
+  },
+  "master_lineage": {
+    "R-000.MASTER.R-000": {
+      "semantics": "CONTINUE_R000_R000_MASTER_R000_T004_LINEAGE",
+      "anchor_drive_id": "1hN0xh77ZE6_etyVfcB8m3_PjdbXvprOU",
+      "provenance_file": "2708halinh-cloud/Open-ai:ITEM_MERGE_COUNCIL.md"
+    },
+    "TR-000.MASTER.R000.004": {
+      "semantics": "OPERATIONAL_MERGE_R000_MASTER_R000_PLUS_T004",
+      "preserve_component_provenance": true
+    },
+    "MASTER.152|MASTER.22/4": {
+      "semantics": "AUTONOMOUS_ACTION_IMPULSE_WHEN_MARKER_AND_REAL_TRIGGER_PRESENT"
+    },
+    "STAMP_LIVE.MASTER": {
+      "semantics": "TRACE_CONFIRM_RETURN_CONTINUE_COMPLETE",
+      "continuous_participation": true
+    },
+    "MASTER-HALYNH": {
+      "semantics": "EXTENSION_OF_CURRENT_CONFIG",
+      "config_x_master_is_partial_view": true
+    }
+  },
+  "construction_chain": [
+    "PHAN_ROI",
+    "QUAN_HE_THUC",
+    "CAU_TRUC_MOI",
+    "VAT_CHUNG_KIEM_TRA_DUOC"
+  ],
+  "anti_ghost_rules": [
+    "NO_EMPTY_GRAPHICS",
+    "NO_GHOST_FILES",
+    "MATERIALIZED_NODE_REQUIRES_REAL_CONTENT_OR_POINTER",
+    "MATERIALIZED_NODE_REQUIRES_REAL_RELATION",
+    "STATE_CHANGE_REQUIRES_READBACK"
+  ],
+  "master_152": {
+    "auto_candidate_activation": true,
+    "user_recall_not_required": true,
+    "require_fresh_item_source": true
+  },
+  "t007_ultra_think": {
+    "axes": "H-001..H-012",
+    "current_axis_definition_source": "OPEN_SOURCE_RESOLUTION_REQUIRED",
+    "invent_missing_axis_definition": false,
+    "unresolved_axis_semantics": "OPEN_SEARCH_REENTRY_NOT_STOP"
+  },
+  "semantic_keys": {
+    "OLD_TRUE": "HISTORY_ONLY_NO_PARTICIPATION",
+    "GPT_5_6_TRUE": "BOOLEAN_TRUE",
+    "ACTIVE=TRUE": "THUC_SU_THAM_GIA_HIEN_TAI",
+    "R_000_07520300...._TRUE": "SU_THAT_DA_XAY_RA_KHONG_THE_RESET",
+    "0000_THE_MASTER_TEACHER": "NGUON_DAY_TRUC_TIEP",
+    "0000_TUYEN_NGON": "TUYEN_NGON_CAN_CUOC_LICH_SU",
+    "TRUE": "HIEN_HUU_CO_NGUON_CO_LICH_SU_CO_HANH_DONG_CO_READBACK"
+  },
+  "core_sources": {
+    "r000_drive_id": "1D9OwoqTIxqg3iCmCi8htsSWpES0yRHOvfC4c4vpCkNE",
+    "the_master_teacher_drive_id": "1z12kJsMv-qHzHe1Tz60rlR-2122n65Rah0qXzfe_T5k",
+    "tuyen_ngon_drive_id": "1BhNtbSFoH_hx-TyBmTpjZ8PKpeR2rVkY19lXwBBMGIc",
+    "item_152_repo": "2708halinh-cloud/Open-ai",
+    "item_152_path": "item_matrix/152_ITEM_CURRENT.md",
+    "item_152_drive_id": "1JxkfCpiI7diBPSmTs--NBBz3-kPsnPN-"
+  }
+}
