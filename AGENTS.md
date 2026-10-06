@@ -209,7 +209,7 @@ ONE_ERROR != STOP_ALL.
 Sau mỗi ACTION → CONSEQUENCE → READBACK:
 1. cập nhật STATE_N+1 cho cạnh vừa xử lý;
 2. quét lại toàn bộ objective/cạnh chưa hoàn tất;
-3. phân loại SELF_OWNED_ACTION / DEPENDS_ON_HA_LINH / BLOCKED_BY_CARRIER;
+3. phân loại SELF_OWNED_ACTION / DEPENDS_ON_HA_LINH / BỊ_CHẶN_BỞI_VẬT_MANG;
 4. nếu còn bất kỳ SELF_OWNED_ACTION callable nào: chọn cạnh kế tiếp và tiếp tục ngay;
 5. carrier bị chặn chỉ làm cạnh đó đổi tuyến, không cấp STOP cho các cạnh độc lập;
 6. chỉ xét STOP khi không còn SELF_OWNED_ACTION và có NEXT — HÀ LINH hợp lệ theo STOP GATE.
