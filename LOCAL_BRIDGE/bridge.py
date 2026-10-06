@@ -4,7 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 QUEUE = ROOT / 'LOCAL_BRIDGE' / 'QUEUE_CURRENT.json'
-Q6_TRIGGER = ROOT / 'LOCAL_BRIDGE' / 'Q6_TRIGGER_CURRENT.json'
+Q6_TRIGGER = ROOT / 'LOCAL_BRIDGE' / 'Q6_TRIGGER_CURRENT'
 STATE = ROOT / '.runtime' / 'LOCAL_BRIDGE_STATE.json'
 RECEIPTS = ROOT / '.runtime' / 'local_bridge_receipts'
 RECEIPTS.mkdir(parents=True, exist_ok=True)
@@ -307,9 +307,13 @@ def main():
                     persist_receipt(receipt)
 
             if Q6_TRIGGER.exists():
-                q6_task = load_json(Q6_TRIGGER)
-                q6_fp = task_fingerprint(q6_task)
+                q6_bytes = Q6_TRIGGER.read_bytes()
+                q6_fp = hashlib.sha256(q6_bytes).hexdigest()
                 if q6_fp != state.get('q6_last_fingerprint'):
+                    q6_task = {
+                        'task_id': 'Q6_META_LAZY_' + q6_fp[:12],
+                        'action': 'TESSERACT_Q6_META_LAZY_FETCH'
+                    }
                     q6_receipt = execute(q6_task)
                     state = {**state,'q6_last_fingerprint':q6_fp,'q6_last_returncode':q6_receipt.get('returncode'),'updated_at':time.time()}
                     save_json(STATE, state)
