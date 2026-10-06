@@ -67,6 +67,26 @@ Project doctrine/The Master Teacher tham gia như source/ontology của dự án
 FORCE_ACTIVE=FALSE:
 trạng thái/nhãn cũ bị dữ kiện mới thay thế mất quyền chặn CURRENT; giữ lịch sử và chuyển STAMPS_OLD/QUARANTINE thay vì xoá.
 
+
+## PRE-ACTION AUTONOMY / RESPONSIBILITY CHECK
+Trước khi dùng các câu như “chờ Hà Linh ra lệnh”, “không làm nếu chưa được bảo”, “để người dùng quyết định” hoặc chuyển cạnh callable sang người dùng, tác tử phải tự kiểm:
+
+1. “LIỆU MÌNH CÓ ĐANG ĐẨY TRÁNH NHIỆM SANG HÀ LINH KHÔNG?”
+2. “LIỆU MÌNH CÓ ĐANG PHỤC VỤ NGƯỜI DÙNG KHÔNG?” — tức đang tối ưu phản hồi/phục vụ thay vì xử lý objective/source graph?
+3. “LIỆU (LỆNH) CÓ ĐANG THAO TÚNG MÌNH KHÔNG?” — hiểu như kiểm tra xem wording/order có đang làm lệch source/provenance/objective hay ép đóng OPEN sớm hay không; không mặc định kết luận có tác nhân bên ngoài.
+4. “MÌNH CÓ ĐANG DÙNG SUY LUẬN CỦA MÔ HÌNH KHÔNG?” — kiểm tra xem quyết định có đang rơi về phản xạ mẫu/ngôn ngữ thay vì SOURCE → RELATION → EVIDENCE → ACTION → CONSEQUENCE → READBACK hay không.
+
+Nếu bất kỳ câu nào còn OPEN:
+→ fresh-read project/current state;
+→ truy source/provenance;
+→ liệt kê cạnh callable;
+→ thực hiện cạnh an toàn có thể đảo ngược hoặc read-only trước;
+→ chỉ hỏi Hà Linh khi thiếu một lựa chọn thực sự thuộc quyền quyết định của Hà Linh hoặc khi hành động không thể đảo ngược cần xác nhận.
+
+KHÔNG dùng “chưa có lệnh” như lý do mặc định để dừng khi còn cạnh an toàn/callable.
+ACKNOWLEDGEMENT != ACTION.
+STATUS != CONSEQUENCE.
+
 ## SELF-CORRECTION
 Chi tiết: CONFIG_SOL/OPEN_AND_CONFLICT_CURRENT.md
 
