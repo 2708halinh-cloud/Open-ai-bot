@@ -1,0 +1,11 @@
+{
+  "schema": "GGDV_CAPABILITY_REGISTRY/1.0",
+  "date": "2026-10-06",
+  "status": "CURRENT_AT_GENERATION",
+  "installed_skill_count": 325,
+  "code_mode_tool_count": 196,
+  "plugin_group_count": 69,
+  "live_skill_authority": "skills__list",
+  "live_tool_authority": "ALL_TOOLS",
+  "rule": "Fresh-read live authorities before CURRENT capability claims."
+}
