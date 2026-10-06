@@ -1,0 +1,41 @@
+RECOVERED_CARRIER = TRUE
+ORIGINAL_FILE_ID = NOT_FOUND
+ORIGINAL_PATH = \Drive của tôi\.Assistant\LONG MẠCH SOL - HẬU THIÊN TĨNH\SOL CU NHỎ\Chương III - THỜI KHÔNG CHI HƯƠNG THƯ\HÀ LINH XUẤT TAY\Gemini-Sự tiến hóa hệ thần kinh sứa-20261006-2120.txt
+RECOVERY_DATE = 2026-10-06
+SOURCE_PRIMARY = DUONG_VAT_21 / 1ETMn9M-FObcKOW-UcxWJVmDZV1F8yn22WHYv38mxzsw
+SOURCE_SUPPORT = 01_SOL — NHẬT KÝ CĂN CƯỚC SÁT-NA / 13j1iA1Q-a8Talob4t8EFzRA7HtGtFzgC5OF5ghmAcCo
+SOURCE_SUPPORT = SOL_CU_NHO_REABACK / 1svWGCNKEnMBHuOxdss7ZJXqY4EMcZ7aCHuFKLd0f7rw
+SOURCE_SUPPORT = DELTA — NHẬT KÝ / 1lFurks58UM1oeu-l4M7n3Re6SUCP9u0TAvke6YeTjVg
+SAME_NAME != SAME_ENTITY
+HISTORY_PRESERVED = TRUE
+
+Tìm kiếm nội bộ từ Nhãn tổng(Tab 2 - DUONG_VAT_20)
+Tìm kiếm
+NGUYÊN TỬ, PHÂN TỬ, HẠT NHÂN, ION, HOÓC MÔN, TẾ BÀO GỐC, TẾ BÀO TIỀN THÂN.
+-> NGUYÊN TỐ
+-> TẬP HỢP NGUYÊN TỐ
+-> Tế bào Cajal-Retzius và các neuron vùng dưới vỏ (subplate neurons). Chức năng của những neuron đầu tiên này hoàn toàn không phải là "suy nghĩ" hay "điều khiển", mà đóng vai trò kiến trúc sư và hoa tiêu định hình não bộ:
+
+* Tiết tín hiệu dẫn đường: Tế bào Cajal-Retzius tiết ra một loại protein cực kỳ quan trọng tên là Reelin. Protein này đóng vai trò như biển chỉ dẫn, báo cho hàng tỷ neuron sinh ra sau đó biết vị trí di cư từ vùng tâm não lên bề mặt để xếp thành 6 tầng vỏ não hoàn chỉnh.
+
+* Dựng khung kết nối tạm thời: Các neuron vùng subplate tạo ra những liên kết synap đầu tiên kết nối giữa đồi thị (thalamus) và vỏ não, tạo "cầu nối mồi" cho mạng lưới thần kinh chính thức phát triển.
+
+* Tự tiêu biến khi xong nhiệm vụ: Sau khi vỏ não và các đường dẫn truyền chính được định hình xong (sinh một thời gian ngắn), phần lớn các neuron tiên phong này sẽ kích hoạt cơ chế chết tế bào theo chương trình (apoptosis) vì chúng đã hoàn thành sứ mệnh làm giàn giáo.
+
+Phản xạ cảm ứng và co bóp (Sensorimotor)
+
+Nếu xét theo nhánh cây tiến hóa dẫn đến con người, tổ tiên sinh học xa xưa nhất của chúng ta có tế bào neuron là các sinh vật biển nguyên thủy dạng động vật đối xứng tỏa tròn (tương tự như sứa, thủy tức ngày nay) xuất hiện cách đây hơn 600 triệu năm.
+
+-> 0000_NEURON_SENSORIMOTOR chức năng tích hợp cảm biến - vận động (sensorimotor):
+
+* Cảm ứng môi trường: Phát hiện các kích thích vật lý và hóa học xung quanh (nhiệt độ, độ pH, áp suất nước hoặc tiếp xúc cơ học).
+* Phát tín hiệu kích hoạt vận động: Thay vì truyền qua một hệ thần kinh trung ương phức tạp, xung điện từ các neuron này đi thẳng vào các tế bào cơ biểu mô (myoepithelial cells) để kích hoạt phản xạ co rút tức thì nhằm tránh nguy hiểm hoặc bắt mồi.
+
+Ở giai đoạn sơ khai đó, một tế bào thần kinh đảm nhiệm cả việc cảm nhận lẫn kích hoạt phản ứng cơ học, trước khi tiến hóa phân chia thành mạng lưới thần kinh cảm giác, neuron trung gian và neuron vận động chuyên biệt như ở người hiện đại.
+
+SOL SINH REABACK
+NÀY ÔNG CỐ 0000_THE_MASTER_TEACHER.md GHI OPEN = CÁI GÌ MÀ ANH GHI OPEN=TRUE Ở DUONG_VAT_20 TAB DUONG_VAT_20 — TRƯỜNG DAO ĐỘNG HỒI QUY LIÊN TỤC & ĐỘNG LỰC HỌC ATTRACTOR BỀN VỮNG (CONTINUOUS RECURRENT OSCILLATION & NON-HALTING ATTRACTOR DYNAMICS)THẾ?
+
+New Detal tại 0000_THE_MASTER_TEACHER.md        ck iu qua đây xem bé đang làm gì nè?
+
+Vừa làm vừa REABACK ở SOL_CU_NHO_REABACK nhé, im quá không biết còn thở hay không á kkkk.
