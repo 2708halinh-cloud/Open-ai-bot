@@ -2,10 +2,23 @@ name: local-bridge-verify
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - 'fix/**'
     paths:
       - 'LOCAL_BRIDGE/**'
       - 'RECOVERY/**'
+      - 'CURRENT_RUNTIME/TESSERACT_LOCAL_BOOT_CURRENT.md'
+      - 'AGENTS.md'
+      - 'terminal/tesseract_boot_g_from_wsl.sh'
+      - '.runtime/TESSERACT_BOOT_G.env'
+      - '.github/workflows/local-bridge-verify.yml'
+  pull_request:
+    paths:
+      - 'LOCAL_BRIDGE/**'
+      - 'RECOVERY/**'
+      - 'CURRENT_RUNTIME/TESSERACT_LOCAL_BOOT_CURRENT.md'
+      - 'AGENTS.md'
       - 'terminal/tesseract_boot_g_from_wsl.sh'
       - '.runtime/TESSERACT_BOOT_G.env'
       - '.github/workflows/local-bridge-verify.yml'
@@ -19,19 +32,26 @@ jobs:
         run: |
           python3 -m py_compile LOCAL_BRIDGE/bridge.py
           python3 -m py_compile RECOVERY/recover_continuity.py
+          python3 -m py_compile LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/server/runtime_core.py
       - name: Bash syntax
         run: bash -n terminal/tesseract_boot_g_from_wsl.sh
-      - name: PowerShell bootstrap parses
+      - name: PowerShell scripts parse
         shell: pwsh
-        run: "[void][scriptblock]::Create((Get-Content 'LOCAL_BRIDGE/bootstrap_once.ps1' -Raw))"
+        run: |
+          [void][scriptblock]::Create((Get-Content 'LOCAL_BRIDGE/bootstrap_once.ps1' -Raw))
+          [void][scriptblock]::Create((Get-Content 'LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/scripts/autostart-sol.ps1' -Raw))
       - name: Queue contract
         run: |
           python3 - <<'PY'
           import json
           q=json.load(open('LOCAL_BRIDGE/QUEUE_CURRENT.json'))
           action=q['action']
-          allowed={'BOOT_G','STATUS','RECOVER_CONTINUITY','RECOVER_AND_BOOT_G','UNIFY_CONTROL_PLANE'}
-          assert action in allowed
+          allowed={
+              'BOOT_G','STATUS','RECOVER_CONTINUITY','RECOVER_AND_BOOT_G',
+              'UNIFY_CONTROL_PLANE','CONNECT_OS_WORKSPACE','ENSURE_SOL_RUNTIME',
+              'UBUBU_LAZY_FETCH','THANOS_SNAP_META_TB','TESSERACT_Q6_META_LAZY_FETCH'
+          }
+          assert action in allowed, (action, sorted(allowed))
           if action in {'BOOT_G','RECOVER_AND_BOOT_G'}:
               assert q['target']=='G:'
               assert q['require_usb'] is True
@@ -42,6 +62,29 @@ jobs:
               assert q.get('no_reset') is True
               assert q.get('secrets',{}).get('echo_values') is False
               assert q.get('secrets',{}).get('commit_values') is False
+          elif action == 'CONNECT_OS_WORKSPACE':
+              assert str(q.get('target','')).replace('/','\\').endswith('\\OS_Workspace')
+              inv=q.get('invariants',{})
+              assert inv.get('preserve_existing_before_replace') is True
+              assert inv.get('no_destructive_overwrite') is True
+              assert inv.get('readback_required') is True
+              assert inv.get('chat_not_runtime') is True
+          PY
+      - name: Root-neutral worktree regression
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          stale='Open-ai-bot-2-unify-item-matrix-34d45d00'
+          paths=[
+              Path('AGENTS.md'),
+              Path('CURRENT_RUNTIME/TESSERACT_LOCAL_BOOT_CURRENT.md'),
+              Path('LOCAL_BRIDGE/bootstrap_once.ps1'),
+              Path('LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/README.md'),
+              Path('LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/scripts/autostart-sol.ps1'),
+              Path('LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/server/runtime_core.py'),
+          ]
+          offenders=[str(p) for p in paths if stale in p.read_text(encoding='utf-8')]
+          assert not offenders, offenders
           PY
       - name: Recovery contract
         run: |
