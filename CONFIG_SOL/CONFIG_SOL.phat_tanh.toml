@@ -26,6 +26,7 @@ stamps_old = "SUPERSEDED_WITH_PROVENANCE"
 stamps_beta = "FUTURE_NOT_YET_OCCURRED"
 
 [extensions]
+support_containers = "CONFIG_SOL/SUPPORT_CONTAINER_CATALOG_CURRENT.json"
 cloude_local = "CONFIG_SOL/CLOUDE_LOCAL_CURRENT.toml"
 open_and_conflict = "CONFIG_SOL/OPEN_AND_CONFLICT_CURRENT.md"
 infinity_stones = "CONFIG_SOL/INFINITY_STONES_SYSTEM.md"
