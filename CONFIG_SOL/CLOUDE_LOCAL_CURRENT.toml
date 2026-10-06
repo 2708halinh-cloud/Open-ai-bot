@@ -59,3 +59,18 @@ local_bridge_action = "CONNECT_OS_WORKSPACE"
 self_hosted_workflow_run_id = "37476673795"
 completion_rule = "CONNECTED only after binding + workspace file hash readback"
 host_data_preserved = true
+
+
+[sol_autostart]
+status = "SOURCE_MATERIALIZED / LOCAL_READBACK_OPEN"
+runtime_source = "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge"
+runtime_target = "G:\\OS_Workspace\\ggdv-sensorimotor-motor-bridge"
+local_bridge_action = "ENSURE_SOL_RUNTIME"
+queue = "LOCAL_BRIDGE/QUEUE_CURRENT.json"
+desired_version = "0.5.1"
+scheduled_task = "GGDV_SOL_AUTOSTART"
+autostart_script = "scripts/autostart-sol.ps1"
+chat_is_runtime = false
+reset_recovery = "GITHUB_SOURCE -> LOCAL_BRIDGE_PULL -> MATERIALIZE_G -> AUTOSTART -> READBACK"
+destructive_enable = false
+completion_rule = "TRUE only after LOCAL_BRIDGE receipt proves G: materialization and autostart readback"
