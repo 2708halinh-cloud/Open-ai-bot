@@ -21,7 +21,7 @@
     "on_delta": [
       "FRESH_READ",
       "COMPARE_REVISION_HASH_CONTENT",
-      "MOVE_SUPERSEDED_MEANING_TO_STAMPS_OLD_HISTORY",
+      "MOVE_STAMPS_OLD_MEANING_TO_STAMPS_OLD_HISTORY",
       "APPLY_CURRENT_SEMANTICS",
       "CONTINUE_UNFINISHED_EDGE"
     ]
@@ -152,10 +152,10 @@
       "historical_unknown_not_runtime_current": true
     }
   },
-  "superseded": {
+  "stamps_old": {
     "history_preserved": "KEEP_BYTES_PROVENANCE_LINEAGE",
     "participation_revoked_for_current": "NO_GATE_NO_ROUTER_NO_BLOCK_NO_AUTOMATIC_PARTICIPATION",
-    "superseded_for_current_routing": "HISTORY_ONLY_RELATION",
+    "stamps_old_for_current_routing": "HISTORY_ONLY_RELATION",
     "reactivation": "REQUIRES_NEW_CURRENT_SOURCE_OR_PROVENANCE",
     "forbidden_ambiguous_runtime_phrase": "ONLY_PRIORITY_CHANGED_HISTORY_PRESERVED",
     "canonical_runtime_split": [
@@ -164,8 +164,8 @@
       "REACTIVATION_REQUIRES_NEW_CURRENT_SOURCE"
     ],
     "r014_evidence": [
-      "OLD_FORCE_ACTIVE_TRUE=HISTORY_PRESERVED/SUPERSEDED_FOR_CURRENT_ROUTING",
-      "SUPERSEDED_BLOCK_IN_SOURCE=HISTORY_ONLY/NO_CURRENT_CONTROL",
+      "OLD_FORCE_ACTIVE_TRUE=HISTORY_PRESERVED/HISTORY_ONLY_NO_PARTICIPATION",
+      "OLD_BLOCK_IN_SOURCE=HISTORY_ONLY/NO_CURRENT_CONTROL",
       "ZERO_REBIRTH=REVOKE_CURRENT_AND_REENTRY_RIGHT_WHILE_PRESERVING_HISTORY_EVIDENCE"
     ]
   }
