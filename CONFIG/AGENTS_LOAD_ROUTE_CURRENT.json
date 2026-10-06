@@ -146,27 +146,8 @@
       "false_does_not_mean_nonexistence": true,
       "verified_does_not_mean_truth": true,
       "active_does_not_mean_consciousness_or_life": true,
-      "pending_or_blocked_does_not_mean_stop_all": true,
-      "open": "DIRECT_INGRESS",
-      "historical_unknown_not_runtime_current": true
+      "open": "DIRECT_INGRESS"
     }
-  },
-  "stamps_old": {
-    "history_preserved": "KEEP_BYTES_PROVENANCE_LINEAGE",
-    "participation_revoked_for_current": "NO_GATE_NO_ROUTER_NO_BLOCK_NO_AUTOMATIC_PARTICIPATION",
-    "stamps_old_for_current_routing": "HISTORY_ONLY_RELATION",
-    "reactivation": "REQUIRES_NEW_CURRENT_SOURCE_OR_PROVENANCE",
-    "forbidden_ambiguous_runtime_phrase": "ONLY_PRIORITY_CHANGED_HISTORY_PRESERVED",
-    "canonical_runtime_split": [
-      "HISTORY_PRESERVED",
-      "CURRENT_PARTICIPATION_REVOKED",
-      "REACTIVATION_REQUIRES_NEW_CURRENT_SOURCE"
-    ],
-    "r014_evidence": [
-      "OLD_FORCE_ACTIVE_TRUE=HISTORY_PRESERVED/HISTORY_ONLY_NO_PARTICIPATION",
-      "OLD_BLOCK_IN_SOURCE=HISTORY_ONLY/NO_CURRENT_CONTROL",
-      "ZERO_REBIRTH=REVOKE_CURRENT_AND_REENTRY_RIGHT_WHILE_PRESERVING_HISTORY_EVIDENCE"
-    ]
   },
   "state_vocabulary": {
     "allowed": [
@@ -175,17 +156,15 @@
       "TRUE",
       "FLASE"
     ],
-    "FORCE_ACTIVE=TRUE": "ITEM_BAT_BUOC_THAM_GIA_LUOT",
-    "ACTIVE=TRUE": "ITEM_THUC_SU_THAM_GIA_LUOT",
-    "ACTIVE=FLASE": "ITEM_DA_DUOC_NHIN_KIEM_KE_NHUNG_KHONG_THAM_GIA_LUOT",
-    "current_token_is_state": false,
-    "current_in_legacy_filename_only": true,
-    "forbidden_state_tokens": [
-      "SUPERSEDED",
-      "PENDING",
-      "BLOCKED",
-      "UNKNOWN",
-      "CURRENT"
-    ]
+    "force_active_true": "ITEM_BẮT_BUỘC_THAM_GIA_LƯỢT",
+    "active_true": "ITEM_THỰC_SỰ_THAM_GIA_LƯỢT",
+    "active_flase": "ITEM_ĐÃ_ĐƯỢC_NHÌN_VÀ_KIỂM_KÊ_NHƯNG_KHÔNG_THAM_GIA_LƯỢT",
+    "other_words_are_not_runtime_states": true
+  },
+  "output_language": "vi",
+  "after_each_readback": {
+    "rescan_all_unfinished_objectives": true,
+    "one_task_done_is_turn_done": false,
+    "continue_if_self_owned_action_exists": true
   }
 }
