@@ -53,7 +53,7 @@ try {
     & rsync -a --exclude ".git" "$src/" "$dest/"
     if ($LASTEXITCODE -ne 0) { throw "rsync failed" }
   } else {
-    Copy-Item -LiteralPath (Join-Path $src "*") -Destination $dest -Recurse -Force
+    Copy-Item -Path (Join-Path $src "*") -Destination $dest -Recurse -Force
   }
 
   $manifest = [ordered]@{
