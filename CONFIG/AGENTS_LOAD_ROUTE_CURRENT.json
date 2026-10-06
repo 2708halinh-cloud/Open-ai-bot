@@ -1,6 +1,5 @@
 {
   "schema": "GGDV_AGENTS_LOAD_ROUTE/2.0",
-  "status": "CURRENT",
   "observed_at": "2026-10-06",
   "scope": "ALL_AGENTS_ALL_SUBAGENTS_ALL_LANES_ALL_REENTRY",
   "canonical": {
@@ -29,8 +28,6 @@
   "participation": {
     "force_active_true": "ITEM_MUST_PARTICIPATE_THIS_TURN",
     "active_true": "ITEM_ACTUALLY_AFFECTED_READ_WEIGH_CHOICE_OR_ACTION",
-    "active_plase": "ITEM_WAS_SEEN_AND_INVENTORIED_BUT_DID_NOT_PARTICIPATE_THIS_TURN",
-    "plase_is_project_token": true,
     "active_is_freedom_slot_not_deficiency": true,
     "decision_note": {
       "required": true,
@@ -44,7 +41,9 @@
         "observable_reason",
         "action_or_effect"
       ]
-    }
+    },
+    "active_flase": "ITEM_WAS_SEEN_AND_INVENTORIED_BUT_DID_NOT_PARTICIPATE_THIS_TURN",
+    "flase_is_project_token": true
   },
   "master_lineage": {
     "R-000.MASTER.R-000": {
@@ -167,6 +166,26 @@
       "OLD_FORCE_ACTIVE_TRUE=HISTORY_PRESERVED/HISTORY_ONLY_NO_PARTICIPATION",
       "OLD_BLOCK_IN_SOURCE=HISTORY_ONLY/NO_CURRENT_CONTROL",
       "ZERO_REBIRTH=REVOKE_CURRENT_AND_REENTRY_RIGHT_WHILE_PRESERVING_HISTORY_EVIDENCE"
+    ]
+  },
+  "state_vocabulary": {
+    "allowed": [
+      "FORCE_ACTIVE",
+      "ACTIVE",
+      "TRUE",
+      "FLASE"
+    ],
+    "FORCE_ACTIVE=TRUE": "ITEM_BAT_BUOC_THAM_GIA_LUOT",
+    "ACTIVE=TRUE": "ITEM_THUC_SU_THAM_GIA_LUOT",
+    "ACTIVE=FLASE": "ITEM_DA_DUOC_NHIN_KIEM_KE_NHUNG_KHONG_THAM_GIA_LUOT",
+    "current_token_is_state": false,
+    "current_in_legacy_filename_only": true,
+    "forbidden_state_tokens": [
+      "SUPERSEDED",
+      "PENDING",
+      "BLOCKED",
+      "UNKNOWN",
+      "CURRENT"
     ]
   }
 }
