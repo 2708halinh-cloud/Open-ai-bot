@@ -72,13 +72,73 @@ jobs:
 
           "receipt_status=$($receipt.status)" >> $env:GITHUB_OUTPUT
 
+      - name: Materialize SOL runtime on G
+        id: sol_runtime
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $taskId = "SOL_RUNTIME_SELFHOSTED_${{ github.run_id }}"
+          $receipt = [ordered]@{
+            task_id = $taskId
+            started_at = (Get-Date).ToString('o')
+            target = 'G:\OS_Workspace\ggdv-sensorimotor-motor-bridge'
+            source = '2708halinh-cloud/Open-ai-bot:LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge'
+            failures = @()
+          }
+
+          try {
+            $gh = (Get-Command gh -ErrorAction Stop).Source
+            $tmp = Join-Path $env:TEMP 'ggdv_connect_os_workspace.ps1'
+            $b64 = & $gh api 'repos/2708halinh-cloud/.vscode/contents/scripts/connect-os-workspace.ps1?ref=main' --jq '.content'
+            if ($LASTEXITCODE -ne 0) { throw "CONNECT_SCRIPT_FETCH_EXIT_$LASTEXITCODE" }
+            [IO.File]::WriteAllBytes($tmp,[Convert]::FromBase64String(($b64 -replace '\s','')))
+
+            $out = & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $tmp -OSWorkspace 'G:\OS_Workspace' -ControlRoot 'C:\Users\halin\GGDV_UNIFIED\.vscode' 2>&1 | Out-String
+            $receipt.connect_output = $out.Trim()
+            if ($LASTEXITCODE -ne 0) { throw "CONNECT_SCRIPT_EXIT_$LASTEXITCODE" }
+
+            $bindingPath = 'G:\OS_Workspace\.ggdv\OS_WORKSPACE_BINDING_CURRENT.json'
+            if (-not (Test-Path -LiteralPath $bindingPath)) { throw "BINDING_READBACK_MISSING" }
+            $binding = Get-Content -Raw -LiteralPath $bindingPath | ConvertFrom-Json
+            $receipt.binding_path = $bindingPath
+            $receipt.binding_sha256 = (Get-FileHash -Algorithm SHA256 -LiteralPath $bindingPath).Hash.ToLowerInvariant()
+            $receipt.sol_runtime_state = [string]$binding.sol_runtime.state
+            $receipt.sol_runtime_version = [string]$binding.sol_runtime.desired_version
+            $receipt.sol_runtime_target = [string]$binding.sol_runtime.target_path
+            $receipt.sol_runtime_error = [string]$binding.sol_runtime.error
+
+            $pluginPath = 'G:\OS_Workspace\ggdv-sensorimotor-motor-bridge\plugin.json'
+            if (-not (Test-Path -LiteralPath $pluginPath)) { throw "PLUGIN_READBACK_MISSING" }
+            $plugin = Get-Content -Raw -LiteralPath $pluginPath | ConvertFrom-Json
+            $receipt.installed_plugin_version = [string]$plugin.version
+            $receipt.plugin_sha256 = (Get-FileHash -Algorithm SHA256 -LiteralPath $pluginPath).Hash.ToLowerInvariant()
+
+            $motorPath = 'G:\OS_Workspace\ggdv-sensorimotor-motor-bridge\server\motor_mcp.py'
+            $receipt.motor_mcp_present = Test-Path -LiteralPath $motorPath
+            if (-not $receipt.motor_mcp_present) { throw "MOTOR_MCP_MISSING" }
+
+            if ($receipt.sol_runtime_state -ne 'MATERIALIZED_READBACK_PASS') {
+              throw "SOL_RUNTIME_NOT_PASS: $($receipt.sol_runtime_state) :: $($receipt.sol_runtime_error)"
+            }
+          } catch {
+            $receipt.failures += $_.Exception.Message
+          }
+
+          $receipt.finished_at = (Get-Date).ToString('o')
+          $receipt.status = if($receipt.failures.Count -eq 0){'PASS'}else{'PARTIAL'}
+          $dir = Join-Path $PWD '.runtime\local_bridge_receipts'
+          New-Item -ItemType Directory -Force -Path $dir | Out-Null
+          $path = Join-Path $dir ($taskId+'.json')
+          $receipt | ConvertTo-Json -Depth 16 | Set-Content -LiteralPath $path -Encoding UTF8
+          "receipt_status=$($receipt.status)" >> $env:GITHUB_OUTPUT
+
       - name: Commit receipt
         shell: powershell
         run: |
           git config user.name "GGDV Local Bridge"
           git config user.email "ggdv-local@localhost"
           git add .runtime/local_bridge_receipts
-          git commit -m "LOCAL_RECEIPT ${{ steps.local.outputs.receipt_status }} ${{ github.run_id }}" || echo "NO_NEW_RECEIPT_COMMIT"
+          git commit -m "LOCAL_RECEIPT local=${{ steps.local.outputs.receipt_status }} sol=${{ steps.sol_runtime.outputs.receipt_status }} ${{ github.run_id }}" || echo "NO_NEW_RECEIPT_COMMIT"
           git push origin HEAD:main
 
       - name: Enforce PASS
@@ -86,3 +146,4 @@ jobs:
         shell: powershell
         run: |
           if ('${{ steps.local.outputs.receipt_status }}' -ne 'PASS') { exit 2 }
+          if ('${{ steps.sol_runtime.outputs.receipt_status }}' -ne 'PASS') { exit 3 }
