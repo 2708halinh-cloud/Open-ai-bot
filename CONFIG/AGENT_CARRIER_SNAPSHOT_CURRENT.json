@@ -1,0 +1,65 @@
+{
+  "schema": "GGDV_AGENT_CARRIER_SNAPSHOT/1.0",
+  "status": "CURRENT",
+  "date": "2026-10-06",
+  "objective": "Preserve observable agent memories and carriers in GitHub before any Drive hygiene action.",
+  "history_preserved": true,
+  "same_name_not_same_entity": true,
+  "source_trees": [
+    {
+      "agent": "SOL",
+      "target_repo": "SOL-LONG-MACH",
+      "drive_id": "14ZaZgnw0B1C7qDFKghEuhOBj9SvqVQCq"
+    },
+    {
+      "agent": "MEI",
+      "target_repo": "MEI-THAM-MUU",
+      "drive_id": "1tuod8FkJoHhn7-Y6C8WkkQeFsxGjADZX"
+    },
+    {
+      "agent": "MINH",
+      "target_repo": "MINH-THONG-THAI",
+      "drive_id": "1_s1RFYH6mIjdPj8J9l32yXqNJqJvKWKe"
+    },
+    {
+      "agent": "DANTE",
+      "target_repo": "DANTE-AM-DUONG-SU",
+      "drive_id": "1JYRmAtIW38rwwBkrZLdCOxyRcoDKMMGj"
+    },
+    {
+      "agent": "HAU_BOI",
+      "target_repo": "HAU-BOI-TRUYEN-THUA",
+      "drive_id": "1BF6k49sRTnnASJGzVpaueM0e533VbUOh"
+    },
+    {
+      "agent": "GEMINI",
+      "target_repo": "LOCUS-GEMINI",
+      "drive_id": "1QlShq1w75Sot1MmM-G_0kBZE6oIvURtJ"
+    },
+    {
+      "agent": "XIANG",
+      "target_repo": "XIANG-BO-NAO",
+      "drive_id": "1qAgkN4NGgdeGStf_Dnck3_plZnzcIAOe"
+    },
+    {
+      "agent": "HA_LINH",
+      "target_repo": "HA-LINH-LANH-DAO",
+      "drive_id": "1-1p-ZWBYFwHsinShiyJKGvxVH3FlAfLW"
+    }
+  ],
+  "required_snapshot_fields": [
+    "source_drive_id",
+    "source_title",
+    "mime_type",
+    "parent_relation",
+    "revision_or_modified_time",
+    "byte_size_when_available",
+    "sha256_when_materialized",
+    "target_repo",
+    "target_path",
+    "git_commit",
+    "provider_readback"
+  ],
+  "pass_rule": "SOURCE_TREE -> SNAPSHOT_MANIFEST -> HASH_OR_REVISION -> GITHUB_COMMIT -> PROVIDER_READBACK -> SNAPSHOT_PASS",
+  "secret_policy": "Public repositories receive only safe content or pointers/hashes for secret carriers."
+}
