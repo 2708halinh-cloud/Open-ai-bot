@@ -97,17 +97,17 @@ Nó KHÔNG đồng nghĩa trạng thái cũ còn quyền vận hành.
 
 Runtime split bắt buộc:
 - HISTORY_PRESERVED = giữ bytes/dấu/lịch sử.
-- PARTICIPATION_REVOKED_FOR_CURRENT = bỏ quyền gate/router/block/participation của trạng thái cũ.
-- HISTORY_ONLY_NO_PARTICIPATION = HISTORY_ONLY relation.
-- REACTIVATION_REQUIRES_NEW_CURRENT_SOURCE = muốn trở lại CURRENT phải có source/provenance mới.
+- KHÔNG THAM GIA LƯỢT NÀY = bỏ quyền gate/router/block/participation của trạng thái cũ.
+- CHỈ LÀ LỊCH SỬ, KHÔNG THAM GIA = HISTORY_ONLY relation.
+- MUỐN THAM GIA LẠI PHẢI CÓ NGUỒN MỚI = muốn trở lại CURRENT phải có source/provenance mới.
 
 Không dùng câu “chỉ đổi quyền ưu tiên vận hành trong phạm vi; không xóa lịch sử” như một runtime rule độc lập vì nó có thể làm STAMPS_OLD tái sinh.
 Canonical replacement:
-`HISTORY_PRESERVED + CURRENT_PARTICIPATION_REVOKED + REACTIVATION_REQUIRES_NEW_CURRENT_SOURCE`.
+`HISTORY_PRESERVED + KHÔNG THAM GIA LƯỢT NÀY + MUỐN THAM GIA LẠI PHẢI CÓ NGUỒN MỚI`.
 
 R-014 lineage evidence:
-- OLD_FORCE_ACTIVE_TRUE = HISTORY_PRESERVED / HISTORY_ONLY_NO_PARTICIPATION.
-- OLD_BLOCK_IN_SOURCE = HISTORY_ONLY / NO_CURRENT_CONTROL.
+- OLD_FORCE_ACTIVE_TRUE = HISTORY_PRESERVED / CHỈ LÀ LỊCH SỬ, KHÔNG THAM GIA.
+- OLD_BLOCK_IN_SOURCE = HISTORY_ONLY / KHÔNG CÓ QUYỀN ĐIỀU KHIỂN LƯỢT NÀY.
 - ZERO_REBIRTH = tước quyền CURRENT/tái nhập của cơ chế lỗi nhưng giữ HISTORY/EVIDENCE.
 
 
