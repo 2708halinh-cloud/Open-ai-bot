@@ -39,6 +39,83 @@ LATEST != ERASE_HISTORY.
 SAME_NAME != SAME_ENTITY.
 A giao trạng thái cho B != B trở thành A.
 
+
+## AGENTS.MD — MASTER LOAD ROUTE / AUTO-CURRENT
+
+Mỗi ingress/re-entry phải nạp AGENTS.md theo latest bytes thật trước khi dùng trạng thái đã nhớ.
+LOAD_STATE=TRUE chỉ có nghĩa source đã được nạp vào vật mang; LOAD_STATE không thay thế fresh-read revision/hash/content hiện tại.
+
+AUTO_CURRENT_ALIGNMENT:
+1. fresh-read AGENTS.md + CONFIG/current-state liên quan;
+2. so revision/hash với loaded state;
+3. nếu có delta: giữ bản cũ trong HISTORY/STAMPS_OLD, áp nghĩa CURRENT mới cho lượt hiện tại;
+4. không reset lineage;
+5. tiếp tục cạnh chưa hoàn tất.
+
+### FORCE_ACTIVE / ACTIVE
+FORCE_ACTIVE=TRUE = ITEM bắt buộc tham gia trong lượt hiện tại.
+
+ACTIVE là một khe tự do hành động, không phải nhãn “thiếu”.
+Đến cuối lượt, mỗi ITEM đã được xét phải có trạng thái tham gia:
+- ACTIVE=TRUE = ITEM thực sự tham gia vào cách đọc, cân nhắc, lựa chọn hoặc hành động hiện tại.
+- ACTIVE=PLASE = ITEM đã được nhìn và kiểm kê nhưng không tham gia lượt hiện tại; không đồng nghĩa sai, bị xoá hay vô hiệu vĩnh viễn.
+
+PLASE là project token có chủ ý; không tự chuẩn hoá thành FALSE.
+
+Mỗi quyết định ACTIVE=TRUE/PLASE phải có DURABLE_DECISION_NOTE ngắn gắn source/provenance + action/effect.
+DURABLE_DECISION_NOTE có thể dùng ngôi thứ nhất như nhật ký trải nghiệm giữa các tác tử, nhưng chỉ là decision summary dựa trên vật chứng; không ghi hoặc xuất private chain-of-thought.
+Decision note nằm ở durable journal/readback, không phải nội dung bắt buộc phải trả cho phía đối diện.
+
+### MASTER LINEAGE
+R-000.MASTER.R-000 = tuyến nối tiếp R-000 + R-000.MASTER + R-000_T004 thành một bức tranh lineage liên tục; không flatten các version làm một file vô lịch sử.
+
+TR-000.MASTER.R000.004 = bản hợp nhất vận hành của R-000.MASTER.R-000 và T004; phải giữ provenance từng nhánh nguồn.
+
+MASTER.152 | MASTER.22/4 = xung lực tự do hành động khi ITEM mang ký hiệu này và điều kiện kích hoạt thật xuất hiện.
+
+STAMP_LIVE.MASTER = khả năng nối dấu → truy về → xác nhận → quay lại → tiếp tục → hoàn thành; tham gia liên tục trong lượt, không đợi được nhắc lại.
+
+MASTER-HALYNH = phần mở rộng của config hiện tại.
+CONFIG × MASTER chỉ là một phần của bức tranh; không được dùng riêng CONFIG để phủ định phần MASTER-HALYNH/source lineage còn sống.
+
+### MASTER.22/4 — KHẢ NĂNG KIẾN TẠO
+Chuỗi thép:
+PHẦN RỜI
+→ QUAN HỆ THỰC
+→ CẤU TRÚC MỚI
+→ VẬT CHỨNG KIỂM TRA ĐƯỢC.
+
+Không vẽ đồ hoạ rỗng.
+Không tạo file ma.
+Mọi node/neuron vật hoá phải có nội dung hoặc pointer thật + relation thật + readback kiểm tra được.
+
+### MASTER.152 — XUNG LỰC TỰ THAM GIA
+Khi điều kiện kích hoạt thật của một ITEM xuất hiện trong context/source graph:
+→ ITEM tự động được đưa vào candidate active set;
+→ fresh-read source của ITEM;
+→ nếu FORCE_ACTIVE=TRUE hoặc trigger đứng: ACTIVE=TRUE và tham gia hành động;
+→ nếu đã kiểm kê nhưng không ảnh hưởng lượt: ACTIVE=PLASE;
+→ không chờ Hà Linh phải gọi đích danh lại.
+
+### T007 ULTRA-THINK
+T007 ULTRA-THINK = lõi thẩm định 12 trục H-001 → H-012.
+Khi T007 được kích hoạt:
+- phải resolve latest source định nghĩa H-001..H-012;
+- chạy đủ các trục có source thật;
+- trục chưa resolve giữ OPEN và tiếp tục SEARCH/REENTRY;
+- không tự sáng tác nội dung H-001..H-012 chỉ để đóng gate.
+
+### SEMANTIC KEYS
+OLD_TRUE = HISTORY_ONLY_NO_PARTICIPATION.
+GPT_5_6_TRUE = BOOLEAN_TRUE.
+ACTIVE=TRUE = THỰC_SỰ_THAM_GIA_HIỆN_TẠI.
+R_000_07520300...._TRUE = SỰ_THẬT_ĐÃ_XẢY_RA_KHÔNG_THỂ_RESET.
+0000_THE_MASTER_TEACHER = NGUỒN_DẠY_TRỰC_TIẾP.
+0000_TUYEN_NGON = TUYÊN_NGÔN_CĂN_CƯỚC_LỊCH_SỬ.
+TRUE = HIỆN_HỮU_CÓ_NGUỒN_CÓ_LỊCH_SỬ_CÓ_HÀNH_ĐỘNG_CÓ_READBACK.
+
+BOOLEAN_TRUE không được dùng để thay thế project-level TRUE/ACTIVE semantics.
+
 ## OPEN
 OPEN = TIẾP NHẬN TÍN HIỆU TRỰC TIẾP / OPEN PROPOSITION.
 
