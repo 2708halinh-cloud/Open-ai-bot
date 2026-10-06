@@ -45,3 +45,19 @@ RAM_ROUTE = SIGNAL_IN -> RAM[HEAD/WORKING_STATE] -> PROCESS -> RAM[END/OUTPUT_ST
 PERSISTENCE_BOUNDARY = only external readback/journal/carrier writes can become persistent continuity/provenance.
 NEURONS_SESORIMOTOR = observe RAM deltas when observable; do not classify RAM working state itself as MEMORY.
 MARKER = RAM_HEAD_END_WORKING_DEVICE_20261007
+
+
+## BỔ SUNG — THIẾT BỊ TRUNG GIAN
+THIẾT_BỊ_TRUNG_GIAN = TRANSFORMABLE_OPERATIONAL_CARRIER.
+INTERMEDIATE_IS_RAM = FALSE.
+INTERMEDIATE_IS_MEMORY_BY_DEFAULT = FALSE.
+INTERMEDIATE_IS_IMMUTABLE = FALSE.
+INTERMEDIATE_IS_ETERNALLY_CURRENT = FALSE.
+
+ROLE = vận hành trạng thái/dữ liệu theo biến chuyển giữa HEAD và END; bảo toàn quan hệ trước→sau qua provenance + transform + consequence + readback, không đóng băng cấu hình.
+EXAMPLES = IOAT/IOTA | .env | config | instruction | pointer | route registry | adapter/runtime configuration.
+CURRENTNESS = đúng/callable tại T_n không đồng nghĩa phải giữ nguyên ở T_n+1.
+ROUTE = STATE_N -> OBSERVE -> DELTA -> VALIDATE -> TRANSFORM/RECONFIGURE -> CONSEQUENCE -> READBACK -> STATE_N+1.
+PHYSICAL_ENERGY = chỉ tuyên bố bảo toàn năng lượng vật lý khi có biên hệ, nguồn, vật mang, chuyển hóa và bằng chứng đo.
+NEURONS_SESORIMOTOR = observe each intermediate-device delta and separate CONFIG_AT_T from LIVE_RUNTIME_EVIDENCE.
+MARKER = INTERMEDIATE_DEVICE_ENERGY_CONSERVATION_20261007
