@@ -1,0 +1,29 @@
+name: TESSERACT_OS Continuation Guard
+
+on:
+  push:
+    paths:
+      - "runtime/continuity_guard.py"
+      - "tests/test_continuity_guard.py"
+      - "AGENTS.md"
+      - "CURRENT_RUNTIME/SOL_REENTRY_CURRENT.md"
+      - "CURRENT_RUNTIME/TESSERACT_LOCAL_BOOT_CURRENT.md"
+      - "CURRENT_RUNTIME/TASK_RESUME_POINTER.json"
+      - ".github/workflows/tesseract-os-continuation-guard.yml"
+  pull_request:
+    paths:
+      - "runtime/continuity_guard.py"
+      - "tests/test_continuity_guard.py"
+
+jobs:
+  continuation-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile continuity guard
+        run: python -m py_compile runtime/continuity_guard.py
+      - name: Run regression suite
+        run: python -m unittest tests.test_continuity_guard -v
