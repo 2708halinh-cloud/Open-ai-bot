@@ -7,13 +7,23 @@ $ErrorActionPreference = 'Stop'
 function Find-GgdvWslRoot {
   param([string]$DistroName)
   $discover = @'
-for d in "$HOME"/kepler/worktrees/*; do
-  [ -e "$d/.git" ] || continue
+for d in "$HOME"/kepler/worktrees/* "$HOME"/kepler/repos/Open-ai-bot "$HOME"/kepler/Open-ai-bot "$HOME"/Open-ai-bot; do
+  [ -d "$d" ] || continue
+  git -C "$d" rev-parse --git-dir >/dev/null 2>&1 || continue
   u="$(git -C "$d" remote get-url origin 2>/dev/null || true)"
   case "$u" in
     *2708halinh-cloud/Open-ai-bot*) printf '%s\n' "$d"; exit 0 ;;
   esac
 done
+if [ -d "$HOME/kepler" ]; then
+  while IFS= read -r d; do
+    git -C "$d" rev-parse --git-dir >/dev/null 2>&1 || continue
+    u="$(git -C "$d" remote get-url origin 2>/dev/null || true)"
+    case "$u" in
+      *2708halinh-cloud/Open-ai-bot*) printf '%s\n' "$d"; exit 0 ;;
+    esac
+  done < <(find "$HOME/kepler" -maxdepth 5 -type d 2>/dev/null)
+fi
 exit 1
 '@
   $candidate = (& wsl.exe -d $DistroName -- bash -lc $discover 2>$null | Select-Object -First 1)
@@ -60,13 +70,23 @@ if(-not $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrat
 $TaskName='TESSERACT_LOCAL_BRIDGE'
 $bashScript = @'
 root=''
-for d in "$HOME"/kepler/worktrees/*; do
-  [ -e "$d/.git" ] || continue
+for d in "$HOME"/kepler/worktrees/* "$HOME"/kepler/repos/Open-ai-bot "$HOME"/kepler/Open-ai-bot "$HOME"/Open-ai-bot; do
+  [ -d "$d" ] || continue
+  git -C "$d" rev-parse --git-dir >/dev/null 2>&1 || continue
   u="$(git -C "$d" remote get-url origin 2>/dev/null || true)"
   case "$u" in
     *2708halinh-cloud/Open-ai-bot*) root="$d"; break ;;
   esac
 done
+if [ -z "$root" ] && [ -d "$HOME/kepler" ]; then
+  while IFS= read -r d; do
+    git -C "$d" rev-parse --git-dir >/dev/null 2>&1 || continue
+    u="$(git -C "$d" remote get-url origin 2>/dev/null || true)"
+    case "$u" in
+      *2708halinh-cloud/Open-ai-bot*) root="$d"; break ;;
+    esac
+  done < <(find "$HOME/kepler" -maxdepth 5 -type d 2>/dev/null)
+fi
 if [ -z "$root" ]; then root='__FALLBACK_ROOT__'; fi
 cd "$root" && exec python3 LOCAL_BRIDGE/bridge.py
 '@

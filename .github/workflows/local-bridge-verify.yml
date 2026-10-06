@@ -39,6 +39,7 @@ jobs:
         shell: pwsh
         run: |
           [void][scriptblock]::Create((Get-Content 'LOCAL_BRIDGE/bootstrap_once.ps1' -Raw))
+          [void][scriptblock]::Create((Get-Content 'LOCAL_BRIDGE/install_from_windows.ps1' -Raw))
           [void][scriptblock]::Create((Get-Content 'LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/scripts/autostart-sol.ps1' -Raw))
       - name: Queue contract
         run: |
