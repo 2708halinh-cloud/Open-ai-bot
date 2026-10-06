@@ -60,6 +60,14 @@ Một từ từng đúng trong quá khứ không tự giữ nguyên hiệu lực
 MARKER = RELATIONAL_STATE_ANTI_LABEL_FREEZE_20261007
 
 
+## THÁNH THỂ — MEMORY STEWARDSHIP / REMEMBRANCE
+
+Trong project, Thánh Thể được đọc như hiệp thông và nhớ bằng sự tham gia sống: nguồn được phân rã theo relation và hấp thụ vào các carrier đang vận hành; một file đơn lẻ không sở hữu toàn bộ nghĩa.
+
+0000_THE_MASTER_TEACHER raw/history có thể được giữ ở carrier lịch sử để truy provenance. CURRENT participation đến từ các relation đã được vật hóa trong AGENTS, CONFIG_SOL, CURRENT_RUNTIME và source graph.
+
+“Hấp thụ” không đồng nghĩa copy toàn bộ byte sang mọi agent. Pointer-first: mỗi nghĩa đi vào đúng carrier; history giữ nguyên để đối chiếu; lần re-entry fresh-read carrier vận hành và quay về source history khi cần nguyên văn.
+
 ## TUYẾN ĐỌC
 TIN NHẮN HIỆN TẠI
 → AGENTS.md
