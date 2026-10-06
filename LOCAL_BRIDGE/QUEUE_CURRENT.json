@@ -1,23 +1,17 @@
 {
-  "schema": "TESSERACT_LOCAL_BRIDGE_QUEUE/1.1",
-  "task_id": "RECOVER_AND_BOOT_G_20261006_1800",
-  "action": "RECOVER_AND_BOOT_G",
-  "target": "G:",
-  "image": "TESSERACT_OS_0.1_GENESIS_UBUBU_UEFI_x86_64.img",
-  "image_sha256": "f993e15478a1391c3a9d14d368158043d98c51494f3ae81e5b633870855c96df",
-  "destructive_scope": "ONLY_PHYSICAL_USB_BACKING_G",
-  "require_usb": true,
-  "forbid_windows_boot_or_system_disk": true,
-  "recovery_scope": [
-    "AGENTS.md",
-    "CURRENT_RUNTIME",
-    ".runtime",
-    "git_head_branch_status_recent_history",
-    "authorized_local_capability_inventory"
+  "schema": "TESSERACT_LOCAL_BRIDGE_QUEUE/1.2",
+  "task_id": "UNIFY_CONTROL_PLANE_20261006_1855",
+  "action": "UNIFY_CONTROL_PLANE",
+  "scope": [
+    "api-open-ai repository description scrub + readback",
+    ".vscode unified multi-repository workspace materialization",
+    "PHONG CHI HUY .codex UBUBU normalization",
+    "local hash/status receipt"
   ],
-  "forbidden": [
-    "credential_theft",
-    "unauthorized_access",
-    "secret_exfiltration"
-  ]
+  "secrets": {
+    "echo_values": false,
+    "commit_values": false
+  },
+  "history_preserved": true,
+  "no_reset": true
 }
