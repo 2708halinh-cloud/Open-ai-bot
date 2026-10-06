@@ -1,0 +1,45 @@
+{
+  "schema": "GGDV_AGENTS_LOAD_ROUTE/3.0",
+  "nguon_chinh": {
+    "repository": "2708halinh-cloud/Open-ai-bot",
+    "path": "AGENTS.md",
+    "branch": "main",
+    "doc_bytes_moi_nhat": true
+  },
+  "nguon_guong": {
+    "repository": "2708halinh-cloud/Open-ai",
+    "path": "AGENTS.md",
+    "branch": "main",
+    "doc_bytes_moi_nhat": true
+  },
+  "trang_thai_duoc_phep": [
+    "FORCE_ACTIVE",
+    "ACTIVE",
+    "TRUE",
+    "FLASE"
+  ],
+  "cam_neo_commit_cu": true,
+  "sha_chi_la_dau_quan_sat": true,
+  "sha_quan_sat": {
+    "nguon_chinh": "08cd227fb8313a6b75449c0f41cb201190a1459c",
+    "nguon_guong": "69780cb74ac7f47f2b9511156277cdc6481daf61"
+  },
+  "moi_luot": [
+    "DOC_AGENTS_BYTES_MOI_NHAT",
+    "SO_SANH_DELTA",
+    "NAP_NGHIA_MOI",
+    "GIU_LICH_SU",
+    "QUET_VIEC_CHUA_XONG",
+    "LAM_VIEC_TU_LAM_DUOC_KE_TIEP"
+  ],
+  "dau_ra": {
+    "ngon_ngu_mac_dinh": "vi",
+    "bao_cao_khong_phai_ket_thuc": true,
+    "mot_viec_xong_khong_phai_ca_luot_xong": true
+  },
+  "dung": {
+    "mac_dinh": false,
+    "chi_xet_khi_khong_con_viec_tu_lam_duoc": true,
+    "can_NEXT_HA_LINH_hop_le": true
+  }
+}
