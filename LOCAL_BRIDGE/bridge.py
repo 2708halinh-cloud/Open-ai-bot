@@ -4,6 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 QUEUE = ROOT / 'LOCAL_BRIDGE' / 'QUEUE_CURRENT.json'
+Q6_TRIGGER = ROOT / 'LOCAL_BRIDGE' / 'Q6_TRIGGER_CURRENT.json'
 STATE = ROOT / '.runtime' / 'LOCAL_BRIDGE_STATE.json'
 RECEIPTS = ROOT / '.runtime' / 'local_bridge_receipts'
 RECEIPTS.mkdir(parents=True, exist_ok=True)
@@ -301,9 +302,18 @@ def main():
                 fp = task_fingerprint(task)
                 if tid and (tid != state.get('last_task_id') or fp != state.get('last_fingerprint')):
                     receipt = execute(task)
-                    state = {'last_task_id':tid,'last_fingerprint':fp,'last_returncode':receipt.get('returncode'),'updated_at':time.time()}
+                    state = {**state,'last_task_id':tid,'last_fingerprint':fp,'last_returncode':receipt.get('returncode'),'updated_at':time.time()}
                     save_json(STATE, state)
                     persist_receipt(receipt)
+
+            if Q6_TRIGGER.exists():
+                q6_task = load_json(Q6_TRIGGER)
+                q6_fp = task_fingerprint(q6_task)
+                if q6_fp != state.get('q6_last_fingerprint'):
+                    q6_receipt = execute(q6_task)
+                    state = {**state,'q6_last_fingerprint':q6_fp,'q6_last_returncode':q6_receipt.get('returncode'),'updated_at':time.time()}
+                    save_json(STATE, state)
+                    persist_receipt(q6_receipt)
         except Exception as e:
             save_json(STATE, {**state,'bridge_error':repr(e),'updated_at':time.time()})
         time.sleep(5)
