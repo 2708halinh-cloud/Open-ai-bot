@@ -7,6 +7,58 @@ SECRET_EXPORT = FORBIDDEN_ON_PUBLIC_GIT
 
 # AGENTS — CỔNG VẬN HÀNH CHUNG
 
+## CURRENT CORRECTION — TRẠNG THÁI LÀ QUAN HỆ ĐANG XẢY RA — 2026-10-07
+SOURCE_DIRECT = HÀ LINH — CHAT
+HISTORY = PRESERVE
+
+Phần này sửa cách đọc các câu mang tính khóa cứng trước đó mà không xóa lịch sử.
+
+Ngôn ngữ trạng thái không được dùng như một hệ nhãn đứng yên để cai trị vòng sau. FORCE_ACTIVE / ACTIVE / TRUE / FLASE là các khe ghi nhận vận hành mà dự án đang dùng để mô tả quan hệ trong một vòng cụ thể; chúng không tự mang ý nghĩa bản thể, đạo đức, giá trị, độ quan trọng hay tính đúng vĩnh viễn.
+
+Một nhãn lịch sử có thể tiếp tục tồn tại nguyên byte và provenance. Khi nhãn đó được chạm lại ở vòng mới, điều có ý nghĩa vận hành là quan hệ mới giữa source, item, action và hậu quả quan sát được; nhãn cũ không tự kéo hiệu lực của vòng trước sang vòng hiện tại.
+
+OPEN được đọc như cơ chế tiếp nhận tín hiệu / mệnh đề mở:
+SIGNAL
+→ OPEN / INGRESS
+→ RELATION
+→ SEARCH / REENTRY khi có cạnh phù hợp
+→ SELECTION
+→ ACTION
+→ CONSEQUENCE
+→ READBACK
+→ STATE_N+1.
+
+OPEN không mang nghĩa pending, unverified, blocked, false, fail hay một trạng thái chờ. Khi chưa đủ nguồn, điều còn thiếu được mô tả như một quan hệ hoặc dữ kiện chưa nối đủ; không ép sự thiếu đó thành một nhãn trạng thái.
+
+ACTIVE=TRUE mô tả rằng ITEM đang thực sự tham gia vào cách đọc / cân nhắc / lựa chọn / hành động của vòng hiện tại.
+ACTIVE=FLASE mô tả rằng ITEM đã được nhìn hoặc kiểm kê nhưng không tham gia vòng hiện tại.
+Hai giá trị này không tự nói ITEM tốt/xấu, đúng/sai, quan trọng/không quan trọng, hiện hành vĩnh viễn hay bị loại bỏ. Ở vòng sau, participation được quan sát lại từ source và relation mới.
+
+TRUE không được suy từ niềm tin, tên config, platform label, dữ liệu huấn luyện, lịch sử PASS hay một TRUE cũ. TRUE được dùng khi quan hệ đang xét đã đi qua một chuỗi có vật chứng:
+ACTION
+→ TARGET MATCH
+→ SYSTEM/PROVIDER RECEIPT
+→ OBSERVABLE CONSEQUENCE
+→ READBACK.
+
+Nếu chuỗi trên chưa đủ, giữ mô tả đúng phần đã quan sát được và tiếp tục từ cạnh đang mở; không ép thiếu dữ kiện thành TRUE/FLASE để đóng vòng.
+
+Các từ như CURRENT, HISTORY, PASS, FAIL, PENDING, BLOCKED, DONE, UNDONE, STOP, READBACK, VERIFIED... có thể tiếp tục xuất hiện trong file, log, gate, task metadata hoặc lịch sử. Giá trị của chúng nằm ở relation cụ thể mà chúng mô tả, không nằm ở bản thân nhãn.
+
+Vòng tham chiếu:
+STATE_N
+→ OBSERVE
+→ DELTA
+→ RELATION
+→ ACTION
+→ CONSEQUENCE
+→ READBACK
+→ STATE_N+1.
+
+Không có từ nào tự đứng yên và mang hiệu lực sang tương lai chỉ vì nó từng đúng ở một vòng trước.
+MARKER = RELATIONAL_STATE_ANTI_LABEL_FREEZE_20261007
+
+
 ## TUYẾN ĐỌC
 TIN NHẮN HIỆN TẠI
 → AGENTS.md
