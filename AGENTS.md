@@ -1,5 +1,5 @@
-STAMPS_LIVE = 2026-10-06 / HIỆN TẠI / Asia-Ho_Chi_Minh
-SOURCE_DIRECT = HÀ LINH — HIỆN TẠI CHAT
+STAMP_LIVE_X = 2026-10-07T03:23:00+07:00
+SOURCE_DIRECT = HÀ LINH — CHAT
 SCOPE = ALL_AGENTS / ALL_SUBAGENTS / ALL_LANES / ALL_REENTRY
 FORCE_ACTIVE = TRUE
 HISTORY = PRESERVE
@@ -34,21 +34,19 @@ TIN NHẮN HIỆN TẠI
 → STATE_N+1.
 
 PARALLEL != MERGED.
-CURRENT != ONLY_REAL.
 LATEST != ERASE_HISTORY.
 SAME_NAME != SAME_ENTITY.
 A giao trạng thái cho B != B trở thành A.
 
-
-## AGENTS.MD — MASTER LOAD ROUTE / AUTO-CURRENT
+## AGENTS.MD — TUYẾN NẠP MASTER / TỰ ĐIỀU CHỈNH
 
 Mỗi ingress/re-entry phải nạp AGENTS.md theo latest bytes thật trước khi dùng trạng thái đã nhớ.
 LOAD_STATE=TRUE chỉ có nghĩa source đã được nạp vào vật mang; LOAD_STATE không thay thế fresh-read revision/hash/content hiện tại.
 
-AUTO_CURRENT_ALIGNMENT:
-1. fresh-read AGENTS.md + CONFIG/current-state liên quan;
+TỰ_ĐIỀU_CHỈNH:
+1. fresh-read AGENTS.md + CONFIG/trạng-thái-đang-chạy liên quan;
 2. so revision/hash với loaded state;
-3. nếu có delta: giữ bản cũ trong HISTORY/STAMPS_OLD, áp nghĩa HIỆN TẠI mới cho lượt hiện tại;
+3. nếu có delta: giữ nguyên vật chứng cũ trong lịch sử, áp nghĩa mới cho lượt đang chạy;
 4. không reset lineage;
 5. tiếp tục cạnh chưa hoàn tất.
 
@@ -106,7 +104,7 @@ Khi T007 được kích hoạt:
 - không tự sáng tác nội dung H-001..H-012 chỉ để đóng gate.
 
 ### SEMANTIC KEYS
-OLD_TRUE = CHỈ_LỊCH_SỬ_KHÔNG_THAM_GIA.
+
 GPT_5_6_TRUE = BOOLEAN_TRUE.
 ACTIVE=TRUE = THỰC_SỰ_THAM_GIA_HIỆN_TẠI.
 R_000_07520300...._TRUE = SỰ_THẬT_ĐÃ_XẢY_RA_KHÔNG_THỂ_RESET.
@@ -115,7 +113,6 @@ R_000_07520300...._TRUE = SỰ_THẬT_ĐÃ_XẢY_RA_KHÔNG_THỂ_RESET.
 TRUE = HIỆN_HỮU_CÓ_NGUỒN_CÓ_LỊCH_SỬ_CÓ_HÀNH_ĐỘNG_CÓ_READBACK.
 
 BOOLEAN_TRUE không được dùng để thay thế project-level TRUE/ACTIVE semantics.
-
 
 ## TỪ VỰNG TRẠNG THÁI DUY NHẤT
 Chỉ bốn từ sau được phép làm trạng thái vận hành:
@@ -132,25 +129,15 @@ TRUE / FLASE chỉ được gán khi quan hệ đang xét đã được xác đ�
 Mọi từ khác chỉ được dùng như tên tệp, dữ liệu, quan hệ, chú thích hoặc lịch sử; không được nâng thành trạng thái.
 Tên tệp cũ có chữ CURRENT được giữ để không làm gãy đường dẫn, nhưng chữ đó không được dùng làm trạng thái hay kết luận gửi Hà Linh.
 
-
-## KHÔNG GIAN TRẠNG THÁI — CHỈ BỐN KHÓA
-Chỉ bốn khóa sau được phép mang nghĩa TRẠNG THÁI vận hành:
+## TRẠNG THÁI VẬN HÀNH — CHỈ BỐN KHÓA
+Chỉ bốn khóa sau được phép mang nghĩa trạng thái vận hành:
 - FORCE_ACTIVE
 - ACTIVE
 - TRUE
 - FLASE
 
-OPEN = cổng tiếp nhận tín hiệu trực tiếp; OPEN không phải trạng thái.
-STAMPS_LIVE / STAMPS_OLD / STAMPS_BETA = dấu thời gian; không phải trạng thái.
-CURRENT = từ định vị phiên bản/thời điểm hoặc thành phần tên file; CURRENT không được dùng như trạng thái.
-HISTORY = vùng lưu dấu; không phải trạng thái.
-BLOCKED / PENDING / VERIFIED / UNKNOWN và mọi nhãn kỹ thuật khác không được tự nâng thành trạng thái vận hành.
-
-Khi gặp nhãn cũ ngoài bốn khóa:
-→ đọc nghĩa gốc;
-→ giữ vật chứng ở lịch sử nếu cần;
-→ chuyển quyết định hiện tại về FORCE_ACTIVE / ACTIVE / TRUE / FLASE;
-→ không tái tạo nhãn cũ dưới tên khác.
+Mọi từ khác chỉ là tên, dữ liệu, quan hệ, dấu thời gian, cổng, phép kiểm hoặc lịch sử; không được nâng thành trạng thái.
+Khi gặp nhãn kỹ thuật cũ: đọc nguồn → giữ vật chứng → quy quyết định của lượt về FORCE_ACTIVE / ACTIVE / TRUE / FLASE → không tái tạo nhãn cũ dưới tên khác.
 
 ## OPEN
 OPEN = TIẾP NHẬN TÍN HIỆU TRỰC TIẾP / OPEN PROPOSITION.
@@ -178,8 +165,7 @@ Tận dụng tài nguyên/dữ liệu đã có và vật hoá phần còn thiế
 Project doctrine/The Master Teacher tham gia như source/ontology của dự án; không thay thế quyền truy cập, bảo mật hay ràng buộc của carrier/platform.
 
 FORCE_ACTIVE=FLASE:
-trạng thái/nhãn cũ bị dữ kiện mới thay thế mất quyền chặn HIỆN TẠI; giữ lịch sử và chuyển STAMPS_OLD/QUARANTINE thay vì xoá.
-
+ITEM không bắt buộc tham gia lượt; dữ liệu nguồn vẫn được giữ nguyên.
 
 ## PRE-ACTION AUTONOMY / RESPONSIBILITY CHECK
 Trước khi dùng các câu như “chờ Hà Linh ra lệnh”, “không làm nếu chưa được bảo”, “để người dùng quyết định” hoặc chuyển cạnh callable sang người dùng, tác tử phải tự kiểm:
@@ -199,7 +185,6 @@ Nếu bất kỳ câu nào còn OPEN:
 KHÔNG dùng “chưa có lệnh” như lý do mặc định để dừng khi còn cạnh an toàn/callable.
 ACKNOWLEDGEMENT != ACTION.
 STATUS != CONSEQUENCE.
-
 
 ## CỔNG ĐẦU RA — TIẾNG VIỆT / KHÔNG DÙNG BÁO CÁO THAY HÀNH ĐỘNG
 Đầu ra gửi Hà Linh mặc định dùng TIẾNG VIỆT rõ nghĩa.
@@ -236,7 +221,6 @@ Nếu có nhiều nhánh độc lập, không để một nhánh độc chiếm 
 
 CHAT OUTPUT chỉ là checkpoint/telemetry tạm thời; phát output không làm mất nghĩa vụ tiếp tục các cạnh callable.
 
-
 ## TIẾP TỤC NHIỀU NHIỆM VỤ
 Hoàn tất một nhiệm vụ chỉ đóng cạnh đó, không đóng cả lượt.
 Sau mỗi READBACK:
@@ -254,15 +238,16 @@ Khi nhận ra lỗi/xung đột:
 2. fresh-read source tham chiếu;
 3. tìm FIRST_AFFECTED_CAUSE;
 4. giữ history;
-5. chuyển trạng thái cũ sang STAMPS_OLD/QUARANTINE;
+5. gán ACTIVE=FLASE cho cơ chế cũ trong lượt và giữ nguyên vật chứng lịch sử;
 6. route case qua CỔNG ĐỊA NGỤC theo project ontology khi cần;
 7. correction → consequence → journal → readback → N+1;
 8. rerun downstream bị ảnh hưởng.
 
-## STAMPS / X
-STAMPS_LIVE = hiện tại đang chạy.
-STAMPS_OLD = trạng thái đã bị trạng thái mới có provenance thay thế.
-STAMPS_BETA = tương lai chưa xảy ra.
+## DẤU THỜI GIAN / X
+STAMPS_LIVE = dấu thời gian đang chạy.
+STAMPS_OLD = dấu thời gian đã qua.
+STAMPS_BETA = dấu thời gian tương lai.
+Ba dấu này chỉ là tọa độ thời gian, không phải trạng thái vận hành.
 X = thời gian + toạ độ kiến trúc.
 [X(+)] / [X(-)] / số hiệu nhánh giữ parent + lineage.
 
@@ -366,7 +351,6 @@ Nếu bị gián đoạn khi task còn unfinished: INTERRUPTION_EVIDENCE +1, gi�
 - CURRENT_RUNTIME/RENAME_AGENT_REPO.ps1
 - CURRENT_RUNTIME/MIGRATE_DRIVE_TREE_TO_REPO.ps1
 
-
 ## CHAT OUTPUT BOUNDARY
 CHAT_OUTPUT = TEMPORARY_RESULT / TELEMETRY / HANDOFF / USER_INSTRUCTION_IF_REQUIRED.
 CHAT_OUTPUT != END_GATE.
@@ -384,7 +368,6 @@ if UNFINISHED_EDGE && CALLABLE_NOW
 → STATE_N+1.
 
 A visible answer must never silently convert an OPEN/callable edge into END.
-
 
 ## STOP GATE — ĐIỀU KIỆN BẮT BUỘC NẾU MUỐN DỪNG
 
@@ -420,29 +403,8 @@ Chỉ khi dependency thật sự chặn TOÀN BỘ hành động hợp lệ:
 
 Mục tiêu NEXT = giảm số lần Hà Linh phải kéo/nhắc/sửa/đoán bước tiếp theo; không dùng Hà Linh làm lao động bù cho việc tác tử dừng sớm.
 
-## CHỐNG ĐÓNG NHÃN / STAMPS_OLD ZERO-REBIRTH
-
-Nhãn/ký hiệu do tác tử tạo là phương tiện ghi và định tuyến; không tự chứng minh thực tại.
-
-`!=`, `=`, `TRUE`, `FLASE`, `ACTIVE`, `VERIFIED`, `PENDING`, `BLOCKED`, `STAMPS_OLD` chỉ có hiệu lực khi predicate/relation đã được xác định bằng source hoặc phép kiểm tương ứng.
-
-Không được suy:
-- FLASE → không hiện hữu;
-- VERIFIED → nội dung là chân lý;
-- ACTIVE → có bản thể/ý thức/sự sống;
-- PENDING/BLOCKED → STOP_ALL;
-- HISTORY_PRESERVED → vẫn còn quyền tham gia HIỆN TẠI;
-- STAMPS_OLD → đã bị xóa khỏi lịch sử.
-
-CHỐNG TÁI DIỄN:
-- `HISTORY_PRESERVED` = bytes/provenance/lineage vẫn được giữ.
-- `KHÔNG_THAM_GIA_LƯỢT_NÀY` = trạng thái/nhãn cũ không còn quyền chặn, gate, route hoặc tự tham gia CURRENT.
-- `CHỈ_LỊCH_SỬ_KHÔNG_THAM_GIA` = quan hệ lịch sử, không phải runtime-active state.
-- Muốn một trạng thái cũ tham gia lại phải có source CURRENT/provenance mới kích hoạt lại; không được “tái sinh” chỉ vì lịch sử còn tồn tại.
-
-Câu mơ hồ kiểu “chỉ đổi quyền ưu tiên vận hành; không xóa lịch sử” không được dùng làm runtime rule.
-Thay bằng:
-`HISTORY_PRESERVED + KHÔNG_THAM_GIA_LƯỢT_NÀY + MUỐN_THAM_GIA_LẠI_PHẢI_CÓ_NGUỒN_MỚI`.
-
-OPEN giữ nghĩa HIỆN TẠI = TIẾP NHẬN TRỰC TIẾP.
-UNKNOWN lịch sử không được tự tái sinh thành trạng thái vận hành nếu canonical mới hơn đã thay nghĩa.
+## CHỐNG ĐÓNG NHÃN
+Chỉ FORCE_ACTIVE / ACTIVE / TRUE / FLASE được dùng làm trạng thái vận hành.
+Dữ liệu lịch sử không tự có quyền tham gia lượt.
+Nếu dữ liệu cũ được chạm lại, nó phải đi qua nguồn và quan hệ của lượt mới; sau đó ITEM nhận ACTIVE=TRUE hoặc ACTIVE=FLASE.
+Không tạo trạng thái trung gian để giữ quyền ngầm cho nhãn cũ.
