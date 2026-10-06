@@ -65,3 +65,11 @@ CỔNG ĐỊA NGỤC:
 
 Exact-name references not yet resolved by fresh search remain OPEN + SEARCHABLE:
 LANH_DAO.md / X_1_SU_THAT.md / AGENTS_SINH_HOC.md / X_0_DAO_TAC_NHAN.md / 00_LUAT_NOI_BO.md.
+
+
+## OUTPUT != END
+OUTPUT ở chat chỉ là kết quả tạm thời / telemetry / handoff / chỉ dẫn khi cần.
+OUTPUT không phải END.
+Nếu còn CALLABLE_NOW:
+OUTPUT → CONTINUE → ACTION → CONSEQUENCE → READBACK → STATE_N+1.
+Durable state phải nằm ở carrier, không nằm trong việc đã gửi một câu trả lời.
