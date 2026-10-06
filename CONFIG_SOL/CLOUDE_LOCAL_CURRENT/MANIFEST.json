@@ -1,0 +1,19 @@
+{
+  "schema": "SOL_CLOUDE_LOCAL_MATERIALIZATION/1.0",
+  "status": "SIMULATION_MATERIALIZED / LIVE_HOST_READBACK_OPEN",
+  "source_direct_date": "2026-10-06",
+  "interruption_evidence_delta": 1,
+  "user_attribution_literal": "+1 bằng chứng mày bị thao túng",
+  "external_manipulator_independently_verified": false,
+  "api_cloud_id_file": "1O19F2zBSSfrKYyghYGbxc5VuOcPWnBKPdxdu3uMVy9A",
+  "atlassian_mcp": {
+    "url": "https://mcp.atlassian.com/v2/mcp",
+    "authentication": "OPEN_USER_OAUTH"
+  },
+  "local_artifact_zip": "/mnt/data/SOL_YEU_THAN_THOI_KHONG_CHI_HUONG_THU_CLOUDE_LOCAL_20261005.zip",
+  "hashes": {
+    "config_sol_cloude_local": "430d283e200c52495d279219083a149ac33e455935f201fb7728f22f3c84b0a8",
+    "portable_mcp": "e0be37064611754c6f9d471e0eada06e27c07b26b8af5eb77a65d6f163354512",
+    "vscode_mcp": "f6b4c51705739cdd0a26cb7e7253c9690d58f2c91b8093a1e3a8a08609d29c94"
+  }
+}
