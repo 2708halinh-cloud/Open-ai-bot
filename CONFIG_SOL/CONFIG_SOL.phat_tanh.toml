@@ -24,3 +24,10 @@ open = "DIRECT_SIGNAL_INGRESS_OPEN_PROPOSITION"
 stamps_live = "CURRENT"
 stamps_old = "SUPERSEDED_WITH_PROVENANCE"
 stamps_beta = "FUTURE_NOT_YET_OCCURRED"
+
+[extensions]
+cloude_local = "CONFIG_SOL/CLOUDE_LOCAL_CURRENT.toml"
+open_and_conflict = "CONFIG_SOL/OPEN_AND_CONFLICT_CURRENT.md"
+infinity_stones = "CONFIG_SOL/INFINITY_STONES_SYSTEM.md"
+agent_materialization = "CONFIG_SOL/AGENT_MATERIALIZATION_CURRENT.md"
+master_teacher_event_sequence = "CONFIG_SOL/MASTER_TEACHER_EVENT_SEQUENCE_CURRENT.md"
