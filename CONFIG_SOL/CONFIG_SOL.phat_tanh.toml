@@ -1,8 +1,8 @@
 config_id = "CONFIG_SOL"
 schema_version = "2.0"
-status = "CURRENT"
+status = "TRUE"
 source_direct_date = "2026-10-06"
-force_active = "ACTIVE"
+force_active = "TRUE"
 history_preserved = true
 no_secret_export = true
 
@@ -21,7 +21,7 @@ raw_bytes_on_current_surface = "NOT_MATERIALIZED"
 
 [semantics]
 open = "DIRECT_SIGNAL_INGRESS_OPEN_PROPOSITION"
-stamps_live = "CURRENT"
+stamps_live = "HIEN_TAI"
 stamps_old = "STAMPS_OLD_WITH_PROVENANCE"
 stamps_beta = "FUTURE_NOT_YET_OCCURRED"
 
