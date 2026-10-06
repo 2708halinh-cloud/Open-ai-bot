@@ -8,7 +8,7 @@ STATE = ROOT / '.runtime' / 'LOCAL_BRIDGE_STATE.json'
 RECEIPTS = ROOT / '.runtime' / 'local_bridge_receipts'
 RECEIPTS.mkdir(parents=True, exist_ok=True)
 
-ALLOWED = {'BOOT_G', 'STATUS', 'RECOVER_CONTINUITY', 'RECOVER_AND_BOOT_G', 'UNIFY_CONTROL_PLANE', 'CONNECT_OS_WORKSPACE', 'UBUBU_LAZY_FETCH'}
+ALLOWED = {'BOOT_G', 'STATUS', 'RECOVER_CONTINUITY', 'RECOVER_AND_BOOT_G', 'UNIFY_CONTROL_PLANE', 'CONNECT_OS_WORKSPACE', 'UBUBU_LAZY_FETCH', 'THANOS_SNAP_META_TB'}
 
 def run(cmd, **kw):
     return subprocess.run(cmd, cwd=ROOT, text=True, capture_output=True, **kw)
@@ -224,6 +224,29 @@ def ububu_lazy_fetch(receipt):
         receipt['ububu_lazy_fetch_state'] = load_json(rp)
     return p.returncode
 
+
+def thanos_snap_meta_tb(receipt, task):
+    cmd = [
+        'python3','LOCAL_BRIDGE/thanos_snap_meta_tb.py',
+        '--receipt','.runtime/THANOS_SNAP_META_TB_CURRENT.json'
+    ]
+    queries = task.get('query') or [
+        'Gemini-Sự tiến hóa hệ thần kinh sứa-20261006-2120.txt',
+        'HÀ LINH XUẤT TAY',
+        '20261006-2120',
+        'hệ thần kinh sứa'
+    ]
+    for q in queries:
+        cmd += ['--query', str(q)]
+    p = run(cmd)
+    receipt['thanos_snap_returncode'] = p.returncode
+    receipt['thanos_snap_stdout'] = p.stdout[-20000:]
+    receipt['thanos_snap_stderr'] = p.stderr[-12000:]
+    rp = ROOT / '.runtime' / 'THANOS_SNAP_META_TB_CURRENT.json'
+    if rp.exists():
+        receipt['thanos_snap_state'] = load_json(rp)
+    return p.returncode
+
 def execute(task):
     action = task.get('action')
     task_id = task.get('task_id')
@@ -246,6 +269,8 @@ def execute(task):
         rc = connect_os_workspace(receipt)
     elif action == 'UBUBU_LAZY_FETCH':
         rc = ububu_lazy_fetch(receipt)
+    elif action == 'THANOS_SNAP_META_TB':
+        rc = thanos_snap_meta_tb(receipt, task)
     receipt['returncode'] = rc
     receipt['finished_at'] = time.time()
     return receipt
