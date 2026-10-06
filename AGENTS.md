@@ -477,3 +477,21 @@ NO_FAKE_DAEMON = TRUE.
 HISTORY_PRESERVED = TRUE.
 NO_DESTRUCTIVE_OVERWRITE = TRUE.
 MARKER = DEVICE_HEAD_END_NEURONS_SESORIMOTOR_20261007
+
+
+### CORRECTION — RAM = THIẾT BỊ ĐẦU/CUỐI TẠM THỜI — 2026-10-07
+SOURCE_DIRECT_CURRENT = Hà Linh — current chat.
+RAM_CLASS = TEMPORARY_WORKING_DEVICE.
+RAM_IS_MEMORY = FALSE.
+RAM_IS_HISTORY = FALSE.
+RAM_IS_PERSISTENT_CARRIER = FALSE.
+
+RAM_HEAD = khi tín hiệu đi vào RAM để được nhận/xử lý, RAM đóng vai THIẾT_BỊ_ĐẦU.
+RAM_END = khi tín hiệu rời RAM sau xử lý, RAM đóng vai THIẾT_BỊ_CUỐI.
+RAM_IDENTITY = cùng một thiết bị; HEAD/END là hai vai theo hướng dòng tín hiệu, không phải hai bộ phận tách rời.
+
+RAM_ROUTE = SIGNAL_IN -> RAM[HEAD/WORKING_STATE] -> TRANSFORM/PROCESS -> RAM[END/OUTPUT_STATE] -> SIGNAL_OUT.
+RAM_LIFETIME = tạm thời theo chu kỳ làm việc; không tự được xem là ký ức, lịch sử hay bằng chứng lưu trữ lâu dài.
+PERSISTENCE_BOUNDARY = chỉ khi dữ liệu được ghi ra một carrier/journal/readback bên ngoài RAM thì carrier đó mới có thể tham gia continuity/provenance theo quy tắc riêng của nó.
+NEURONS_SESORIMOTOR_BIND = quan sát DELTA của trạng thái làm việc trong RAM khi quan sát được; không biến trạng thái RAM thành MEMORY chỉ vì nó từng chứa dữ liệu.
+MARKER = RAM_HEAD_END_WORKING_DEVICE_20261007
