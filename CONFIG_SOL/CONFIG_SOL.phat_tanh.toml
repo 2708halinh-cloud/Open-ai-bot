@@ -22,7 +22,7 @@ raw_bytes_on_current_surface = "NOT_MATERIALIZED"
 [semantics]
 open = "DIRECT_SIGNAL_INGRESS_OPEN_PROPOSITION"
 stamps_live = "CURRENT"
-stamps_old = "SUPERSEDED_WITH_PROVENANCE"
+stamps_old = "STAMPS_OLD_WITH_PROVENANCE"
 stamps_beta = "FUTURE_NOT_YET_OCCURRED"
 
 [extensions]
