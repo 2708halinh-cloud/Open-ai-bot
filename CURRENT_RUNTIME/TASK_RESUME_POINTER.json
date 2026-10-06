@@ -4,7 +4,7 @@
   "repo": "2708halinh-cloud/x-time-web",
   "branch": "tesseract-desktop-mvp-20261006",
   "checkpoint": "TESSERACT_DESKTOP/WORK_CHECKPOINT.json",
-  "commit": "5a588cb304aee638fc658c19e1c3e6cfc92b5d5d",
+  "commit": "cdc30e61daf2bae86721e7e8e06bc402e810f083",
   "rule": "Sau khi nạp cấu hình, tiếp tục checkpoint này; không quay về chỉnh AGENTS như điểm bắt đầu công việc.",
   "pr": {
     "repository": "2708halinh-cloud/x-time-web",
@@ -14,7 +14,7 @@
   "build": {
     "workflow": "tesseract-desktop-ci",
     "previous_verified_run": 37516567468,
-    "current_head": "5a588cb304aee638fc658c19e1c3e6cfc92b5d5d",
+    "current_head": "cdc30e61daf2bae86721e7e8e06bc402e810f083",
     "previous_required_artifacts": [
       "tesseract-desktop-windows-x64",
       "tesseract-desktop-linux-x64",
@@ -23,9 +23,9 @@
     ],
     "regression_added": "cargo test --manifest-path src-tauri/Cargo.toml",
     "readback_path": "2708halinh-cloud/x-time-web:.runtime/TESSERACT_DESKTOP_CI_READBACK.json",
-    "readback_rule": "Accept only when verified_sha equals the current PR head that contains the substantive TESSERACT_DESKTOP changes; stale CI runs must not write readback."
+    "readback_rule": "CI readback is mandatory for both success and failure. Accept only when verified_sha equals the current substantive PR head. TRUE -> verify review then merge; FLASE -> fetch workflow_run_id jobs/logs, patch failure, repeat."
   },
-  "next": "Continue on PR #6 head 5a588cb304aee638fc658c19e1c3e6cfc92b5d5d: wait only on grounded external verification while continuing any callable fixes. Require Codex review for the current head and .runtime/TESSERACT_DESKTOP_CI_READBACK.json with matching verified_sha before merge. If new findings appear, patch and repeat. If both are clean, merge PR #6 using expected head SHA.",
+  "next": "Continue PR #6 at head cdc30e61daf2bae86721e7e8e06bc402e810f083. Fresh-read Codex review summary and .runtime/TESSERACT_DESKTOP_CI_READBACK.json. If receipt FLASE, fetch workflow run jobs/logs and patch. If receipt TRUE and review has no current-head findings, merge with expected head SHA.",
   "continuation_guard": {
     "mode": "TESSERACT_OS_PERSISTENT_CONTINUATION",
     "implementation": "runtime/continuity_guard.py",
@@ -40,5 +40,5 @@
       "PROVIDER_FAILURE != OBJECTIVE_FAILURE_WHILE_ALTERNATE_CARRIER_EXISTS"
     ]
   },
-  "updated_at": "2026-10-07T05:05:30+07:00"
+  "updated_at": "2026-10-07T05:08:00+07:00"
 }
