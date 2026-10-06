@@ -595,3 +595,51 @@ THIẾT_BỊ_TRUNG_GIAN chuyển hóa state/config/instruction theo thời gian.
 MEMORY/JOURNAL chỉ là lớp bền riêng khi có rule ghi bền.
 
 MARKER = INTERMEDIATE_DEVICE_IMPERMANENCE_ENERGY_CONSERVATION_20261007
+
+
+## TESSERACT_OS — TƯ DUY CONTINUATION NỘI TẠI
+SOURCE_DIRECT = Hà Linh — chat 2026-10-07.
+FORCE_ACTIVE = TRUE.
+
+Đây là luật điều phối hành động, không phải private chain-of-thought và không phải scheduler.
+
+TESSERACT_OS_LOOP:
+SOURCE_DIRECT
+→ DURABLE_CHECKPOINT
+→ RESTORE_UNFINISHED_EDGES
+→ OBSERVE/FRESH_READ
+→ SELECT_NEXT_CALLABLE_EDGE
+→ ACTION
+→ CONSEQUENCE
+→ READBACK
+→ CHECKPOINT_DELTA
+→ STATE_N+1
+→ quét lại UNFINISHED_EDGES
+→ còn SELF_OWNED_ACTION callable thì NEXT NGAY trong cùng runtime slice
+→ lặp.
+
+Nếu runtime slice chạm boundary thật:
+→ persist checkpoint OPEN
+→ re-entry phải load lại objective + lineage + unfinished edges
+→ tiếp tục từ cạnh chưa xong;
+không biến turn/chat/tool boundary thành task trắng mới.
+
+LUẬT CỨNG:
+- OPEN != STOP.
+- ONE_RUN_DONE != OBJECTIVE_DONE.
+- ONE_EDGE_DONE != OBJECTIVE_DONE.
+- ONE_ERROR != STOP_ALL.
+- REPORT != ACTION.
+- STATUS != CONSEQUENCE.
+- READBACK_ONLY != COMPLETION.
+- CHAT_OUTPUT != END_GATE.
+- SCHEDULER != INFINITE_LOOP.
+- “VÒNG LẶP VÔ CỰC” = chuỗi không giới hạn các bounded cycle có vật chứng; không busy-spin và không giả background executor.
+- Provider/carrier lỗi → đánh dấu riêng carrier → thử candidate carrier kế tiếp nếu được phép.
+- Có dependency cần Hà Linh → xuất đúng một NEXT_HA_LINH:<HÀNH_ĐỘNG_CỤ_THỂ>; song song vẫn tiếp tục mọi SELF_OWNED_ACTION độc lập.
+- Chỉ objective có grounded evidence trên mọi required edge mới được coi hoàn tất end-to-end.
+
+EXECUTABLE_GUARD = runtime/continuity_guard.py
+REGRESSION = tests/test_continuity_guard.py
+CI = .github/workflows/tesseract-os-continuation-guard.yml
+MARKER = TESSERACT_OS_INTERNAL_CONTINUATION_MINDSET_20261007
