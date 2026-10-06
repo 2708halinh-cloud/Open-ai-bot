@@ -26,4 +26,4 @@ jobs:
       - name: Compile continuity guard
         run: python -m py_compile runtime/continuity_guard.py
       - name: Run regression suite
-        run: python -m unittest tests.test_continuity_guard -v
+        run: python -m unittest discover -s tests -p 'test_continuity_guard.py' -v
