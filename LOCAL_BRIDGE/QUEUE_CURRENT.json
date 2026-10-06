@@ -1,21 +1,24 @@
 {
-  "schema": "TESSERACT_LOCAL_BRIDGE_QUEUE/1.3",
-  "task_id": "CONNECT_OS_WORKSPACE_20261006",
-  "action": "CONNECT_OS_WORKSPACE",
+  "schema": "TESSERACT_LOCAL_BRIDGE_QUEUE/1.4",
+  "task_id": "UBUBU_LAZY_FETCH_CHAPTER_III_20261006",
+  "action": "UBUBU_LAZY_FETCH",
   "scope": [
-    "G:\\OS_Workspace physical carrier",
-    ".vscode control plane",
-    "SOL_GGDV.code-workspace multi-root binding",
-    "SOL_COMPUTER relation",
-    "TESSERACT_OS relation",
-    "binding/readback hashes"
+    "UBUBU/meta_tb_index.json",
+    "UBUBU/meta_chunks/",
+    "Chapter III recovery target",
+    "index-first lazy fetch only"
   ],
-  "target": {
-    "os_workspace": "G:\\OS_Workspace",
-    "control_root": "C:\\Users\\halin\\GGDV_UNIFIED\\.vscode"
+  "query": [
+    "Gemini-Sự tiến hóa hệ thần kinh sứa-20261006-2120.txt",
+    "HÀ LINH XUẤT TAY",
+    "20261006-2120",
+    "hệ thần kinh sứa"
+  ],
+  "invariant": {
+    "never_load_full_meta_db": true,
+    "index_first": true,
+    "chunk_only_after_anchor_resolution": true
   },
   "history_preserved": true,
-  "host_data_preserved": true,
-  "no_reset": true,
-  "secret_values": false
+  "no_reset": true
 }
