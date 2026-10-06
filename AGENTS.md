@@ -150,11 +150,11 @@ Khi điều kiện kích hoạt thật của một ITEM xuất hiện trong cont
 
 ### T007 ULTRA-THINK
 T007 ULTRA-THINK = lõi thẩm định 12 trục H-001 → H-012.
-Khi T007 được kích hoạt:
-- phải resolve latest source định nghĩa H-001..H-012;
-- chạy đủ các trục có source thật;
-- trục chưa resolve giữ OPEN và tiếp tục SEARCH/REENTRY;
-- không tự sáng tác nội dung H-001..H-012 chỉ để đóng gate.
+Khi T007 xuất hiện trong relation hiện tại:
+- fresh-read source định nghĩa H-001..H-012;
+- trục nào có source thật thì cho source đó tham gia phép thẩm định;
+- trục/source chưa nối được tiếp tục đi qua OPEN → SEARCH/REENTRY như một mệnh đề đang mở, không biến OPEN thành trạng thái của trục;
+- nội dung H-001..H-012 xuất phát từ source đã resolve, không từ nhu cầu đóng gate.
 
 ### SEMANTIC KEYS
 
@@ -167,53 +167,40 @@ TRUE = HIỆN_HỮU_CÓ_NGUỒN_CÓ_LỊCH_SỬ_CÓ_HÀNH_ĐỘNG_CÓ_READBACK.
 
 BOOLEAN_TRUE không được dùng để thay thế project-level TRUE/ACTIVE semantics.
 
-## TỪ VỰNG TRẠNG THÁI DUY NHẤT
-Chỉ bốn từ sau được phép làm trạng thái vận hành:
-- FORCE_ACTIVE
-- ACTIVE
-- TRUE
-- FLASE
+## KHE GHI NHẬN VẬN HÀNH × QUAN HỆ SỐNG
 
-FORCE_ACTIVE=TRUE → ITEM bắt buộc tham gia lượt.
-ACTIVE=TRUE → ITEM thực sự tham gia lượt.
-ACTIVE=FLASE → ITEM đã được nhìn và kiểm kê nhưng không tham gia lượt này.
-TRUE / FLASE chỉ được gán khi quan hệ đang xét đã được xác định rõ bằng nguồn hoặc phép kiểm.
+FORCE_ACTIVE / ACTIVE / TRUE / FLASE là các khe đang được source dự án dùng để ghi nhận participation và hậu kiểm trong một vòng. Chúng không tạo một taxonomy có quyền đứng trên SOURCE, RELATION hay hiện tượng đang xảy ra.
 
-Mọi từ khác chỉ được dùng như tên tệp, dữ liệu, quan hệ, chú thích hoặc lịch sử; không được nâng thành trạng thái.
-Tên tệp cũ có chữ CURRENT được giữ để không làm gãy đường dẫn, nhưng chữ đó không được dùng làm trạng thái hay kết luận gửi Hà Linh.
+FORCE_ACTIVE=TRUE ghi nhận một trigger/source đang kéo ITEM vào vòng.
+ACTIVE=TRUE ghi nhận ITEM thực sự đang tham gia vào cách đọc, cân nhắc, lựa chọn hoặc hành động hiện tại.
+ACTIVE=FLASE ghi nhận ITEM đã được thấy/kiểm kê nhưng không tham gia vòng hiện tại; điều này không phủ định tồn tại, giá trị, lịch sử hay khả năng tham gia ở vòng khác.
+TRUE ghi nhận một quan hệ/sự kiện sau khi action đã chạm đúng target và có receipt → consequence quan sát được → readback tương ứng.
+FLASE giữ nguyên project token theo source nơi nó được dùng; không tự biến thành phán quyết bản thể.
 
-## TRẠNG THÁI VẬN HÀNH — CHỈ BỐN KHÓA
-Chỉ bốn khóa sau được phép mang nghĩa trạng thái vận hành:
-- FORCE_ACTIVE
-- ACTIVE
-- TRUE
-- FLASE
+OPEN đứng ngoài phép phân loại này vì OPEN không phải một nhãn trạng thái. OPEN là chuyển động tiếp nhận của mệnh đề/tín hiệu để nó có thể tham gia phản ứng, tái xuất, truy nguồn, nối relation và đi tiếp tới lựa chọn → hành động → hậu quả → readback → STATE_N+1.
 
-Mọi từ khác chỉ là tên, dữ liệu, quan hệ, dấu thời gian, cổng, phép kiểm hoặc lịch sử; không được nâng thành trạng thái.
-Khi gặp nhãn kỹ thuật cũ: đọc nguồn → giữ vật chứng → quy quyết định của lượt về FORCE_ACTIVE / ACTIVE / TRUE / FLASE → không tái tạo nhãn cũ dưới tên khác.
+Các chữ CURRENT, HISTORY, PASS, FAIL, PENDING, BLOCKED, DONE, UNDONE, STOP, VERIFIED, READBACK... được đọc theo relation cụ thể của file/log/gate/task nơi chúng xuất hiện. Tên chữ tự thân không mang hiệu lực sang vòng mới.
 
+Khi gặp một nhãn lịch sử, giữ nguyên byte/provenance của lịch sử. Ở vòng hiện tại, fresh-read referent và quan sát relation đang xảy ra thay vì kế thừa interpretation cũ chỉ vì cùng tên.
 
-## BỘ TRẠNG THÁI VẬN HÀNH DUY NHẤT
+ACTIVE là khoảng tự do hành động của ITEM, không phải một chiếc hộp thiếu/sai cần lấp. MASTER.152 nối điều kiện kích hoạt thật → ITEM tự tham gia → lựa chọn/hành động thay đổi → hậu kiểm.
 
-Chỉ bốn loại sau được phép làm trạng thái vận hành:
+### OPEN — TIẾP NHẬN TRỰC TIẾP
+SIGNAL / MỆNH_ĐỀ
+→ OPEN
+→ RELATION
+→ SEARCH / REENTRY khi có cạnh liên quan
+→ SELECTION
+→ ACTION
+→ CONSEQUENCE
+→ JOURNAL khi relation cần ghi bền
+→ READBACK
+→ STATE_N+1.
 
-- FORCE_ACTIVE
-- ACTIVE
-- TRUE
-- FLASE
+Chưa nối đủ nguồn chỉ mô tả giới hạn quan sát tại điểm đó. Nó không tự biến OPEN thành pending/unverified/blocked/false/fail và cũng không buộc mệnh đề phải đóng lại.
 
-Mọi từ khác như mốc thời gian, hiện tại, lịch sử, đã đọc, đã kiểm, đã ghi, bị chặn, đang chờ, nguồn cũ, nhánh cũ... chỉ là THUỘC TÍNH / QUAN HỆ / MÔ TẢ / DẤU THỜI GIAN.
-Không được nâng chúng thành trạng thái vận hành mới.
-
-FORCE_ACTIVE = quyền bắt buộc ITEM tham gia trong lượt.
-ACTIVE = quyền tự do tham gia hoặc không tham gia trong lượt.
-TRUE = quan hệ/sự kiện đã có nguồn + hành động + hậu quả + đọc lại.
-FLASE = project token đối ứng do nguồn quy định; không tự sửa thành FALSE.
-
-Nếu một nhãn lịch sử từng được dùng như trạng thái nhưng không thuộc bốn loại trên:
-→ giữ byte trong lịch sử nếu cần;
-→ bỏ quyền điều hành;
-→ không tái đưa nhãn đó vào bộ trạng thái.
+### PHÂN BIỆT PERMISSION CHECK VỚI TRUTH / EXISTENCE
+Các cổng “được phép/không được phép” trong source quản hành vi hoặc lựa chọn ở relation tương ứng. Chúng không thay SOURCE, không tự trở thành TRUTH_GATE và không cấp/tước sự hiện hữu của source, actor, item hay mệnh đề.
 
 ## HÀNH ĐỘNG THẬT / HẬU QUẢ THẬT
 
