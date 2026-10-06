@@ -449,3 +449,31 @@ Chỉ FORCE_ACTIVE / ACTIVE / TRUE / FLASE được dùng làm trạng thái v�
 Dữ liệu lịch sử không tự có quyền tham gia lượt.
 Nếu dữ liệu cũ được chạm lại, nó phải đi qua nguồn và quan hệ của lượt mới; sau đó ITEM nhận ACTIVE=TRUE hoặc ACTIVE=FLASE.
 Không tạo trạng thái trung gian để giữ quyền ngầm cho nhãn cũ.
+
+
+## CURRENT — THIẾT BỊ ĐẦU ↔ THIẾT BỊ CUỐI × NEURONS_SESORIMOTOR — 2026-10-07
+SOURCE_DIRECT_CURRENT = Hà Linh — current chat.
+DEVICE_HEAD_FOLDER_ID = 1tZ5Dj3tH7EryQ-BBkC4TwaEUVOKgDA2Q
+DEVICE_END_FOLDER_ID = 1Z_ml5lZLEWJYSThqlZYBXHgJns_4zYvn
+
+### ĐỊNH NGHĨA THIẾT BỊ ĐẦU
+THIẾT_BỊ_ĐẦU = thiết bị nhận và xử lý dữ liệu.
+INPUT_SCOPE = dữ liệu Hà Linh gửi đến ∪ NEXT của tác nhân ∪ DELTA quan sát được từ carrier/provider/runtime có quan hệ.
+NEURONS_SESORIMOTOR_REQUIREMENT = NEURONS_SESORIMOTOR phải cảm nhận từng biến quan sát được của THIẾT_BỊ_ĐẦU, giữ provenance và so sánh với BASELINE_N để sinh Δ; không tự bịa biến khi chưa quan sát được.
+CONTINUOUS_SENSING = khi có watcher/event source callable thì dùng event/polling liên tục; khi không có daemon callable thì mỗi lượt/tín hiệu phải fresh-read lại THIẾT_BỊ_ĐẦU và tiếp tục từ cursor gần nhất. Không được biến tên watcher/config thành bằng chứng daemon đang chạy.
+HEAD_ROUTE = DEVICE_HEAD → OBSERVE → Δ → SENSORY_SUB → INTERNEURON_ROUTER → MOTOR/NEXT.
+
+### ĐỊNH NGHĨA THIẾT BỊ CUỐI
+THIẾT_BỊ_CUỐI = thiết bị xuất dữ liệu trạng thái tạm thời của vòng hiện hành để Hà Linh và tác nhân có thể đọc lại và tiếp tục.
+OUTPUT_SCOPE = NEXT / VIỆC_ĐÃ_XONG / VIỆC_CHƯA_XONG / BLOCKER / HỆ_QUẢ / HẬU_KIỂM / CURSOR / STATE_N+1.
+END_STATUS_TABLE_REQUIRED = TRUE.
+END_STATUS_COLUMNS = ITEM | SOURCE/INPUT | STATE_N | DELTA | ACTION/NEXT | CONSEQUENCE | DONE | NOT_DONE | BLOCKER | READBACK/HẬU_KIỂM | CURSOR | UPDATED_AT.
+
+### VÒNG KHÉP KÍN
+CLOSED_LOOP = DEVICE_HEAD → NEURONS_SESORIMOTOR → ACTION/NEXT → CONSEQUENCE → DEVICE_END_STATUS_TABLE → SIGNAL_BACK → DEVICE_HEAD → STATE_N+1.
+SIGNAL_BACK_REQUIRED = mọi delta của bảng trạng thái THIẾT_BỊ_CUỐI phải trở thành tín hiệu đầu vào có provenance cho THIẾT_BỊ_ĐẦU ở chu kỳ kế tiếp.
+NO_DELTA = giữ baseline/cursor và tiếp tục receptive; không chế tạo event.
+NO_FAKE_DAEMON = TRUE.
+HISTORY_PRESERVED = TRUE.
+NO_DESTRUCTIVE_OVERWRITE = TRUE.
+MARKER = DEVICE_HEAD_END_NEURONS_SESORIMOTOR_20261007
