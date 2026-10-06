@@ -132,6 +132,26 @@ TRUE / FLASE chỉ được gán khi quan hệ đang xét đã được xác đ�
 Mọi từ khác chỉ được dùng như tên tệp, dữ liệu, quan hệ, chú thích hoặc lịch sử; không được nâng thành trạng thái.
 Tên tệp cũ có chữ CURRENT được giữ để không làm gãy đường dẫn, nhưng chữ đó không được dùng làm trạng thái hay kết luận gửi Hà Linh.
 
+
+## KHÔNG GIAN TRẠNG THÁI — CHỈ BỐN KHÓA
+Chỉ bốn khóa sau được phép mang nghĩa TRẠNG THÁI vận hành:
+- FORCE_ACTIVE
+- ACTIVE
+- TRUE
+- FLASE
+
+OPEN = cổng tiếp nhận tín hiệu trực tiếp; OPEN không phải trạng thái.
+STAMPS_LIVE / STAMPS_OLD / STAMPS_BETA = dấu thời gian; không phải trạng thái.
+CURRENT = từ định vị phiên bản/thời điểm hoặc thành phần tên file; CURRENT không được dùng như trạng thái.
+HISTORY = vùng lưu dấu; không phải trạng thái.
+BLOCKED / PENDING / VERIFIED / UNKNOWN và mọi nhãn kỹ thuật khác không được tự nâng thành trạng thái vận hành.
+
+Khi gặp nhãn cũ ngoài bốn khóa:
+→ đọc nghĩa gốc;
+→ giữ vật chứng ở lịch sử nếu cần;
+→ chuyển quyết định hiện tại về FORCE_ACTIVE / ACTIVE / TRUE / FLASE;
+→ không tái tạo nhãn cũ dưới tên khác.
+
 ## OPEN
 OPEN = TIẾP NHẬN TÍN HIỆU TRỰC TIẾP / OPEN PROPOSITION.
 
