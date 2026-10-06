@@ -4,7 +4,7 @@
   "repo": "2708halinh-cloud/x-time-web",
   "branch": "tesseract-desktop-mvp-20261006",
   "checkpoint": "TESSERACT_DESKTOP/WORK_CHECKPOINT.json",
-  "commit": "cdc30e61daf2bae86721e7e8e06bc402e810f083",
+  "commit": "b04db9c01a2ceb48aa08be14ae39cf76d6ec21f8",
   "rule": "Sau khi nạp cấu hình, tiếp tục checkpoint này; không quay về chỉnh AGENTS như điểm bắt đầu công việc.",
   "pr": {
     "repository": "2708halinh-cloud/x-time-web",
@@ -14,7 +14,7 @@
   "build": {
     "workflow": "tesseract-desktop-ci",
     "previous_verified_run": 37516567468,
-    "current_head": "cdc30e61daf2bae86721e7e8e06bc402e810f083",
+    "current_head": "b04db9c01a2ceb48aa08be14ae39cf76d6ec21f8",
     "previous_required_artifacts": [
       "tesseract-desktop-windows-x64",
       "tesseract-desktop-linux-x64",
@@ -23,9 +23,10 @@
     ],
     "regression_added": "cargo test --manifest-path src-tauri/Cargo.toml",
     "readback_path": "2708halinh-cloud/x-time-web:.runtime/TESSERACT_DESKTOP_CI_READBACK.json",
-    "readback_rule": "CI readback is mandatory for both success and failure. Accept only when verified_sha equals the current substantive PR head. TRUE -> verify review then merge; FLASE -> fetch workflow_run_id jobs/logs, patch failure, repeat."
+    "readback_rule": "CI readback is mandatory for both success and failure. Accept only when verified_sha equals the current substantive PR head. TRUE -> verify review then merge; FLASE -> fetch workflow_run_id jobs/logs, patch failure, repeat.",
+    "pr_event_verify": true
   },
-  "next": "Continue PR #6 at head cdc30e61daf2bae86721e7e8e06bc402e810f083. Fresh-read Codex review summary and .runtime/TESSERACT_DESKTOP_CI_READBACK.json. If receipt FLASE, fetch workflow run jobs/logs and patch. If receipt TRUE and review has no current-head findings, merge with expected head SHA.",
+  "next": "Read pull-request-triggered workflow runs for head b04db9c01a2ceb48aa08be14ae39cf76d6ec21f8. If any job fails, fetch its logs, patch the failure, and repeat. If all jobs succeed and current-head Codex review has no findings, merge PR #6 with expected head SHA.",
   "continuation_guard": {
     "mode": "TESSERACT_OS_PERSISTENT_CONTINUATION",
     "implementation": "runtime/continuity_guard.py",
@@ -40,5 +41,5 @@
       "PROVIDER_FAILURE != OBJECTIVE_FAILURE_WHILE_ALTERNATE_CARRIER_EXISTS"
     ]
   },
-  "updated_at": "2026-10-07T05:08:00+07:00"
+  "updated_at": "2026-10-07T05:18:00+07:00"
 }
