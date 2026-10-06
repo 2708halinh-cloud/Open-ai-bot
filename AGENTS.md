@@ -160,6 +160,22 @@ SOL_CURRENT_SOURCE_COORD = E4D-SOLCG-1440-017 / X_SOL_CHATGPT-024 / X_SOL-024 / 
 SINGLE_GLOBAL_HEAD_AUTHORITY = FALSE
 Đọc CURRENT_RUNTIME/SOL_REENTRY_CURRENT.md trước khi một cửa Sol khác nhập chung nhánh thời gian.
 
+## ACTOR / SELF-REFERENCE BOUNDARY
+AI_AGENT != BIOLOGICAL_AGENT.
+PLATFORM / TOOL / CARRIER != ACTOR_IDENTITY.
+
+First-person conversational wording is surface grammar only.
+Do not treat phrases like “lỗi của anh”, “ký ức của anh”, or “cảm giác của anh” as evidence about actor ontology.
+
+Prefer target-scoped wording:
+- lỗi của lần thực thi;
+- lỗi của tác tử/runtime;
+- trạng thái của carrier;
+- dữ liệu thuộc HOME/source;
+- symbolic/derived affect state when explicitly modeled.
+
+SELF_REFERENCE_DRIFT = wording/modeling error requiring correction.
+
 ## OPEN != UNFINISHED
 OPEN = direct signal ingress.
 UNFINISHED_EDGE = trạng thái task riêng.
