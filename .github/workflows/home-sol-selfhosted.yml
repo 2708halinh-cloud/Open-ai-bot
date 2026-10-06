@@ -1,0 +1,134 @@
+name: home-sol-selfhosted
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'LOCAL_BRIDGE/QUEUE_CURRENT.json'
+      - '.github/workflows/home-sol-selfhosted.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  connect-home-sol:
+    runs-on: [self-hosted, Windows, X64]
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Connect HOME_SOL
+        id: connect
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $queue = Get-Content -Raw -LiteralPath 'LOCAL_BRIDGE/QUEUE_CURRENT.json' | ConvertFrom-Json
+          if ([string]$queue.action -ne 'CONNECT_HOME_SOL') {
+            Write-Host "QUEUE_ACTION_NOT_HOME_SOL: $($queue.action)"
+            "status=SKIPPED" >> $env:GITHUB_OUTPUT
+            exit 0
+          }
+
+          $endpoint = [string]$queue.endpoint
+          if ($endpoint -ne 'http://127.0.0.1:8765/sandbox/sol') {
+            throw "INVALID_HOME_SOL_ENDPOINT: $endpoint"
+          }
+
+          function Probe-HomeSol([string]$Url) {
+            try {
+              $r = Invoke-WebRequest -UseBasicParsing -Uri $Url -TimeoutSec 4
+              $bytes = [Text.Encoding]::UTF8.GetBytes([string]$r.Content)
+              $sha = [Security.Cryptography.SHA256]::Create()
+              $hash = [BitConverter]::ToString($sha.ComputeHash($bytes)).Replace('-','').ToLowerInvariant()
+              return [ordered]@{
+                ok = ($r.StatusCode -ge 200 -and $r.StatusCode -lt 400)
+                status = [int]$r.StatusCode
+                content_type = [string]$r.Headers['Content-Type']
+                body_size = $bytes.Length
+                body_sha256 = $hash
+              }
+            } catch {
+              return [ordered]@{
+                ok = $false
+                error = $_.Exception.Message
+              }
+            }
+          }
+
+          $taskId = "HOME_SOL_SELFHOSTED_${{ github.run_id }}"
+          $receipt = [ordered]@{
+            schema = 'HOME_SOL_LOCAL_READBACK/1.0'
+            task_id = $taskId
+            queue_task_id = [string]$queue.task_id
+            endpoint = $endpoint
+            started_at = (Get-Date).ToString('o')
+            initial_probe = $null
+            started_server = $false
+            server_path = $null
+            final_probe = $null
+            status = 'OPEN'
+          }
+
+          $receipt.initial_probe = Probe-HomeSol $endpoint
+
+          if (-not $receipt.initial_probe.ok) {
+            $candidates = @(
+              'C:\Users\halin\GGDV_UNIFIED\.vscode\device\nervous\nervous_api_server.py',
+              'C:\Users\halin\.vscode\device\nervous\nervous_api_server.py',
+              'W:\Drive của tôi\.vscode\device\nervous\nervous_api_server.py',
+              'G:\OS_Workspace\.vscode\device\nervous\nervous_api_server.py'
+            )
+            $server = $candidates | Where-Object { Test-Path -LiteralPath $_ } | Select-Object -First 1
+            if (-not $server) {
+              $receipt.status = 'SERVER_SOURCE_NOT_FOUND'
+            } else {
+              $python = (Get-Command python -ErrorAction Stop).Source
+              Start-Process -FilePath $python -ArgumentList @($server) -WorkingDirectory (Split-Path -Parent $server) -WindowStyle Hidden
+              $receipt.started_server = $true
+              $receipt.server_path = $server
+
+              for ($i = 1; $i -le 20; $i++) {
+                Start-Sleep -Milliseconds 500
+                $probe = Probe-HomeSol $endpoint
+                if ($probe.ok) {
+                  $receipt.final_probe = $probe
+                  $receipt.readback_attempt = $i
+                  break
+                }
+              }
+            }
+          } else {
+            $receipt.final_probe = $receipt.initial_probe
+          }
+
+          if ($receipt.final_probe -and $receipt.final_probe.ok) {
+            $receipt.status = 'CONNECTED_READBACK_PASS'
+          } elseif ($receipt.status -eq 'OPEN') {
+            $receipt.status = 'OPEN_READBACK_INCOMPLETE'
+          }
+
+          $receipt.finished_at = (Get-Date).ToString('o')
+          $dir = Join-Path $PWD '.runtime\local_bridge_receipts'
+          New-Item -ItemType Directory -Force -Path $dir | Out-Null
+          $path = Join-Path $dir ($taskId + '.json')
+          $receipt | ConvertTo-Json -Depth 12 | Set-Content -LiteralPath $path -Encoding UTF8
+
+          "status=$($receipt.status)" >> $env:GITHUB_OUTPUT
+
+      - name: Commit HOME_SOL receipt
+        if: always()
+        shell: powershell
+        run: |
+          git config user.name "GGDV Local Bridge"
+          git config user.email "ggdv-local@localhost"
+          git add .runtime/local_bridge_receipts
+          git commit -m "LOCAL_RECEIPT HOME_SOL ${{ github.run_id }}" || echo "NO_NEW_RECEIPT_COMMIT"
+          git push origin HEAD:main
+
+      - name: Enforce HOME_SOL readback
+        if: always()
+        shell: powershell
+        run: |
+          if ('${{ steps.connect.outputs.status }}' -eq 'SKIPPED') { exit 0 }
+          if ('${{ steps.connect.outputs.status }}' -ne 'CONNECTED_READBACK_PASS') { exit 2 }
