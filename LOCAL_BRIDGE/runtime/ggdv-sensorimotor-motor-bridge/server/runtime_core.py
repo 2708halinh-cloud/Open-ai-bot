@@ -312,17 +312,43 @@ def adb_action(action: str, serial: str|None=None, command: str|None=None, key: 
 
 def resolve_app_adapter(explicit: str|None=None):
     candidates=[]
-    if explicit: candidates.append(explicit)
-    if os.environ.get("GGDV_APP_ADAPTER"): candidates.append(os.environ["GGDV_APP_ADAPTER"])
-    # Known project worktree supplied by project context; keep as a fallback only.
-    candidates += [
-        r"\\wsl$\Ubuntu\home\halin\kepler\worktrees\Open-ai-bot-2-unify-item-matrix-34d45d00\.vscode\scripts\app_adapters.py",
-        str(Path.home()/"kepler"/"worktrees"/"Open-ai-bot-2-unify-item-matrix-34d45d00"/".vscode"/"scripts"/"app_adapters.py")
-    ]
+    if explicit:
+        candidates.append(explicit)
+    if os.environ.get("GGDV_APP_ADAPTER"):
+        candidates.append(os.environ["GGDV_APP_ADAPTER"])
+
+    repo_path = os.environ.get("GGDV_REPO_PATH")
+    if repo_path:
+        candidates.append(str(Path(repo_path) / ".vscode" / "scripts" / "app_adapters.py"))
+
+    # Root-neutral discovery inside the current process tree.
+    for base in (Path.cwd(), PLUGIN_ROOT):
+        for root in (base, *base.parents):
+            candidates.append(str(root / ".vscode" / "scripts" / "app_adapters.py"))
+
+    # On POSIX/WSL, discover the active Open-ai-bot worktree by Git provenance,
+    # not by a generated worktree directory name.
+    worktrees = Path.home() / "kepler" / "worktrees"
+    git = git_path()
+    if git and worktrees.is_dir():
+        for wt in sorted(worktrees.iterdir(), key=lambda p: p.name):
+            adapter = wt / ".vscode" / "scripts" / "app_adapters.py"
+            if not adapter.exists():
+                continue
+            origin = run([git, "-C", str(wt), "remote", "get-url", "origin"], timeout=5)
+            if origin.get("success") and "2708halinh-cloud/Open-ai-bot" in origin.get("stdout", ""):
+                candidates.append(str(adapter))
+
+    seen=set()
     for c in candidates:
+        if not c or c in seen:
+            continue
+        seen.add(c)
         try:
-            if Path(c).exists(): return str(Path(c))
-        except Exception: pass
+            if Path(c).exists():
+                return str(Path(c))
+        except Exception:
+            pass
     return None
 
 def app_adapter(action: str, target: str="all", adapter_path: str|None=None, force: bool=False, extra_args: list[str]|None=None):
