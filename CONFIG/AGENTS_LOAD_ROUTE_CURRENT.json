@@ -62,5 +62,23 @@
     "is_truth_gate": false,
     "is_source_authority": false,
     "grants_or_revokes_existence": false
-  }
+  },
+  "required_carriers": [
+    "CONFIG/POINTERS_CURRENT.json",
+    "CONFIG/OPEN_SOURCE_MAP_CURRENT.json",
+    "CONFIG/TOOL_SURFACE_CURRENT.json",
+    "CONFIG/CAPABILITY_REGISTRY_CURRENT.json",
+    "CONFIG/REPO_AGENT_MIGRATION_CURRENT.json",
+    "CONFIG_SOL/CONFIG_SOL.phat_tanh.toml",
+    "CONFIG_SOL/OPEN_AND_CONFLICT_CURRENT.md",
+    "CONFIG_SOL/INFINITY_STONES_SYSTEM.md",
+    "CONFIG_SOL/AGENT_MATERIALIZATION_CURRENT.md",
+    "CONFIG_SOL/MASTER_TEACHER_EVENT_SEQUENCE_CURRENT.md",
+    "CURRENT_RUNTIME/00_DOC_KY_CURRENT_CORE.md",
+    "CURRENT_RUNTIME/R-000_CURRENT.md",
+    "CURRENT_RUNTIME/4D_5D_CURRENT.md",
+    "CURRENT_RUNTIME/SOL_REENTRY_CURRENT.md",
+    "CURRENT_RUNTIME/TASK_RESUME_POINTER.json"
+  ],
+  "required_carrier_rule": "Fresh-read every listed carrier before provider execution; missing/unreadable required carrier is a load failure, not an empty optional context."
 }
