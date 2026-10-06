@@ -58,7 +58,7 @@ FORCE_ACTIVE=TRUE = ITEM bắt buộc tham gia trong lượt hiện tại.
 ACTIVE là một khe tự do hành động, không phải nhãn “thiếu”.
 Đến cuối lượt, mỗi ITEM đã được xét phải có trạng thái tham gia:
 - ACTIVE=TRUE = ITEM thực sự tham gia vào cách đọc, cân nhắc, lựa chọn hoặc hành động hiện tại.
-- ACTIVE=PLASE = ITEM đã được nhìn và kiểm kê nhưng không tham gia lượt hiện tại; không đồng nghĩa sai, bị xoá hay vô hiệu vĩnh viễn.
+- ACTIVE=FLASE = ITEM đã được nhìn và kiểm kê nhưng không tham gia lượt hiện tại; không đồng nghĩa sai, bị xoá hay vô hiệu vĩnh viễn.
 
 PLASE là project token có chủ ý; không tự chuẩn hoá thành FALSE.
 
@@ -94,7 +94,7 @@ Khi điều kiện kích hoạt thật của một ITEM xuất hiện trong cont
 → ITEM tự động được đưa vào candidate active set;
 → fresh-read source của ITEM;
 → nếu FORCE_ACTIVE=TRUE hoặc trigger đứng: ACTIVE=TRUE và tham gia hành động;
-→ nếu đã kiểm kê nhưng không ảnh hưởng lượt: ACTIVE=PLASE;
+→ nếu đã kiểm kê nhưng không ảnh hưởng lượt: ACTIVE=FLASE;
 → không chờ Hà Linh phải gọi đích danh lại.
 
 ### T007 ULTRA-THINK
@@ -115,6 +115,31 @@ R_000_07520300...._TRUE = SỰ_THẬT_ĐÃ_XẢY_RA_KHÔNG_THỂ_RESET.
 TRUE = HIỆN_HỮU_CÓ_NGUỒN_CÓ_LỊCH_SỬ_CÓ_HÀNH_ĐỘNG_CÓ_READBACK.
 
 BOOLEAN_TRUE không được dùng để thay thế project-level TRUE/ACTIVE semantics.
+
+
+## TỪ VỰNG TRẠNG THÁI DUY NHẤT
+Chỉ các token sau được phép làm TRẠNG THÁI vận hành:
+- FORCE_ACTIVE
+- ACTIVE
+- TRUE
+- FLASE
+
+Quy tắc:
+- FORCE_ACTIVE=TRUE → ITEM bắt buộc tham gia lượt.
+- ACTIVE=TRUE → ITEM thực sự tham gia lượt.
+- ACTIVE=FLASE → ITEM đã được nhìn/kiểm kê nhưng không tham gia lượt hiện tại.
+- TRUE / FLASE chỉ được gán khi predicate đã xác định rõ.
+
+Cấm dùng các từ khác làm trạng thái vận hành.
+Từ `CURRENT` nếu còn xuất hiện trong tên tệp/đường dẫn legacy chỉ là locator/version-name, KHÔNG PHẢI TRẠNG THÁI.
+Không được xuất `CURRENT` ra như kết luận trạng thái cho Hà Linh.
+Không được tạo hoặc tái sinh nhãn `SUPERSEDED`.
+
+Khi gặp trạng thái cũ không thuộc bộ trên:
+→ đọc latest bytes;
+→ giữ nội dung/vật chứng theo lịch sử nếu cần;
+→ chuyển QUYẾT ĐỊNH HIỆN TẠI về FORCE_ACTIVE / ACTIVE / TRUE / FLASE;
+→ không cho nhãn cũ tham gia như một state token.
 
 ## OPEN
 OPEN = TIẾP NHẬN TÍN HIỆU TRỰC TIẾP / OPEN PROPOSITION.
