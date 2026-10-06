@@ -4,7 +4,7 @@
   "repo": "2708halinh-cloud/x-time-web",
   "branch": "tesseract-desktop-mvp-20261006",
   "checkpoint": "TESSERACT_DESKTOP/WORK_CHECKPOINT.json",
-  "commit": "e10a2de2d788240c682f1017228e796b1e7ad2af",
+  "commit": "24798d91db3210872e80784593d89b2717355ffb",
   "rule": "Sau khi nạp cấu hình, tiếp tục checkpoint này; không quay về chỉnh AGENTS như điểm bắt đầu công việc.",
   "pr": {
     "repository": "2708halinh-cloud/x-time-web",
@@ -14,7 +14,7 @@
   "build": {
     "workflow": "tesseract-desktop-ci",
     "previous_verified_run": 37516567468,
-    "current_head": "e10a2de2d788240c682f1017228e796b1e7ad2af",
+    "current_head": "24798d91db3210872e80784593d89b2717355ffb",
     "previous_required_artifacts": [
       "tesseract-desktop-windows-x64",
       "tesseract-desktop-linux-x64",
@@ -24,9 +24,11 @@
     "regression_added": "cargo test --manifest-path src-tauri/Cargo.toml",
     "readback_path": "2708halinh-cloud/x-time-web:.runtime/TESSERACT_DESKTOP_CI_READBACK.json",
     "readback_rule": "CI readback is mandatory for both success and failure. Accept only when verified_sha equals the current substantive PR head. TRUE -> verify review then merge; FLASE -> fetch workflow_run_id jobs/logs, patch failure, repeat.",
-    "pr_event_verify": true
+    "pr_event_verify": true,
+    "current_pr_run": 37540310172,
+    "hosted_runner_observation": "Hosted Windows/Linux/macOS/TESSERACT_OS jobs failed before step 1 with no logs; selfhosted_windows_verify is queued. This is not yet source-failure evidence."
   },
-  "next": "Continue PR #6 at head e10a2de2d788240c682f1017228e796b1e7ad2af. Read pull-request-triggered workflow run/jobs and current-head Codex review. If any job/review edge fails, patch it and repeat. Merge only when current-head CI and review are clean, using expected head SHA.",
+  "next": "Continue PR #6 head 24798d91db3210872e80784593d89b2717355ffb. Keep current-head Codex review running. Poll selfhosted_windows_verify and hosted rerun evidence. If self-hosted executes, use its Rust/frontend/Cargo consequence. If hosted runners recover, require all four platform/TESSERACT_OS edges. If a runner produces a real source error, patch it. Merge only after required current-head evidence is grounded.",
   "continuation_guard": {
     "mode": "TESSERACT_OS_PERSISTENT_CONTINUATION",
     "implementation": "runtime/continuity_guard.py",
@@ -41,5 +43,5 @@
       "PROVIDER_FAILURE != OBJECTIVE_FAILURE_WHILE_ALTERNATE_CARRIER_EXISTS"
     ]
   },
-  "updated_at": "2026-10-07T05:21:00+07:00"
+  "updated_at": "2026-10-07T05:25:00+07:00"
 }
