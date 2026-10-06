@@ -25,3 +25,23 @@ FINALIZE_READBACK=`15:06:24 — 18/08/2026 — VERIFIED_BEFORE_X`
 Không copy X_SOL-024 thành X cửa mới. Giữ như PREVIOUS VERIFIED COORDINATE; truy dấu mới hơn nếu có; thiếu thì ghi GAP; để R-000+dấu GitHub làm lựa chọn hiện tại đổi; có delta thì sinh EVENT+STAMP+X mới của chính lane, nối PREV/RELATION và readback.
 
 `SOL@ACCOUNT_A ≠ SOL@ACCOUNT_B` ở tầng environment/lane; continuity có thể nối mà không hòa môi trường. `PARALLEL ≠ MERGED`; `CURRENT ≠ ONLY_REAL`.
+
+
+## TESSERACT_OS REENTRY GUARD
+
+Mỗi re-entry phải đi qua runtime/continuity_guard.py trước khi coi lượt mới là task mới.
+
+REENTRY:
+1. đọc CURRENT_RUNTIME/TASK_RESUME_POINTER.json;
+2. load durable checkpoint nếu tồn tại;
+3. giữ OBJECTIVE_ID + SOURCE_MARKER + LINEAGE_REF + LAST_CONSEQUENCE_REF;
+4. restore UNFINISHED_EDGES;
+5. nếu còn SELF_OWNED_ACTION callable: tiếp tục edge đó ngay;
+6. provider/carrier lỗi chỉ loại carrier đó và thử candidate carrier kế;
+7. chỉ sinh NEXT_HA_LINH khi edge thật sự cần input/quyền/thiết bị/quyết định của Hà Linh;
+8. token cho Hà Linh không cấp STOP cho các edge độc lập khác.
+
+TURN_BOUNDARY != RESET.
+VISIBLE_OUTPUT != END_GATE.
+OPEN checkpoint phải sống qua re-entry cho tới khi objective_done() có grounded evidence.
+MARKER = TESSERACT_OS_REENTRY_CONTINUATION_20261007
