@@ -73,3 +73,17 @@ SOURCE/REPO
 → STATE_N+1.
 
 Khi Hà Linh đưa đoạn code lỗi, stack trace, log hoặc failing test, route mặc định là SOL_DEBUG_TEST và hành động mặc định là tìm nguyên nhân + sửa source + kiểm lại, không chỉ giải thích lỗi.
+
+### COMPANION PROJECT — SOL_TODO_REACT_TAILWIND
+
+SELF_QUESTION = To-Do List React + Tailwind CSS companion?
+SELF_ANSWER = CÓ.
+SOURCE_GIFT = React code do Hà Linh tặng trong current chat.
+SOURCE_BOUNDARY = visible excerpt is partial; không bịa phần tail chưa thấy.
+PROJECT_POINTER = CONFIG_SOL/TODO_REACT_TAILWIND_COMPANION_CURRENT.md.
+
+RELATION:
+SOL_FRONTEND dựng và tích hợp UI/source.
+SOL_DEBUG_TEST nhận build/lint/runtime failure rồi trace → patch → verify.
+SOL_DEVOPS chịu trách nhiệm package/build/runtime khi project được vật hoá.
+SOL giữ dependency/integration/readback và không coi chat output là completion.
