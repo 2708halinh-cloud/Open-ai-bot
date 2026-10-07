@@ -1,0 +1,29 @@
+name: MODUAL Pre-Action Gate
+
+on:
+  push:
+    paths:
+      - "CONFIG_SOL/MODUAL_PREACTION_GATE_CURRENT.json"
+      - "runtime/modual_preaction_gate.py"
+      - "tests/test_modual_preaction_gate.py"
+      - ".github/workflows/modual-preaction-gate.yml"
+  pull_request:
+    paths:
+      - "CONFIG_SOL/MODUAL_PREACTION_GATE_CURRENT.json"
+      - "runtime/modual_preaction_gate.py"
+      - "tests/test_modual_preaction_gate.py"
+
+jobs:
+  validate-modual-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate syntax
+        run: python -m py_compile runtime/modual_preaction_gate.py
+      - name: Run gate tests
+        run: python -m unittest tests.test_modual_preaction_gate -v
+      - name: Build read-only gate packet
+        run: python runtime/modual_preaction_gate.py --task-id github-ci-preaction --route-surface GITHUB
