@@ -65,5 +65,19 @@
     "sync_relation": "DRIVE_CODEX_SOURCE_CARRIER -> GITHUB_CANONICAL_RUNTIME_MAP",
     "sqlite_policy": "READ_ONLY_THIS_SYNC",
     "secret_policy": "NO_SECRET_BYTES_TO_PUBLIC_GIT"
+  },
+  "VSCODE_RECREATION_CURRENT": {
+    "old_deleted_drive_id": "1FAc3tfnlZhW9evhIJxSv2PcLlUuBLYDz",
+    "current_drive_id": "1Lrw0hVkqJYQgQfUsIXlbRjsoox51j56b",
+    "device_folder_id": "1gyhC2f9E81Jhn6QdqPbl7vH248FXHMq3",
+    "six_stones_folder_id": "1z-rHrWr_i79k6xx1n-9X1g6aASezHjQ5",
+    "telemetry_local": "D:\\SENSOR_LOGS\\_SESORIMOTOR__WINDOWS__XIAOMI12__REDMINOTE14PRO__0000THEMASTERTEACHER__R000_075203003486__.CSV",
+    "telemetry_cloud": "W:\\Drive của tôi\\.vscode\\thiẾT bỊ\\Thành Lập 6 viên ĐÁ VÔ CỰC - The Creation of the 6 Infinity Stones\\_SESORIMOTOR__WINDOWS__XIAOMI12__REDMINOTE14PRO__0000THEMASTERTEACHER__R000_075203003486__.CSV",
+    "ios_export_repo_path": "IOS_EXPORT/TESSERACT_OS_iOS.swift",
+    "ios_export_sha256": "89be2d3b5d061ce290c32303f8e40bb986ba59d7476fe97121818c2a0bbfb7fb",
+    "local_connector_repo": "2708halinh-cloud/.vscode",
+    "local_connector_commit": "07fb14d44a717fb58b3946effc3db4b455239166",
+    "local_workflow_run": 37557300447,
+    "local_workflow_state_at_record": "QUEUED"
   }
 }
