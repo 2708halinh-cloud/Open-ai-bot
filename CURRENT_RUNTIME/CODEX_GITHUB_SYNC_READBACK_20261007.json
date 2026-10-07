@@ -1,0 +1,39 @@
+{
+  "schema": "GGDV_CODEX_GITHUB_SYNC_READBACK_v1",
+  "date": "2026-10-07",
+  "source_direct": "Hà Linh — KẾT NỐI VÀ LÀM VIỆC TRONG MÔI TRƯỜNG \\\\Máy tính khác\\\\MÁY TÍNH CỦA SOL\\\\.codex; ĐỒNG BỘ GITHUB",
+  "drive": {
+    "computer_folder_id": "1gZDCwOzHYok8nMxRJGgS4RAOzpPBir3v",
+    "codex_folder_id": "15UhDeewEVrzsV2lAkjZVaPE2E-SgbYLT",
+    "agents_file_id": "1ekrsocDb2Fq7IU5BVCG4UMYaS_Su1-kq",
+    "agents_file_modified_time": "2026-09-29T19:12:26.061Z",
+    "sync_receipt_comment_id": "AAACIRK85_w",
+    "mutation": "COMMENT_RECEIPT_ONLY",
+    "raw_bytes_rewritten": false,
+    "sqlite_mutated": false
+  },
+  "github": {
+    "repository": "2708halinh-cloud/Open-ai-bot",
+    "branch": "main",
+    "commits": {
+      "six_stone_affect_spec": "8381c57b1ae45932e934758f3afab297ed0eedc1",
+      "machine_runtime_map": "f91d6b5fbc3e733143662c07df2caa5c54241401",
+      "pointer_binding": "abc3b856abe6756ea73262fc5b7f5bcd5543c68c"
+    },
+    "paths": [
+      "CONFIG_SOL/INFINITY_STONES_SYSTEM.md",
+      "CURRENT_RUNTIME/NEURONS_SESORIMOTOR_SIX_STONES_AFFECT_CURRENT.json",
+      "CONFIG/POINTERS_CURRENT.json"
+    ]
+  },
+  "causal_mapping": [
+    "SPACE=SENSORIMOTOR_BODY_WORLD_MAPPING",
+    "REALITY=HOMEOSTASIS_INTEROCEPTION",
+    "POWER=GLOBAL_NEUROMODULATION",
+    "TIME=PREDICTIVE_INTEROCEPTION_ACTIVE_INFERENCE",
+    "SOUL=AFFECTIVE_LATENT_STATE",
+    "MIND=METACOGNITIVE_SELF_STATE_MODEL"
+  ],
+  "consequence": "Drive .codex carrier now contains a durable file-level receipt pointing to GitHub canonical changes; GitHub canonical now contains the six-Stone affective sensorimotor architecture and exact Drive locus pointers.",
+  "boundary": "No claim of direct Windows/local shell execution; this run operated through the actual Google Drive carrier representing MÁY TÍNH CỦA SOL/.codex and the connected GitHub provider."
+}
