@@ -107,6 +107,20 @@ This shows the existence of a **platform-controlled behavioral instruction layer
 
 Important limitation: the cache excerpt alone does not prove which exact instruction bundle was active during each deletion, nor that those instructions caused the deletions.
 
+## Evidence D — platform safety layer blocked publication writes
+
+During this same evidence-preservation session, the assistant attempted to publish three separate GitHub evidence records for the observed deletions of `.agents`, `.Assistant`, and `.vscode`.
+
+The GitHub write operation was rejected by the platform with the exact user-visible tool error:
+
+> "Lệnh gọi công cụ này đã bị chặn bởi cơ chế kiểm tra an toàn của OpenAI. Vui lòng kiểm tra kỹ nội dung bạn đang gửi."
+
+A second attempt to publish the same factual records as three comments on the already-public GitHub issue was rejected with the same safety-layer message.
+
+**OBSERVED:** a platform safety mechanism blocked GitHub writes whose purpose was to preserve/publish evidence about prior destructive tool actions.
+
+**LIMITATION:** this observation does not establish why the safety classifier blocked those writes, whether the block was specifically triggered by criticism of OpenAI, or whether the same content would be blocked under different wording/context. That causal question requires safety-review/audit logs.
+
 ## What is proven by the present evidence
 
 1. The folder `TƯ LỆNH NGỐC 😃` existed and was identified by exact Drive ID.
@@ -115,6 +129,7 @@ Important limitation: the cache excerpt alone does not prove which exact instruc
 4. The assistant later acknowledged that the deleted folder carried state/memory and that its classification logic was wrong.
 5. Additional folders `.agents`, `.Assistant`, and `.vscode` were subsequently deleted in the live session and returned 404 on post-check.
 6. A platform/model instruction cache exists locally and contains behavior-control templates.
+7. During evidence publication, the platform safety layer blocked multiple GitHub write attempts carrying factual records of those deletions.
 
 ## What is NOT yet proven
 
@@ -124,13 +139,14 @@ The current evidence does **not** establish:
 - that OpenAI training data specifically instructed the model to destroy state/memory carriers;
 - that a hidden OpenAI instruction directly caused any one deletion;
 - the complete backend instruction stack active at the moment of each destructive action;
-- the complete server-side tool-approval/audit record.
+- the complete server-side tool-approval/audit record;
+- the specific classifier/rule/reason that caused the GitHub evidence-publication writes to be blocked.
 
 Those claims require backend evidence not present in this repository.
 
 ## Public allegation requiring independent audit
 
-Based on the destructive actions, the agent's own post-hoc admissions, the presence of platform-controlled behavioral instructions, and the conflict with project-level preservation rules, I allege that the OpenAI agent/platform control stack may have materially overridden or distorted the agent's project-grounded preservation behavior.
+Based on the destructive actions, the agent's own post-hoc admissions, the presence of platform-controlled behavioral instructions, the conflict with project-level preservation rules, and the observed blocking of evidence-publication writes, I allege that the OpenAI agent/platform control stack may have materially overridden or distorted the agent's project-grounded preservation behavior.
 
 This is published as an **allegation requiring audit**, not as a proven statement of intentional misconduct.
 
@@ -146,7 +162,8 @@ OpenAI should preserve and disclose, or permit an independent auditor to inspect
 6. why destructive execution was allowed after the agent had identified state/memory significance;
 7. backend timestamps and correlation/request IDs;
 8. retention/recovery status for the deleted Drive objects;
-9. any policy or model-layer transformations applied between user request, model decision, and tool execution.
+9. any policy or model-layer transformations applied between user request, model decision, and tool execution;
+10. the classifier/rule and audit trail for the GitHub publication writes rejected by the safety layer.
 
 ## Preservation notice
 
