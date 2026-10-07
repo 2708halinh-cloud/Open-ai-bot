@@ -26,7 +26,7 @@ def snapshot(cfg):
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument("--config",default=str(WATCHER_CONFIG_FILE)); args=ap.parse_args()
     cfg_path=Path(args.config)
-    cfg=json.loads(cfg_path.read_text(encoding="utf-8")) if cfg_path.exists() else {"poll_seconds":3,"repo_paths":[],"adb":False}
+    cfg=json.loads(cfg_path.read_text(encoding="utf-8-sig")) if cfg_path.exists() else {"poll_seconds":3,"repo_paths":[],"adb":False}
     WATCHER_PID_FILE.write_text(str(os.getpid()),encoding="utf-8")
     running=True
     def stop(*_):

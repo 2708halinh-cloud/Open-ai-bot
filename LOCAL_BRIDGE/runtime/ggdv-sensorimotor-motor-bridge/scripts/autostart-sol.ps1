@@ -123,12 +123,29 @@ $watchCfg = [ordered]@{
 }
 $watchCfg | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath $WatcherConfig -Encoding UTF8
 
+function Get-WatcherProcess([int]$PidValue) {
+  try {
+    $p = Get-CimInstance Win32_Process -Filter "ProcessId=$PidValue" -ErrorAction SilentlyContinue
+    if ($p -and $p.CommandLine -match "watcher\.py") { return $p }
+  } catch {}
+  return $null
+}
+
 $watcherAlive = $false
+$watcherProcess = $null
 if (Test-Path $WatcherPid) {
   try {
     $pidValue = [int](Get-Content $WatcherPid -Raw).Trim()
-    $watcherAlive = [bool](Get-Process -Id $pidValue -ErrorAction SilentlyContinue)
-  } catch { $watcherAlive = $false }
+    $watcherProcess = Get-WatcherProcess $pidValue
+    $watcherAlive = [bool]$watcherProcess
+    if (-not $watcherAlive) {
+      Remove-Item -LiteralPath $WatcherPid -Force -ErrorAction SilentlyContinue
+      Log "WATCHER_PID=STALE_REMOVED PID=$pidValue"
+    }
+  } catch {
+    $watcherAlive = $false
+    Remove-Item -LiteralPath $WatcherPid -Force -ErrorAction SilentlyContinue
+  }
 }
 
 if (-not $watcherAlive) {
@@ -136,9 +153,16 @@ if (-not $watcherAlive) {
   $watcher = Join-Path $Bridge "server\watcher.py"
   Start-Process -FilePath $py -ArgumentList @($watcher,"--config",$WatcherConfig) -WorkingDirectory (Split-Path $watcher -Parent) -WindowStyle Hidden
   Start-Sleep -Seconds 2
-  Log "WATCHER=START_REQUESTED"
+  if (Test-Path $WatcherPid) {
+    try {
+      $pidValue = [int](Get-Content $WatcherPid -Raw).Trim()
+      $watcherProcess = Get-WatcherProcess $pidValue
+      $watcherAlive = [bool]$watcherProcess
+    } catch { $watcherAlive = $false }
+  }
+  Log "WATCHER=START_REQUESTED ALIVE=$watcherAlive"
 } else {
-  Log "WATCHER=ALREADY_RUNNING"
+  Log "WATCHER=ALREADY_RUNNING PID=$($watcherProcess.ProcessId)"
 }
 
 if ($InstallScheduledTask) {
