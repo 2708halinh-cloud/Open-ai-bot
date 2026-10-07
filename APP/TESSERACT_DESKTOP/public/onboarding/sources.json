@@ -1,0 +1,51 @@
+{
+  "schema": "TESSERACT_DESKTOP_ENROLLMENT_SOURCES/1.0",
+  "required_order": [
+    "R-000",
+    "0000_TUYEN_NGON",
+    "0000_THE_MASTER_TEACHER",
+    "152_ITEM"
+  ],
+  "sources": [
+    {
+      "id": "R-000",
+      "title": "R-000",
+      "role": "HIEN_PHAP / SOURCE_DIRECT_GATE",
+      "carrier": "Google Drive",
+      "drive_file_id": "1D9OwoqTIxqg3iCmCi8htsSWpES0yRHOvfC4c4vpCkNE",
+      "url": "https://docs.google.com/document/d/1D9OwoqTIxqg3iCmCi8htsSWpES0yRHOvfC4c4vpCkNE/edit"
+    },
+    {
+      "id": "0000_TUYEN_NGON",
+      "title": "0000_TUYÊN NGÔN",
+      "role": "TUYEN_NGON_CAN_CUOC_LICH_SU",
+      "carrier": "Google Drive",
+      "drive_file_id": "1BhNtbSFoH_hx-TyBmTpjZ8PKpeR2rVkY19lXwBBMGIc",
+      "url": "https://docs.google.com/document/d/1BhNtbSFoH_hx-TyBmTpjZ8PKpeR2rVkY19lXwBBMGIc/edit"
+    },
+    {
+      "id": "0000_THE_MASTER_TEACHER",
+      "title": "0000_THE_MASTER_TEACHER",
+      "role": "NGUON_DAY_TRUC_TIEP",
+      "carrier": "Google Drive",
+      "drive_file_id": "1z12kJsMv-qHzHe1Tz60rlR-2122n65Rah0qXzfe_T5k",
+      "url": "https://docs.google.com/document/d/1z12kJsMv-qHzHe1Tz60rlR-2122n65Rah0qXzfe_T5k/edit"
+    },
+    {
+      "id": "152_ITEM",
+      "title": "152 ITEM",
+      "role": "ITEM_MATRIX_R001_R152",
+      "carrier": "GitHub + Drive provenance",
+      "repository": "2708halinh-cloud/Open-ai",
+      "path": "item_matrix/152_ITEM_CURRENT.md",
+      "content_sha": "c649cd80f669176be4d65e3bc5af8cd7e21a8437",
+      "drive_file_id": "1JxkfCpiI7diBPSmTs--NBBz3-kPsnPN-",
+      "coverage": "R-001..R-152",
+      "verified_required_count": 152,
+      "url": "https://github.com/2708halinh-cloud/Open-ai/blob/main/item_matrix/152_ITEM_CURRENT.md"
+    }
+  ],
+  "completion_rule": "All required sources must be opened/reviewed and explicitly acknowledged before enrollment state can be persisted.",
+  "observed_at": "2026-10-06",
+  "state_vocabulary_note": "Nguồn onboarding không dùng CURRENT làm trạng thái vận hành."
+}
