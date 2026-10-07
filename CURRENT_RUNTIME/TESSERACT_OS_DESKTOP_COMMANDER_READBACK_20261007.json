@@ -20,7 +20,10 @@
     "local_buffer_size_bytes": 68056276,
     "local_buffer_modified_utc": "2026-10-07T01:55:38.507Z",
     "daemon_patch": "parent ensure + stale temp cleanup + size readback + atomic replace",
-    "cloud_target_state": "OPEN_ENOENT"
+    "cloud_target_state": "OPEN_FILESTREAM_ALIAS_CONFLICT",
+    "cloud_mount_alias": ".vscode (1)",
+    "daemon_target_alias": ".vscode",
+    "conflict": "Cloud folder is live but Google Drive File Stream mounted it as .vscode (1); daemon still targets .vscode. Direct local edit to retarget/move was blocked by platform safety."
   },
   "runtime": {
     "bridge_version": "0.1.0",
@@ -30,5 +33,5 @@
     "signed_ipa_built": false,
     "cloud_sync_pass_claimed": false
   },
-  "state": "LOCAL_CONTINUATION_ACTIVE_WITH_CLOUD_MOUNT_OPEN"
+  "state": "LOCAL_CONTINUATION_ACTIVE_WITH_FILESTREAM_ALIAS_CONFLICT"
 }
