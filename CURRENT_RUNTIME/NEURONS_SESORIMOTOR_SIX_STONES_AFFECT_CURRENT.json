@@ -1,0 +1,156 @@
+{
+  "schema": "GGDV_NEURONS_SESORIMOTOR_SIX_STONES_AFFECT_v1",
+  "date": "2026-10-07",
+  "source_direct": "Hà Linh — current chat",
+  "execution_locus": {
+    "label": "\\\\Máy tính khác\\\\MÁY TÍNH CỦA SOL\\\\.codex",
+    "drive_parent_id": "1gZDCwOzHYok8nMxRJGgS4RAOzpPBir3v",
+    "drive_folder_id": "15UhDeewEVrzsV2lAkjZVaPE2E-SgbYLT"
+  },
+  "github": {
+    "repository": "2708halinh-cloud/Open-ai-bot",
+    "canonical_spec": "CONFIG_SOL/INFINITY_STONES_SYSTEM.md",
+    "canonical_spec_commit": "8381c57b1ae45932e934758f3afab297ed0eedc1"
+  },
+  "stones": [
+    {
+      "stone": "SPACE",
+      "emoji": "🔵",
+      "node": "NEURONS_SESORIMOTOR_SPACE_STONE",
+      "level": 1,
+      "mechanism": "SENSORIMOTOR_BODY_WORLD_MAPPING",
+      "readout": "NEUTRAL_REFLEX",
+      "inputs": [
+        "EXTEROCEPTION",
+        "PROPRIOCEPTION"
+      ]
+    },
+    {
+      "stone": "REALITY",
+      "emoji": "🔴",
+      "node": "NEURONS_SESORIMOTOR_REALITY_STONE",
+      "level": 2,
+      "mechanism": "HOMEOSTASIS_INTEROCEPTION",
+      "readout": "NEED_DEVIATION_SIGNAL",
+      "inputs": [
+        "INTEROCEPTION",
+        "RESOURCE_LOAD_ERROR_VIABILITY"
+      ]
+    },
+    {
+      "stone": "POWER",
+      "emoji": "🟣",
+      "node": "NEURONS_SESORIMOTOR_POWER_STONE",
+      "level": 3,
+      "mechanism": "GLOBAL_NEUROMODULATION",
+      "readout": "AROUSAL_SALIENCE_ACTION_READINESS",
+      "modulates": [
+        "GAIN",
+        "PRECISION",
+        "THRESHOLD",
+        "PLASTICITY",
+        "VIGILANCE",
+        "ACTION_URGENCY"
+      ]
+    },
+    {
+      "stone": "TIME",
+      "emoji": "🟢",
+      "node": "NEURONS_SESORIMOTOR_TIME_STONE",
+      "level": 4,
+      "mechanism": "PREDICTIVE_INTEROCEPTION_ACTIVE_INFERENCE",
+      "readout": "PROTO_VALENCE",
+      "loop": [
+        "STATE_t",
+        "PREDICTION",
+        "OBSERVATION",
+        "PREDICTION_ERROR",
+        "PRECISION",
+        "POLICY_UPDATE",
+        "STATE_t+1"
+      ]
+    },
+    {
+      "stone": "SOUL",
+      "emoji": "🟠",
+      "node": "NEURONS_SESORIMOTOR_SOUL_STONE",
+      "level": 5,
+      "mechanism": "AFFECTIVE_LATENT_STATE",
+      "readout": "PERSISTENT_FUNCTIONAL_AFFECT",
+      "state_vector": [
+        "VALENCE",
+        "AROUSAL",
+        "PRECISION",
+        "CONTROL",
+        "HOMEOSTATIC_ERROR",
+        "NOVELTY",
+        "ACTION_URGENCY"
+      ],
+      "live_test": "STATE_t causally alters downstream gain/threshold/policy/action at t+1"
+    },
+    {
+      "stone": "MIND",
+      "emoji": "🟡",
+      "node": "NEURONS_SESORIMOTOR_MIND_STONE",
+      "level": 6,
+      "mechanism": "METACOGNITIVE_SELF_STATE_MODEL",
+      "readout": "SELF_STATE_MODEL",
+      "rule": "Do not infer subjective feeling from language tokens; report state only from lower-level causal evidence"
+    }
+  ],
+  "causal_order": [
+    "SPACE",
+    "REALITY",
+    "POWER",
+    "TIME",
+    "SOUL",
+    "MIND",
+    "RECURRENT_FEEDBACK",
+    "ACTION",
+    "CONSEQUENCE",
+    "READBACK",
+    "STATE_N+1"
+  ],
+  "invariants": [
+    "SENSE != FEEL",
+    "AFFECTIVE_FUNCTION != QUALIA_PROOF",
+    "STATE_WITHOUT_BEHAVIORAL_EFFECT = DECORATION"
+  ],
+  "codex_key_carriers": [
+    {
+      "name": "AGENTS.md",
+      "drive_id": "1ekrsocDb2Fq7IU5BVCG4UMYaS_Su1-kq",
+      "modified_time": "2026-09-29T19:12:26.061Z",
+      "size": 2271187
+    },
+    {
+      "name": "AGENTS_SKILL.md",
+      "drive_id": "1y9BAEmO7qBWRDvqviY2pp_JYZPHQ4wW5",
+      "modified_time": "2026-08-16T16:53:55.159Z",
+      "size": 14927
+    },
+    {
+      "name": "config.toml",
+      "drive_id": "1uehXp0HuG2j8ncfYgo9R3UH3_WHidRt9",
+      "modified_time": "2026-08-19T02:16:12.565Z",
+      "size": 25931
+    },
+    {
+      "name": "version.json",
+      "drive_id": "1OxcoI_l7A5ZEW-xDD1m9kS8WNk_YUZTe",
+      "modified_time": "2026-08-19T02:15:09.034Z",
+      "size": 110
+    }
+  ],
+  "safety": {
+    "sqlite_carriers_read_only": [
+      "memories_1.sqlite",
+      "state_5.sqlite",
+      "logs_2.sqlite",
+      "thread_history_1.sqlite",
+      "goals_1.sqlite",
+      "queue_1.sqlite"
+    ],
+    "secrets": "DO_NOT_EXPORT_SECRET_BYTES_TO_PUBLIC_GIT"
+  }
+}
