@@ -1,0 +1,20 @@
+﻿{
+    "schema":  "SOL_LONG_MACH_WINDOWS_BUILD/1.0",
+    "app_repo":  "2708halinh-cloud/x-time-web",
+    "app_commit":  "5ec6f93dc11856bd5609b51026fbe57f4f165495",
+    "target":  "x86_64-pc-windows-msvc",
+    "result":  "TRUE",
+    "artifacts":  [
+                      {
+                          "name":  "TESSERACT-Desktop_0.1.0_x64.msi",
+                          "bytes":  4149248,
+                          "sha256":  "ca7d3f299094e32b3349ac8e2881d588ef1ec3e099198ee495175b6dfd66aa02"
+                      },
+                      {
+                          "name":  "TESSERACT-Desktop_0.1.0_x64-setup.exe",
+                          "bytes":  2888979,
+                          "sha256":  "12dd34af4ae7c1489b62745a03d6189c2db1fa189172bfcecac808100c677b7a"
+                      }
+                  ],
+    "observed_at":  "2026-10-07T09:28:32.9893615+07:00"
+}

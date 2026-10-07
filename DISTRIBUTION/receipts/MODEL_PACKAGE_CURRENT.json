@@ -1,0 +1,10 @@
+﻿{
+    "schema":  "SOL_LONG_MACH_MODEL_PACKAGE/1.0",
+    "source_head":  "d9feca36db44d50f0d9d2b0ce0166231bdfeca45",
+    "archive":  "D:\\SOL_LONG_MACH\\BUILD\\sol-long-mach-model-d9feca36.zip",
+    "bytes":  550797,
+    "sha256":  "c9ac7eb07c816e93f6f35e562dc7749c8fe084edad7b02defeceec64cc8fbdbe",
+    "created_at":  "2026-10-07T09:23:41.1389319+07:00",
+    "source_dirty":  false,
+    "carrier":  "LOCAL_D_DRIVE_AND_GITHUB_COMMIT"
+}
