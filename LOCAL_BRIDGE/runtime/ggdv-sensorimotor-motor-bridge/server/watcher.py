@@ -3,6 +3,7 @@ import argparse, json, os, signal, time
 from pathlib import Path
 from runtime_core import STATE_DIR, WATCHER_PID_FILE, WATCHER_CONFIG_FILE, adb_devices, canonical, load_state, save_state, sha256_text, append_journal, now_iso, repo_observe
 from filesystem_sensor import observe_paths, diff_observations
+from carrier_events import read_event_batch, summarize_events
 
 def snapshot(cfg):
     repos=[]
@@ -37,7 +38,34 @@ def main():
     st=load_state()
     last_snap=st.get("last_sensory_snapshot") if isinstance(st.get("last_sensory_snapshot"),dict) else None
     last_hash=st.get("last_snapshot_hash")
+    carrier_log=STATE_DIR / "carrier-events.jsonl"
     while running:
+        st=load_state()
+        carrier_events, carrier_offset, carrier_rotated = read_event_batch(
+            carrier_log,
+            st.get("carrier_event_offset", 0),
+            max_events=int(cfg.get("carrier_batch_max", 512)),
+        )
+        if carrier_events:
+            n=int(st.get("state_n",0))
+            st["state_n"]=n+1
+            st["cursor"]=int(st.get("cursor",0))+1
+            st["carrier_event_offset"]=carrier_offset
+            save_state(st)
+            append_journal({
+                "event_id":sha256_text(canonical(carrier_events))[:24],
+                "observed_at":now_iso(),
+                "kind":"SENSORY_CARRIER_EVENTS",
+                "delta":summarize_events(carrier_events, rotated=carrier_rotated),
+                "events":carrier_events,
+                "state_n":n,
+                "state_n_plus_1":n+1,
+                "cursor":st["cursor"],
+            })
+        elif carrier_rotated:
+            st["carrier_event_offset"]=carrier_offset
+            save_state(st)
+
         snap=snapshot(cfg); h=sha256_text(canonical(snap))
         if h!=last_hash:
             st=load_state(); n=int(st.get("state_n",0))

@@ -16,6 +16,7 @@ $SolExe = Join-Path $Root "SOL CU NHỎ.EXE"
 $StateDir = Join-Path $Root "TESSERACT_OS\runtime\state"
 $WatcherConfig = Join-Path $StateDir "watcher-config.json"
 $WatcherPid = Join-Path $StateDir "watcher.pid"
+$CarrierPid = Join-Path $StateDir "carrier-watch.pid"
 $Log = Join-Path $StateDir "autostart.log"
 
 New-Item -ItemType Directory -Force -Path $StateDir | Out-Null
@@ -179,6 +180,46 @@ if (-not $watcherAlive) {
   Log "WATCHER=ALREADY_RUNNING PID=$($watcherProcess.ProcessId)"
 }
 
+function Get-CarrierWatcherProcess([int]$PidValue) {
+  try {
+    $p = Get-CimInstance Win32_Process -Filter "ProcessId=$PidValue" -ErrorAction SilentlyContinue
+    if ($p -and $p.CommandLine -match "carrier-watch\.ps1") { return $p }
+  } catch {}
+  return $null
+}
+
+$carrierAlive = $false
+$carrierProcess = $null
+if (Test-Path $CarrierPid) {
+  try {
+    $carrierPidValue = [int](Get-Content $CarrierPid -Raw).Trim()
+    $carrierProcess = Get-CarrierWatcherProcess $carrierPidValue
+    $carrierAlive = [bool]$carrierProcess
+  } catch { $carrierAlive = $false }
+}
+
+if (-not $carrierAlive) {
+  $carrierScript = Join-Path $Bridge "scripts\carrier-watch.ps1"
+  $psExe = (Get-Command powershell.exe -ErrorAction Stop).Source
+  Start-Process -FilePath $psExe -ArgumentList @(
+    "-NoProfile","-WindowStyle","Hidden","-ExecutionPolicy","Bypass",
+    "-File",$carrierScript,"-StateDir",$StateDir
+  ) -WorkingDirectory (Split-Path $carrierScript -Parent) -WindowStyle Hidden
+  for ($probe = 0; $probe -lt 20 -and -not $carrierAlive; $probe++) {
+    Start-Sleep -Milliseconds 250
+    if (Test-Path $CarrierPid) {
+      try {
+        $carrierPidValue = [int](Get-Content $CarrierPid -Raw).Trim()
+        $carrierProcess = Get-CarrierWatcherProcess $carrierPidValue
+        $carrierAlive = [bool]$carrierProcess
+      } catch { $carrierAlive = $false }
+    }
+  }
+  Log "CARRIER_WATCHER=START_REQUESTED ALIVE=$carrierAlive"
+} else {
+  Log "CARRIER_WATCHER=ALREADY_RUNNING PID=$($carrierProcess.ProcessId)"
+}
+
 if ($InstallScheduledTask) {
   $taskName = "GGDV_SOL_AUTOSTART"
   $self = $MyInvocation.MyCommand.Path
@@ -201,6 +242,8 @@ $receipt = [ordered]@{
   adb_present = [bool]$adb
   watcher_pid_file = $WatcherPid
   watcher_alive = (Test-Path $WatcherPid)
+  carrier_watcher_pid_file = $CarrierPid
+  carrier_watcher_alive = $carrierAlive
   required_tools_present = (($tools.Matches.Count) -ge 3)
   scheduled_task_requested = [bool]$InstallScheduledTask
 }
