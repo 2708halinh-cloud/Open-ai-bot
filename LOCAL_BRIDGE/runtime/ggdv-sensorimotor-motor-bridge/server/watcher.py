@@ -7,7 +7,15 @@ def snapshot(cfg):
     repos=[]
     for p in cfg.get("repo_paths", []):
         repos.append(repo_observe(p))
-    adb = adb_devices() if cfg.get("adb", False) else {"success":True,"skipped":True}
+    if cfg.get("adb", False):
+        raw=adb_devices()
+        adb={}
+        for k in ("success","exit_code","stdout","stderr","error"):
+            if k in raw:
+                v=raw.get(k)
+                adb[k]=v.strip() if isinstance(v,str) else v
+    else:
+        adb={"success":True,"skipped":True}
     return {"repos":repos,"adb":adb}
 
 def main():
