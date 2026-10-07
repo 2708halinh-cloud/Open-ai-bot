@@ -116,8 +116,22 @@ if (Test-Path -LiteralPath $SolExe -PathType Leaf) {
 
 $repoPaths = @()
 if (-not [string]::IsNullOrWhiteSpace($RepoPath)) { $repoPaths = @($RepoPath) }
+
+# SENSORY filesystem roots: observe only. These paths are never mutated by the watcher.
+# A missing root is itself a signal so PRESENT->ABSENT and ABSENT->PRESENT survive restart.
+$fsPaths = @(
+  [ordered]@{ label = "GGDV_DRIVE_ROOT"; path = "W:\Drive của tôi"; depth = 1; max_entries = 4096 },
+  [ordered]@{ label = "ASSTANGT"; path = "W:\Drive của tôi\.ASSTANGT"; depth = 2; max_entries = 4096 },
+  [ordered]@{ label = "HOME_HALINH"; path = "W:\Drive của tôi\HÀ LINH - NGUYÊN THỦY THIÊN TÔN"; depth = 4; max_entries = 12000 },
+  [ordered]@{ label = "ASSISTANT_ROOT"; path = "W:\Drive của tôi\.Assistant"; depth = 3; max_entries = 12000 },
+  [ordered]@{ label = "HOME_SOL_MIRROR"; path = "W:\Drive của tôi\.Assistant\LONG MẠCH SOL - HẬU THIÊN TĨNH"; depth = 4; max_entries = 12000 },
+  [ordered]@{ label = "SOL_LONG_MACH_D"; path = "D:\SOL_LONG_MACH"; depth = 3; max_entries = 12000 },
+  [ordered]@{ label = "OS_WORKSPACE_G"; path = "G:\OS_Workspace"; depth = 2; max_entries = 12000 }
+)
+
 $watchCfg = [ordered]@{
   repo_paths = $repoPaths
+  fs_paths = $fsPaths
   adb = [bool]$adb
   poll_seconds = 3
 }
