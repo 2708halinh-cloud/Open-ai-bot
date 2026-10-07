@@ -1,4 +1,5 @@
 name: local-unify-selfhosted
+# retrigger: TESSERACT_OS local rebuild 2026-10-07
 
 on:
   push:
