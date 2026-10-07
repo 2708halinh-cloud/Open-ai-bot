@@ -1,0 +1,1 @@
+{"version":"2.0.0","tasks":[{"label":"SOL MODEL STUDIO","type":"shell","command":"node server.mjs","options":{"cwd":"${workspaceFolder}/SOL_MODEL_STUDIO"},"problemMatcher":[],"isBackground":true}]}

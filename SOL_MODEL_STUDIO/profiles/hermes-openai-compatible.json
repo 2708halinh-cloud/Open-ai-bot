@@ -1,0 +1,1 @@
+{"name":"Hermes / OpenAI-compatible","provider":"openai","endpoint":"http://127.0.0.1:8080/v1","model":"Hermes","notes":"Change endpoint/model to the local Hermes-compatible server actually in use."}

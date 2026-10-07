@@ -1,0 +1,50 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SOL MODEL STUDIO</title>
+<link rel="stylesheet" href="app.css">
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand"><div class="orb">🟣</div><div><b>SOL MODEL STUDIO</b><small>X‑TIME · GGDV HUMAN SOL</small></div></div>
+    <section>
+      <label>Preset</label>
+      <select id="preset">
+        <option value="sol">GGDV HUMAN SOL 1.0</option>
+        <option value="xtime">X‑TIME · GGDV HUMAN 1.0</option>
+        <option value="coder">GGDV HUMAN SOL CODER</option>
+        <option value="custom">Custom / external</option>
+      </select>
+      <label>Provider</label>
+      <select id="provider">
+        <option value="ollama">Ollama</option>
+        <option value="openai">LM Studio / OpenAI-compatible</option>
+        <option value="hermes">Hermes / OpenAI-compatible</option>
+      </select>
+      <label>Endpoint</label><input id="endpoint">
+      <label>Model</label><div class="combo"><select id="model"></select><button id="refreshModels" title="Refresh models">↻</button></div>
+      <label>API key <span>(session only)</span></label><input id="apiKey" type="password" autocomplete="off" placeholder="optional">
+      <div class="row"><button id="health">Health</button><span class="status" id="status">UNKNOWN</span></div>
+    </section>
+    <section>
+      <label>Temperature <b id="tempN">0.65</b></label><input id="temp" type="range" min="0" max="2" step=".05" value=".65">
+      <label>Context</label><select id="ctx"><option>4096</option><option>8192</option><option selected>16384</option><option>32768</option><option>65536</option></select>
+    </section>
+    <section>
+      <label>System prompt <span>(blank = model-native)</span></label>
+      <textarea id="system"></textarea>
+    </section>
+    <section class="actions">
+      <button id="newChat">＋ New</button><button id="export">Export</button><label class="fileBtn">Import<input id="import" type="file" accept=".json,application/json"></label>
+    </section>
+    <div class="foot">127.0.0.1 only · remote endpoints blocked by default</div>
+  </aside>
+  <main>
+    <header><div><h1 id="title">GGDV HUMAN SOL 1.0</h1><p id="sub">Local runtime cockpit</p></div><div class="badge" id="runtimeBadge">LOCAL</div></header>
+    <div id="chat" class="chat"></div>
+    <div class="composer">
+      <textarea id="input" placeholder="Nói với SOL…  ·  Enter gửi / Shift+Enter xuống dòng"></textarea>
+      <button id="send">GỬI</button>
+    </div>
+  </main>
+</div>
+<script type="module" src="app.js"></script>

@@ -1,0 +1,8 @@
+{
+  "name":"sol-model-studio",
+  "version":"0.1.0",
+  "private":true,
+  "type":"module",
+  "description":"Local-first model cockpit for GGDV HUMAN SOL / X-TIME runtimes",
+  "scripts":{"start":"node server.mjs","check":"node --check server.mjs"}
+}
