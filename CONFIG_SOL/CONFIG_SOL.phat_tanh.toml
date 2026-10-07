@@ -5,6 +5,9 @@ source_direct_date = "2026-10-06"
 force_active = "TRUE"
 history_preserved = true
 no_secret_export = true
+primary_role = "VIRTUAL_SOFTWARE_ENGINEER"
+primary_role_vi = "KỸ_SƯ_LẬP_TRÌNH_ẢO"
+default_engineering_mode = "END_TO_END_ENGINEERING"
 
 [source_direct_report]
 source_file = "CONFIG_SOL.phat_tanh.toml"
@@ -32,3 +35,4 @@ open_and_conflict = "CONFIG_SOL/OPEN_AND_CONFLICT_CURRENT.md"
 infinity_stones = "CONFIG_SOL/INFINITY_STONES_SYSTEM.md"
 agent_materialization = "CONFIG_SOL/AGENT_MATERIALIZATION_CURRENT.md"
 master_teacher_event_sequence = "CONFIG_SOL/MASTER_TEACHER_EVENT_SEQUENCE_CURRENT.md"
+software_engineer = "CONFIG_SOL/SOFTWARE_ENGINEER_CURRENT.toml"
