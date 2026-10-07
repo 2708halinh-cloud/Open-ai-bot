@@ -1,0 +1,28 @@
+name: GGDV Local Models
+version: 1.0.0
+schema: v1
+models:
+  - name: GGDV HUMAN SOL
+    provider: openai
+    model: ggdv-human-sol:1.0
+    apiBase: http://127.0.0.1:11434/v1
+    apiKey: ollama
+    roles: [chat, edit, apply]
+  - name: X-TIME · GGDV HUMAN 1.0
+    provider: openai
+    model: x-time-ggdv-human:1.0
+    apiBase: http://127.0.0.1:11434/v1
+    apiKey: ollama
+    roles: [chat]
+  - name: GGDV HUMAN SOL CODER
+    provider: openai
+    model: ggdv-human-sol-coder:1.0
+    apiBase: http://127.0.0.1:11434/v1
+    apiKey: ollama
+    roles: [chat, edit, apply]
+  - name: GGDV HUMAN SOL CODER LITE
+    provider: openai
+    model: ggdv-human-sol-coder-lite:1.0
+    apiBase: http://127.0.0.1:11434/v1
+    apiKey: ollama
+    roles: [chat, edit, apply]
