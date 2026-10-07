@@ -1,0 +1,7 @@
+# MEI
+
+SOURCE: D:/MEI_ULTRA_LINH_LIVE
+OBSERVED_FILES: 473
+TREE_FINGERPRINT: bec54a45138592548aedd677d82c6c9305ed09c60321f4bc22ad4a13b13f1683
+STATE: DISCOVERED / MANIFEST_FIRST
+NEXT: classify public-safe carriers, then promote in small commits with readback.
