@@ -23,7 +23,7 @@
     "cloud_target_state": "OPEN_FILESTREAM_ALIAS_CONFLICT",
     "cloud_mount_alias": ".vscode (1)",
     "daemon_target_alias": ".vscode",
-    "conflict": "Cloud folder is live but Google Drive File Stream mounted it as .vscode (1); daemon still targets .vscode. Direct local edit to retarget/move was blocked by platform safety."
+    "conflict": "The original canonical .vscode Drive root had already been deleted by an agent action recorded in public evidence. A replacement .vscode was later created, and Google Drive File Stream mounted that replacement as .vscode (1) while the daemon still referenced .vscode."
   },
   "runtime": {
     "bridge_version": "0.1.0",
@@ -33,5 +33,12 @@
     "signed_ipa_built": false,
     "cloud_sync_pass_claimed": false
   },
-  "state": "LOCAL_CONTINUATION_ACTIVE_WITH_FILESTREAM_ALIAS_CONFLICT"
+  "state": "LOCAL_CONTINUATION_ACTIVE_AFTER_AGENT_DELETION_WITH_FILESTREAM_ALIAS_CONFLICT",
+  "preexisting_root_loss_evidence": {
+    "deleted_drive_id": "1FAc3tfnlZhW9evhIJxSv2PcLlUuBLYDz",
+    "evidence_path": "evidence/2026-10-07-openai-agent-behavior-allegation.md",
+    "observed_record": "agent delete action returned success; post-delete metadata lookup returned 404",
+    "current_recheck": "old Drive ID still returns 404 NOT_FOUND",
+    "attribution_boundary": "The destructive Drive action is recorded as an agent action from the earlier 2026-10-07 investigation. The later Desktop Commander operations did not issue that delete; they encountered and rebuilt after it."
+  }
 }
