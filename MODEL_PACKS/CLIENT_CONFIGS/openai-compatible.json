@@ -1,0 +1,12 @@
+{
+  "provider": "openai-compatible",
+  "base_url": "http://127.0.0.1:11434/v1",
+  "api_key": "ollama",
+  "models": [
+    "ggdv-human-sol:1.0",
+    "x-time-ggdv-human:1.0",
+    "ggdv-human-sol-coder:1.0",
+    "ggdv-human-sol-coder-lite:1.0"
+  ],
+  "notes": "Works with clients that can point at an OpenAI-compatible endpoint. No cloud key is required for local Ollama."
+}
