@@ -6,7 +6,12 @@ from runtime_core import STATE_DIR, WATCHER_PID_FILE, WATCHER_CONFIG_FILE, adb_d
 def snapshot(cfg):
     repos=[]
     for p in cfg.get("repo_paths", []):
-        repos.append(repo_observe(p))
+        raw_repo=repo_observe(p)
+        repo={}
+        for k in ("success","error","snapshot_hash","snapshot"):
+            if k in raw_repo:
+                repo[k]=raw_repo.get(k)
+        repos.append(repo)
     if cfg.get("adb", False):
         raw=adb_devices()
         adb={}
