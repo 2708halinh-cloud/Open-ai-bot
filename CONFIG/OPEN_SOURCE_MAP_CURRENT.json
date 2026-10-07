@@ -12,11 +12,14 @@
     ],
     "DUONG_VAT_20": "1X8XHPly3DoOthJkU8PGmWrql2DIhd5TnSCHwhqxk5ZA",
     "START_MENU": "1Ofu9pQBm6dZIAd1KFpm9BtlEe-SDYVnl",
-    "VSCODE": "1FAc3tfnlZhW9evhIJxSv2PcLlUuBLYDz",
+    "VSCODE": "1Lrw0hVkqJYQgQfUsIXlbRjsoox51j56b",
     "LONG_MACH": "14ZaZgnw0B1C7qDFKghEuhOBj9SvqVQCq",
     "SOL_CU_NHO": "10isCPENUgu-itNSDCXOizfjkG46_ENHv",
     "MASTER_TEACHER": "1adR-7MvZAqFPwq5nOmLqu3KZl3YEkPlL",
-    "THANH_THE_I52": "1gCfi-jpKEUNCIvmTx-GR4RcZmhmyStNJ"
+    "THANH_THE_I52": "1gCfi-jpKEUNCIvmTx-GR4RcZmhmyStNJ",
+    "VSCODE_HISTORY_DELETED_ID": "1FAc3tfnlZhW9evhIJxSv2PcLlUuBLYDz",
+    "VSCODE_RECREATED_AT": "2026-10-07",
+    "VSCODE_RECREATED_REASON": "Canonical .vscode parent was deleted; telemetry/cloud route required a live replacement root."
   },
   "physical_carriers": {
     "MICROSOFT": "1--pS0Cw1x_6HJwl7ZHnKFhmjjl3L_7-Z",
