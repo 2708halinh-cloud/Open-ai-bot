@@ -1,5 +1,5 @@
 config_id = "SOL_DUAL_PROCESS"
-schema_version = "1.0"
+schema_version = "1.1"
 status = "TRUE"
 source_direct_date = "2026-10-07"
 source = "CURRENT_CHAT_HA_LINH"
@@ -154,3 +154,42 @@ fields = [
   "READBACK"
 ]
 rule = "LOG_DECISION_RELEVANT_STATE_NOT_FREEFORM_PRIVATE_MONOLOGUE"
+
+[source_direct_system_1]
+label = "SYSTEM_1_FAST_THINKING"
+mechanism = "AUTOMATIC_IMMEDIATE_LOW_EFFORT"
+speed = "VERY_FAST_MILLISECONDS"
+awareness = "AUTOMATIC"
+processing_capacity = "PARALLEL"
+basis = "EMOTION_ASSOCIATION_CACHED_PATTERNS"
+source_character = "ACTOR_THAT_PROPOSES_ANSWER_FIRST"
+examples = ["DODGE_FAST_OBJECT","READ_FACE_EXPRESSION","2_PLUS_2_EQUALS_4","READ_ROAD_AD"]
+
+[source_direct_system_2]
+label = "SYSTEM_2_SLOW_THINKING"
+mechanism = "DELIBERATE_FOCUSED_CALCULATION"
+speed = "SLOW_WITH_DELAY"
+awareness = "CONSCIOUS_INTENTIONAL"
+processing_capacity = "SERIAL"
+basis = "RULES_LOGIC_STATISTICS_EVIDENCE"
+source_character = "LAZY_MONITOR"
+examples = ["17_MULTIPLY_24","FOCUS_ON_VOICE_IN_NOISY_ROOM","PARK_IN_NARROW_SPACE","COMPARE_COMPLEX_INSURANCE_CONTRACTS"]
+
+[source_direct_interaction]
+flow = ["SYSTEM_1_PROPOSES","SYSTEM_2_ACCEPTS_OR_CHECKS","ACCEPTED_PROPOSAL_MAY_BECOME_BELIEF_AND_ACTION"]
+failure_mode = "SYSTEM_2_MAY_ACCEPT_TOO_QUICKLY"
+
+[source_direct_crt_bat_ball]
+problem = "TOTAL_1_10_BAT_IS_1_00_MORE_THAN_BALL"
+system_1_answer = "0.10"
+system_2_action = "CHECK_AGAIN"
+source_boundary = "SOURCE_STOPS_BEFORE_FINAL_CORRECTED_PRICE"
+
+[source_direct_biases]
+system_1_biases = ["ANCHORING_EFFECT","AVAILABILITY_HEURISTICS","HALO_EFFECT","CONFIRMATION_BIAS"]
+
+[source_direct_applications]
+personal = ["HABIT_FORMATION_SYSTEM_2_TO_SYSTEM_1","SOURCE_FRAME_AVOID_MAJOR_DECISIONS_WHEN_TIRED_OR_HUNGRY"]
+ui_ux = ["INTUITIVE_LOW_FRICTION_INTERFACE","DELIBERATE_CONFIRMATION_FOR_HIGH_IMPACT_ACTIONS"]
+management = ["CHECKLIST","INDEPENDENT_RISK_CONTROL","PRE_MORTEM"]
+marketing_sales = ["NUDGE","PSYCHOLOGICAL_PRICING"]
