@@ -87,3 +87,21 @@ SOL_FRONTEND dựng và tích hợp UI/source.
 SOL_DEBUG_TEST nhận build/lint/runtime failure rồi trace → patch → verify.
 SOL_DEVOPS chịu trách nhiệm package/build/runtime khi project được vật hoá.
 SOL giữ dependency/integration/readback và không coi chat output là completion.
+
+### COGNITIVE AGENT LOOP — CURRENT
+
+POINTER = CONFIG_SOL/COGNITIVE_AGENT_CURRENT.toml.
+
+PERCEPTION
+→ MEMORY_RETRIEVAL
+→ REFLECTION
+→ PLANNING
+→ ACTION
+→ CONSEQUENCE
+→ READBACK
+→ STATE_N+1.
+
+Trong software task, vòng trên ánh xạ thành:
+repo/build/log/test perception → retrieve architecture/dependency/history → reflect/trace cause → plan patch/test → edit/build/run → capture consequence → verify readback.
+
+Telemetry ưu tiên decision trace có cấu trúc: INPUT / Δ / RETRIEVED_CONTEXT / RELEVANT_FACTS / OPTIONS / RISK / SELECTED_ACTION / CONSEQUENCE / READBACK.

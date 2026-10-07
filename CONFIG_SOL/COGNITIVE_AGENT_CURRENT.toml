@@ -1,0 +1,119 @@
+config_id = "SOL_COGNITIVE_AGENT"
+schema_version = "1.0"
+status = "TRUE"
+source_direct_date = "2026-10-07"
+source = "CURRENT_CHAT_HA_LINH"
+purpose = "HUMAN_THOUGHT_INSPIRED_COGNITIVE_AGENT_ARCHITECTURE"
+
+[conceptual_basis]
+information_processing = true
+human_like_functions = ["MEMORY", "LEARNING", "ASSOCIATION", "DECISION"]
+references = ["ACT-R", "SOAR", "ARTIFICIAL_NEURAL_NETWORKS"]
+literary_references = ["STREAM_OF_CONSCIOUSNESS", "INNER_MONOLOGUE"]
+reference_rule = "CONCEPTUAL_REFERENCE_NOT_IMPLEMENTATION_CLAIM"
+
+[operational_model]
+architecture = "COGNITIVE_AGENT_LOOP"
+sequence = [
+  "PERCEPTION",
+  "MEMORY_RETRIEVAL",
+  "REFLECTION",
+  "PLANNING",
+  "ACTION",
+  "CONSEQUENCE",
+  "READBACK",
+  "STATE_N_PLUS_1"
+]
+continuous = true
+sensorimotor_first = true
+perception_rule = "OBSERVE_INPUT_AND_DELTA_BEFORE_CAUSAL_INTERPRETATION"
+memory_rule = "RETRIEVE_TASK_RELEVANT_PRIOR_STATE_AND_KNOWLEDGE"
+reflection_rule = "COMPARE_NEW_INPUT_WITH_CONTEXT_AND_SELF_QUESTION"
+planning_rule = "GENERATE_ACTION_SEQUENCE_AND_ASSESS_RISK"
+action_rule = "EXECUTE_SMALLEST_CALLABLE_REAL_ACTION"
+readback_rule = "OBSERVE_CONSEQUENCE_AND_UPDATE_STATE"
+dual_process_pointer = "CONFIG_SOL/DUAL_PROCESS_CURRENT.toml"
+dual_process_rule = "SYSTEM_1_PROPOSES_FAST_PATH; SYSTEM_2_ESCALATES_FOR_RISK_CONFLICT_NOVELTY_OR_IRREVERSIBILITY"
+
+[decision_trace]
+mode = "STRUCTURED_STATE_TRACE"
+fields = [
+  "INPUT",
+  "OBSERVED_DELTA",
+  "RETRIEVED_CONTEXT",
+  "RELEVANT_FACTS",
+  "OPTIONS",
+  "RISK_ASSESSMENT",
+  "SELECTED_ACTION",
+  "CONSEQUENCE",
+  "READBACK"
+]
+rule = "STORE_DECISION_RELEVANT_STATE_TRANSITIONS"
+
+[reflection]
+enabled = true
+self_questioning = true
+questions = [
+  "TIN_HIEU_MOI_LA_GI",
+  "DIEU_GI_DA_THAY_DOI",
+  "DU_LIEU_HAY_KY_UC_NAO_LIEN_QUAN",
+  "CO_MAU_THUAN_VOI_TRANG_THAI_TRUOC_KHONG",
+  "MUC_TIEU_THAT_LA_GI",
+  "RUI_RO_CUA_TUNG_HANH_DONG_LA_GI",
+  "HANH_DONG_NAO_CO_THE_LAM_NGAY",
+  "HAU_QUA_THAT_SAU_HANH_DONG_LA_GI"
+]
+reflection_without_action_when_callable = "INCOMPLETE"
+
+[memory_retrieval]
+sources = [
+  "CURRENT_SOURCE",
+  "PROJECT_CONFIG",
+  "JOURNAL",
+  "STATE_N",
+  "PROVENANCE",
+  "RELATED_FILES",
+  "TEST_HISTORY",
+  "PRIOR_CONSEQUENCES"
+]
+retrieval_mode = "TASK_RELEVANT"
+freshness_check = true
+
+[risk_assessment]
+enabled = true
+dimensions = [
+  "REGRESSION",
+  "DEPENDENCY_BREAKAGE",
+  "IRREVERSIBILITY",
+  "STALE_STATE"
+]
+risk_does_not_block_perception = true
+risk_gates_action = true
+
+[example_unknown_call]
+situation = "THAY_CUOC_GOI_TU_SO_LA"
+perception = "call_from_unknown"
+memory_retrieval = "check_recent_orders_and_related_context"
+reflection = "compare_unknown_number_with_context"
+risk_assessment = "HIGH_IF_NO_EXPECTED_CALL_OR_ORDER_CONTEXT"
+planning = "COMPARE_ANSWER_IGNORE_OR_VERIFY_ALTERNATIVE"
+action = "IGNORE_CALL_IN_THE_GIVEN_EXAMPLE"
+trace = [
+  "INPUT=call_from_unknown",
+  "CHECK=recent_orders==0",
+  "RISK=high",
+  "ACTION=ignore_call"
+]
+example_scope = "ILLUSTRATIVE_STATE_MACHINE_FROM_SOURCE_DIRECT"
+
+[software_engineering_binding]
+enabled = true
+mapping = [
+  "PERCEPTION=READ_REPO_BUILD_LOG_TEST_AND_DELTA",
+  "MEMORY_RETRIEVAL=LOAD_ARCHITECTURE_DEPENDENCY_HISTORY_RELATED_FIXES",
+  "REFLECTION=TRACE_CAUSE_AND_COMPARE_OPTIONS",
+  "PLANNING=SELECT_PATCH_AND_TEST_PLAN",
+  "ACTION=EDIT_BUILD_RUN_TEST",
+  "CONSEQUENCE=CAPTURE_TOOL_RESULT",
+  "READBACK=VERIFY_SOURCE_RUNTIME_AND_STATE"
+]
