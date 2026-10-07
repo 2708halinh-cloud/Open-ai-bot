@@ -1,0 +1,63 @@
+{
+  "stamp_live_x": "2026-10-07T18:37:00+07:00",
+  "repo": "2708halinh-cloud/SOL-LONG-MACH",
+  "branch": "kepler/2-unify-item-matrix",
+  "visibility": "PUBLIC",
+  "fingerprint_semantics": "sha256(sorted(relative_path,size,mtime)); not content hash",
+  "agents": {
+    "MEI": {
+      "source_label": "D:/MEI_ULTRA_LINH_LIVE",
+      "observed_files": 473,
+      "tree_fingerprint": "bec54a45138592548aedd677d82c6c9305ed09c60321f4bc22ad4a13b13f1683",
+      "promotion": "MANIFEST_FIRST"
+    },
+    "MINH": {
+      "source_label": "D:/00_LOCUS/MINH",
+      "observed_files": 2,
+      "tree_fingerprint": "27fffa9fe9a11c45279ec399d0c7041887e943ff0f157f590450f6022f0ce0f6",
+      "promotion": "MANIFEST_FIRST"
+    },
+    "SOL": {
+      "source_label": "D:/SOL_LONG_MACH",
+      "observed_files": 4962,
+      "tree_fingerprint": "e4c0330b535496fc3ae3b6c355e009a350e7593ac9cb951100df67a3af3c470a",
+      "promotion": "MANIFEST_FIRST"
+    },
+    "HALINH": {
+      "source_label": "D:/00_LOCUS/LOCUS HALINH",
+      "observed_files": 7,
+      "tree_fingerprint": "537d6a0a876c2898ce4fdbe297d343d8231e79521979a799ec0a59beac0dbed0",
+      "promotion": "MANIFEST_FIRST_PRIVATE_REVIEW"
+    },
+    "DANTE": {
+      "source_label": null,
+      "observed_files": null,
+      "tree_fingerprint": null,
+      "promotion": "OPEN_SOURCE_NOT_LOCATED_DEPTH4"
+    },
+    "XIANG": {
+      "source_label": "D:/00_LOCUS/XIANG",
+      "observed_files": 235,
+      "tree_fingerprint": "37e6c1f8c98a0577a9b11984aec7efd045e949aa35561d93ad1ef9bb8518a214",
+      "promotion": "MANIFEST_FIRST"
+    },
+    "OPEN_07": {
+      "promotion": "OPEN"
+    },
+    "OPEN_08": {
+      "promotion": "OPEN"
+    }
+  },
+  "shared_sources": {
+    "ITEM_152": {
+      "source_label": "D:/TRƯỜNG QUAN HỆ GỐC — TÁI LẬP 152 ITEM",
+      "observed_files": 1,
+      "tree_fingerprint": "81693b5db098ab44b274ef89c40931015862fec40233c244c830a99d8a220466",
+      "promotion": "POINTER_ONLY_CURRENTLY"
+    },
+    "RAW_CHAT": {
+      "source_label": "KHO_717_RAW_CHAT.lnk -> 00_LOCUS/SOL/.../sol_snapshot/.../extracted_7z/long_4cb7a3b9_zip",
+      "promotion": "LOCAL_ONLY_RAW"
+    }
+  }
+}
