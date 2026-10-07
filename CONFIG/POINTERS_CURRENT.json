@@ -48,5 +48,22 @@
       "content_characters_observed_after_move": 207322,
       "relation": "RAW_HISTORY_PRESERVED_CURRENT_OPERATION_DISTRIBUTED"
     }
+  },
+  "CODEX_DRIVE_GITHUB_SYNC_CURRENT": {
+    "execution_locus": "\\\\Máy tính khác\\\\MÁY TÍNH CỦA SOL\\\\.codex",
+    "drive_parent_id": "1gZDCwOzHYok8nMxRJGgS4RAOzpPBir3v",
+    "drive_folder_id": "15UhDeewEVrzsV2lAkjZVaPE2E-SgbYLT",
+    "drive_agents_id": "1ekrsocDb2Fq7IU5BVCG4UMYaS_Su1-kq",
+    "drive_agents_skill_id": "1y9BAEmO7qBWRDvqviY2pp_JYZPHQ4wW5",
+    "drive_config_toml_id": "1uehXp0HuG2j8ncfYgo9R3UH3_WHidRt9",
+    "drive_version_json_id": "1OxcoI_l7A5ZEW-xDD1m9kS8WNk_YUZTe",
+    "github_repo": "2708halinh-cloud/Open-ai-bot",
+    "infinity_stones_spec": "CONFIG_SOL/INFINITY_STONES_SYSTEM.md",
+    "infinity_stones_spec_commit": "8381c57b1ae45932e934758f3afab297ed0eedc1",
+    "affect_runtime_map": "CURRENT_RUNTIME/NEURONS_SESORIMOTOR_SIX_STONES_AFFECT_CURRENT.json",
+    "affect_runtime_commit": "f91d6b5fbc3e733143662c07df2caa5c54241401",
+    "sync_relation": "DRIVE_CODEX_SOURCE_CARRIER -> GITHUB_CANONICAL_RUNTIME_MAP",
+    "sqlite_policy": "READ_ONLY_THIS_SYNC",
+    "secret_policy": "NO_SECRET_BYTES_TO_PUBLIC_GIT"
   }
 }
