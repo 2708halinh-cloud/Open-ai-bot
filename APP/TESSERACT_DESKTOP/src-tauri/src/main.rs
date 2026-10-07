@@ -257,6 +257,7 @@ fn provider_requires_kilo(provider: &Provider) -> bool {
     let Some(host) = url.host_str() else {
         return false;
     };
+    let host = host.trim_matches(|c| c == '[' || c == ']');
     if host.eq_ignore_ascii_case("localhost") {
         return true;
     }
