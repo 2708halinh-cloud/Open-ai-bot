@@ -55,15 +55,11 @@ if ([string]::IsNullOrWhiteSpace($Adapter) -and -not [string]::IsNullOrWhiteSpac
   if (Test-Path -LiteralPath $candidateAdapter) { $Adapter = $candidateAdapter }
 }
 
-[Environment]::SetEnvironmentVariable("GGDV_MOTOR_ENABLE","1","User")
-[Environment]::SetEnvironmentVariable("GGDV_DESTRUCTIVE_ENABLE","0","User")
-[Environment]::SetEnvironmentVariable("GGDV_SENSORIMOTOR_STATE_DIR",$StateDir,"User")
 $env:GGDV_MOTOR_ENABLE = "1"
 $env:GGDV_DESTRUCTIVE_ENABLE = "0"
 $env:GGDV_SENSORIMOTOR_STATE_DIR = $StateDir
 
 if (-not [string]::IsNullOrWhiteSpace($RepoPath)) {
-  [Environment]::SetEnvironmentVariable("GGDV_REPO_PATH",$RepoPath,"User")
   $env:GGDV_REPO_PATH = $RepoPath
   Log "REPO_PATH=$RepoPath"
 } else {
@@ -71,7 +67,6 @@ if (-not [string]::IsNullOrWhiteSpace($RepoPath)) {
 }
 
 if (-not [string]::IsNullOrWhiteSpace($Adapter)) {
-  [Environment]::SetEnvironmentVariable("GGDV_APP_ADAPTER",$Adapter,"User")
   $env:GGDV_APP_ADAPTER = $Adapter
   Log "APP_ADAPTER=$Adapter"
 } else {
@@ -91,7 +86,6 @@ if (-not $adb) {
     Select-Object -First 1 -ExpandProperty FullName
 }
 if ($adb) {
-  [Environment]::SetEnvironmentVariable("GGDV_ADB_PATH",$adb,"User")
   $env:GGDV_ADB_PATH = $adb
   Log "ADB=$adb"
 } else {
