@@ -1,0 +1,86 @@
+{
+  "schema": "GGDV_MODUAL_PREACTION_GATE/1.0",
+  "gate_id": "GGDV_MODUAL_PREACTION_GATE",
+  "required_scope": "GGDV_OFFICIAL_CONTROL_PLANE",
+  "policy": {
+    "mandatory_before_target_mutation": true,
+    "self_bootstrap_read_only": true,
+    "reports_do_not_satisfy_gate": true,
+    "secret_bytes": "FORBIDDEN",
+    "drive_identity": "GOOGLE_DRIVE_PROVIDER_OBJECT_OR_FOLDER_PLUS_EXACT_TITLE",
+    "filesystem_mount_is_identity": false
+  },
+  "google_drive": {
+    "provider": "Google Drive",
+    "folder_id": "1z-rHrWr_i79k6xx1n-9X1g6aASezHjQ5",
+    "folder_title": "Thành Lập 6 viên ĐÁ VÔ CỰC - The Creation of the 6 Infinity Stones",
+    "target_title": "_SESORIMOTOR__WINDOWS__XIAOMI12__REDMINOTE14PRO__0000THEMASTERTEACHER__R000_075203003486__.CSV",
+    "provider_file_id": null,
+    "provider_file_state": "PENDING_DRIVE_PROVIDER_ID",
+    "drivefs_observation": {
+      "stable_id": 2408153,
+      "local_id": "local-2408153",
+      "role": "LOCAL_SYNC_OBSERVATION_ONLY"
+    }
+  },
+  "plugins": {
+    "modual_auto_log": {
+      "id": "plugins_6abe807a50e8819184ddafdcbb2ef0e1",
+      "version": "0.2.0",
+      "release_id": "pluginrel_6ac6677854d881919f6c6947775b4d60"
+    },
+    "runtime_gate": {
+      "id": "plugins_6ab8baf26a088191ab639ace8892ab62",
+      "version": "0.12.0",
+      "release_id": "pluginrel_6ac66784747881918fe8d2273751ab29"
+    },
+    "all_plugins": {
+      "id": "plugins_6abe5060513081919dfbf62d117ee818",
+      "version": "1.1.0",
+      "release_id": "pluginrel_6ac667a40f3881918a7e84f660eb999b"
+    },
+    "neurons_sensorimotor": {
+      "id": "plugins_6abde8dc9c7081918c883bbb14e56776",
+      "version": "0.2.0",
+      "release_id": "pluginrel_6ac667b2fdb88191873b7fc778c95933"
+    },
+    "infinity_stones": {
+      "id": "plugins_6abd596ea0908191926866ffb0a1d31f",
+      "version": "0.15.0",
+      "release_id": "pluginrel_6ac667c4276881919f908265be7f6303"
+    }
+  },
+  "surfaces": {
+    "github": {
+      "repository": "2708halinh-cloud/SOL-LONG-MACH",
+      "branch": "kepler/2-unify-item-matrix"
+    },
+    "ubuntu": {
+      "worktree": "/home/halin/kepler/worktrees/Open-ai-bot-2-unify-item-matrix-34d45d00"
+    },
+    "ububu": {
+      "entrypoint": "LOCAL_BRIDGE/ububu_lazy_fetch.py",
+      "policy": "INDEX_FIRST_CHUNK_ONLY_NEVER_META_DB"
+    },
+    "tesseract_os": {
+      "pointer": "CURRENT_RUNTIME/TESSERACT_LOCAL_BOOT_CURRENT.md",
+      "continuation_workflow": ".github/workflows/tesseract-os-continuation-guard.yml"
+    },
+    "local": {
+      "bridge": "LOCAL_BRIDGE",
+      "authorized_executor": "Remote Desktop Commander"
+    }
+  },
+  "sequence": [
+    "SOURCE_DIRECT",
+    "MODUAL_GOOGLE_DRIVE_BIND",
+    "NEURONS_SESORIMOTOR_BIND",
+    "CAPABILITY_ROUTE",
+    "AUTH_CALLABILITY_CHECK",
+    "ACTION",
+    "CONSEQUENCE",
+    "RECEIPT",
+    "READBACK",
+    "STATE_N+1"
+  ]
+}
