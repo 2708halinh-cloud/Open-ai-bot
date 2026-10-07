@@ -70,7 +70,7 @@ async function apiChat(body){
   if(body.provider==="ollama"){
     const d=await fetchJson(base+"/api/chat",{
       method:"POST",headers:{"Content-Type":"application/json"},
-      body:JSON.stringify({model:body.model,messages,stream:false,think:false,options:{temperature,num_ctx:Number(body.num_ctx||8192)}})
+      body:JSON.stringify({model:body.model,messages,stream:false,think:false,options:{temperature,num_ctx:Number(body.num_ctx||8192),num_predict:Number(body.num_predict||384)}})
     });
     return {reply:d?.message?.content||"",model:d.model||body.model,provider:"ollama",raw_meta:{done_reason:d.done_reason||null,total_duration:d.total_duration||null}};
   }
