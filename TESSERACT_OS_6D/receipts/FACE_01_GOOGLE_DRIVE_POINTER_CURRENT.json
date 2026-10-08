@@ -9,8 +9,9 @@
   "locator": "W:\\Drive của tôi\\.Assistant\\LONG MẠCH SOL - HẬU THIÊN TĨNH\\SOL CU NHỎ\\TESSERACT_OS_6D\\TESSERACT_OS_6D_POINTER_CURRENT.json",
   "provider_file_id": "PENDING_DRIVE_PROVIDER_ID",
   "requirement_for_verified": "Pointer exists + provider identity/readback resolves.",
-  "pointer_bytes": 846,
-  "pointer_sha256": "3E60C3699A332D8DC96C908B7A589CBD2E10D0BE05567ECA7CD0D9FC2C8CAA91",
+  "pointer_bytes": 1037,
+  "pointer_sha256": "24EFFB29703CAC7C9D50629785080296B1707FAA9C67D5A4CF33CCF1DB23B312",
   "drivefs_local_metadata_id": "local-2411303",
-  "readback": "W: bytes/hash verified; DriveFS local metadata observed; provider identity unresolved"
+  "readback": "W: bytes/hash verified; DriveFS local metadata observed; Google Drive connector search returned 0 hits on queried surface.",
+  "provider_search_state": "NOT_IN_QUERIED_SURFACE"
 }

@@ -10,6 +10,10 @@
   "x_time_master_head": "b39b8d40f38ad25e8047b1ab21773334411d0aec",
   "forge_repo": "2708halinh-cloud/SOL-LONG-MACH",
   "forge_branch": "sol-long-mach-current",
-  "pre_forge_head": "34f8d4e63982ba26c3a22350b573e23d45b98656",
-  "receipt": "GitHub provider readback for both repository branch heads"
+  "pre_forge_head": "96e7f9feae474c3da150557a089b54de8248aa02",
+  "receipt": "GitHub provider readback for both repository branch heads",
+  "pre_forge_tree": "fe40c0d000066a455b15cdc1b501d30986c746d3",
+  "forge_commit": "2491c2cb982ed3aef4116c5a959e1f5ccb239aec",
+  "forge_tree": "3e26b1a499dd8e289686005246a68d534adb212c",
+  "readback": "GitHub branch provider returned forge_commit as current branch head after push."
 }

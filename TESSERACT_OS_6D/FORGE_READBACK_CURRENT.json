@@ -1,0 +1,20 @@
+{
+  "schema": "TESSERACT_OS_6D_FORGE_READBACK/1.0",
+  "observed_at": "2026-10-08T20:23:33.212647+07:00",
+  "repository": "2708halinh-cloud/SOL-LONG-MACH",
+  "branch": "sol-long-mach-current",
+  "source_snapshot_commit": "96e7f9feae474c3da150557a089b54de8248aa02",
+  "source_snapshot_tree": "fe40c0d000066a455b15cdc1b501d30986c746d3",
+  "forge_commit": "2491c2cb982ed3aef4116c5a959e1f5ccb239aec",
+  "forge_tree": "3e26b1a499dd8e289686005246a68d534adb212c",
+  "github_provider_readback": true,
+  "six_stones_center_digest_sha256": "272d105ab222685357e8121670a835109d6555f81762642655ab7f1757fc68c9",
+  "drive_pointer_provider_state": "PENDING_DRIVE_PROVIDER_ID",
+  "overall_closed": false,
+  "reason": "6D closed requires 6/6 verified faces; current verified faces remain 2/6.",
+  "drive_pointer_path": "W:\\Drive của tôi\\.Assistant\\LONG MẠCH SOL - HẬU THIÊN TĨNH\\SOL CU NHỎ\\TESSERACT_OS_6D\\TESSERACT_OS_6D_POINTER_CURRENT.json",
+  "drive_pointer_sha256": "24EFFB29703CAC7C9D50629785080296B1707FAA9C67D5A4CF33CCF1DB23B312",
+  "drive_pointer_bytes": 1037,
+  "drivefs_local_metadata_id": "local-2411303",
+  "drive_provider_search_state": "NOT_IN_QUERIED_SURFACE"
+}
