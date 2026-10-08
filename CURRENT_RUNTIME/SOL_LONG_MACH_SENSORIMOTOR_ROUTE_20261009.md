@@ -37,7 +37,8 @@ Observed local sensor watcher: process PID 24304, heartbeat at 2026-10-09T05:50:
 ## SOL Project Watch — raw source validated
 
 - Historical conversation title: Sol Project Watch
-- Conversation ID: 6a56235d-9d14-83ec-9c0d-9aa1320c4dd8
+- Conversation ID: 6a56235d-9d14-83ec-82c7-96d7899520d9
+- CORRECTION: exact conversation ID matched to CONFIG_SOL/TIME_STONE_CORE_CURRENT.json; previous typo preserved in Git history, not in CURRENT.
 - Distinct raw source: D:\BÉ LINH - LIVING MEMORY\VAT_LIEU_01_NEN_TANG_DU_LIEU_HANH_VI_HA_LINH\00_RAW_SOURCE_PRESERVED\NHAT_KY_DONG_X.jsonl
 - Source bytes: 29245609
 - SHA-256: f719e1f472f014887c8ba0b6d871b782d10275599f3ac429fcd054eb7ad403bc
