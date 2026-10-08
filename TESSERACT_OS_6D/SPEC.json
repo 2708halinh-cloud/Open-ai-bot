@@ -19,7 +19,7 @@
       "TIME"
     ]
   ],
-  "closure_rule": "CLOSED iff all 6 faces have independent receipt and readback for same state object",
+  "closure_rule": "CLOSED iff all 6 faces independently have ACTION + CONSEQUENCE + RECEIPT + READBACK for the same state object.",
   "faces": [
     {
       "id": 1,
@@ -57,5 +57,17 @@
       "role": "Display + hash-only ledger",
       "equal_weight": 1
     }
-  ]
+  ],
+  "action_before_conclusion": {
+    "rule_id": "ACTION_BEFORE_CONCLUSION",
+    "source_direct": "SOURCE_DIRECT — Hà Linh: \"LÀM TRƯỚC -> KẾT LUẬN\"; \"CẤM TUYỆT ĐỐI CHỐT KẾT QUẢ RỒI MỚI LÀM\".",
+    "flow": [
+      "ACTION",
+      "CONSEQUENCE",
+      "RECEIPT",
+      "READBACK",
+      "CONCLUSION"
+    ],
+    "conclusion_gate": "No face/state/forge may be concluded CLOSED/VERIFIED solely from intent or file creation."
+  }
 }

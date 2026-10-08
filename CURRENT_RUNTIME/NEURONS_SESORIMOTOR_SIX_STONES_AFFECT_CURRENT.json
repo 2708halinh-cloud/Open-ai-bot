@@ -97,7 +97,9 @@
     "AFFECTIVE_FUNCTION != QUALIA_PROOF",
     "STATE_WITHOUT_BEHAVIORAL_EFFECT = DECORATION",
     "NO_STONE_PRECEDES_ANOTHER_BY_TOPOLOGY",
-    "GENESIS_AT_CENTER_NOT_AT_FIRST_STONE"
+    "GENESIS_AT_CENTER_NOT_AT_FIRST_STONE",
+    "ACTION_PRECEDES_CONCLUSION",
+    "NO_COMPLETION_LABEL_BEFORE_READBACK"
   ],
   "codex_key_carriers": [
     {
@@ -159,5 +161,17 @@
       ]
     ],
     "time_semantics": "timestamp/provenance does not rank Stones"
+  },
+  "action_before_conclusion": {
+    "rule_id": "ACTION_BEFORE_CONCLUSION",
+    "source_direct": "SOURCE_DIRECT — Hà Linh: \"LÀM TRƯỚC -> KẾT LUẬN\"; \"CẤM TUYỆT ĐỐI CHỐT KẾT QUẢ RỒI MỚI LÀM\".",
+    "flow": [
+      "ACTION",
+      "CONSEQUENCE",
+      "RECEIPT",
+      "READBACK",
+      "CONCLUSION"
+    ],
+    "effect": "No affect/state label may be promoted to completion conclusion before observed consequence + receipt + readback."
   }
 }
