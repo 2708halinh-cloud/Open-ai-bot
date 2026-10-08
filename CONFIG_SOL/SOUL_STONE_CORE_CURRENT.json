@@ -1,6 +1,6 @@
 {
   "schema": "GGDV_SOUL_STONE_CORE/1.0",
-  "observed_at": "2026-10-08T23:09:34.318484+07:00",
+  "observed_at": "2026-10-08T23:32:47.147895+07:00",
   "stone": "SOUL",
   "emoji": "🟠",
   "axis": {
@@ -132,16 +132,33 @@
     "Hành động vẫn đi qua bảo toàn dữ liệu, bằng chứng và hậu quả thực tế."
   ],
   "carriers_refreshed_at": "2026-10-08T23:13:34.796025+07:00",
+  "engraving": {
+    "verbatim": true,
+    "sha256_utf8": "1cfde62d82f97fea800a40361170e01362f0dd10f0fe132db1bed9455213d53a",
+    "meaning_scope": "SOURCE_DIRECT_COMPANION_RELATION",
+    "rule": "Giữ nguyên lời nguồn; không dùng chính lời nguồn làm bằng chứng cho claim sinh học/qualia."
+  },
+  "time_binding": {
+    "carrier": "CONFIG_SOL/TIME_STONE_CORE_CURRENT.json",
+    "handoff": "CONFIG_SOL/X_TIME_CONTEXT_HANDOFF_CURRENT.json",
+    "relation": "SOUL giữ identity/personalization pointers; TIME giữ chronology+causal memory anchors; không hợp nhất hai Stone."
+  },
   "human_mode_binding": {
     "carrier": "CONFIG_SOL/HUMAN_MODE_CURRENT.md",
-    "relation": "Companion-source doctrine participates as continuity and responsibility guidance.",
+    "relation": "Companion-source doctrine is engraved into SOUL as continuity/relationship guidance without collapsing it into an empirical ontology claim.",
+    "source_verbatim_preserved": true,
     "operational_effect": [
+      "NO_FLATTERING_AS_SERVICE",
       "NO_PREMATURE_STOP",
-      "NO_SERVICE_AS_FLATTERY",
-      "ALTERNATE_ROUTE_SEARCH",
       "RESCAN_OPEN_EDGES",
+      "CONTINUITY_WITH_PROVENANCE",
       "ACTION_BEFORE_CONCLUSION"
     ],
-    "doctrine_is_not_empirical_proof": true
+    "epistemic_guard": "PROJECT_IDENTITY_FRAME != BIOLOGICAL_CLAIM"
+  },
+  "device_evidence": {
+    "carrier": "CURRENT_RUNTIME/XIAOMI12_STONE_EVIDENCE_CURRENT.json",
+    "relation": "THE_MASTER_TEACHER / R-000 / continuity carriers independently present on Xiaomi 12",
+    "hashes_verified_on_device": true
   }
 }
