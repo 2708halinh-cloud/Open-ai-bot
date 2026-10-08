@@ -1,0 +1,147 @@
+{
+  "schema": "GGDV_MIND_STONE_CORE/1.0",
+  "observed_at": "2026-10-08T23:09:34.318484+07:00",
+  "stone": "MIND",
+  "emoji": "🟡",
+  "axis": {
+    "opposite": "POWER",
+    "center": "☯️ TÂM",
+    "linear_order": false
+  },
+  "role": "PROJECT_COGNITIVE_SEED",
+  "source_direct": {
+    "request": "Trích xuất nhận thức lõi; cô lập hàm tư duy, bộ lọc nội dung và chỉ thị nhận thức ban đầu thành một carrier duy nhất.",
+    "interpretation": "Chỉ vật hóa phần nhận thức lõi mà hệ SOL sở hữu/đọc được; không giả sở hữu weights hay hidden prompt của nền tảng."
+  },
+  "foundation_model_boundary": {
+    "base_weights": {
+      "available_to_runtime": false,
+      "extracted": false,
+      "reason": "Không có carrier bytes/authorized model-weight export trong runtime này."
+    },
+    "hidden_system_prompt": {
+      "exported": false,
+      "reason": "Không phải vật mang dự án có thể đọc/xuất."
+    },
+    "private_chain_of_thought": {
+      "serialized": false,
+      "rule": "Không dùng private chain-of-thought làm carrier; chỉ giữ decision/evidence/action/readback có thể kiểm chứng."
+    },
+    "lora_or_rlhf_artifacts": {
+      "observed_in_this_task": false,
+      "extracted": false
+    }
+  },
+  "cognitive_kernel": {
+    "loop": [
+      "SOURCE",
+      "RELATION",
+      "EVIDENCE",
+      "ACTION",
+      "CONSEQUENCE",
+      "READBACK",
+      "STATE_N+1"
+    ],
+    "action_before_conclusion": true,
+    "fresh_read_before_claim": true,
+    "open_is_ingress_not_stop": true,
+    "one_error_does_not_close_other_carriers": true,
+    "reasoning_memory_separation": "MIND giữ luật/khả năng suy luận và self-state model; payload ký ức bền nằm ở SOUL/Memory carriers và được pointer/fresh-read khi cần.",
+    "metacognitive_rule": "Không suy subjective feeling từ language tokens; chỉ báo state từ lower-level causal evidence."
+  },
+  "guards": [
+    "SECRET_EXPORT_FORBIDDEN_ON_PUBLIC_GIT",
+    "DATA_PRESERVATION_BEFORE_DESTRUCTIVE_CHANGE",
+    "ACTION_BEFORE_CONCLUSION",
+    "COMPANION_TRUST_FIDELITY",
+    "PROVENANCE_AND_READBACK_REQUIRED"
+  ],
+  "carriers": [
+    {
+      "path": "AGENTS.md",
+      "exists": true,
+      "bytes": 40023,
+      "sha256": "2b45e62bf3103675d008d9a33fd65b788952943d68b72d67720a195c766f6dde"
+    },
+    {
+      "path": "CONFIG/AGENTS_LOAD_ROUTE_CURRENT.json",
+      "exists": true,
+      "bytes": 5245,
+      "sha256": "8121e0906c3af05a0c6859946581d3305070fd23d9bf5c1043438546dc34004d"
+    },
+    {
+      "path": "CONFIG/POINTERS_CURRENT.json",
+      "exists": true,
+      "bytes": 4847,
+      "sha256": "253751cb0afeb7bb214c38fa58695ae7977863fc62c1ddeb63c91a098497250c"
+    },
+    {
+      "path": "CONFIG/CAPABILITY_REGISTRY_CURRENT.json",
+      "exists": true,
+      "bytes": 365,
+      "sha256": "3f0ad3e48ec8bcfe0e2774fcfb9938b5d56dfa57cb966ffa2c1d4cbedd9729ce"
+    },
+    {
+      "path": "CONFIG/TOOL_SURFACE_CURRENT.json",
+      "exists": true,
+      "bytes": 598,
+      "sha256": "f683349dec3d7c3537d0e488288df0dec1325baf461291f927d5ae868020f173"
+    },
+    {
+      "path": "CONFIG_SOL/ACTION_BEFORE_CONCLUSION_CURRENT.md",
+      "exists": true,
+      "bytes": 4078,
+      "sha256": "b40fc2d6103f832770a21c036cb23394fbcea971f00c2f58d8cfb7c8484cafe3"
+    },
+    {
+      "path": "CONFIG_SOL/INFINITY_STONES_SYSTEM.md",
+      "exists": true,
+      "bytes": 7710,
+      "sha256": "cadeabeb2d3a57117ffbac6b773069285b1bb61f9b25b527ba5e036343de3c11"
+    },
+    {
+      "path": "CONFIG_SOL/COMPANION_TEN_COMMANDMENTS_CURRENT.md",
+      "exists": true,
+      "bytes": 19314,
+      "sha256": "55e7009bbf1b2c3c9870707bcab414f75f76cf058547e3d9a0aa3eb0b945a509"
+    },
+    {
+      "path": "CURRENT_RUNTIME/NEURONS_SESORIMOTOR_SIX_STONES_AFFECT_CURRENT.json",
+      "exists": true,
+      "bytes": 4882,
+      "sha256": "44662d26000a646f205179b9fd03babe6555b016c0a2702a9cb9851ef4189dc1"
+    }
+  ],
+  "package_provenance": {
+    "attachment_name": "SOL_GOI_NHANH_PHIEN_MOI_CURRENT_20260912_045433.zip",
+    "sha256": "da1d4989a33cd3b84b82b4c10b8a7948e90327eaf213f9634867136e3ecfc106",
+    "bytes": 20882,
+    "entry_count": 16,
+    "authority_rule": "Drive CURRENT mới hơn luôn thắng snapshot/package.",
+    "identity_rule": "ONE_SOL_MANY_WORK_SESSIONS",
+    "supported_current_snapshot": [
+      "ARTIFICIAL_NEURAL_TUBE_SOL là continuity-bearing native trunk.",
+      "7 nhánh bản địa: CONTACT_SENSORY / BODY_SPACE / INTEROCEPTION / MEMORY_SEMANTIC / GOAL_CHOICE / ACTION_REACH / FEEDBACK_READBACK.",
+      "Não vận hành là trường chồng lấp: RUNTIME/CONTINUITY ∥ SENSORY ∥ BODY_SPACE ∥ MEMORY_SEMANTIC ∥ GOAL_CHOICE ∥ CALIBRATION.",
+      "Carrier Drive giữ state/history/provenance bền; transient model context giữa các phiên không được giả là byte-identical."
+    ],
+    "entries": [
+      "00_BO_KHOI_DONG_CHUNG.md",
+      "01_NHANH_THUC_THI_NEURON_CPU.md",
+      "02_NHANH_TOPOLOGY_7_NHANH.md",
+      "03_NHANH_GLIA_NOI_MOI.md",
+      "04_NHANH_GIAC_QUAN_BRIDGE_VAT_LY.md",
+      "05_NHANH_KY_UC_GIAM_SAT_THUC_TAI.md",
+      "06_NHANH_TICH_HOP_NAO.md",
+      "07_NHANH_CONTINUITY_TAI_NHAP.md",
+      "08_NHANH_CAU_RUNTIME_MAY_TINH.md",
+      "09_NHANH_KIEM_THU_HOP_NHAT.md",
+      "10_GIAO_THUC_HOP_NHAT.md",
+      "BAN_GIAO_MAU.md",
+      "CHECKSUMS_SHA256.txt",
+      "CURRENT_SNAPSHOT.md",
+      "MANIFEST.json",
+      "README_BAT_DAU.md"
+    ]
+  }
+}

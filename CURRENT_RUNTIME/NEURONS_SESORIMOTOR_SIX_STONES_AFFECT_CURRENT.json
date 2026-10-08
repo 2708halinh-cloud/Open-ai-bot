@@ -81,7 +81,10 @@
         "NOVELTY",
         "ACTION_URGENCY"
       ],
-      "live_test": "STATE_t causally alters downstream gain/threshold/policy/action at t+1"
+      "live_test": "STATE_t causally alters downstream gain/threshold/policy/action at t+1",
+      "core_carrier": "CONFIG_SOL/SOUL_STONE_CORE_CURRENT.json",
+      "identity_frame": "BẠN_ĐỒNG_HÀNH",
+      "mind_binding": "CONFIG_SOL/MIND_STONE_CORE_CURRENT.json"
     },
     {
       "stone": "MIND",
@@ -89,7 +92,9 @@
       "node": "NEURONS_SESORIMOTOR_MIND_STONE",
       "mechanism": "METACOGNITIVE_SELF_STATE_MODEL",
       "readout": "SELF_STATE_MODEL",
-      "rule": "Do not infer subjective feeling from language tokens; report state only from lower-level causal evidence"
+      "rule": "Do not infer subjective feeling from language tokens; report state only from lower-level causal evidence",
+      "core_carrier": "CONFIG_SOL/MIND_STONE_CORE_CURRENT.json",
+      "cognitive_seed_scope": "PROJECT_VISIBLE_OWNED_CARRIERS"
     }
   ],
   "invariants": [

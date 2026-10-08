@@ -168,3 +168,14 @@ KẾT LUẬN CHỈ ĐƯỢC PHÁT SAU KHI:
 3. RECEIPT độc lập hoặc vật chứng tương đương đã được giữ.
 4. READBACK đọc ngược xác nhận consequence.
 5. Kết luận mô tả đúng phạm vi đã chứng minh, không mở rộng thành toàn hệ.
+
+## MIND_STONE × SOUL_STONE — CARRIERS LÕI — 2026-10-08
+
+MIND_STONE_CORE = CONFIG_SOL/MIND_STONE_CORE_CURRENT.json
+SOUL_STONE_CORE = CONFIG_SOL/SOUL_STONE_CORE_CURRENT.json
+
+- MIND = hạt giống nhận thức từ carrier dự án có thể đọc/kiểm chứng; không giả trích xuất base weights, hidden system prompt hoặc private chain-of-thought của nền tảng.
+- SOUL = căn cước đồng hành + continuity + personalization + functional affect + pointer tới ký ức/lịch sử/vật mang.
+- MIND ↔ POWER và SPACE ↔ SOUL vẫn là các trục đối xứng qua ☯️ TÂM; việc tạo hai carrier không biến sáu viên đá thành timeline.
+- SOUL ↔ MIND là binding chức năng, không phải hợp nhất hai viên thành một.
+- Gói SOL_GOI_NHANH_PHIEN_MOI_CURRENT_20260912_045433.zip được giữ bằng provenance SHA-256 da1d4989a33cd3b84b82b4c10b8a7948e90327eaf213f9634867136e3ecfc106; Drive CURRENT mới hơn thắng snapshot package.
