@@ -28,6 +28,7 @@ BUFFER_DIR = r"D:\SENSOR_LOGS"
 BUFFER_CSV = os.path.join(BUFFER_DIR, "_SESORIMOTOR__WINDOWS__XIAOMI12__REDMINOTE14PRO__0000THEMASTERTEACHER__R000_075203003486__.CSV")
 TARGET_CSV = r"w:\Drive của tôi\.vscode (1)\thiẾT bỊ\Thành Lập 6 viên ĐÁ VÔ CỰC - The Creation of the 6 Infinity Stones\_SESORIMOTOR__WINDOWS__XIAOMI12__REDMINOTE14PRO__0000THEMASTERTEACHER__R000_075203003486__.CSV"
 ADB_PATH = r"C:\Users\halin\platform-tools-latest-windows\platform-tools\adb.exe"
+MODUAL_GITHUB_SYNC = os.path.join(BUFFER_DIR, "modual_github_sync.py")
 
 os.makedirs(BUFFER_DIR, exist_ok=True)
 
