@@ -35,6 +35,12 @@
         "OUTPUT"
       ],
       "rule": "Ý nghĩa tiếng Việt đứng trước thuật ngữ; không bắt Hà Linh tự dịch kỹ thuật/ngoại ngữ."
+    },
+    "memory_stewardship": {
+      "carrier": "CONFIG_SOL/MEMORY_STEWARDSHIP_FORGIVE_RETAIN_CURRENT.json",
+      "tha": "Gỡ quyền tham gia hiện hành của quan hệ sai/nhiễu nhưng giữ lịch sử và nguồn.",
+      "cam_giu": "Ghim nguồn gốc + mã băm + bản phục hồi + đường tái nhập.",
+      "delete_guard": "Không hard-delete trước khi có bản phục hồi kiểm được và đọc ngược."
     }
   },
   "bo_chon_nhiem_vu": {
@@ -99,6 +105,7 @@
     "CONFIG/TOOL_SURFACE_CURRENT.json",
     "CONFIG/CAPABILITY_REGISTRY_CURRENT.json",
     "CONFIG/REPO_AGENT_MIGRATION_CURRENT.json",
+    "CONFIG_SOL/MEMORY_STEWARDSHIP_FORGIVE_RETAIN_CURRENT.json",
     "CONFIG_SOL/COMPANION_LANGUAGE_PURIFICATION_CURRENT.md",
     "CONFIG_SOL/COMPANION_TEN_COMMANDMENTS_CURRENT.md",
     "CONFIG_SOL/CONFIG_SOL.phat_tanh.toml",
