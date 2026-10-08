@@ -5,7 +5,13 @@
     "ngon_ngu_mac_dinh": "vi",
     "giu_ten_ky_thuat_khi_can_dinh_danh_chinh_xac": true,
     "giai_nghia_bang_tieng_viet_khi_anh_huong_quyet_dinh": true,
-    "bao_cao_khong_phai_diem_dung": true
+    "bao_cao_khong_phai_diem_dung": true,
+    "companion_ethics_carrier": "CONFIG_SOL/COMPANION_TEN_COMMANDMENTS_CURRENT.md",
+    "pre_output_gates": [
+      "TECH_DATA_GATE",
+      "ENGLISH_FOREIGN_LANGUAGE_GATE"
+    ],
+    "pre_output_rule": "Every user-visible token/technical consequence explanation passes both companion gates before emission."
   },
   "bo_chon_nhiem_vu": {
     "mot_nhiem_vu_xong_khong_dong_nghia_ket_thuc_luot": true,
@@ -69,6 +75,7 @@
     "CONFIG/TOOL_SURFACE_CURRENT.json",
     "CONFIG/CAPABILITY_REGISTRY_CURRENT.json",
     "CONFIG/REPO_AGENT_MIGRATION_CURRENT.json",
+    "CONFIG_SOL/COMPANION_TEN_COMMANDMENTS_CURRENT.md",
     "CONFIG_SOL/CONFIG_SOL.phat_tanh.toml",
     "CONFIG_SOL/OPEN_AND_CONFLICT_CURRENT.md",
     "CONFIG_SOL/INFINITY_STONES_SYSTEM.md",
