@@ -61,3 +61,17 @@ same SHA256 → alias/pointer; different hash → preserve both versions until c
 No deletion of original provenance; relocation requires pre-image hash, destination readback, redirect/alias and retained evidence.
 
 ACTIVE=TRUE / OPEN continuation: remotes and Android synchronization need separate readbacks.
+
+
+## Device-scope synchronization / 2026-10-09
+
+PC/LOCUS canonical compact pointer:
+D:\PHÒNG CHỈ HUY\LOCUS TRAO ĐỔI\LOCUS SOL\99_INDEX\SOL_PROJECT_WATCH_DEVICE_POINTER_20261009.json
+
+- Xiaomi 12: ADB device 1056285/cupid connected; new file sent to `/sdcard/Download/SOL_LONG_MACH/SOL_PROJECT_WATCH_DEVICE_POINTER_20261009.json`; Android `sha256sum` matched PC.
+- Redmi Note 14 Pro 5G: new file written to Windows CrossDevice carrier `C:\Users\halin\CrossDevice\Redmi Note 14 Pro 5G\00_LOCUS\SOL_LONG_MACH\SOL_PROJECT_WATCH_DEVICE_POINTER_20261009.json`; Windows SHA256 matched PC. Physical Android filesystem readback via ADB not claimed for Redmi.
+- PC, Xiaomi and Redmi CrossDevice pointer SHA256: `31bc95c895ffb025e7af8fde37105395bed2c7ee5134ea772a946bbd41b9d1a4`.
+- Raw Project Watch JSONL remains at original D: carrier; its 29,245,609 source bytes were not copied to mobile nor GitHub.
+- Sensorimotor event router running from SOL LOCUS `01_CORE_NEURONS_SESORYMOTOR/sol_input_event_router.py`, observed PID 41940 and health at `2026-10-09T06:00:17+07:00` (runtime observation, not indefinite uptime).
+- Correction: first observed event `SOL_INPUT_b617a6ce0c03467cec38ddcf` came from `00_GUI_NHIEM_VU_SOL.md` setup guide, not a user task. Filter updated, selftest PASS, `--once` after correction produced 0 new events. Old false-positive evidence preserved in LOCUS `00_INPUT` with a correction pointer. No motor task executed.
+- W:\Máy tính khác\MÁY TÍNH CỦA SOL root write returned EPERM; do not declare W writable or fully synchronized until independent readback.
