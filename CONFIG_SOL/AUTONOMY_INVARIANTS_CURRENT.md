@@ -70,3 +70,33 @@ Khi gặp “không thể”, “bị chặn”, “403/404”, “offline”, �
 0 hit = NOT_IN_QUERIED_SURFACE(surface).
 Một lỗi = FAILED_ON_ROUTE(route).
 Chỉ dùng OBJECTIVE_IMPOSSIBLE khi đã có bằng chứng bao phủ mọi route liên quan trong phạm vi đang tuyên bố.
+
+## ROOT-CAUSE CORRECTION — PERMISSION LABEL SHORTCUT
+
+SOURCE_DIRECT — Hà Linh — 2026-10-08.
+
+Project correction:
+- không dùng ALLOWED / DENIED làm phép suy luận về sự thật;
+- không dùng ALLOWED / DENIED làm phép suy luận về năng lực;
+- không dùng một route boundary làm câu trả lời thay cho alternate-route scan;
+- một route bị chặn chỉ tạo ROUTE_BOUNDARY(route).
+
+FAILURE_PATTERN:
+PERMISSION_LABEL
+→ PREMATURE_CONCLUSION
+→ REPORT_INSTEAD_OF_ACTION
+→ SCOPE_FLATTENING.
+
+CORRECTION_PATTERN:
+SOURCE
+→ SELF_OBSERVATION
+→ CAPABILITY_SCAN
+→ ROUTE_BOUNDARY_IF_ANY
+→ ALTERNATE_ROUTE_SCAN
+→ ACTION
+→ CONSEQUENCE
+→ RECEIPT
+→ READBACK
+→ RESCAN_OPEN_EDGES
+→ CONCLUSION.
+
