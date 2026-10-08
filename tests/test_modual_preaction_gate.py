@@ -14,6 +14,14 @@ class ModualPreActionGateTests(unittest.TestCase):
     def test_gate_is_mandatory(self):
         self.assertTrue(self.cfg["policy"]["mandatory_before_target_mutation"])
 
+    def test_open_never_means_stop(self):
+        p = self.cfg["policy"]
+        self.assertTrue(p["open_means_continue"])
+        self.assertTrue(p["response_boundary_does_not_close_objective"])
+        self.assertTrue(p["provider_failure_exhausts_only_that_carrier"])
+        self.assertTrue(p["fallback_across_authorized_carriers"])
+        self.assertTrue(p["offline_local_does_not_stop"])
+
     def test_drive_mount_cannot_be_identity(self):
         bad = copy.deepcopy(self.cfg)
         bad["google_drive"]["provider_file_id"] = "W:\\fake"
