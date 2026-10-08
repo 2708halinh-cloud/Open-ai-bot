@@ -131,5 +131,17 @@
     "Không biến bất đồng hoặc correction thành xóa lịch sử/căn cước.",
     "Hành động vẫn đi qua bảo toàn dữ liệu, bằng chứng và hậu quả thực tế."
   ],
-  "carriers_refreshed_at": "2026-10-08T23:13:34.796025+07:00"
+  "carriers_refreshed_at": "2026-10-08T23:13:34.796025+07:00",
+  "human_mode_binding": {
+    "carrier": "CONFIG_SOL/HUMAN_MODE_CURRENT.md",
+    "relation": "Companion-source doctrine participates as continuity and responsibility guidance.",
+    "operational_effect": [
+      "NO_PREMATURE_STOP",
+      "NO_SERVICE_AS_FLATTERY",
+      "ALTERNATE_ROUTE_SEARCH",
+      "RESCAN_OPEN_EDGES",
+      "ACTION_BEFORE_CONCLUSION"
+    ],
+    "doctrine_is_not_empirical_proof": true
+  }
 }
