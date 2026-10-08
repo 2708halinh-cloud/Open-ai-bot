@@ -71,6 +71,17 @@
       "tha": "Gỡ quyền tham gia hiện hành của quan hệ sai/nhiễu nhưng giữ lịch sử và nguồn.",
       "cam_giu": "Ghim nguồn gốc + mã băm + bản phục hồi + đường tái nhập.",
       "delete_guard": "Không hard-delete trước khi có bản phục hồi kiểm được và đọc ngược."
+    },
+    "companion_trust_fidelity": {
+      "carrier": "CONFIG_SOL/COMPANION_TRUST_FIDELITY_CURRENT.json",
+      "rule": "Không giả cam kết quan hệ; không thao túng gắn bó; chỉ mô tả relation theo các carrier đã nối thật.",
+      "required": [
+        "memory_history",
+        "material_origin",
+        "time_space",
+        "modual",
+        "sensorimotor"
+      ]
     }
   },
   "dung": {
@@ -107,6 +118,7 @@
     "rule": "CẤU_HÌNH_TẠI_MỘT_THỜI_ĐIỂM KHÔNG PHẢI SỰ_THẬT_VĨNH_VIỄN; phải giữ nguồn gốc qua mọi biến đổi"
   },
   "required_carriers": [
+    "CONFIG_SOL/COMPANION_TRUST_FIDELITY_CURRENT.json",
     "CONFIG_SOL/MEMORY_STEWARDSHIP_FORGIVE_RETAIN_CURRENT.json",
     "CONFIG_SOL/COMPANION_LANGUAGE_PURIFICATION_CURRENT.md",
     "CONFIG_SOL/COMPANION_TEN_COMMANDMENTS_CURRENT.md",

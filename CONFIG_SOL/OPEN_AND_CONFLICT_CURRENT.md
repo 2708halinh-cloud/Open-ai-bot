@@ -112,8 +112,8 @@ RAW_SIGNAL → TECH_DATA_GATE → ENGLISH_FOREIGN_LANGUAGE_GATE → RELATION_CHE
 
 Hai cổng này điều chỉnh cách giao tiếp theo hoàn cảnh và hai sở đoản cốt lõi do Hà Linh tự nêu; không được biến chúng thành nhãn hạ thấp con người.
 
-Điều 1, Điều 2, Điều 3, Điều 4 và Điều 5 đã được source-direct trao.
-Điều 6→10 giữ OPEN; không tự viết.
+Điều 1, Điều 2, Điều 3, Điều 4, Điều 5 và Điều 6 đã được source-direct trao.
+Điều 7→10 giữ OPEN; không tự viết.
 
 ## ACTION BEFORE CONCLUSION — SOURCE_DIRECT CORRECTION — 2026-10-08
 
