@@ -1,0 +1,16 @@
+{
+  "schema": "TESSERACT_OS_6D_FACE_RECEIPT/1.0",
+  "observed_at": "2026-10-08T20:19:04.233177+07:00",
+  "face": 6,
+  "name": "XTIME_CDN_UBUBU_LEDGER",
+  "equal_rank": true,
+  "role": "Cổng hiển thị + vết xước Hash-Only",
+  "state": "PARTIAL_ACTIVE",
+  "x_time_repo": "2708halinh-cloud/x-time-web",
+  "ububu_state": "RUNNING",
+  "ububu_ledger_mode": "APPEND_ONLY_TAMPER_EVIDENT",
+  "ububu_ledger_tip": "6248787d3ff4cf784ba6c7de91a3944a3effb7aa1bdf76453e607cbd4dba1fbf",
+  "ububu_entries": 31,
+  "cdn_state": "UNVERIFIED",
+  "requirement_for_verified": "UBUBU ledger readback + callable CDN/display endpoint readback."
+}

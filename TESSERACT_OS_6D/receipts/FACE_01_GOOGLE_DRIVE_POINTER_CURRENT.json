@@ -1,0 +1,16 @@
+{
+  "schema": "TESSERACT_OS_6D_FACE_RECEIPT/1.0",
+  "observed_at": "2026-10-08T20:19:04.233177+07:00",
+  "face": 1,
+  "name": "GOOGLE_DRIVE_POINTER",
+  "equal_rank": true,
+  "role": "Mỏ neo Pointer (<10MB), JSON định vị",
+  "state": "DRIVEFS_POINTER_WRITTEN_PROVIDER_PENDING",
+  "locator": "W:\\Drive của tôi\\.Assistant\\LONG MẠCH SOL - HẬU THIÊN TĨNH\\SOL CU NHỎ\\TESSERACT_OS_6D\\TESSERACT_OS_6D_POINTER_CURRENT.json",
+  "provider_file_id": "PENDING_DRIVE_PROVIDER_ID",
+  "requirement_for_verified": "Pointer exists + provider identity/readback resolves.",
+  "pointer_bytes": 846,
+  "pointer_sha256": "3E60C3699A332D8DC96C908B7A589CBD2E10D0BE05567ECA7CD0D9FC2C8CAA91",
+  "drivefs_local_metadata_id": "local-2411303",
+  "readback": "W: bytes/hash verified; DriveFS local metadata observed; provider identity unresolved"
+}

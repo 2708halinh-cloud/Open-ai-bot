@@ -1,0 +1,223 @@
+{
+  "schema": "GGDV_SIX_STONES_REPO_COMPRESSION/1.0",
+  "observed_at": "2026-10-08T20:19:04.233177+07:00",
+  "repository": "2708halinh-cloud/SOL-LONG-MACH",
+  "branch": "sol-long-mach-current",
+  "source_commit": "34f8d4e63982ba26c3a22350b573e23d45b98656",
+  "source_tree": "e1e0f548e56a2e2fab19e7ad95224308e9f17af4",
+  "compression_semantics": "CONTENT_ADDRESSED_RELATIONAL_PROJECTION",
+  "losslessness_rule": "No source blob is replaced. Git commit/tree/blob IDs remain authoritative; Stone digests index reproducible views.",
+  "linear_order": false,
+  "center": {
+    "name": "TÂM",
+    "emoji": "☯️",
+    "genesis": "INTERSECTION_NOT_TIMELINE_START",
+    "digest_sha256": "60b44220247e89476cb18b64421790f42e0aebf5ad12d8869f574e4a44e5d8c5"
+  },
+  "axes": [
+    [
+      "SPACE",
+      "SOUL"
+    ],
+    [
+      "MIND",
+      "POWER"
+    ],
+    [
+      "REALITY",
+      "TIME"
+    ]
+  ],
+  "stones": {
+    "SPACE": {
+      "emoji": "🔵",
+      "axis_opposite": "SOUL",
+      "element": "THỦY",
+      "body": "XƯƠNG",
+      "role": "carrier/location/topology",
+      "projection": "CONTENT_ADDRESS_VIEW_OF_GIT_TREE",
+      "member_count": 48,
+      "digest_sha256": "542e9d3772c6beb6c9ca41a42cfe7f5a1175be67be5659b0211688bdb8e04378",
+      "selectors": [
+        "^LOCAL_BRIDGE/",
+        "^DISTRIBUTION/",
+        "^IOS_EXPORT/",
+        "^\\.runtime/",
+        "^APP/TESSERACT_DESKTOP/onboarding/",
+        "^APP/TESSERACT_DESKTOP/public/onboarding/",
+        "^CONFIG/.*(PATH|ROUTE|CARRIER|LOCATOR|DEVICE).*"
+      ],
+      "reconstruction_rule": "Resolve repo_commit + git tree/blob SHA; this view is an index, not a replacement for source bytes.",
+      "sample_members": [
+        ".runtime/RUNTIME_N_PLUS.env",
+        ".runtime/TESSERACT_BOOT_G.env",
+        "APP/TESSERACT_DESKTOP/onboarding/sources.json",
+        "APP/TESSERACT_DESKTOP/public/onboarding/sources.json",
+        "CONFIG/AGENTS_LOAD_ROUTE.json",
+        "CONFIG/AGENTS_LOAD_ROUTE_CURRENT.json",
+        "CONFIG/AGENT_CARRIER_SNAPSHOT_CURRENT.json",
+        "CONFIG/IO_DEVICE_INTERMEDIATE_CURRENT.json",
+        "CONFIG/IO_DEVICE_TEMP_CURRENT.json",
+        "DISTRIBUTION/BUILD/sol-long-mach-model-d9feca36.zip",
+        "DISTRIBUTION/INSTALLERS/install-linux.sh",
+        "DISTRIBUTION/INSTALLERS/install-macos.sh"
+      ]
+    },
+    "MIND": {
+      "emoji": "🟡",
+      "axis_opposite": "POWER",
+      "element": "KIM",
+      "body": "DA",
+      "role": "meaning/config/self-state",
+      "projection": "CONTENT_ADDRESS_VIEW_OF_GIT_TREE",
+      "member_count": 28,
+      "digest_sha256": "90b5a6f03cd525b0ecdd0dd8383f2a79581b523f13830961c405d30adf5ad7c7",
+      "selectors": [
+        "^CONFIG/",
+        "^CONFIG_SOL/",
+        "(^|/)README\\.md$",
+        "(^|/)AGENTS.*\\.md$"
+      ],
+      "reconstruction_rule": "Resolve repo_commit + git tree/blob SHA; this view is an index, not a replacement for source bytes.",
+      "sample_members": [
+        "AGENTS.md",
+        "APP/TESSERACT_DESKTOP/README.md",
+        "CONFIG/AGENTS_LOAD_ROUTE.json",
+        "CONFIG/AGENTS_LOAD_ROUTE_CURRENT.json",
+        "CONFIG/AGENT_CARRIER_SNAPSHOT_CURRENT.json",
+        "CONFIG/CAPABILITY_REGISTRY_CURRENT.json",
+        "CONFIG/DRIVE_CLEANUP_AFTER_SNAPSHOT_CURRENT.md",
+        "CONFIG/IO_DEVICE_INTERMEDIATE_CURRENT.json",
+        "CONFIG/IO_DEVICE_TEMP_CURRENT.json",
+        "CONFIG/OPEN_SOURCE_MAP_CURRENT.json",
+        "CONFIG/POINTERS_CURRENT.json",
+        "CONFIG/PROTECTED_ROOTS.json"
+      ]
+    },
+    "POWER": {
+      "emoji": "🟣",
+      "axis_opposite": "MIND",
+      "element": "KHÍ",
+      "body": "BRAIN_OS",
+      "role": "callability/execution/modulation",
+      "projection": "CONTENT_ADDRESS_VIEW_OF_GIT_TREE",
+      "member_count": 32,
+      "digest_sha256": "bdaa76bdb84c98f6f75ed8b30235c7ecc9880a92e87b04aedeb393bc329464c0",
+      "selectors": [
+        "^terminal/",
+        "^scripts/",
+        "^runtime/",
+        "^LOCAL_BRIDGE/runtime/",
+        "^APP/TESSERACT_DESKTOP/src-tauri/",
+        "^APP/TESSERACT_DESKTOP/src/"
+      ],
+      "reconstruction_rule": "Resolve repo_commit + git tree/blob SHA; this view is an index, not a replacement for source bytes.",
+      "sample_members": [
+        "APP/TESSERACT_DESKTOP/src-tauri/Cargo.toml",
+        "APP/TESSERACT_DESKTOP/src-tauri/build.rs",
+        "APP/TESSERACT_DESKTOP/src-tauri/capabilities/default.json",
+        "APP/TESSERACT_DESKTOP/src-tauri/src/main.rs",
+        "APP/TESSERACT_DESKTOP/src-tauri/tauri.conf.json",
+        "APP/TESSERACT_DESKTOP/src/main.js",
+        "APP/TESSERACT_DESKTOP/src/styles.css",
+        "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/README.md",
+        "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/agents/registry.json",
+        "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/mcp.json",
+        "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/plugin.json",
+        "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/references/destructive-action-gate.md"
+      ]
+    },
+    "REALITY": {
+      "emoji": "🔴",
+      "axis_opposite": "TIME",
+      "element": "HỎA",
+      "body": "MÁU",
+      "role": "observable state/evidence/consequence",
+      "projection": "CONTENT_ADDRESS_VIEW_OF_GIT_TREE",
+      "member_count": 32,
+      "digest_sha256": "821a6b7ddaeba62c5eeba45db63615a87404a8bf283215ee196ddbb249d3b247",
+      "selectors": [
+        "^CURRENT_RUNTIME/",
+        "^EVIDENCE/",
+        "^tests/",
+        "^MODUAL/SENSOR_LOGS/"
+      ],
+      "reconstruction_rule": "Resolve repo_commit + git tree/blob SHA; this view is an index, not a replacement for source bytes.",
+      "sample_members": [
+        "CURRENT_RUNTIME/00_DOC_KY_CURRENT_CORE.md",
+        "CURRENT_RUNTIME/4D_5D_CURRENT.md",
+        "CURRENT_RUNTIME/CODEX_GITHUB_SYNC_READBACK_20261007.json",
+        "CURRENT_RUNTIME/DEVICE_HEAD_END_STATUS_CURRENT.md",
+        "CURRENT_RUNTIME/DRIVE_CLEANUP_AFTER_SNAPSHOT.ps1",
+        "CURRENT_RUNTIME/INFINITY_STONES_ARTIFACTS_CURRENT.json",
+        "CURRENT_RUNTIME/LOCAL_SOL_OPEN_SUPPORT.ps1",
+        "CURRENT_RUNTIME/MIGRATE_DRIVE_TREE_TO_REPO.ps1",
+        "CURRENT_RUNTIME/NEURONS_SESORIMOTOR_SIX_STONES_AFFECT_CURRENT.json",
+        "CURRENT_RUNTIME/R-000_CURRENT.md",
+        "CURRENT_RUNTIME/RENAME_AGENT_REPO.ps1",
+        "CURRENT_RUNTIME/SNAPSHOT_AGENT_CARRIERS.ps1"
+      ]
+    },
+    "TIME": {
+      "emoji": "🟢",
+      "axis_opposite": "REALITY",
+      "element": "MỘC",
+      "body": "TÓC",
+      "role": "event/revision/chronology",
+      "projection": "CONTENT_ADDRESS_VIEW_OF_GIT_TREE",
+      "member_count": 110,
+      "digest_sha256": "ff4d3057014a6f3e15ea0da87c0129209678eeb3f5cc91a45394c2ee0c6b66c0",
+      "selectors": [
+        "^CURRENT_RUNTIME/",
+        "^EVIDENCE/",
+        "^\\.github/workflows/",
+        ".*(EVENT|LEDGER|HISTORY|STAMP|TIME|CURRENT).*"
+      ],
+      "reconstruction_rule": "Resolve repo_commit + git tree/blob SHA; this view is an index, not a replacement for source bytes.",
+      "sample_members": [
+        ".github/workflows/home-sol-selfhosted.yml",
+        ".github/workflows/local-bridge-verify.yml",
+        ".github/workflows/local-unify-selfhosted.yml",
+        ".github/workflows/runtime-n-plus.yml",
+        ".github/workflows/sol-long-mach-cross-platform.yml",
+        ".github/workflows/tesseract-local-boot-controller-verify.yml",
+        ".github/workflows/tesseract-os-continuation-guard.yml",
+        ".runtime/RUNTIME_N_PLUS.env",
+        ".runtime/TESSERACT_BOOT_G.env",
+        "CONFIG/AGENTS_LOAD_ROUTE_CURRENT.json",
+        "CONFIG/AGENT_CARRIER_SNAPSHOT_CURRENT.json",
+        "CONFIG/CAPABILITY_REGISTRY_CURRENT.json"
+      ]
+    },
+    "SOUL": {
+      "emoji": "🟠",
+      "axis_opposite": "SPACE",
+      "element": "THỔ",
+      "body": "THỊT",
+      "role": "identity/provenance/history/raw memory",
+      "projection": "CONTENT_ADDRESS_VIEW_OF_GIT_TREE",
+      "member_count": 18,
+      "digest_sha256": "6a52685dc1ae574753c884e9e994cd36c652fa3816f100b82c77c592b37eba23",
+      "selectors": [
+        "^EVIDENCE/",
+        ".*(PROVENANCE|SOURCE|ORIGIN|MEMORY|HISTORY|R-000|MASTER_TEACHER|TUYEN_NGON).*",
+        "^CONFIG_SOL/COMPANION_TEN_COMMANDMENTS_CURRENT\\.md$"
+      ],
+      "reconstruction_rule": "Resolve repo_commit + git tree/blob SHA; this view is an index, not a replacement for source bytes.",
+      "sample_members": [
+        "APP/TESSERACT_DESKTOP/onboarding/sources.json",
+        "APP/TESSERACT_DESKTOP/public/content/HA_LINH_SOURCE_DIRECT_LIFE.md",
+        "APP/TESSERACT_DESKTOP/public/onboarding/sources.json",
+        "CONFIG/OPEN_SOURCE_MAP_CURRENT.json",
+        "CONFIG_SOL/COMPANION_TEN_COMMANDMENTS_CURRENT.md",
+        "CONFIG_SOL/MASTER_TEACHER_EVENT_SEQUENCE_CURRENT.md",
+        "CURRENT_RUNTIME/R-000_CURRENT.md",
+        "CURRENT_RUNTIME/SOURCE_POINTERS_CURRENT.md",
+        "EVIDENCE/2026-10-07_OPENAI_AGENT_STEERING_ALLEGATION.md",
+        "EVIDENCE/X_TIME_OPENAI_PUBLIC_ACCOUNTABILITY_CASE_20261007.md",
+        "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/references/source-map.md",
+        "MODUAL/SENSOR_LOGS/source/START_TELEMETRY_SYNC.bat"
+      ]
+    }
+  }
+}

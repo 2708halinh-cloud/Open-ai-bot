@@ -1,0 +1,15 @@
+{
+  "schema": "TESSERACT_OS_6D_FACE_RECEIPT/1.0",
+  "observed_at": "2026-10-08T20:19:04.233177+07:00",
+  "face": 3,
+  "name": "GITHUB_STATE",
+  "equal_rank": true,
+  "role": "Pháp tắc & State / CURRENT_STATE / commit bất biến",
+  "state": "VERIFIED_ACTIVE",
+  "primary_standard_repo": "2708halinh-cloud/x-time-web",
+  "x_time_master_head": "b39b8d40f38ad25e8047b1ab21773334411d0aec",
+  "forge_repo": "2708halinh-cloud/SOL-LONG-MACH",
+  "forge_branch": "sol-long-mach-current",
+  "pre_forge_head": "34f8d4e63982ba26c3a22350b573e23d45b98656",
+  "receipt": "GitHub provider readback for both repository branch heads"
+}

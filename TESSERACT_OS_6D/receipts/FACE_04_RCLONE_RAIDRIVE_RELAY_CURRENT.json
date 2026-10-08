@@ -1,0 +1,14 @@
+{
+  "schema": "TESSERACT_OS_6D_FACE_RECEIPT/1.0",
+  "observed_at": "2026-10-08T20:19:04.233177+07:00",
+  "face": 4,
+  "name": "RCLONE_RAIDRIVE_RELAY",
+  "equal_rank": true,
+  "role": "Chuyển tiếp ổ đĩa ảo / mount Cloud ngoại vi",
+  "state": "PARTIAL_ACTIVE",
+  "rclone_installed": true,
+  "rclone_remote_count": 0,
+  "raidrive_process_observed": true,
+  "w_drive_exists": true,
+  "requirement_for_verified": "At least one relay path must have a concrete source-to-target transfer receipt and readback."
+}
