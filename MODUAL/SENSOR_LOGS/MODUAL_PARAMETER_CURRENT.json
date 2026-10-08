@@ -1,6 +1,6 @@
 {
   "schema": "GGDV_MODUAL_SENSOR_LOGS_GITHUB_STATE/1.0",
-  "observed_at": "2026-10-08T22:33:07.345164+07:00",
+  "observed_at": "2026-10-08T22:38:12.478934+07:00",
   "source_root": "D:\\SENSOR_LOGS",
   "source_semantics": "LOCAL_MODUAL_BYTES_AND_INTERMEDIATE_DEVICE_TELEMETRY",
   "github_role": "LAW_AND_CURRENT_STATE_NOT_BULK_ARCHIVE",
@@ -9,9 +9,9 @@
     "role": "MODUAL_BULK_LOCAL_SOURCE",
     "exists": true,
     "source_path": "D:\\SENSOR_LOGS\\_SESORIMOTOR__WINDOWS__XIAOMI12__REDMINOTE14PRO__0000THEMASTERTEACHER__R000_075203003486__.CSV",
-    "bytes": 83235354,
-    "modified_at": "2026-10-08T22:33:06.727515+07:00",
-    "sha256": "1d85d0ab40292ad2153819b68fb39787c4af27d6b097cc5cab1607728e964688"
+    "bytes": 83260974,
+    "modified_at": "2026-10-08T22:38:11.881405+07:00",
+    "sha256": "ae8be9fc4de9a59a7b6a9fa84db77427ec10deaafcea0ca1f7d8c88f1681eedb"
   },
   "live": {
     "name": "_SESORIMOTOR__{WINDOWS)__XIAOMI12__REDMINOTE14PRO__0000THEMASTERTEACHER__R000_075203003486__.CSV",
