@@ -66,12 +66,16 @@
       "receipt": {
         "rclone_installed": true,
         "raidrive_process_observed": true,
-        "w_drive_exists": true
+        "w_drive_exists": true,
+        "w_volume_label": "Google Drive",
+        "w_is_raidrive": false
       },
       "readback": {
         "verified": false,
         "rclone_remote_count": 0,
-        "transfer_receipt": null
+        "relay_transfer_receipt": null,
+        "w_provider": "Google Drive",
+        "reason": "No concrete RaiDrive/rclone relay transfer receipt."
       },
       "closed": false
     },
@@ -97,12 +101,19 @@
       "receipt": {
         "ububu_ledger_tip": "6248787d3ff4cf784ba6c7de91a3944a3effb7aa1bdf76453e607cbd4dba1fbf",
         "ububu_entries": 31,
-        "ledger_mode": "APPEND_ONLY_TAMPER_EVIDENT"
+        "ledger_mode": "APPEND_ONLY_TAMPER_EVIDENT",
+        "cdn_endpoint": "https://gambbrazil.fun/",
+        "cdn_http_status": 200,
+        "cdn_platform": "hostinger"
       },
       "readback": {
         "verified": false,
         "ububu_state": "RUNNING",
-        "cdn_state": "UNVERIFIED"
+        "ledger_tip": "6248787d3ff4cf784ba6c7de91a3944a3effb7aa1bdf76453e607cbd4dba1fbf",
+        "cdn_root_http_status": 200,
+        "mcp_http_status": 404,
+        "same_state_verified": false,
+        "reason": "Public display exists but current Hostinger state diverges from GitHub source."
       },
       "closed": false
     }

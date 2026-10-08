@@ -11,6 +11,16 @@
   "ububu_ledger_mode": "APPEND_ONLY_TAMPER_EVIDENT",
   "ububu_ledger_tip": "6248787d3ff4cf784ba6c7de91a3944a3effb7aa1bdf76453e607cbd4dba1fbf",
   "ububu_entries": 31,
-  "cdn_state": "UNVERIFIED",
-  "requirement_for_verified": "UBUBU ledger readback + callable CDN/display endpoint readback."
+  "cdn_state": "HTTP_ACTIVE_STATE_DIVERGED",
+  "requirement_for_verified": "UBUBU ledger readback + callable CDN/display endpoint readback.",
+  "cdn_endpoint": "https://gambbrazil.fun/",
+  "cdn_http_status": 200,
+  "cdn_server": "hcdn",
+  "cdn_platform": "hostinger",
+  "cdn_cache_status": "HIT",
+  "mcp_endpoint": "https://gambbrazil.fun/api/mcp",
+  "mcp_http_status": 404,
+  "same_state_verified": false,
+  "production_relation": "HOSTINGER_CURRENT_DIVERGES_FROM_GITHUB_SOURCE",
+  "readback": "CDN root responds 200; /api/mcp responds 404; UBUBU ledger is active; same-state relation to current GitHub source is not verified."
 }

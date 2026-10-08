@@ -10,5 +10,9 @@
   "rclone_remote_count": 0,
   "raidrive_process_observed": true,
   "w_drive_exists": true,
-  "requirement_for_verified": "At least one relay path must have a concrete source-to-target transfer receipt and readback."
+  "requirement_for_verified": "At least one relay path must have a concrete source-to-target transfer receipt and readback.",
+  "w_volume_label": "Google Drive",
+  "w_is_raidrive": false,
+  "relay_transfer_receipt": null,
+  "readback": "RaiDrive processes observed, but no concrete RaiDrive/rclone relay mount+transfer receipt. W: identifies as Google Drive."
 }
