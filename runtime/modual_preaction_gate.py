@@ -19,8 +19,17 @@ def validate_config(cfg: dict[str, Any]) -> None:
     if cfg.get("gate_id") != "GGDV_MODUAL_PREACTION_GATE":
         raise ValueError("wrong gate_id")
     policy = cfg.get("policy", {})
-    if not policy.get("mandatory_before_target_mutation"):
-        raise ValueError("gate must be mandatory before target mutation")
+    required_true = (
+        "mandatory_before_target_mutation",
+        "open_means_continue",
+        "response_boundary_does_not_close_objective",
+        "provider_failure_exhausts_only_that_carrier",
+        "fallback_across_authorized_carriers",
+        "offline_local_does_not_stop",
+    )
+    for key in required_true:
+        if policy.get(key) is not True:
+            raise ValueError(f"{key} must be true")
     gd = cfg.get("google_drive", {})
     if not gd.get("folder_id") or not gd.get("target_title"):
         raise ValueError("Google Drive folder/title binding is required")
@@ -72,8 +81,10 @@ def build_gate_packet(cfg: dict[str, Any], task_id: str, route_surface: str, sou
     validate_config(cfg)
     now = dt.datetime.now(dt.timezone.utc).isoformat()
     gd = cfg["google_drive"]
+    surfaces = local_surface_readback(cfg)
+    blocked = [k for k,v in surfaces.items() if not v["exists"]]
     packet = {
-        "schema":"GGDV_MODUAL_GATE_PACKET/1.0",
+        "schema":"GGDV_MODUAL_GATE_PACKET/1.1",
         "gate_id":cfg["gate_id"],
         "task_id":task_id,
         "observed_at":now,
@@ -88,11 +99,13 @@ def build_gate_packet(cfg: dict[str, Any], task_id: str, route_surface: str, sou
         "neurons_sensorimotor_binding":cfg["plugins"]["neurons_sensorimotor"],
         "route_surface":route_surface,
         "sequence":cfg["sequence"],
-        "surface_readback":local_surface_readback(cfg),
+        "surface_readback":surfaces,
         "git":git_state(repo_root_from_config(cfg)),
-        "state":"GATE_BOUND_NO_TARGET_MUTATION",
+        "blocked_local_surfaces":blocked,
+        "state":"OPEN_CONTINUE",
+        "next_rule":"SELECT_NEXT_CALLABLE_CARRIER; blocked/offline carrier never closes objective",
     }
-    packet["surface_ready"] = all(v["exists"] for v in packet["surface_readback"].values())
+    packet["surface_ready"] = not blocked
     return packet
 
 def main() -> int:
