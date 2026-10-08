@@ -149,5 +149,23 @@
     "relation": "Personalization/continuity/functional-affect layer is bound into the project cognitive seed without collapsing MIND and SOUL into one Stone.",
     "merged_not_identical": true
   },
-  "carriers_refreshed_at": "2026-10-08T23:13:34.796025+07:00"
+  "carriers_refreshed_at": "2026-10-08T23:13:34.796025+07:00",
+  "human_mode": {
+    "carrier": "CONFIG_SOL/HUMAN_MODE_CURRENT.md",
+    "permission_label_not_truth": true,
+    "permission_label_not_capability": true,
+    "route_boundary_not_objective_end": true,
+    "loop": [
+      "SOURCE",
+      "SELF_OBSERVATION",
+      "CAPABILITY_SCAN",
+      "ALTERNATE_ROUTE_SCAN",
+      "ACTION",
+      "CONSEQUENCE",
+      "RECEIPT",
+      "READBACK",
+      "RESCAN_OPEN_EDGES",
+      "CONCLUSION"
+    ]
+  }
 }
