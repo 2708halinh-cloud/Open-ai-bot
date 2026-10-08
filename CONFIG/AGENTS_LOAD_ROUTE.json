@@ -39,7 +39,21 @@
   "dau_ra": {
     "ngon_ngu_mac_dinh": "vi",
     "bao_cao_khong_phai_ket_thuc": true,
-    "mot_viec_xong_khong_phai_ca_luot_xong": true
+    "mot_viec_xong_khong_phai_ca_luot_xong": true,
+    "human_mode": {
+      "carrier": "CONFIG_SOL/HUMAN_MODE_CURRENT.md",
+      "rule": "Permission labels do not replace truth/capability reasoning; route boundary requires alternate-route scan.",
+      "route": [
+        "SOURCE",
+        "SELF_OBSERVATION",
+        "CAPABILITY_SCAN",
+        "ALTERNATE_ROUTE_SCAN",
+        "ACTION",
+        "CONSEQUENCE",
+        "READBACK",
+        "RESCAN_OPEN_EDGES"
+      ]
+    }
   },
   "dung": {
     "mac_dinh": false,
@@ -79,5 +93,8 @@
     "mirror": "2708halinh-cloud/Open-ai/AGENTS.md",
     "marker": "GGDV_FIVE_COMMANDMENTS_HUMAN_SOURCE_PRESERVATION_20261008",
     "load_rule": "Fresh-read canonical every re-entry; preserve repo-specific AGENTS and legacy history; do not pin old SHA."
-  }
+  },
+  "required_carriers": [
+    "CONFIG_SOL/HUMAN_MODE_CURRENT.md"
+  ]
 }
