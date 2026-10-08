@@ -1,0 +1,118 @@
+name: desktop-commander-autostart-selfhosted
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/desktop-commander-autostart-selfhosted.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  install-autostart:
+    runs-on: [self-hosted, Windows, X64]
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Desktop Commander Remote autostart
+        id: install
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $targetUser = 'halin'
+          $userRoot = "C:\Users\$targetUser"
+          $appDir = Join-Path $userRoot 'AppData\Local\DesktopCommanderRemote'
+          $launcher = Join-Path $appDir 'start-remote.ps1'
+          $log = Join-Path $appDir 'remote.log'
+          $startupDir = Join-Path $userRoot 'AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup'
+          $startupCmd = Join-Path $startupDir 'DesktopCommanderRemote.cmd'
+          $taskName = 'DesktopCommanderRemote'
+          New-Item -ItemType Directory -Force -Path $appDir | Out-Null
+
+          @'
+          $ErrorActionPreference = 'Stop'
+          $appDir = Join-Path $env:LOCALAPPDATA 'DesktopCommanderRemote'
+          $log = Join-Path $appDir 'remote.log'
+          New-Item -ItemType Directory -Force -Path $appDir | Out-Null
+          try {
+            $already = Get-CimInstance Win32_Process -ErrorAction SilentlyContinue | Where-Object { $_.CommandLine -and $_.CommandLine -match '@wonderwhy-er/desktop-commander@latest' -and $_.CommandLine -match '\bremote\b' } | Select-Object -First 1
+            if ($already) {
+              "$(Get-Date -Format o) already-running pid=$($already.ProcessId)" | Add-Content -LiteralPath $log
+              exit 0
+            }
+          } catch {}
+          $npx = (Get-Command npx.cmd -ErrorAction Stop).Source
+          "$(Get-Date -Format o) starting: $npx -y @wonderwhy-er/desktop-commander@latest remote" | Add-Content -LiteralPath $log
+          & $npx -y @wonderwhy-er/desktop-commander@latest remote *>> $log
+          exit $LASTEXITCODE
+          '@ | Set-Content -LiteralPath $launcher -Encoding UTF8
+
+          $taskInstalled = $false
+          $taskError = $null
+          try {
+            $action = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument "-NoLogo -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File ""$launcher"""
+            $trigger = New-ScheduledTaskTrigger -AtLogOn -User $targetUser
+            $settings = New-ScheduledTaskSettingsSet -MultipleInstances IgnoreNew -RestartCount 999 -RestartInterval (New-TimeSpan -Minutes 1) -StartWhenAvailable -ExecutionTimeLimit ([TimeSpan]::Zero)
+            $principal = New-ScheduledTaskPrincipal -UserId $targetUser -LogonType Interactive -RunLevel Limited
+            Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $trigger -Settings $settings -Principal $principal -Force | Out-Null
+            $taskInstalled = $true
+          } catch {
+            $taskError = $_.Exception.Message
+          }
+
+          if ($taskInstalled) {
+            if (Test-Path -LiteralPath $startupCmd) { Remove-Item -LiteralPath $startupCmd -Force }
+            Start-ScheduledTask -TaskName $taskName
+            Start-Sleep -Seconds 3
+          } else {
+            New-Item -ItemType Directory -Force -Path $startupDir | Out-Null
+            @('@echo off', ('powershell.exe -NoLogo -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "' + $launcher + '"')) | Set-Content -LiteralPath $startupCmd -Encoding ASCII
+            Start-Process -FilePath 'powershell.exe' -ArgumentList @('-NoLogo','-NoProfile','-ExecutionPolicy','Bypass','-WindowStyle','Hidden','-File',$launcher) -WindowStyle Hidden
+            Start-Sleep -Seconds 3
+          }
+
+          $proc = Get-CimInstance Win32_Process -ErrorAction SilentlyContinue | Where-Object { $_.CommandLine -and $_.CommandLine -match '@wonderwhy-er/desktop-commander@latest' -and $_.CommandLine -match '\bremote\b' } | Select-Object -First 1
+          $task = if ($taskInstalled) { Get-ScheduledTask -TaskName $taskName } else { $null }
+
+          $receipt = [ordered]@{
+            schema = 'DESKTOP_COMMANDER_AUTOSTART/1.0'
+            observed_at = (Get-Date).ToString('o')
+            target_user = $targetUser
+            command = 'npx.cmd -y @wonderwhy-er/desktop-commander@latest remote'
+            launcher = $launcher
+            log = $log
+            mode = if ($taskInstalled) { 'SCHEDULED_TASK_AT_LOGON' } else { 'STARTUP_FOLDER_FALLBACK' }
+            task_name = if ($taskInstalled) { $taskName } else { $null }
+            task_state = if ($task) { [string]$task.State } else { $null }
+            startup_cmd = if ($taskInstalled) { $null } else { $startupCmd }
+            task_error = $taskError
+            remote_process_found = [bool]$proc
+            remote_process_id = if ($proc) { [int]$proc.ProcessId } else { $null }
+            status = if ($proc) { 'INSTALLED_AND_PROCESS_OBSERVED' } else { 'INSTALLED_PROCESS_NOT_YET_OBSERVED' }
+          }
+
+          $dir = Join-Path $PWD '.runtime\desktop_commander_autostart'
+          New-Item -ItemType Directory -Force -Path $dir | Out-Null
+          $receiptPath = Join-Path $dir 'RECEIPT_CURRENT.json'
+          $receipt | ConvertTo-Json -Depth 12 | Set-Content -LiteralPath $receiptPath -Encoding UTF8
+          "mode=$($receipt.mode)" >> $env:GITHUB_OUTPUT
+          "status=$($receipt.status)" >> $env:GITHUB_OUTPUT
+
+      - name: Commit installation receipt
+        if: always()
+        shell: powershell
+        run: |
+          git config user.name "GGDV Local Bridge"
+          git config user.email "ggdv-local@localhost"
+          git add .runtime/desktop_commander_autostart/RECEIPT_CURRENT.json
+          git commit -m "LOCAL_RECEIPT Desktop Commander autostart \${{ github.run_id }}" || echo "NO_NEW_RECEIPT_COMMIT"
+          git push origin HEAD:main
+
+      - name: Enforce process observation
+        if: always()
+        shell: powershell
+        run: |
+          if ('\${{ steps.install.outputs.status }}' -ne 'INSTALLED_AND_PROCESS_OBSERVED') { exit 2 }
