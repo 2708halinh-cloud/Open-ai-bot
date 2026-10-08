@@ -1,0 +1,112 @@
+{
+  "schema": "TESSERACT_OS_6D_FACE_RECEIPTS/2.0",
+  "state_object": {
+    "repository": "2708halinh-cloud/SOL-LONG-MACH",
+    "source_snapshot_commit": "96e7f9feae474c3da150557a089b54de8248aa02",
+    "forge_commit": "2491c2cb982ed3aef4116c5a959e1f5ccb239aec",
+    "center_digest_sha256": "272d105ab222685357e8121670a835109d6555f81762642655ab7f1757fc68c9"
+  },
+  "faces": {
+    "1": {
+      "name": "GOOGLE_DRIVE_POINTER",
+      "verification_state": "DRIVEFS_POINTER_WRITTEN_PROVIDER_PENDING",
+      "state_digest_sha256": "272d105ab222685357e8121670a835109d6555f81762642655ab7f1757fc68c9",
+      "receipt": {
+        "pointer_sha256": "24EFFB29703CAC7C9D50629785080296B1707FAA9C67D5A4CF33CCF1DB23B312",
+        "pointer_bytes": 1037,
+        "drivefs_local_metadata_id": "local-2411303"
+      },
+      "readback": {
+        "verified": false,
+        "provider_state": "PENDING_DRIVE_PROVIDER_ID",
+        "provider_search_state": "NOT_IN_QUERIED_SURFACE"
+      },
+      "closed": false
+    },
+    "2": {
+      "name": "LOCAL_BULK_STORAGE",
+      "verification_state": "VERIFIED_ACTIVE",
+      "state_digest_sha256": "272d105ab222685357e8121670a835109d6555f81762642655ab7f1757fc68c9",
+      "receipt": {
+        "modual_sha256": "E1AC3A582BB3B2D9F9A6A6594364DC474F9F6AAFCBCB455D570B4EAA0A7351A6",
+        "modual_bytes": 82548738,
+        "locators": [
+          "D:\\SENSOR_LOGS",
+          "D:\\SOL_LONG_MACH\\MODEL\\repo"
+        ]
+      },
+      "readback": {
+        "verified": true,
+        "local_path_exists": true,
+        "hash_verified": true,
+        "git_worktree_callable": true
+      },
+      "closed": true
+    },
+    "3": {
+      "name": "GITHUB_STATE",
+      "verification_state": "VERIFIED_ACTIVE",
+      "state_digest_sha256": "272d105ab222685357e8121670a835109d6555f81762642655ab7f1757fc68c9",
+      "receipt": {
+        "forge_commit": "2491c2cb982ed3aef4116c5a959e1f5ccb239aec",
+        "forge_tree": "3e26b1a499dd8e289686005246a68d534adb212c",
+        "x_time_master_head": "b39b8d40f38ad25e8047b1ab21773334411d0aec"
+      },
+      "readback": {
+        "verified": true,
+        "github_provider_readback": true,
+        "branch": "sol-long-mach-current"
+      },
+      "closed": true
+    },
+    "4": {
+      "name": "RCLONE_RAIDRIVE_RELAY",
+      "verification_state": "PARTIAL_ACTIVE",
+      "state_digest_sha256": "272d105ab222685357e8121670a835109d6555f81762642655ab7f1757fc68c9",
+      "receipt": {
+        "rclone_installed": true,
+        "raidrive_process_observed": true,
+        "w_drive_exists": true
+      },
+      "readback": {
+        "verified": false,
+        "rclone_remote_count": 0,
+        "transfer_receipt": null
+      },
+      "closed": false
+    },
+    "5": {
+      "name": "GCP_STORAGE_BUFFER",
+      "verification_state": "UNBOUND_AUTH_PROJECT",
+      "state_digest_sha256": "272d105ab222685357e8121670a835109d6555f81762642655ab7f1757fc68c9",
+      "receipt": {
+        "gcloud_installed": true,
+        "gsutil_installed": true
+      },
+      "readback": {
+        "verified": false,
+        "active_auth": false,
+        "project_bound": false
+      },
+      "closed": false
+    },
+    "6": {
+      "name": "XTIME_CDN_UBUBU_LEDGER",
+      "verification_state": "PARTIAL_ACTIVE",
+      "state_digest_sha256": "272d105ab222685357e8121670a835109d6555f81762642655ab7f1757fc68c9",
+      "receipt": {
+        "ububu_ledger_tip": "6248787d3ff4cf784ba6c7de91a3944a3effb7aa1bdf76453e607cbd4dba1fbf",
+        "ububu_entries": 31,
+        "ledger_mode": "APPEND_ONLY_TAMPER_EVIDENT"
+      },
+      "readback": {
+        "verified": false,
+        "ububu_state": "RUNNING",
+        "cdn_state": "UNVERIFIED"
+      },
+      "closed": false
+    }
+  },
+  "closed": false,
+  "closed_faces": 2
+}

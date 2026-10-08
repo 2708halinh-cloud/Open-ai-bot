@@ -1,0 +1,61 @@
+{
+  "schema": "TESSERACT_OS_6D/1.0",
+  "generated_at": "2026-10-08T20:22:36.246245+07:00",
+  "source_commit": "2491c2cb982ed3aef4116c5a959e1f5ccb239aec",
+  "dimension": 6,
+  "faces_equal": true,
+  "center": "☯️ TÂM",
+  "stone_axes": [
+    [
+      "SPACE",
+      "SOUL"
+    ],
+    [
+      "MIND",
+      "POWER"
+    ],
+    [
+      "REALITY",
+      "TIME"
+    ]
+  ],
+  "closure_rule": "CLOSED iff all 6 faces have independent receipt and readback for same state object",
+  "faces": [
+    {
+      "id": 1,
+      "name": "GOOGLE_DRIVE",
+      "role": "Pointer <10MB + locator JSON",
+      "equal_weight": 1
+    },
+    {
+      "id": 2,
+      "name": "LOCAL_STORAGE",
+      "role": "W/D/NVMe bulk/raw/snapshot",
+      "equal_weight": 1
+    },
+    {
+      "id": 3,
+      "name": "GITHUB_X_TIME_WEB",
+      "role": "Law & State + immutable commit",
+      "equal_weight": 1
+    },
+    {
+      "id": 4,
+      "name": "RCLONE_RAIDRIVE",
+      "role": "Virtual-drive / cloud relay",
+      "equal_weight": 1
+    },
+    {
+      "id": 5,
+      "name": "GCP_STORAGE_BUCKET",
+      "role": "Processing buffer + lifecycle 3–7 days",
+      "equal_weight": 1
+    },
+    {
+      "id": 6,
+      "name": "X_TIME_CDN_UBUBU_LEDGER",
+      "role": "Display + hash-only ledger",
+      "equal_weight": 1
+    }
+  ]
+}
