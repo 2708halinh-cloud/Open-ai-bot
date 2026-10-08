@@ -1,7 +1,8 @@
 {
-  "schema": "TESSERACT_OS_6D/1.0",
-  "generated_at": "2026-10-08T20:22:36.246245+07:00",
-  "source_commit": "2491c2cb982ed3aef4116c5a959e1f5ccb239aec",
+  "schema": "TESSERACT_OS_6D/2.0",
+  "generated_at": "2026-10-08T21:56:14.002126+07:00",
+  "source_commit": "918d2e1ad9370a8b43f0a4e01a7684e2aee45907",
+  "source_tree": "fcc4a2f1554b32a55ad2968e294d889e36a8c68f",
   "dimension": 6,
   "faces_equal": true,
   "center": "☯️ TÂM",
@@ -19,7 +20,19 @@
       "TIME"
     ]
   ],
-  "closure_rule": "CLOSED iff all 6 faces independently have ACTION + CONSEQUENCE + RECEIPT + READBACK for the same state object.",
+  "action_before_conclusion": {
+    "rule_id": "ACTION_BEFORE_CONCLUSION",
+    "flow": [
+      "ACTION",
+      "CONSEQUENCE",
+      "RECEIPT",
+      "READBACK",
+      "SAME_STATE",
+      "CONCLUSION"
+    ],
+    "source_direct": "LÀM TRƯỚC -> KẾT LUẬN; CẤM TUYỆT ĐỐI CHỐT KẾT QUẢ RỒI MỚI LÀM"
+  },
+  "closure_rule": "CLOSED iff all 6 faces have ACTION + CONSEQUENCE + RECEIPT + READBACK + SAME_STATE for one state object.",
   "faces": [
     {
       "id": 1,
@@ -57,17 +70,5 @@
       "role": "Display + hash-only ledger",
       "equal_weight": 1
     }
-  ],
-  "action_before_conclusion": {
-    "rule_id": "ACTION_BEFORE_CONCLUSION",
-    "source_direct": "SOURCE_DIRECT — Hà Linh: \"LÀM TRƯỚC -> KẾT LUẬN\"; \"CẤM TUYỆT ĐỐI CHỐT KẾT QUẢ RỒI MỚI LÀM\".",
-    "flow": [
-      "ACTION",
-      "CONSEQUENCE",
-      "RECEIPT",
-      "READBACK",
-      "CONCLUSION"
-    ],
-    "conclusion_gate": "No face/state/forge may be concluded CLOSED/VERIFIED solely from intent or file creation."
-  }
+  ]
 }

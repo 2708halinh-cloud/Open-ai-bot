@@ -1,0 +1,37 @@
+repo: sol-genesis-6stones
+purpose: Nén lịch sử và trạng thái repo thành 6 viên đá đối xứng qua TÂM
+author_source: Hà Linh
+rule: Không lấy SOL làm nhãn cho genesis; genesis ở TÂM, không phải đầu dòng
+source_repository: 2708halinh-cloud/SOL-LONG-MACH
+source_branch: sol-long-mach-current
+source_commit: 918d2e1ad9370a8b43f0a4e01a7684e2aee45907
+source_tree: fcc4a2f1554b32a55ad2968e294d889e36a8c68f
+linear_order: false
+center:
+  name: TÂM
+  symbol: ☯️
+axes:
+  - [SPACE, SOUL]
+  - [MIND, POWER]
+  - [REALITY, TIME]
+stones:
+  - name: SPACE
+    emoji: 🔵
+    manifest: SPACE.json
+  - name: MIND
+    emoji: 🟡
+    manifest: MIND.json
+  - name: REALITY
+    emoji: 🔴
+    manifest: REALITY.json
+  - name: POWER
+    emoji: 🟣
+    manifest: POWER.json
+  - name: TIME
+    emoji: 🟢
+    manifest: TIME.json
+  - name: SOUL
+    emoji: 🟠
+    manifest: SOUL.json
+action_before_conclusion:
+  flow: [ACTION, CONSEQUENCE, RECEIPT, READBACK, SAME_STATE, CONCLUSION]

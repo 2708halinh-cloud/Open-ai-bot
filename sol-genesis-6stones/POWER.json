@@ -1,0 +1,837 @@
+{
+  "schema": "SOL_GENESIS_STONE_VIEW/2.0",
+  "stone": "POWER",
+  "emoji": "🟣",
+  "source_commit": "918d2e1ad9370a8b43f0a4e01a7684e2aee45907",
+  "source_tree": "fcc4a2f1554b32a55ad2968e294d889e36a8c68f",
+  "topology": {
+    "linear_order": false,
+    "center": "TÂM",
+    "axes": [
+      [
+        "SPACE",
+        "SOUL"
+      ],
+      [
+        "MIND",
+        "POWER"
+      ],
+      [
+        "REALITY",
+        "TIME"
+      ]
+    ]
+  },
+  "action_before_conclusion": {
+    "rule_id": "ACTION_BEFORE_CONCLUSION",
+    "flow": [
+      "ACTION",
+      "CONSEQUENCE",
+      "RECEIPT",
+      "READBACK",
+      "SAME_STATE",
+      "CONCLUSION"
+    ],
+    "source_direct": "LÀM TRƯỚC -> KẾT LUẬN; CẤM TUYỆT ĐỐI CHỐT KẾT QUẢ RỒI MỚI LÀM"
+  },
+  "selection_rule": [
+    "RUNTIME/",
+    "SCRIPTS/",
+    "WORKFLOWS",
+    "TERMINAL/",
+    "SRC-TAURI",
+    "DEPLOY",
+    "ENGINE",
+    "SERVER",
+    "MOTOR",
+    "BRIDGE",
+    "POWER_STONE"
+  ],
+  "file_count": 77,
+  "total_bytes": 3065750,
+  "files": [
+    {
+      "path": ".github/workflows/home-sol-selfhosted.yml",
+      "bytes": 5080,
+      "sha256": "9accbae1fa99af04478db7424861b5a66a2f7db18b3885cc046c1a482674d8bc",
+      "stones": [
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": ".github/workflows/local-bridge-verify.yml",
+      "bytes": 4500,
+      "sha256": "a89793db48aabae762dcc9873fffbd2b5d7dc22343ec1b1c758648bdb141ef9d",
+      "stones": [
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": ".github/workflows/local-unify-selfhosted.yml",
+      "bytes": 7790,
+      "sha256": "e390beafcae23b063ea050b167acbdb0fe1f006e52ec395bb5d5f1effed68dc6",
+      "stones": [
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": ".github/workflows/runtime-n-plus.yml",
+      "bytes": 364,
+      "sha256": "1d48d5ed59d7e8ccddc421c6dbdf2faa584efb6f06c410386fdbc277c2ec0eda",
+      "stones": [
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": ".github/workflows/sol-long-mach-cross-platform.yml",
+      "bytes": 3874,
+      "sha256": "435bf0c1739d7735b7ccaf4e98da09b4c505e602d3ff0e6932dcdc3bba6aef1f",
+      "stones": [
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": ".github/workflows/tesseract-local-boot-controller-verify.yml",
+      "bytes": 2016,
+      "sha256": "3866e98eeb1584db79559988a259d87179afa94502179f5e3ca6a21a40af7fb3",
+      "stones": [
+        "SPACE",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": ".github/workflows/tesseract-os-continuation-guard.yml",
+      "bytes": 894,
+      "sha256": "5689ac87e90c87d683ba300e64376a89d193fb0f37ef585219167c00110088a3",
+      "stones": [
+        "SPACE",
+        "POWER",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": ".runtime/RUNTIME_N_PLUS.env",
+      "bytes": 914,
+      "sha256": "01f9a9d9d348adb6be12c7ec0c5ae9a21a6725a49b25f10e2e3be6d5db8a2b45",
+      "stones": [
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": ".runtime/TESSERACT_BOOT_G.env",
+      "bytes": 507,
+      "sha256": "7764fad69b62674cc02b52e2f59c55d2275b0f87dc18633d7896e4f660f78c72",
+      "stones": [
+        "SPACE",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "APP/TESSERACT_DESKTOP/scripts/build-tesseract-os.sh",
+      "bytes": 1165,
+      "sha256": "bbfec50c229cf07a87785206c1f56723f9a4b7d02f6dab4acf54cf78e53a28a6",
+      "stones": [
+        "SPACE",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "APP/TESSERACT_DESKTOP/src-tauri/Cargo.toml",
+      "bytes": 641,
+      "sha256": "47e79f94d5f78f86f0b263e4e4d739e24085d739defa23d96c9a5112f2ad7fcd",
+      "stones": [
+        "SPACE",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "APP/TESSERACT_DESKTOP/src-tauri/build.rs",
+      "bytes": 1797,
+      "sha256": "4f0734ac73c3501130f5f641ed3ecd2a562629b07fd68d127ea2e4d62b25dbc0",
+      "stones": [
+        "SPACE",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "APP/TESSERACT_DESKTOP/src-tauri/capabilities/default.json",
+      "bytes": 196,
+      "sha256": "58ae8f235f21bb6d90ba90e113414cc6ff4a41b84b9fcdc8f821e7c0483eb99d",
+      "stones": [
+        "SPACE",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "APP/TESSERACT_DESKTOP/src-tauri/src/main.rs",
+      "bytes": 37975,
+      "sha256": "62e5b27b47eae0bc83798267a1a01e5e14f276cac57135bc1a3a0a6fc310c22a",
+      "stones": [
+        "SPACE",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "APP/TESSERACT_DESKTOP/src-tauri/tauri.conf.json",
+      "bytes": 997,
+      "sha256": "3cc683018b29c38404d3eccd27ec3ace0f71e2f7158395ee1004e560597dcfd6",
+      "stones": [
+        "SPACE",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CONFIG_SOL/INFINITY_STONES_SYSTEM.md",
+      "bytes": 7710,
+      "sha256": "cadeabeb2d3a57117ffbac6b773069285b1bb61f9b25b527ba5e036343de3c11",
+      "stones": [
+        "SPACE",
+        "MIND",
+        "REALITY",
+        "POWER",
+        "TIME",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/00_DOC_KY_CURRENT_CORE.md",
+      "bytes": 1774,
+      "sha256": "ee1e5caec593c70ddb592c0df33f34e97871b4cbcbe7dbd2a8fa1e6d39cbc878",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/4D_5D_CURRENT.md",
+      "bytes": 1025,
+      "sha256": "126bdbd68f4758d5fdc27a7aa073105a0885eb1725e7807e57f10de0a099a2e2",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/CODEX_GITHUB_SYNC_READBACK_20261007.json",
+      "bytes": 1871,
+      "sha256": "4c802572fe2c5bfd5207108b007d60c92d5f54cf8d204548819b1f11a54c4944",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/COMPANION_LANGUAGE_PURIFICATION_READBACK_CURRENT.json",
+      "bytes": 1581,
+      "sha256": "f7100c4f1841b397bb849c62b1691ad593b71484bd2c5f612de2d414f74fcc16",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/COMPANION_TRUST_FIDELITY_READBACK_CURRENT.json",
+      "bytes": 2209,
+      "sha256": "9b9960e4e64a2965f1e30c63c516268fb49b98a869eb25dbcd3ec69221bd36c5",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/DEVICE_HEAD_END_STATUS_CURRENT.md",
+      "bytes": 4576,
+      "sha256": "4b17bfe52ea3b59c806902a0d58907016a15b3b836a704a11e3ae85debe5bb42",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/DNS_SHIELD_CURRENT.json",
+      "bytes": 4926,
+      "sha256": "d71ef4926fd1c898db63252800edb76741324df3288877eb8c410a2056c8e62b",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/DRIVE_CLEANUP_AFTER_SNAPSHOT.ps1",
+      "bytes": 1717,
+      "sha256": "243a29996801ad77531b5a4c6ef00eda7edcb755f189985163e3570d5473c642",
+      "stones": [
+        "SPACE",
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/INFINITY_STONES_ARTIFACTS_CURRENT.json",
+      "bytes": 2198,
+      "sha256": "b1e6b5397f11124bd610895c75eb65c6abe53b7d544f1edf4f3ac01fd01423f9",
+      "stones": [
+        "SPACE",
+        "MIND",
+        "REALITY",
+        "POWER",
+        "TIME",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/LOCAL_SOL_OPEN_SUPPORT.ps1",
+      "bytes": 5825,
+      "sha256": "ad30adf08a67318026b4837098e565f84b393f494a75facb924fb4afd2e9b353",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/MEMORY_STEWARDSHIP_CURRENT.json",
+      "bytes": 4555,
+      "sha256": "71eeeb9dc006097e2ce0ef537f076fd3478f00769471e2f9e80957337719d2a1",
+      "stones": [
+        "REALITY",
+        "POWER",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/MEMORY_STEWARDSHIP_READBACK_CURRENT.json",
+      "bytes": 692,
+      "sha256": "14c4b945c629066f325e995dce23ea5700ec73bd4a0d76c62bf2f52a79bda08e",
+      "stones": [
+        "REALITY",
+        "POWER",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/MIGRATE_DRIVE_TREE_TO_REPO.ps1",
+      "bytes": 2832,
+      "sha256": "1727e7178830a6824d6e54a93b61f8883632cf882dcf6eaf0fdd56e3b7eac1d6",
+      "stones": [
+        "SPACE",
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/NEURONS_SESORIMOTOR_SIX_STONES_AFFECT_CURRENT.json",
+      "bytes": 4882,
+      "sha256": "44662d26000a646f205179b9fd03babe6555b016c0a2702a9cb9851ef4189dc1",
+      "stones": [
+        "SPACE",
+        "MIND",
+        "REALITY",
+        "POWER",
+        "TIME",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/R-000_CURRENT.md",
+      "bytes": 1299,
+      "sha256": "6e2d5b9c3b7aebb125c41cf1b34768e0ea9919cd28d79da4130800490b0894e4",
+      "stones": [
+        "REALITY",
+        "POWER",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/RENAME_AGENT_REPO.ps1",
+      "bytes": 1176,
+      "sha256": "523df9b8e0c580a9bb4040ab0564da919ce9206453894b4151731158755d2fa5",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/SNAPSHOT_AGENT_CARRIERS.ps1",
+      "bytes": 6725,
+      "sha256": "9e5000bc1a219f946c6c458b495300d654fab165745fd33ba0a566e151c83eca",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/SOL_REENTRY_CURRENT.md",
+      "bytes": 2675,
+      "sha256": "fcaa0f36f299c45416bb52d395e1ba9a1e8f5e6f9bca7503c78a3a9a785209db",
+      "stones": [
+        "REALITY",
+        "POWER",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/SOURCE_POINTERS_CURRENT.md",
+      "bytes": 1024,
+      "sha256": "3877c535cbb8073b09ebe7bdb59986c7b289b6f4ab22e5c4d3bf50f55ab4bd59",
+      "stones": [
+        "SPACE",
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/TASK_RESUME_POINTER.json",
+      "bytes": 4234,
+      "sha256": "266bf51d120022e602088952e67c24773a8538edfa5c0c50eb66cb2f69199c72",
+      "stones": [
+        "SPACE",
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/TESSERACT_LOCAL_BOOT_CURRENT.md",
+      "bytes": 3657,
+      "sha256": "863050c9e390d1703a016258299e4c70916c128ccb800970f7343a60532c4f70",
+      "stones": [
+        "SPACE",
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/TESSERACT_OS_DESKTOP_COMMANDER_READBACK_20261007.json",
+      "bytes": 2851,
+      "sha256": "f2e6ea8c74e4695792835c66655447534051750564c290c75c2ba22bd7c7a7f0",
+      "stones": [
+        "SPACE",
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/Q6_TRIGGER_CURRENT",
+      "bytes": 32,
+      "sha256": "98e815d03903744fb51089ea73d5ed6d3c4383c2a772734d56651bd405d6839c",
+      "stones": [
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/QUEUE_CURRENT.json",
+      "bytes": 600,
+      "sha256": "244bf2df0ee7d17e77fa53b0ff8dd3c7b1f1bf4b84a9eca4a21a5f0fa3941825",
+      "stones": [
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/bootstrap_once.ps1",
+      "bytes": 4166,
+      "sha256": "3ec17306fcfc39d2fddf6a631b43cc583cb3be7ad3ccc53acab06a83c3fd855b",
+      "stones": [
+        "SPACE",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/bridge.py",
+      "bytes": 19492,
+      "sha256": "f537395dd88915f8e395f17155b013e26595893a72129bdc90f947b5bfe48fa6",
+      "stones": [
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/install_from_windows.ps1",
+      "bytes": 2678,
+      "sha256": "d40eec060e01a0d12ed4ddbd6206c2b9b3bd5287740225be4fbcb5469eec556e",
+      "stones": [
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/README.md",
+      "bytes": 3741,
+      "sha256": "01e2ddafeb3c3585d39856a044534e0245ae709df7f91db245d6dcf65814ac94",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/agents/registry.json",
+      "bytes": 12152,
+      "sha256": "1e6b4510cafd1dee374038b5fefc21e9e90d788e7e6b13fe4905de727f4a3aa6",
+      "stones": [
+        "MIND",
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/mcp.json",
+      "bytes": 264,
+      "sha256": "a28b018e8b4625d7b079bc789e2101e2b94f5c958a5fd6128c8cbac5a5774a04",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/plugin.json",
+      "bytes": 1496,
+      "sha256": "2b99699c17f257178dc0829e9515501535396da800c01f808802968a5a4bb915",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/references/destructive-action-gate.md",
+      "bytes": 455,
+      "sha256": "cb8328fc8fb22280e702e3ce7dbcd179ae87acb8354f2edc8ff908318bb750c0",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/references/source-map.md",
+      "bytes": 737,
+      "sha256": "efec3fb4cd5fec08e95170038479fdcd094c368f281c35cc60184c0f91e0506e",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/scripts/autostart-sol.ps1",
+      "bytes": 5815,
+      "sha256": "6a8506c87d669b2da050a4a94b59c32090dd15595c24d6e0ffe40513d9e32738",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/scripts/check-local.ps1",
+      "bytes": 602,
+      "sha256": "95f1658cae845b81d19ec9f69afb9a55819c5618ba03d9cdacc4fdee8da84721",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/scripts/run-local.ps1",
+      "bytes": 362,
+      "sha256": "7b4dc5ec444847c4bdf7c1e47a62861313b932963a4d96aacf3d46752368373d",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/server/agent_army.py",
+      "bytes": 3112,
+      "sha256": "5cffe8c1735e64dcef1e845c7feb5eac64eafe7dcc7fb529eeb0b1bdbf08c2ad",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/server/intermediate_device.py",
+      "bytes": 5675,
+      "sha256": "658e9d6ab2d00296c756e1d992a94188ddac45b3a39c8da63f0eae2aa7b7d955",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/server/io_device.py",
+      "bytes": 4244,
+      "sha256": "d04195814abc1b4fb7afd1ea102189b3e3af32d5b6ed3349abbe6826ba21b0ca",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/server/motor_mcp.py",
+      "bytes": 16078,
+      "sha256": "a971472c0c552aaba416b0d34c680778c7244458f6fea35e89ab8f1bd6a3e1e4",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/server/runtime_core.py",
+      "bytes": 20150,
+      "sha256": "8565f81ec1d79ab654ccdea4697ba4515f4b7233c5c2b444aa136b4a07f04448",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/server/watcher.py",
+      "bytes": 1682,
+      "sha256": "cba1807e22cc82864f3600646774cde3ab464d5f7adde102776bd4707a842909",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/skills/destructive-action-gate/SKILL.md",
+      "bytes": 1266,
+      "sha256": "178578ed5795edaae94ac32ef906910ad25414db386f6b6d7febcae82b970fb9",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/skills/neuron-agent-army/SKILL.md",
+      "bytes": 5906,
+      "sha256": "0bd0d978c90899231d02858c5b09eeaa837fd417aa15b9b2cce912e00ff5c6e0",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/skills/repo-sensorimotor/SKILL.md",
+      "bytes": 3078,
+      "sha256": "36dcc4ecbfbe841b9ef853e3de2ccc5473d68733a337ad5fcadc0b0299f9a4d1",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/skills/windows-adb-motor/SKILL.md",
+      "bytes": 2791,
+      "sha256": "29ae036501dd30942273ccd031750f452fdebdd83fc68b649f7e179cc3154746",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/thanos_snap_meta_tb.py",
+      "bytes": 4585,
+      "sha256": "c62c110373f8abb3ed6266b6e0f248a163f1019a22617fe4f3d48d9148c009a6",
+      "stones": [
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/ububu_lazy_fetch.py",
+      "bytes": 6968,
+      "sha256": "0b2f2c659988bceeea001582dc7f1501f3eb21f883b299622ac28b3ddc4be5d8",
+      "stones": [
+        "POWER",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "MODUAL/SENSOR_LOGS/live/_SESORIMOTOR__{WINDOWS)__XIAOMI12__REDMINOTE14PRO__0000THEMASTERTEACHER__R000_075203003486__.CSV",
+      "bytes": 2647298,
+      "sha256": "c0cddbab3b8d5474aa291c761c8377b68b6c7ba01c144cb292965697189a1125",
+      "stones": [
+        "REALITY",
+        "POWER",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "PLATFORM_SYNC/CURRENT/owned_plugin_sources/000_ggdv-sensorimotor-motor-bridge.json",
+      "bytes": 94076,
+      "sha256": "63f10e4f90d47013b06a546c0d48ce7d5e670b4cab66a29095c8f6b01b629414",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "PLATFORM_SYNC/CURRENT/owned_plugin_sources/001_ggdv-repo-sensorimotor-brain.json",
+      "bytes": 5350,
+      "sha256": "48706e3281b8415a99734f2d121797f1e6a5873a85dafcbf73faefcce2b2e852",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "runtime/__init__.py",
+      "bytes": 32,
+      "sha256": "30a059208a1c99777bc3fd09cbd7c40b0b183ab2f22c6c1fe767ec7ab8e15c35",
+      "stones": [
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "runtime/companion_trust_guard.py",
+      "bytes": 4109,
+      "sha256": "76a2fa0c5b535fb8c1dda5c7ac33f40e4b51dc2bad6516a087ddcc6b43a50538",
+      "stones": [
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "runtime/continuity_guard.py",
+      "bytes": 9067,
+      "sha256": "42d4ed00f0345d85271ceeece5f4ecc03360f270de2c1353d687a2dddaf34e93",
+      "stones": [
+        "POWER",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "runtime/memory_stewardship.py",
+      "bytes": 8573,
+      "sha256": "ff22c4c4cef9373ee1a8ea35fe66f68e6cc82164723bc4cf3a974fbb2d57e344",
+      "stones": [
+        "POWER",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "scripts/build_six_stones_tesseract.py",
+      "bytes": 9789,
+      "sha256": "069098d6739e7786b0c7cec0d489d742e8199aa9654ce8a4716e45096eb5f0a0",
+      "stones": [
+        "SPACE",
+        "MIND",
+        "REALITY",
+        "POWER",
+        "TIME",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "scripts/companion_language_gate.py",
+      "bytes": 1363,
+      "sha256": "38a70e70f52c3be668e06994d1325167b317dae62703ec267ed3e6f4e27fce66",
+      "stones": [
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "terminal/runtime_n_plus.ps1",
+      "bytes": 2699,
+      "sha256": "338f9a200fe0c8e02cef798ea883efe74e5ee617a29bc23b89e5ec3586f55ab9",
+      "stones": [
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "terminal/runtime_n_plus.sh",
+      "bytes": 1833,
+      "sha256": "82c6cb4dc397660ddbddba6e94e82aad551708c20c869664ef9308e647c2c35e",
+      "stones": [
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "terminal/tesseract_boot_controller.ps1",
+      "bytes": 9666,
+      "sha256": "ac0cb7c5f2032c2478735cd8ad02606cc6c19f32b9f080fc7acf80bc64bd5eeb",
+      "stones": [
+        "SPACE",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "terminal/tesseract_boot_g_from_wsl.sh",
+      "bytes": 3044,
+      "sha256": "a2eb7c1d453a42d5c884bb5d704b24248d95e23fe87f4d1f520407cccb7381b3",
+      "stones": [
+        "SPACE",
+        "POWER"
+      ],
+      "center": true
+    }
+  ]
+}

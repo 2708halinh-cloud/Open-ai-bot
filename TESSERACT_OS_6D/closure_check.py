@@ -5,7 +5,7 @@ p=Path(__file__).with_name("FACE_RECEIPTS_CURRENT.json")
 d=json.loads(p.read_text(encoding="utf-8"))
 faces=d.get("faces",{})
 expected={str(i) for i in range(1,7)}
-state_digest=(d.get("state_object") or {}).get("center_digest_sha256")
+state_digest=((d.get("state_object") or {}).get("state_object_sha256") or (d.get("state_object") or {}).get("center_digest_sha256"))
 
 if set(faces) != expected:
     d["closed"]=False

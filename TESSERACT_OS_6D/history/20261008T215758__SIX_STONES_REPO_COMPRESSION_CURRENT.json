@@ -1,10 +1,10 @@
 {
   "schema": "GGDV_SIX_STONES_REPO_COMPRESSION/2.0",
-  "observed_at": "2026-10-08T21:57:58.286094+07:00",
+  "observed_at": "2026-10-08T21:50:50.379105+07:00",
   "repository": "2708halinh-cloud/SOL-LONG-MACH",
   "branch": "sol-long-mach-current",
-  "source_commit": "918d2e1ad9370a8b43f0a4e01a7684e2aee45907",
-  "source_tree": "fcc4a2f1554b32a55ad2968e294d889e36a8c68f",
+  "source_commit": "1c223c1fa0f050898cb3783db9d515f38253b76e",
+  "source_tree": "cba44257ede22a477d18c2bbae1b120906b80c7b",
   "compression_semantics": "CONTENT_ADDRESSED_RELATIONAL_PROJECTION",
   "losslessness_rule": "No source blob is replaced. The source commit/tree remains authoritative; Stone manifests are reproducible relational views.",
   "linear_order": false,
@@ -13,11 +13,11 @@
     "emoji": "☯️",
     "genesis": "INTERSECTION_NOT_TIMELINE_START",
     "manifest_path": "sol-genesis-6stones/CENTER_TAM.json",
-    "manifest_sha256": "7cc744acbe5aa80e54d5ff5a895db1a2ac2c021ed8c7e661df8ffb74b5aae93d"
+    "manifest_sha256": "e8349091e74bbcc516a9ea3789a26c022e8838915654f17f934335a69ffdc860"
   },
   "state_object": {
     "path": "TESSERACT_OS_6D/STATE_OBJECT_CURRENT.json",
-    "sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+    "sha256": "94f3450976f57dfb1b112db304b37fc5ddc547c218057841cf7715c6a6cda583",
     "bytes": 65536
   },
   "axes": [
@@ -44,7 +44,7 @@
       "projection": "CONTENT_ADDRESS_VIEW_OF_GIT_COMMIT",
       "member_count": 48,
       "total_bytes": 15095784,
-      "manifest_sha256": "dc869a0fce2b366b6c9a3516051541e17167f3bf52eda4e899f098370c032385",
+      "manifest_sha256": "682b2b33edfde5ea28f108900afb4e23053b4a81f0aefc718999f4cd284dd04e",
       "manifest_path": "sol-genesis-6stones/SPACE.json",
       "reconstruction_rule": "Resolve source_commit/source_tree, then verify blob SHA-256 entries in the Stone manifest."
     },
@@ -57,7 +57,7 @@
       "projection": "CONTENT_ADDRESS_VIEW_OF_GIT_COMMIT",
       "member_count": 30,
       "total_bytes": 161114,
-      "manifest_sha256": "cfa604b19a09c235e50c0b62fc05e5fa55a65fee3a8f9f07de726c96a28b30a4",
+      "manifest_sha256": "4e090f576a5651e3e5744545fa293ef4204e34d2d1816add55c120bddf4470dd",
       "manifest_path": "sol-genesis-6stones/MIND.json",
       "reconstruction_rule": "Resolve source_commit/source_tree, then verify blob SHA-256 entries in the Stone manifest."
     },
@@ -70,7 +70,7 @@
       "projection": "CONTENT_ADDRESS_VIEW_OF_GIT_COMMIT",
       "member_count": 77,
       "total_bytes": 3065750,
-      "manifest_sha256": "fdd2e7e456ec7659c40e761b63eb842abcb7e1a0c56d1f5eeb84006ea78c0b82",
+      "manifest_sha256": "ac4dbddb6626303f2cf6536a15071f1cf09427a6b7526eef653a4e6382181a05",
       "manifest_path": "sol-genesis-6stones/POWER.json",
       "reconstruction_rule": "Resolve source_commit/source_tree, then verify blob SHA-256 entries in the Stone manifest."
     },
@@ -83,7 +83,7 @@
       "projection": "CONTENT_ADDRESS_VIEW_OF_GIT_COMMIT",
       "member_count": 63,
       "total_bytes": 3042496,
-      "manifest_sha256": "572974060e9e94079e8515519fbe26481db0bf306f9ee875004457ecdf9ad461",
+      "manifest_sha256": "0a5d1c03d81ccd478af08e9e7c1d85134eb112f06cd638091b2cb34089cc3d59",
       "manifest_path": "sol-genesis-6stones/REALITY.json",
       "reconstruction_rule": "Resolve source_commit/source_tree, then verify blob SHA-256 entries in the Stone manifest."
     },
@@ -96,7 +96,7 @@
       "projection": "CONTENT_ADDRESS_VIEW_OF_GIT_COMMIT",
       "member_count": 21,
       "total_bytes": 2792327,
-      "manifest_sha256": "a05a84ce7a0ab8cd8b22c7d9bd65b53078da9a3c8e5ef6f43b2a31c8727e4ef9",
+      "manifest_sha256": "383d293abb52237cdc7e148f81e689abe3a495465124b9703edc81064c81dd23",
       "manifest_path": "sol-genesis-6stones/TIME.json",
       "reconstruction_rule": "Resolve source_commit/source_tree, then verify blob SHA-256 entries in the Stone manifest."
     },
@@ -109,7 +109,7 @@
       "projection": "CONTENT_ADDRESS_VIEW_OF_GIT_COMMIT",
       "member_count": 16,
       "total_bytes": 87165,
-      "manifest_sha256": "9708867faca7a56e53fa03979dc1539598c68ff8f043a8b1771a776d6a4d330a",
+      "manifest_sha256": "44a72d887f1843f73bb5f9476d556de5fe369ab34ea11ea3aa20180fb37fd59d",
       "manifest_path": "sol-genesis-6stones/SOUL.json",
       "reconstruction_rule": "Resolve source_commit/source_tree, then verify blob SHA-256 entries in the Stone manifest."
     }

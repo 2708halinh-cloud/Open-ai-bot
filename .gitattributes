@@ -1,0 +1,2 @@
+# Vật mang TESSERACT 64 KiB cố định: giữ nguyên bytes, không đổi dòng, không diff chữ.
+TESSERACT_OS_6D/STATE_OBJECT_CURRENT.json -text -diff -merge

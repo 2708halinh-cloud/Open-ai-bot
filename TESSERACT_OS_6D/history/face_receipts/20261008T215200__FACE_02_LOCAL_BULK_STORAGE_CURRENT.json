@@ -1,0 +1,16 @@
+{
+  "schema": "TESSERACT_OS_6D_FACE_RECEIPT/1.0",
+  "observed_at": "2026-10-08T20:19:04.233177+07:00",
+  "face": 2,
+  "name": "LOCAL_BULK_STORAGE",
+  "equal_rank": true,
+  "role": "Ổ cứng local (W,D,NVMe): bulk/raw/snapshot",
+  "state": "VERIFIED_ACTIVE",
+  "locators": [
+    "D:\\SENSOR_LOGS",
+    "D:\\SOL_LONG_MACH\\MODEL\\repo"
+  ],
+  "modual_sha256": "E1AC3A582BB3B2D9F9A6A6594364DC474F9F6AAFCBCB455D570B4EAA0A7351A6",
+  "modual_bytes": 82548738,
+  "receipt": "local path exists + fresh hash + git working tree callable"
+}

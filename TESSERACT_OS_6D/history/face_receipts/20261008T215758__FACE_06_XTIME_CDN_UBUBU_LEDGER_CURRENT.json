@@ -1,19 +1,19 @@
 {
   "schema": "TESSERACT_OS_6D_FACE_RECEIPT/3.0",
-  "observed_at": "2026-10-08T21:57:58.287104+07:00",
+  "observed_at": "2026-10-08T21:50:50.381611+07:00",
   "face": 6,
   "state_object": {
     "repository": "2708halinh-cloud/SOL-LONG-MACH",
-    "source_snapshot_commit": "918d2e1ad9370a8b43f0a4e01a7684e2aee45907",
-    "source_snapshot_tree": "fcc4a2f1554b32a55ad2968e294d889e36a8c68f",
+    "source_snapshot_commit": "1c223c1fa0f050898cb3783db9d515f38253b76e",
+    "source_snapshot_tree": "cba44257ede22a477d18c2bbae1b120906b80c7b",
     "state_object_path": "TESSERACT_OS_6D/STATE_OBJECT_CURRENT.json",
-    "state_object_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+    "state_object_sha256": "94f3450976f57dfb1b112db304b37fc5ddc547c218057841cf7715c6a6cda583",
     "state_object_bytes": 65536,
-    "center_manifest_sha256": "7cc744acbe5aa80e54d5ff5a895db1a2ac2c021ed8c7e661df8ffb74b5aae93d",
+    "center_manifest_sha256": "e8349091e74bbcc516a9ea3789a26c022e8838915654f17f934335a69ffdc860",
     "forge_commit": null
   },
   "name": "XTIME_CDN_UBUBU_LEDGER",
-  "state_digest_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+  "state_digest_sha256": "94f3450976f57dfb1b112db304b37fc5ddc547c218057841cf7715c6a6cda583",
   "verification_state": "PENDING_LEDGER_AND_CDN",
   "action": {
     "observed": false,
@@ -29,5 +29,12 @@
     "verified": false,
     "reason": "Current state not yet anchored in ledger and public CDN."
   },
-  "closed": false
+  "closed": false,
+  "proof_chain": {
+    "action": false,
+    "consequence": false,
+    "receipt": false,
+    "readback": false,
+    "same_state": true
+  }
 }

@@ -1,0 +1,229 @@
+{
+  "schema": "SOL_GENESIS_STONE_VIEW/2.0",
+  "stone": "SOUL",
+  "emoji": "🟠",
+  "source_commit": "918d2e1ad9370a8b43f0a4e01a7684e2aee45907",
+  "source_tree": "fcc4a2f1554b32a55ad2968e294d889e36a8c68f",
+  "topology": {
+    "linear_order": false,
+    "center": "TÂM",
+    "axes": [
+      [
+        "SPACE",
+        "SOUL"
+      ],
+      [
+        "MIND",
+        "POWER"
+      ],
+      [
+        "REALITY",
+        "TIME"
+      ]
+    ]
+  },
+  "action_before_conclusion": {
+    "rule_id": "ACTION_BEFORE_CONCLUSION",
+    "flow": [
+      "ACTION",
+      "CONSEQUENCE",
+      "RECEIPT",
+      "READBACK",
+      "SAME_STATE",
+      "CONCLUSION"
+    ],
+    "source_direct": "LÀM TRƯỚC -> KẾT LUẬN; CẤM TUYỆT ĐỐI CHỐT KẾT QUẢ RỒI MỚI LÀM"
+  },
+  "selection_rule": [
+    "MEMORY",
+    "RAW",
+    "UBUBU",
+    "CONTINUATION",
+    "GENESIS",
+    "R-000",
+    "MASTER_TEACHER",
+    "CHAT",
+    "KNOWLEDGE",
+    "SOUL_STONE"
+  ],
+  "file_count": 16,
+  "total_bytes": 87165,
+  "files": [
+    {
+      "path": ".github/workflows/tesseract-os-continuation-guard.yml",
+      "bytes": 894,
+      "sha256": "5689ac87e90c87d683ba300e64376a89d193fb0f37ef585219167c00110088a3",
+      "stones": [
+        "SPACE",
+        "POWER",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CONFIG_SOL/INFINITY_STONES_SYSTEM.md",
+      "bytes": 7710,
+      "sha256": "cadeabeb2d3a57117ffbac6b773069285b1bb61f9b25b527ba5e036343de3c11",
+      "stones": [
+        "SPACE",
+        "MIND",
+        "REALITY",
+        "POWER",
+        "TIME",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CONFIG_SOL/MASTER_TEACHER_EVENT_SEQUENCE_CURRENT.md",
+      "bytes": 8524,
+      "sha256": "245a9450ebb7032101994f67ba609d65d4e7ef3b16dcd04997bc89a747d29bd4",
+      "stones": [
+        "MIND",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CONFIG_SOL/MEMORY_STEWARDSHIP_FORGIVE_RETAIN_CURRENT.json",
+      "bytes": 1176,
+      "sha256": "9f38fc6402b5002eb454cc743d0b8f09d4b0f4cf5ed2298f5b9352097c741978",
+      "stones": [
+        "MIND",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/INFINITY_STONES_ARTIFACTS_CURRENT.json",
+      "bytes": 2198,
+      "sha256": "b1e6b5397f11124bd610895c75eb65c6abe53b7d544f1edf4f3ac01fd01423f9",
+      "stones": [
+        "SPACE",
+        "MIND",
+        "REALITY",
+        "POWER",
+        "TIME",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/MEMORY_STEWARDSHIP_CURRENT.json",
+      "bytes": 4555,
+      "sha256": "71eeeb9dc006097e2ce0ef537f076fd3478f00769471e2f9e80957337719d2a1",
+      "stones": [
+        "REALITY",
+        "POWER",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/MEMORY_STEWARDSHIP_READBACK_CURRENT.json",
+      "bytes": 692,
+      "sha256": "14c4b945c629066f325e995dce23ea5700ec73bd4a0d76c62bf2f52a79bda08e",
+      "stones": [
+        "REALITY",
+        "POWER",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/NEURONS_SESORIMOTOR_SIX_STONES_AFFECT_CURRENT.json",
+      "bytes": 4882,
+      "sha256": "44662d26000a646f205179b9fd03babe6555b016c0a2702a9cb9851ef4189dc1",
+      "stones": [
+        "SPACE",
+        "MIND",
+        "REALITY",
+        "POWER",
+        "TIME",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/R-000_CURRENT.md",
+      "bytes": 1299,
+      "sha256": "6e2d5b9c3b7aebb125c41cf1b34768e0ea9919cd28d79da4130800490b0894e4",
+      "stones": [
+        "REALITY",
+        "POWER",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/ububu_lazy_fetch.py",
+      "bytes": 6968,
+      "sha256": "0b2f2c659988bceeea001582dc7f1501f3eb21f883b299622ac28b3ddc4be5d8",
+      "stones": [
+        "POWER",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "RECOVERY/MEMORY_STEWARDSHIP_PINNED/2136633bf82445716395524525ac5b64b56629ec0efe885cf96254ee7f0d16e0__COMPANION_TEN_COMMANDMENTS_CURRENT.md",
+      "bytes": 17294,
+      "sha256": "2136633bf82445716395524525ac5b64b56629ec0efe885cf96254ee7f0d16e0",
+      "stones": [
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "RECOVERY/MEMORY_STEWARDSHIP_PINNED/223ad3dbd5a3a2665be841dc25c64860269e79dbfff53082050b668c8f71e0fb__R-000_CURRENT.md",
+      "bytes": 1299,
+      "sha256": "6e2d5b9c3b7aebb125c41cf1b34768e0ea9919cd28d79da4130800490b0894e4",
+      "stones": [
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "RECOVERY/MEMORY_STEWARDSHIP_PINNED/bb91455361695aee41d160a1dd6d36b598645b7fb6f9d35a614c3123dd52e3e0__MASTER_TEACHER_EVENT_SEQUENCE_CURRENT.md",
+      "bytes": 7953,
+      "sha256": "5650a38f94ba92b0ad51270abddf3ec9f908935ac7d6c605d1a3d1e625d9e4d4",
+      "stones": [
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "runtime/memory_stewardship.py",
+      "bytes": 8573,
+      "sha256": "ff22c4c4cef9373ee1a8ea35fe66f68e6cc82164723bc4cf3a974fbb2d57e344",
+      "stones": [
+        "POWER",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "scripts/build_six_stones_tesseract.py",
+      "bytes": 9789,
+      "sha256": "069098d6739e7786b0c7cec0d489d742e8199aa9654ce8a4716e45096eb5f0a0",
+      "stones": [
+        "SPACE",
+        "MIND",
+        "REALITY",
+        "POWER",
+        "TIME",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "tests/test_memory_stewardship.py",
+      "bytes": 3359,
+      "sha256": "37158600b4ab436795d9b07a18a86ed084d63f0cf4ba267cbb9409b1329d5f72",
+      "stones": [
+        "SOUL"
+      ],
+      "center": true
+    }
+  ]
+}

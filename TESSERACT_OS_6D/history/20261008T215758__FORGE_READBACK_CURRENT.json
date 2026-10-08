@@ -1,0 +1,15 @@
+{
+  "schema": "TESSERACT_OS_6D_FORGE_READBACK/2.0",
+  "observed_at": "2026-10-08T21:50:50.441841+07:00",
+  "repository": "2708halinh-cloud/SOL-LONG-MACH",
+  "branch": "sol-long-mach-current",
+  "source_snapshot_commit": "1c223c1fa0f050898cb3783db9d515f38253b76e",
+  "source_snapshot_tree": "cba44257ede22a477d18c2bbae1b120906b80c7b",
+  "state_object_sha256": "94f3450976f57dfb1b112db304b37fc5ddc547c218057841cf7715c6a6cda583",
+  "center_manifest_sha256": "e8349091e74bbcc516a9ea3789a26c022e8838915654f17f934335a69ffdc860",
+  "forge_commit": null,
+  "github_provider_readback": false,
+  "overall_closed": false,
+  "closed_faces": 2,
+  "reason": "Forge artifacts generated locally; GitHub push/readback not performed yet."
+}

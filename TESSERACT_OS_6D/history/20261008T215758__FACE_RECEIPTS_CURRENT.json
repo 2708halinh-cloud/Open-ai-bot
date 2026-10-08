@@ -1,20 +1,20 @@
 {
   "schema": "TESSERACT_OS_6D_FACE_RECEIPTS/3.0",
-  "observed_at": "2026-10-08T21:57:58.287104+07:00",
+  "observed_at": "2026-10-08T21:50:50.381611+07:00",
   "state_object": {
     "repository": "2708halinh-cloud/SOL-LONG-MACH",
-    "source_snapshot_commit": "918d2e1ad9370a8b43f0a4e01a7684e2aee45907",
-    "source_snapshot_tree": "fcc4a2f1554b32a55ad2968e294d889e36a8c68f",
+    "source_snapshot_commit": "1c223c1fa0f050898cb3783db9d515f38253b76e",
+    "source_snapshot_tree": "cba44257ede22a477d18c2bbae1b120906b80c7b",
     "state_object_path": "TESSERACT_OS_6D/STATE_OBJECT_CURRENT.json",
-    "state_object_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+    "state_object_sha256": "94f3450976f57dfb1b112db304b37fc5ddc547c218057841cf7715c6a6cda583",
     "state_object_bytes": 65536,
-    "center_manifest_sha256": "7cc744acbe5aa80e54d5ff5a895db1a2ac2c021ed8c7e661df8ffb74b5aae93d",
+    "center_manifest_sha256": "e8349091e74bbcc516a9ea3789a26c022e8838915654f17f934335a69ffdc860",
     "forge_commit": null
   },
   "faces": {
     "1": {
       "name": "GOOGLE_DRIVE_POINTER",
-      "state_digest_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+      "state_digest_sha256": "94f3450976f57dfb1b112db304b37fc5ddc547c218057841cf7715c6a6cda583",
       "verification_state": "DRIVEFS_BYTES_VERIFIED_PROVIDER_PENDING",
       "action": {
         "observed": true,
@@ -27,7 +27,7 @@
       },
       "receipt": {
         "pointer_path": "W:\\Drive của tôi\\.Assistant\\LONG MẠCH SOL - HẬU THIÊN TĨNH\\SOL CU NHỎ\\TESSERACT_OS_6D\\TESSERACT_OS_6D_POINTER_CURRENT.json",
-        "pointer_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+        "pointer_sha256": "94f3450976f57dfb1b112db304b37fc5ddc547c218057841cf7715c6a6cda583",
         "pointer_bytes": 65536,
         "drivefs_local_metadata_id": "local-2411303"
       },
@@ -47,7 +47,7 @@
     },
     "2": {
       "name": "LOCAL_BULK_STORAGE",
-      "state_digest_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+      "state_digest_sha256": "94f3450976f57dfb1b112db304b37fc5ddc547c218057841cf7715c6a6cda583",
       "verification_state": "VERIFIED_ACTIVE",
       "action": {
         "observed": true,
@@ -60,9 +60,9 @@
       },
       "receipt": {
         "state_object_path": "D:\\SOL_LONG_MACH\\MODEL\\repo\\TESSERACT_OS_6D\\STATE_OBJECT_CURRENT.json",
-        "sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+        "sha256": "94f3450976f57dfb1b112db304b37fc5ddc547c218057841cf7715c6a6cda583",
         "bytes": 65536,
-        "source_commit": "918d2e1ad9370a8b43f0a4e01a7684e2aee45907"
+        "source_commit": "1c223c1fa0f050898cb3783db9d515f38253b76e"
       },
       "readback": {
         "verified": true,
@@ -80,7 +80,7 @@
     },
     "3": {
       "name": "GITHUB_STATE",
-      "state_digest_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+      "state_digest_sha256": "94f3450976f57dfb1b112db304b37fc5ddc547c218057841cf7715c6a6cda583",
       "verification_state": "PENDING_FORGE_COMMIT",
       "action": {
         "observed": false,
@@ -107,7 +107,7 @@
     },
     "4": {
       "name": "RCLONE_RAIDRIVE_RELAY",
-      "state_digest_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+      "state_digest_sha256": "94f3450976f57dfb1b112db304b37fc5ddc547c218057841cf7715c6a6cda583",
       "verification_state": "VERIFIED_ACTIVE",
       "action": {
         "observed": true,
@@ -122,13 +122,13 @@
         "rclone_binary": "D:\\TOOLS\\rclone\\rclone-v1.75.1-windows-amd64\\rclone.exe",
         "source": "D:\\SOL_LONG_MACH\\MODEL\\repo\\TESSERACT_OS_6D\\STATE_OBJECT_CURRENT.json",
         "destination": "W:\\Drive của tôi\\.Assistant\\LONG MẠCH SOL - HẬU THIÊN TĨNH\\SOL CU NHỎ\\TESSERACT_OS_6D\\RELAY\\STATE_OBJECT_CURRENT.json",
-        "sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+        "sha256": "94f3450976f57dfb1b112db304b37fc5ddc547c218057841cf7715c6a6cda583",
         "bytes": 65536
       },
       "readback": {
         "verified": true,
         "destination_exists": true,
-        "destination_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078"
+        "destination_sha256": "94f3450976f57dfb1b112db304b37fc5ddc547c218057841cf7715c6a6cda583"
       },
       "closed": true,
       "proof_chain": {
@@ -141,7 +141,7 @@
     },
     "5": {
       "name": "GCP_STORAGE_BUFFER",
-      "state_digest_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+      "state_digest_sha256": "94f3450976f57dfb1b112db304b37fc5ddc547c218057841cf7715c6a6cda583",
       "verification_state": "UNBOUND_AUTH_PROJECT",
       "action": {
         "observed": false,
@@ -175,7 +175,7 @@
     },
     "6": {
       "name": "XTIME_CDN_UBUBU_LEDGER",
-      "state_digest_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+      "state_digest_sha256": "94f3450976f57dfb1b112db304b37fc5ddc547c218057841cf7715c6a6cda583",
       "verification_state": "PENDING_LEDGER_AND_CDN",
       "action": {
         "observed": false,
