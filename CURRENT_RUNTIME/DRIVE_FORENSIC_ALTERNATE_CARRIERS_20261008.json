@@ -1,0 +1,95 @@
+{
+  "schema": "GGDV_DRIVE_FORENSIC_ALTERNATE_CARRIERS/1.0",
+  "observed_date": "2026-10-08",
+  "local_dependency": false,
+  "source": "Google Drive connector direct reads",
+  "roots_checked": [
+    {"id":"15UhDeewEVrzsV2lAkjZVaPE2E-SgbYLT","title":".codex"},
+    {"id":"1YnrnWqZrR7eeyHCZFTQeVZsfuBqJ4N1O","title":".docker"},
+    {"id":"1McUJrcFuiVM9LyTCADMIyPTg-YIPdkrH","title":".sol-cu-nho"},
+    {"id":"1rPMABpC1ZbvHu7JmzxYLGjBux4Wb2XBi","title":"anh"},
+    {"id":"16nvZekl5EqsQuvgLV7J3gM7dLjUbCUds","title":"OneDrive"},
+    {"id":"1ProsZQuhLlyHO1zBufybeA20jlnliDIt","title":"Tài liệu"},
+    {"id":"1c07sOcuFh4TxHYWD2ghT7D_wZr-dZbAC","title":"Xiaomi 12"},
+    {"id":"18RDuxfts7shCfGWJgZkH5GaN136B9lGt","title":"Redmi Note 14 Pro 5G"},
+    {"id":"1fkiHN1rQTzT2mJ1aEhqREHW17iC04dqV","title":"Desktop"}
+  ],
+  "high_value_carriers": [
+    {
+      "root_id":"15UhDeewEVrzsV2lAkjZVaPE2E-SgbYLT",
+      "title":".codex",
+      "observed":[
+        "AGENTS.md",
+        ".codex-global-state.json",
+        "logs_2.sqlite",
+        "thread_history_1.sqlite",
+        "memories_1.sqlite",
+        "goals_1.sqlite",
+        "queue_1.sqlite",
+        "history.jsonl"
+      ]
+    },
+    {
+      "root_id":"1McUJrcFuiVM9LyTCADMIyPTg-YIPdkrH",
+      "title":".sol-cu-nho",
+      "state_folder_id":"1ep0fxE5IKUsG_MK0H3eRAE4TwXMugiur",
+      "state_node_id":"12BUdd3UjqcrBVKRGgHegnUtKrb-w_BLR",
+      "observed":[
+        "Xiaomi 12",
+        "Redmi Note 14 Pro 5G",
+        "Desktop",
+        "Tài liệu",
+        "OneDrive",
+        "BOOT_RECEIPT.json",
+        "SESSION_STATE.json"
+      ]
+    },
+    {
+      "root_id":"18RDuxfts7shCfGWJgZkH5GaN136B9lGt",
+      "title":"Redmi Note 14 Pro 5G",
+      "command_room_id":"1QXmmoolqPcmzzrEXQrvRBb9Y3ERgo3hD",
+      "command_room_codex_id":"11oS4CeYv-6yhWD7NaqOf3Kr3vLqDRQEi",
+      "observed":[
+        "UBUBU",
+        "thread_history_1.sqlite",
+        "logs_2.sqlite",
+        "state_5.sqlite",
+        "queue_1.sqlite",
+        "memories_1.sqlite",
+        "goals_1.sqlite",
+        "session_index.jsonl",
+        "sessions",
+        "skills",
+        "sqlite"
+      ]
+    },
+    {
+      "root_id":"1fkiHN1rQTzT2mJ1aEhqREHW17iC04dqV",
+      "title":"Desktop",
+      "forensic_origin_id":"1BWnQhkQIpDBVbQRm2lV9odSjLx2ZZkHG",
+      "origin_ledger_id":"1PuFZB39P2oyrg8QcjmFWLUDKcB-PLkyoe436GAZ25LU",
+      "snapshot_folder_id":"1zNE3xjF_aE8n2wiukc28_2NWTE8JypYB",
+      "recovery_folder_id":"1eAHst_QzLXXvLk2DGuWKqEcSdZ5M3xM5"
+    }
+  ],
+  "source_documented_event": {
+    "event_id":"E-DELETE-20260907-001",
+    "source":"SỔ ĐỐI CHIẾU MEI — ORIGIN_ID ↔ SNAPSHOT/COPY ↔ STATUS — 20260907",
+    "event_text":"XÓA NHẦM / QUÁ PHẠM VI LOCUS MEI",
+    "old_root_id":"1IWCPXEK363IXAiVbrKAEPaUKvCpeYy5p",
+    "old_current_folder_id":"1PltYVdGdNTIUhp9IBWwpzj3HPRsvgBTy",
+    "boundary":"This documents the 2026-09-07 incident only. It is not by itself attribution or proof for the 2026-10-07 incident."
+  },
+  "direct_child_recency_probe": {
+    "window_start":"2026-10-06T00:00:00Z",
+    "result":"NO_DIRECT_CHILD_MATCHES_ACROSS_THE_NINE_ROOTS",
+    "boundary":"Direct-parent query only; nested descendants remain unscanned by this probe."
+  },
+  "next_edge":"Recursively traverse Drive-native high-value descendants and correlate exact IDs, histories, snapshots, recovery ledgers, and October incident objects without waiting for D Local.",
+  "invariants":[
+    "DRIVE_NATIVE_EVIDENCE_DOES_NOT_REQUIRE_D_LOCAL",
+    "404_OR_EMPTY_RESULT_DOES_NOT_EQUAL_NEVER_EXISTED",
+    "SOURCE_DOCUMENTED_20260907_EVENT_DOES_NOT_AUTO_PROVE_20261007_EVENT",
+    "OPEN != STOP"
+  ]
+}
