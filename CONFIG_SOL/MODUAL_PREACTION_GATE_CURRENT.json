@@ -1,11 +1,16 @@
 {
-  "schema": "GGDV_MODUAL_PREACTION_GATE/1.0",
+  "schema": "GGDV_MODUAL_PREACTION_GATE/1.1",
   "gate_id": "GGDV_MODUAL_PREACTION_GATE",
   "required_scope": "GGDV_OFFICIAL_CONTROL_PLANE",
   "policy": {
     "mandatory_before_target_mutation": true,
     "self_bootstrap_read_only": true,
     "reports_do_not_satisfy_gate": true,
+    "open_means_continue": true,
+    "response_boundary_does_not_close_objective": true,
+    "provider_failure_exhausts_only_that_carrier": true,
+    "fallback_across_authorized_carriers": true,
+    "offline_local_does_not_stop": true,
     "secret_bytes": "FORBIDDEN",
     "drive_identity": "GOOGLE_DRIVE_PROVIDER_OBJECT_OR_FOLDER_PLUS_EXACT_TITLE",
     "filesystem_mount_is_identity": false
@@ -77,10 +82,12 @@
     "NEURONS_SESORIMOTOR_BIND",
     "CAPABILITY_ROUTE",
     "AUTH_CALLABILITY_CHECK",
+    "SELECT_NEXT_CALLABLE_CARRIER",
     "ACTION",
     "CONSEQUENCE",
     "RECEIPT",
     "READBACK",
-    "STATE_N+1"
+    "CHECKPOINT_DELTA",
+    "NEXT_EDGE"
   ]
 }
