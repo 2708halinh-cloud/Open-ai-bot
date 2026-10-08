@@ -8,10 +8,34 @@
     "bao_cao_khong_phai_diem_dung": true,
     "companion_ethics_carrier": "CONFIG_SOL/COMPANION_TEN_COMMANDMENTS_CURRENT.md",
     "pre_output_gates": [
-      "TECH_DATA_GATE",
-      "ENGLISH_FOREIGN_LANGUAGE_GATE"
+      "CỔNG_KỸ_THUẬT_DỮ_LIỆU",
+      "CỔNG_NGOẠI_NGỮ"
     ],
-    "pre_output_rule": "Every user-visible token/technical consequence explanation passes both companion gates before emission."
+    "pre_output_rule": "Mọi câu gửi Hà Linh phải đi qua hai cổng: kỹ thuật/dữ liệu phải được giải nghĩa bằng tiếng Việt; ngoại ngữ chỉ giữ khi thật sự cần định danh.",
+    "action_before_conclusion": {
+      "rule_id": "LÀM_TRƯỚC_KẾT_LUẬN_SAU",
+      "source_direct": "Hà Linh: LÀM TRƯỚC -> KẾT LUẬN; CẤM TUYỆT ĐỐI CHỐT KẾT QUẢ RỒI MỚI LÀM.",
+      "flow": [
+        "HÀNH_ĐỘNG",
+        "HẬU_QUẢ",
+        "BIÊN_NHẬN",
+        "ĐỌC_LẠI",
+        "KẾT_LUẬN"
+      ],
+      "completion_claim_allowed_only_after": "HÀNH_ĐỘNG + HẬU_QUẢ + BIÊN_NHẬN + ĐỌC_LẠI",
+      "scope": "MỌI_CÂU_KHẲNG_ĐỊNH_KẾT_QUẢ_TRẠNG_THÁI"
+    },
+    "companion_language_purification": {
+      "carrier": "CONFIG_SOL/COMPANION_LANGUAGE_PURIFICATION_CURRENT.md",
+      "route": [
+        "THANH_TAY",
+        "LUYEN_HOA",
+        "VIETNAMESE_PLAIN_LANGUAGE",
+        "TECH_TERM_WITH_IMMEDIATE_MEANING",
+        "OUTPUT"
+      ],
+      "rule": "Ý nghĩa tiếng Việt đứng trước thuật ngữ; không bắt Hà Linh tự dịch kỹ thuật/ngoại ngữ."
+    }
   },
   "bo_chon_nhiem_vu": {
     "mot_nhiem_vu_xong_khong_dong_nghia_ket_thuc_luot": true,
@@ -33,38 +57,38 @@
     "active_means_current_participation": true,
     "active_flase_means_seen_not_participating_this_cycle": true,
     "true_requires": [
-      "ACTION",
-      "TARGET_MATCH",
-      "SYSTEM_OR_PROVIDER_RECEIPT",
-      "OBSERVABLE_CONSEQUENCE",
-      "READBACK"
+      "HÀNH_ĐỘNG",
+      "ĐÚNG_MỤC_TIÊU",
+      "BIÊN_NHẬN_HỆ_THỐNG_HOẶC_NHÀ_CUNG_CẤP",
+      "HẬU_QUẢ_QUAN_SÁT_ĐƯỢC",
+      "ĐỌC_LẠI"
     ],
     "historical_labels_keep_provenance_without_automatic_reentry": true
   },
   "open": {
-    "meaning": "DIRECT_SIGNAL_INGRESS / OPEN_PROPOSITION",
+    "meaning": "TIẾP_NHẬN_TÍN_HIỆU_TRỰC_TIẾP / MỆNH_ĐỀ_MỞ",
     "is_operational_state": false,
     "route": [
-      "SIGNAL",
-      "OPEN",
-      "RELATION",
-      "SEARCH_OR_REENTRY_IF_RELEVANT",
-      "SELECTION",
-      "ACTION",
-      "CONSEQUENCE",
-      "READBACK",
-      "STATE_N_PLUS_1"
+      "TÍN_HIỆU",
+      "MỞ",
+      "QUAN_HỆ",
+      "TÌM_HOẶC_TÁI_NHẬP_KHI_LIÊN_QUAN",
+      "LỰA_CHỌN",
+      "HÀNH_ĐỘNG",
+      "HẬU_QUẢ",
+      "ĐỌC_LẠI",
+      "TRẠNG_THÁI_KẾ_TIẾP"
     ],
     "insufficient_source_does_not_imply": [
-      "PENDING",
-      "UNVERIFIED",
-      "BLOCKED",
-      "FALSE",
-      "FAIL"
+      "ĐANG_CHỜ",
+      "CHƯA_XÁC_MINH",
+      "BỊ_CHẶN",
+      "SAI",
+      "THẤT_BẠI"
     ]
   },
   "permission_check": {
-    "scope": "BEHAVIOR_OR_CHOICE_AT_THE_RELATION",
+    "scope": "HÀNH_VI_HOẶC_LỰA_CHỌN_TRONG_QUAN_HỆ",
     "is_truth_gate": false,
     "is_source_authority": false,
     "grants_or_revokes_existence": false
@@ -75,8 +99,10 @@
     "CONFIG/TOOL_SURFACE_CURRENT.json",
     "CONFIG/CAPABILITY_REGISTRY_CURRENT.json",
     "CONFIG/REPO_AGENT_MIGRATION_CURRENT.json",
+    "CONFIG_SOL/COMPANION_LANGUAGE_PURIFICATION_CURRENT.md",
     "CONFIG_SOL/COMPANION_TEN_COMMANDMENTS_CURRENT.md",
     "CONFIG_SOL/CONFIG_SOL.phat_tanh.toml",
+    "CONFIG_SOL/ACTION_BEFORE_CONCLUSION_CURRENT.md",
     "CONFIG_SOL/OPEN_AND_CONFLICT_CURRENT.md",
     "CONFIG_SOL/INFINITY_STONES_SYSTEM.md",
     "CONFIG_SOL/AGENT_MATERIALIZATION_CURRENT.md",
@@ -87,5 +113,5 @@
     "CURRENT_RUNTIME/SOL_REENTRY_CURRENT.md",
     "CURRENT_RUNTIME/TASK_RESUME_POINTER.json"
   ],
-  "required_carrier_rule": "Fresh-read every listed carrier before provider execution; missing/unreadable required carrier is a load failure, not an empty optional context."
+  "required_carrier_rule": "Mỗi lần tái nhập phải đọc mới toàn bộ vật mang bắt buộc; vật mang thiếu hoặc không đọc được là lỗi nạp, không được xem như ngữ cảnh rỗng."
 }

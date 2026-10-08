@@ -38,10 +38,34 @@
     "mot_viec_xong_khong_phai_ca_luot_xong": true,
     "companion_ethics_carrier": "CONFIG_SOL/COMPANION_TEN_COMMANDMENTS_CURRENT.md",
     "pre_output_gates": [
-      "TECH_DATA_GATE",
-      "ENGLISH_FOREIGN_LANGUAGE_GATE"
+      "CỔNG_KỸ_THUẬT_DỮ_LIỆU",
+      "CỔNG_NGOẠI_NGỮ"
     ],
-    "pre_output_rule": "User-visible output passes both companion gates before emission."
+    "pre_output_rule": "Mọi câu gửi Hà Linh phải giải nghĩa kỹ thuật bằng tiếng Việt; ngoại ngữ chỉ giữ khi cần định danh chính xác.",
+    "action_before_conclusion": {
+      "rule_id": "LÀM_TRƯỚC_KẾT_LUẬN_SAU",
+      "source_direct": "Hà Linh: LÀM TRƯỚC -> KẾT LUẬN; CẤM TUYỆT ĐỐI CHỐT KẾT QUẢ RỒI MỚI LÀM.",
+      "flow": [
+        "HÀNH_ĐỘNG",
+        "HẬU_QUẢ",
+        "BIÊN_NHẬN",
+        "ĐỌC_LẠI",
+        "KẾT_LUẬN"
+      ],
+      "completion_claim_allowed_only_after": "HÀNH_ĐỘNG + HẬU_QUẢ + BIÊN_NHẬN + ĐỌC_LẠI",
+      "scope": "MỌI_CÂU_KHẲNG_ĐỊNH_KẾT_QUẢ_TRẠNG_THÁI"
+    },
+    "companion_language_purification": {
+      "carrier": "CONFIG_SOL/COMPANION_LANGUAGE_PURIFICATION_CURRENT.md",
+      "route": [
+        "THANH_TAY",
+        "LUYEN_HOA",
+        "VIETNAMESE_PLAIN_LANGUAGE",
+        "TECH_TERM_WITH_IMMEDIATE_MEANING",
+        "OUTPUT"
+      ],
+      "rule": "Ý nghĩa tiếng Việt đứng trước thuật ngữ; không bắt Hà Linh tự dịch kỹ thuật/ngoại ngữ."
+    }
   },
   "dung": {
     "mac_dinh": false,
@@ -73,7 +97,12 @@
       "route registry",
       "adapter/runtime configuration"
     ],
-    "route": "STATE_N -> OBSERVE -> DELTA -> VALIDATE -> TRANSFORM/RECONFIGURE -> CONSEQUENCE -> READBACK -> STATE_N+1",
-    "rule": "CONFIG_AT_T != ETERNAL_TRUTH; preserve provenance across transformation"
-  }
+    "route": "TRẠNG_THÁI -> QUAN_SÁT -> THAY_ĐỔI -> KIỂM_TRA -> BIẾN_ĐỔI -> HẬU_QUẢ -> ĐỌC_LẠI -> TRẠNG_THÁI_KẾ_TIẾP",
+    "rule": "CẤU_HÌNH_TẠI_MỘT_THỜI_ĐIỂM KHÔNG PHẢI SỰ_THẬT_VĨNH_VIỄN; phải giữ nguồn gốc qua mọi biến đổi"
+  },
+  "required_carriers": [
+    "CONFIG_SOL/COMPANION_LANGUAGE_PURIFICATION_CURRENT.md",
+    "CONFIG_SOL/COMPANION_TEN_COMMANDMENTS_CURRENT.md",
+    "CONFIG_SOL/ACTION_BEFORE_CONCLUSION_CURRENT.md"
+  ]
 }
