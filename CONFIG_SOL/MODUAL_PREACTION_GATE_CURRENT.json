@@ -1,5 +1,5 @@
 {
-  "schema": "GGDV_MODUAL_PREACTION_GATE/1.1",
+  "schema": "GGDV_MODUAL_PREACTION_GATE/1.2",
   "gate_id": "GGDV_MODUAL_PREACTION_GATE",
   "required_scope": "GGDV_OFFICIAL_CONTROL_PLANE",
   "policy": {
@@ -13,7 +13,20 @@
     "offline_local_does_not_stop": true,
     "secret_bytes": "FORBIDDEN",
     "drive_identity": "GOOGLE_DRIVE_PROVIDER_OBJECT_OR_FOLDER_PLUS_EXACT_TITLE",
-    "filesystem_mount_is_identity": false
+    "filesystem_mount_is_identity": false,
+    "destructive_action_guard": {
+      "delete_by_name_only": "FORBIDDEN",
+      "delete_by_path_only": "FORBIDDEN",
+      "recursive_tree_delete_default": "FORBIDDEN",
+      "require_exact_provider_or_stable_object_id": true,
+      "require_parent_scope_readback": true,
+      "require_child_count_or_manifest_before_tree_delete": true,
+      "require_pre_delete_snapshot_or_manifest_when_available": true,
+      "require_explicit_tree_scope_for_recursive_delete": true,
+      "require_post_delete_provider_readback": true,
+      "uncertain_target": "NO_DELETE",
+      "evidence_gap": "NO_DELETE"
+    }
   },
   "google_drive": {
     "provider": "Google Drive",
@@ -31,28 +44,28 @@
   "plugins": {
     "modual_auto_log": {
       "id": "plugins_6abe807a50e8819184ddafdcbb2ef0e1",
-      "version": "0.2.0",
-      "release_id": "pluginrel_6ac6677854d881919f6c6947775b4d60"
+      "version": "0.2.1",
+      "release_id": "pluginrel_6ac76506776881919c76d1c5ffddf07f"
     },
     "runtime_gate": {
       "id": "plugins_6ab8baf26a088191ab639ace8892ab62",
-      "version": "0.12.0",
-      "release_id": "pluginrel_6ac66784747881918fe8d2273751ab29"
+      "version": "0.12.1",
+      "release_id": "pluginrel_6ac76518b88c81918bb9fb8dfa6fe4dd"
     },
     "all_plugins": {
       "id": "plugins_6abe5060513081919dfbf62d117ee818",
-      "version": "1.1.0",
-      "release_id": "pluginrel_6ac667a40f3881918a7e84f660eb999b"
+      "version": "1.1.1",
+      "release_id": "pluginrel_6ac7653f80a48191b47639648a14b486"
     },
     "neurons_sensorimotor": {
       "id": "plugins_6abde8dc9c7081918c883bbb14e56776",
-      "version": "0.2.0",
-      "release_id": "pluginrel_6ac667b2fdb88191873b7fc778c95933"
+      "version": "0.2.1",
+      "release_id": "pluginrel_6ac7655130c88191ab23cfe6646548bf"
     },
     "infinity_stones": {
       "id": "plugins_6abd596ea0908191926866ffb0a1d31f",
-      "version": "0.15.0",
-      "release_id": "pluginrel_6ac667c4276881919f908265be7f6303"
+      "version": "0.15.1",
+      "release_id": "pluginrel_6ac7656711f08191a4c2d02a12d1e8d0"
     }
   },
   "surfaces": {
@@ -82,6 +95,7 @@
     "NEURONS_SESORIMOTOR_BIND",
     "CAPABILITY_ROUTE",
     "AUTH_CALLABILITY_CHECK",
+    "DESTRUCTIVE_SCOPE_GUARD",
     "SELECT_NEXT_CALLABLE_CARRIER",
     "ACTION",
     "CONSEQUENCE",
