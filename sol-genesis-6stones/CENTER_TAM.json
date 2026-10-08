@@ -1,10 +1,10 @@
 {
   "schema": "SOL_GENESIS_CENTER_TAM/2.0",
-  "generated_at": "2026-10-08T21:56:13.989074+07:00",
+  "generated_at": "2026-10-08T23:14:59.870499+07:00",
   "source_repository": "2708halinh-cloud/SOL-LONG-MACH",
   "source_branch": "sol-long-mach-current",
-  "source_commit": "918d2e1ad9370a8b43f0a4e01a7684e2aee45907",
-  "source_tree": "fcc4a2f1554b32a55ad2968e294d889e36a8c68f",
+  "source_commit": "9074c7d2041871987cd68c17c34a40ee06fbe477",
+  "source_tree": "cc5963d4874b7ec2a537f916b6d83897c4778d3d",
   "genesis": "☯️ TÂM — giao ba trục, không phải đầu dòng",
   "axes": [
     [
@@ -32,9 +32,16 @@
     ],
     "source_direct": "LÀM TRƯỚC -> KẾT LUẬN; CẤM TUYỆT ĐỐI CHỐT KẾT QUẢ RỒI MỚI LÀM"
   },
-  "tracked_file_count": 181,
-  "total_bytes": 19779934,
+  "tracked_file_count": 187,
+  "total_bytes": 19796677,
   "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 166,
+      "sha256": "cef3682bdb36645383e980b36cacd4ef7d752861c66ddaacb31a505304e8d2f0",
+      "stones": [],
+      "center": true
+    },
     {
       "path": ".github/workflows/home-sol-selfhosted.yml",
       "bytes": 5080,
@@ -481,8 +488,8 @@
     },
     {
       "path": "CONFIG_SOL/INFINITY_STONES_SYSTEM.md",
-      "bytes": 7710,
-      "sha256": "cadeabeb2d3a57117ffbac6b773069285b1bb61f9b25b527ba5e036343de3c11",
+      "bytes": 8703,
+      "sha256": "a162bda3e6f195611f536489439361b5ee87bd0b4499af2c8873349d366c8c47",
       "stones": [
         "SPACE",
         "MIND",
@@ -514,11 +521,30 @@
       "center": true
     },
     {
+      "path": "CONFIG_SOL/MIND_STONE_CORE_CURRENT.json",
+      "bytes": 5826,
+      "sha256": "57cdb54770f81c0dfcb6a5810516c90e9fc6964d28d38023c07c7f344378885a",
+      "stones": [
+        "MIND"
+      ],
+      "center": true
+    },
+    {
       "path": "CONFIG_SOL/OPEN_AND_CONFLICT_CURRENT.md",
       "bytes": 7246,
       "sha256": "1dc4cc6104110c77be364653b1d2ecf8a0529c78eb7fd2d7f2ecda8803229e96",
       "stones": [
         "MIND"
+      ],
+      "center": true
+    },
+    {
+      "path": "CONFIG_SOL/SOUL_STONE_CORE_CURRENT.json",
+      "bytes": 5680,
+      "sha256": "37e1dc2a318c28261ed3aa016be03cf73a85597989dba62b88bb9fc02edfa80b",
+      "stones": [
+        "MIND",
+        "SOUL"
       ],
       "center": true
     },
@@ -671,9 +697,30 @@
       "center": true
     },
     {
+      "path": "CURRENT_RUNTIME/MIND_SOUL_GATE0_READBACK_CURRENT.json",
+      "bytes": 925,
+      "sha256": "c6030864b044911ca9accd0a3a29d230b8ceba519426c6fd159e26d3b3a74b5f",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/MIND_SOUL_STONES_READBACK_CURRENT.json",
+      "bytes": 644,
+      "sha256": "2a2886519291d140d6c4cfd86d0796b93d06202bc9d10071eea56e9c7e426bac",
+      "stones": [
+        "REALITY",
+        "POWER",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
       "path": "CURRENT_RUNTIME/NEURONS_SESORIMOTOR_SIX_STONES_AFFECT_CURRENT.json",
-      "bytes": 4882,
-      "sha256": "44662d26000a646f205179b9fd03babe6555b016c0a2702a9cb9851ef4189dc1",
+      "bytes": 5188,
+      "sha256": "aa71e3317f8f80c61e99ae2c0851266878fecf868527a92923f28cd0f0449ea7",
       "stones": [
         "SPACE",
         "MIND",
@@ -1192,8 +1239,8 @@
     },
     {
       "path": "MODUAL/SENSOR_LOGS/BULK_LATEST_CURRENT.csv",
-      "bytes": 15172,
-      "sha256": "ca7d4cc8a0b4c1a86ab1227c6730f7a85c12db0f44f5fc98d883be90be3137be",
+      "bytes": 15168,
+      "sha256": "0ceb778718300ef208f2ff465220756ce39436644c502839a1543b66b807f3b8",
       "stones": [
         "REALITY",
         "TIME"
@@ -1223,7 +1270,7 @@
     {
       "path": "MODUAL/SENSOR_LOGS/MODUAL_PARAMETER_CURRENT.json",
       "bytes": 1501,
-      "sha256": "59e977b7aefbf8106210c67ddf4d0655aa2423103089e050a6384ef7e2acb32d",
+      "sha256": "f8e59b39f496ef089a7e196148b979d5c78918aff560a22b7e5f03c2344b4776",
       "stones": [
         "REALITY",
         "TIME"
@@ -1610,8 +1657,8 @@
     },
     {
       "path": "scripts/build_six_stones_tesseract.py",
-      "bytes": 9789,
-      "sha256": "069098d6739e7786b0c7cec0d489d742e8199aa9654ce8a4716e45096eb5f0a0",
+      "bytes": 9816,
+      "sha256": "7e42d45d98456ec7c5f23dd1902c7938a8e76cf9001575b73755463fd0be438f",
       "stones": [
         "SPACE",
         "MIND",
@@ -1696,6 +1743,15 @@
       "path": "tests/test_memory_stewardship.py",
       "bytes": 3359,
       "sha256": "37158600b4ab436795d9b07a18a86ed084d63f0cf4ba267cbb9409b1329d5f72",
+      "stones": [
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "tests/test_mind_soul_stones.py",
+      "bytes": 2180,
+      "sha256": "7b4fec0d5bdbe8b6160c6b4ee73d225bd5b69d4e84cad4006769edca464e38ba",
       "stones": [
         "SOUL"
       ],

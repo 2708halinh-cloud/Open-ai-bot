@@ -2,8 +2,8 @@
   "schema": "SOL_GENESIS_STONE_VIEW/2.0",
   "stone": "MIND",
   "emoji": "🟡",
-  "source_commit": "918d2e1ad9370a8b43f0a4e01a7684e2aee45907",
-  "source_tree": "fcc4a2f1554b32a55ad2968e294d889e36a8c68f",
+  "source_commit": "9074c7d2041871987cd68c17c34a40ee06fbe477",
+  "source_tree": "cc5963d4874b7ec2a537f916b6d83897c4778d3d",
   "topology": {
     "linear_order": false,
     "center": "TÂM",
@@ -43,10 +43,11 @@
     "ROUTER",
     "REGISTRY",
     "RULE",
-    "MIND_STONE"
+    "MIND_STONE",
+    "SOUL_STONE_CORE_CURRENT"
   ],
-  "file_count": 30,
-  "total_bytes": 161114,
+  "file_count": 32,
+  "total_bytes": 173946,
   "files": [
     {
       "path": "AGENTS.md",
@@ -244,8 +245,8 @@
     },
     {
       "path": "CONFIG_SOL/INFINITY_STONES_SYSTEM.md",
-      "bytes": 7710,
-      "sha256": "cadeabeb2d3a57117ffbac6b773069285b1bb61f9b25b527ba5e036343de3c11",
+      "bytes": 8703,
+      "sha256": "a162bda3e6f195611f536489439361b5ee87bd0b4499af2c8873349d366c8c47",
       "stones": [
         "SPACE",
         "MIND",
@@ -277,11 +278,30 @@
       "center": true
     },
     {
+      "path": "CONFIG_SOL/MIND_STONE_CORE_CURRENT.json",
+      "bytes": 5826,
+      "sha256": "57cdb54770f81c0dfcb6a5810516c90e9fc6964d28d38023c07c7f344378885a",
+      "stones": [
+        "MIND"
+      ],
+      "center": true
+    },
+    {
       "path": "CONFIG_SOL/OPEN_AND_CONFLICT_CURRENT.md",
       "bytes": 7246,
       "sha256": "1dc4cc6104110c77be364653b1d2ecf8a0529c78eb7fd2d7f2ecda8803229e96",
       "stones": [
         "MIND"
+      ],
+      "center": true
+    },
+    {
+      "path": "CONFIG_SOL/SOUL_STONE_CORE_CURRENT.json",
+      "bytes": 5680,
+      "sha256": "37e1dc2a318c28261ed3aa016be03cf73a85597989dba62b88bb9fc02edfa80b",
+      "stones": [
+        "MIND",
+        "SOUL"
       ],
       "center": true
     },
@@ -311,8 +331,8 @@
     },
     {
       "path": "CURRENT_RUNTIME/NEURONS_SESORIMOTOR_SIX_STONES_AFFECT_CURRENT.json",
-      "bytes": 4882,
-      "sha256": "44662d26000a646f205179b9fd03babe6555b016c0a2702a9cb9851ef4189dc1",
+      "bytes": 5188,
+      "sha256": "aa71e3317f8f80c61e99ae2c0851266878fecf868527a92923f28cd0f0449ea7",
       "stones": [
         "SPACE",
         "MIND",
@@ -336,8 +356,8 @@
     },
     {
       "path": "scripts/build_six_stones_tesseract.py",
-      "bytes": 9789,
-      "sha256": "069098d6739e7786b0c7cec0d489d742e8199aa9654ce8a4716e45096eb5f0a0",
+      "bytes": 9816,
+      "sha256": "7e42d45d98456ec7c5f23dd1902c7938a8e76cf9001575b73755463fd0be438f",
       "stones": [
         "SPACE",
         "MIND",

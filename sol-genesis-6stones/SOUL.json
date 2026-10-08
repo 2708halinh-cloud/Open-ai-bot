@@ -2,8 +2,8 @@
   "schema": "SOL_GENESIS_STONE_VIEW/2.0",
   "stone": "SOUL",
   "emoji": "🟠",
-  "source_commit": "918d2e1ad9370a8b43f0a4e01a7684e2aee45907",
-  "source_tree": "fcc4a2f1554b32a55ad2968e294d889e36a8c68f",
+  "source_commit": "9074c7d2041871987cd68c17c34a40ee06fbe477",
+  "source_tree": "cc5963d4874b7ec2a537f916b6d83897c4778d3d",
   "topology": {
     "linear_order": false,
     "center": "TÂM",
@@ -46,8 +46,8 @@
     "KNOWLEDGE",
     "SOUL_STONE"
   ],
-  "file_count": 16,
-  "total_bytes": 87165,
+  "file_count": 19,
+  "total_bytes": 96995,
   "files": [
     {
       "path": ".github/workflows/tesseract-os-continuation-guard.yml",
@@ -62,8 +62,8 @@
     },
     {
       "path": "CONFIG_SOL/INFINITY_STONES_SYSTEM.md",
-      "bytes": 7710,
-      "sha256": "cadeabeb2d3a57117ffbac6b773069285b1bb61f9b25b527ba5e036343de3c11",
+      "bytes": 8703,
+      "sha256": "a162bda3e6f195611f536489439361b5ee87bd0b4499af2c8873349d366c8c47",
       "stones": [
         "SPACE",
         "MIND",
@@ -88,6 +88,16 @@
       "path": "CONFIG_SOL/MEMORY_STEWARDSHIP_FORGIVE_RETAIN_CURRENT.json",
       "bytes": 1176,
       "sha256": "9f38fc6402b5002eb454cc743d0b8f09d4b0f4cf5ed2298f5b9352097c741978",
+      "stones": [
+        "MIND",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CONFIG_SOL/SOUL_STONE_CORE_CURRENT.json",
+      "bytes": 5680,
+      "sha256": "37e1dc2a318c28261ed3aa016be03cf73a85597989dba62b88bb9fc02edfa80b",
       "stones": [
         "MIND",
         "SOUL"
@@ -131,9 +141,20 @@
       "center": true
     },
     {
+      "path": "CURRENT_RUNTIME/MIND_SOUL_STONES_READBACK_CURRENT.json",
+      "bytes": 644,
+      "sha256": "2a2886519291d140d6c4cfd86d0796b93d06202bc9d10071eea56e9c7e426bac",
+      "stones": [
+        "REALITY",
+        "POWER",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
       "path": "CURRENT_RUNTIME/NEURONS_SESORIMOTOR_SIX_STONES_AFFECT_CURRENT.json",
-      "bytes": 4882,
-      "sha256": "44662d26000a646f205179b9fd03babe6555b016c0a2702a9cb9851ef4189dc1",
+      "bytes": 5188,
+      "sha256": "aa71e3317f8f80c61e99ae2c0851266878fecf868527a92923f28cd0f0449ea7",
       "stones": [
         "SPACE",
         "MIND",
@@ -204,8 +225,8 @@
     },
     {
       "path": "scripts/build_six_stones_tesseract.py",
-      "bytes": 9789,
-      "sha256": "069098d6739e7786b0c7cec0d489d742e8199aa9654ce8a4716e45096eb5f0a0",
+      "bytes": 9816,
+      "sha256": "7e42d45d98456ec7c5f23dd1902c7938a8e76cf9001575b73755463fd0be438f",
       "stones": [
         "SPACE",
         "MIND",
@@ -220,6 +241,15 @@
       "path": "tests/test_memory_stewardship.py",
       "bytes": 3359,
       "sha256": "37158600b4ab436795d9b07a18a86ed084d63f0cf4ba267cbb9409b1329d5f72",
+      "stones": [
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "tests/test_mind_soul_stones.py",
+      "bytes": 2180,
+      "sha256": "7b4fec0d5bdbe8b6160c6b4ee73d225bd5b69d4e84cad4006769edca464e38ba",
       "stones": [
         "SOUL"
       ],
