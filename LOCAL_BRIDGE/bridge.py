@@ -9,7 +9,7 @@ STATE = ROOT / '.runtime' / 'LOCAL_BRIDGE_STATE.json'
 RECEIPTS = ROOT / '.runtime' / 'local_bridge_receipts'
 RECEIPTS.mkdir(parents=True, exist_ok=True)
 
-ALLOWED = {'BOOT_G', 'STATUS', 'RECOVER_CONTINUITY', 'RECOVER_AND_BOOT_G', 'UNIFY_CONTROL_PLANE', 'CONNECT_OS_WORKSPACE', 'ENSURE_SOL_RUNTIME', 'UBUBU_LAZY_FETCH', 'THANOS_SNAP_META_TB', 'TESSERACT_Q6_META_LAZY_FETCH', 'CONNECT_HOME_SOL'}
+ALLOWED = {'BOOT_G', 'STATUS', 'RECOVER_CONTINUITY', 'RECOVER_AND_BOOT_G', 'UNIFY_CONTROL_PLANE', 'CONNECT_OS_WORKSPACE', 'ENSURE_SOL_RUNTIME', 'UBUBU_LAZY_FETCH', 'THANOS_SNAP_META_TB', 'TESSERACT_Q6_META_LAZY_FETCH', 'CONNECT_HOME_SOL', 'ENSURE_DESKTOP_COMMANDER_REMOTE'}
 
 def run(cmd, **kw):
     return subprocess.run(cmd, cwd=ROOT, text=True, capture_output=True, **kw)
@@ -354,6 +354,44 @@ def connect_home_sol(receipt, task):
     return 33
 
 
+
+def ensure_desktop_commander_remote(receipt):
+    script = ROOT / 'LOCAL_BRIDGE' / 'install_desktop_commander_remote_autostart.ps1'
+    receipt['installer_path'] = str(script)
+    if not script.exists():
+        receipt['desktop_commander_state'] = 'INSTALLER_MISSING'
+        return 41
+
+    conv = _run_external(['wslpath', '-w', str(script)])
+    receipt['wslpath_returncode'] = conv.returncode
+    receipt['wslpath_stderr'] = conv.stderr[-4000:]
+    if conv.returncode != 0:
+        receipt['desktop_commander_state'] = 'PATH_CONVERSION_FAILED'
+        return conv.returncode
+
+    win_script = conv.stdout.strip()
+    receipt['installer_windows_path'] = win_script
+    p = _run_external([
+        'powershell.exe', '-NoProfile',
+        '-File', win_script
+    ])
+    receipt['desktop_commander_install_returncode'] = p.returncode
+    receipt['desktop_commander_install_stdout'] = p.stdout[-12000:]
+    receipt['desktop_commander_install_stderr'] = p.stderr[-12000:]
+
+    receipt_path = Path('/mnt/c/Users/halin/AppData/Local/DesktopCommanderRemote/install-receipt.json')
+    receipt['desktop_commander_receipt_path'] = str(receipt_path)
+    receipt['desktop_commander_receipt_exists'] = receipt_path.exists()
+    if receipt_path.exists():
+        try:
+            receipt['desktop_commander_readback'] = load_json(receipt_path)
+        except Exception as e:
+            receipt['desktop_commander_readback_error'] = repr(e)
+
+    state = (receipt.get('desktop_commander_readback') or {}).get('status')
+    receipt['desktop_commander_state'] = state or ('INSTALLER_EXIT_0_NO_RECEIPT' if p.returncode == 0 else 'INSTALL_FAILED')
+    return 0 if p.returncode == 0 and state in {'INSTALLED_AND_RUNNING','INSTALLED_PROCESS_NOT_YET_OBSERVED'} else (p.returncode or 42)
+
 def ububu_lazy_fetch(receipt):
     p = run([
         'python3','LOCAL_BRIDGE/ububu_lazy_fetch.py',
@@ -418,6 +456,8 @@ def execute(task):
         rc = ensure_sol_runtime(receipt)
     elif action == 'CONNECT_HOME_SOL':
         rc = connect_home_sol(receipt, task)
+    elif action == 'ENSURE_DESKTOP_COMMANDER_REMOTE':
+        rc = ensure_desktop_commander_remote(receipt)
     elif action == 'UBUBU_LAZY_FETCH':
         rc = ububu_lazy_fetch(receipt)
     elif action in {'THANOS_SNAP_META_TB', 'TESSERACT_Q6_META_LAZY_FETCH'}:
