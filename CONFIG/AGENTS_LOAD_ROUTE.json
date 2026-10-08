@@ -1,10 +1,14 @@
 {
   "schema": "GGDV_AGENTS_LOAD_ROUTE/3.0",
   "nguon_chinh": {
-    "repository": "2708halinh-cloud/Open-ai-bot",
+    "repository": "2708halinh-cloud/SOL-LONG-MACH",
     "path": "AGENTS.md",
     "branch": "main",
-    "doc_bytes_moi_nhat": true
+    "doc_bytes_moi_nhat": true,
+    "historical_repository_aliases": [
+      "2708halinh-cloud/Open-ai-bot"
+    ],
+    "resolution_note": "GitHub repository rename verified 2026-10-08; live repository is SOL-LONG-MACH. Historical alias preserved for source tracing."
   },
   "nguon_guong": {
     "repository": "2708halinh-cloud/Open-ai",
@@ -69,5 +73,11 @@
     ],
     "route": "STATE_N -> OBSERVE -> DELTA -> VALIDATE -> TRANSFORM/RECONFIGURE -> CONSEQUENCE -> READBACK -> STATE_N+1",
     "rule": "CONFIG_AT_T != ETERNAL_TRUTH; preserve provenance across transformation"
+  },
+  "nam_dieu_ran_20261008": {
+    "canonical": "2708halinh-cloud/SOL-LONG-MACH/AGENTS.md",
+    "mirror": "2708halinh-cloud/Open-ai/AGENTS.md",
+    "marker": "GGDV_FIVE_COMMANDMENTS_HUMAN_SOURCE_PRESERVATION_20261008",
+    "load_rule": "Fresh-read canonical every re-entry; preserve repo-specific AGENTS and legacy history; do not pin old SHA."
   }
 }
