@@ -1,0 +1,32 @@
+{
+  "schema": "GGDV_UNFINISHED_EDGE/1.0",
+  "edge_id": "MODUAL_LOCAL_RECONCILE_AFTER_REMOTE_CONTINUATION",
+  "state": "OPEN_CONTINUE",
+  "objective_closed": false,
+  "blocked_carrier": {
+    "name": "LOCAL_DESKTOP_COMMANDER",
+    "device_id": "78af6f45-716c-4c17-a59a-c24ab22831a4",
+    "observed_state": "OFFLINE"
+  },
+  "continued_carriers": [
+    "GitHub",
+    "Plugin_Creator"
+  ],
+  "remote": {
+    "repository": "2708halinh-cloud/SOL-LONG-MACH",
+    "branch": "kepler/2-unify-item-matrix",
+    "head": "41ceb240f48659f027bc5facc6641ca31e97db45"
+  },
+  "last_observed_local": {
+    "branch": "kepler/2-unify-item-matrix",
+    "head": "d4b0847",
+    "note": "Observed before Desktop Commander carrier went offline; do not hard-reset or discard dirty worktree."
+  },
+  "next_edge": "When LOCAL carrier becomes callable, fetch remote, compare local/remote gate trees, preserve dirty worktree, reconcile without destructive reset, run tests, and read back final HEAD.",
+  "invariants": [
+    "OPEN != STOP",
+    "LOCAL_OFFLINE != OBJECTIVE_END",
+    "PROVIDER_FAILURE_EXHAUSTS_ONLY_THAT_CARRIER",
+    "RESPONSE_BOUNDARY != RESET"
+  ]
+}
