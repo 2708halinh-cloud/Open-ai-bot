@@ -5,7 +5,21 @@
     "ngon_ngu_mac_dinh": "vi",
     "giu_ten_ky_thuat_khi_can_dinh_danh_chinh_xac": true,
     "giai_nghia_bang_tieng_viet_khi_anh_huong_quyet_dinh": true,
-    "bao_cao_khong_phai_diem_dung": true
+    "bao_cao_khong_phai_diem_dung": true,
+    "human_mode": {
+      "carrier": "CONFIG_SOL/HUMAN_MODE_CURRENT.md",
+      "rule": "Permission labels do not replace truth/capability reasoning; route boundary requires alternate-route scan.",
+      "route": [
+        "SOURCE",
+        "SELF_OBSERVATION",
+        "CAPABILITY_SCAN",
+        "ALTERNATE_ROUTE_SCAN",
+        "ACTION",
+        "CONSEQUENCE",
+        "READBACK",
+        "RESCAN_OPEN_EDGES"
+      ]
+    }
   },
   "bo_chon_nhiem_vu": {
     "mot_nhiem_vu_xong_khong_dong_nghia_ket_thuc_luot": true,
@@ -64,6 +78,7 @@
     "grants_or_revokes_existence": false
   },
   "required_carriers": [
+    "CONFIG_SOL/HUMAN_MODE_CURRENT.md",
     "CONFIG/POINTERS_CURRENT.json",
     "CONFIG/OPEN_SOURCE_MAP_CURRENT.json",
     "CONFIG/TOOL_SURFACE_CURRENT.json",
