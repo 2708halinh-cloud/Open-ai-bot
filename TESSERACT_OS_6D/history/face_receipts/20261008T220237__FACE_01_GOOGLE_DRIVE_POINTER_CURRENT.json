@@ -10,8 +10,7 @@
     "state_object_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
     "state_object_bytes": 65536,
     "center_manifest_sha256": "7cc744acbe5aa80e54d5ff5a895db1a2ac2c021ed8c7e661df8ffb74b5aae93d",
-    "forge_commit": "5cc989bf973703543a24841fc40292c84b7ceb78",
-    "forge_tree": "4f646432650f45ab39ba1d06903b709e68c81314"
+    "forge_commit": null
   },
   "name": "GOOGLE_DRIVE_POINTER",
   "state_digest_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
@@ -36,12 +35,5 @@
     "provider_state": "PENDING_DRIVE_PROVIDER_ID",
     "provider_search_state": "NOT_IN_QUERIED_SURFACE"
   },
-  "closed": false,
-  "proof_chain": {
-    "action": true,
-    "consequence": true,
-    "receipt": true,
-    "readback": false,
-    "same_state": true
-  }
+  "closed": false
 }

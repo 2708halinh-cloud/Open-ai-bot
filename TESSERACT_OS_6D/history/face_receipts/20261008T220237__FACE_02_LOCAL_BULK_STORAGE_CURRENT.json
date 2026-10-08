@@ -1,7 +1,7 @@
 {
   "schema": "TESSERACT_OS_6D_FACE_RECEIPT/3.0",
   "observed_at": "2026-10-08T21:57:58.287104+07:00",
-  "face": 6,
+  "face": 2,
   "state_object": {
     "repository": "2708halinh-cloud/SOL-LONG-MACH",
     "source_snapshot_commit": "918d2e1ad9370a8b43f0a4e01a7684e2aee45907",
@@ -10,32 +10,30 @@
     "state_object_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
     "state_object_bytes": 65536,
     "center_manifest_sha256": "7cc744acbe5aa80e54d5ff5a895db1a2ac2c021ed8c7e661df8ffb74b5aae93d",
-    "forge_commit": "5cc989bf973703543a24841fc40292c84b7ceb78",
-    "forge_tree": "4f646432650f45ab39ba1d06903b709e68c81314"
+    "forge_commit": null
   },
-  "name": "XTIME_CDN_UBUBU_LEDGER",
+  "name": "LOCAL_BULK_STORAGE",
   "state_digest_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
-  "verification_state": "PENDING_LEDGER_AND_CDN",
+  "verification_state": "VERIFIED_ACTIVE",
   "action": {
-    "observed": false,
-    "kind": "UBUBU_LEDGER_APPEND_AND_PUBLIC_DEPLOY",
-    "target": "x-time-web + gambbrazil.fun"
+    "observed": true,
+    "kind": "LOCAL_STATE_OBJECT_HASH",
+    "target": "D:\\SOL_LONG_MACH\\MODEL\\repo\\TESSERACT_OS_6D\\STATE_OBJECT_CURRENT.json"
   },
   "consequence": {
-    "observed": false,
-    "kind": "LEDGER_CHAIN_AND_PUBLIC_STATE_READBACK"
+    "observed": true,
+    "kind": "STATE_OBJECT_EXISTS_65536_AND_HASH_MATCHES"
   },
-  "receipt": null,
+  "receipt": {
+    "state_object_path": "D:\\SOL_LONG_MACH\\MODEL\\repo\\TESSERACT_OS_6D\\STATE_OBJECT_CURRENT.json",
+    "sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+    "bytes": 65536,
+    "source_commit": "918d2e1ad9370a8b43f0a4e01a7684e2aee45907"
+  },
   "readback": {
-    "verified": false,
-    "reason": "Current state not yet anchored in ledger and public CDN."
+    "verified": true,
+    "local_path_exists": true,
+    "hash_verified": true
   },
-  "closed": false,
-  "proof_chain": {
-    "action": false,
-    "consequence": false,
-    "receipt": false,
-    "readback": false,
-    "same_state": true
-  }
+  "closed": true
 }

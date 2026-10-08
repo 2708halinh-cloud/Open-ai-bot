@@ -1,12 +1,12 @@
 {
   "schema": "TESSERACT_OS_6D_CURRENT/2.0",
-  "observed_at": "2026-10-08T21:57:58.304712+07:00",
+  "observed_at": "2026-10-08T22:02:37.502544+07:00",
   "source_direct": "Hà Linh — TESSERACT_OS 6D six equal faces",
   "state_object_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
   "source_commit": "918d2e1ad9370a8b43f0a4e01a7684e2aee45907",
   "source_tree": "fcc4a2f1554b32a55ad2968e294d889e36a8c68f",
   "six_faces_equal": true,
-  "verified_faces": 2,
+  "verified_faces": 3,
   "total_faces": 6,
   "closed": false,
   "face_states": [
@@ -23,7 +23,7 @@
     {
       "face": 3,
       "name": "GITHUB_STATE",
-      "state": "PENDING_FORGE_COMMIT"
+      "state": "VERIFIED_ACTIVE"
     },
     {
       "face": 4,

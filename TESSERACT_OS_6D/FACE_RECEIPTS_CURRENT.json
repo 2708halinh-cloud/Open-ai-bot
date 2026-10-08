@@ -9,7 +9,8 @@
     "state_object_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
     "state_object_bytes": 65536,
     "center_manifest_sha256": "7cc744acbe5aa80e54d5ff5a895db1a2ac2c021ed8c7e661df8ffb74b5aae93d",
-    "forge_commit": null
+    "forge_commit": "5cc989bf973703543a24841fc40292c84b7ceb78",
+    "forge_tree": "4f646432650f45ab39ba1d06903b709e68c81314"
   },
   "faces": {
     "1": {
@@ -81,27 +82,35 @@
     "3": {
       "name": "GITHUB_STATE",
       "state_digest_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
-      "verification_state": "PENDING_FORGE_COMMIT",
+      "verification_state": "VERIFIED_ACTIVE",
       "action": {
-        "observed": false,
+        "observed": true,
         "kind": "GIT_COMMIT_PUSH",
-        "target": "2708halinh-cloud/SOL-LONG-MACH"
+        "target": "2708halinh-cloud/SOL-LONG-MACH@sol-long-mach-current"
       },
       "consequence": {
-        "observed": false,
-        "kind": "GITHUB_PROVIDER_BRANCH_READBACK"
+        "observed": true,
+        "kind": "GITHUB_PROVIDER_BRANCH_AND_BLOB_READBACK"
       },
-      "receipt": null,
+      "receipt": {
+        "forge_commit": "5cc989bf973703543a24841fc40292c84b7ceb78",
+        "forge_tree": "4f646432650f45ab39ba1d06903b709e68c81314",
+        "state_object_git_blob_sha1": "53b6b534242c21c125c4292e54b9cd7fdfd27f95",
+        "state_object_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078"
+      },
       "readback": {
-        "verified": false,
-        "reason": "Forge artifact not pushed yet."
+        "verified": true,
+        "provider_branch_commit": "5cc989bf973703543a24841fc40292c84b7ceb78",
+        "provider_state_blob_sha1": "53b6b534242c21c125c4292e54b9cd7fdfd27f95",
+        "local_state_blob_sha1": "53b6b534242c21c125c4292e54b9cd7fdfd27f95",
+        "branch": "sol-long-mach-current"
       },
-      "closed": false,
+      "closed": true,
       "proof_chain": {
-        "action": false,
-        "consequence": false,
-        "receipt": false,
-        "readback": false,
+        "action": true,
+        "consequence": true,
+        "receipt": true,
+        "readback": true,
         "same_state": true
       }
     },
@@ -202,6 +211,6 @@
     }
   },
   "closed": false,
-  "closed_faces": 2,
+  "closed_faces": 3,
   "conclusion_policy": "ACTION -> CONSEQUENCE -> RECEIPT -> READBACK -> SAME_STATE -> CONCLUSION"
 }
