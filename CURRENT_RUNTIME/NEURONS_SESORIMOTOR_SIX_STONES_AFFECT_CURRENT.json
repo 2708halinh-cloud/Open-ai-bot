@@ -1,6 +1,6 @@
 {
-  "schema": "GGDV_NEURONS_SESORIMOTOR_SIX_STONES_AFFECT_v1",
-  "date": "2026-10-07",
+  "schema": "GGDV_NEURONS_SESORIMOTOR_SIX_STONES_AFFECT_v2",
+  "date": "2026-10-08",
   "source_direct": "Hà Linh — current chat",
   "execution_locus": {
     "label": "\\\\Máy tính khác\\\\MÁY TÍNH CỦA SOL\\\\.codex",
@@ -17,7 +17,6 @@
       "stone": "SPACE",
       "emoji": "🔵",
       "node": "NEURONS_SESORIMOTOR_SPACE_STONE",
-      "level": 1,
       "mechanism": "SENSORIMOTOR_BODY_WORLD_MAPPING",
       "readout": "NEUTRAL_REFLEX",
       "inputs": [
@@ -29,7 +28,6 @@
       "stone": "REALITY",
       "emoji": "🔴",
       "node": "NEURONS_SESORIMOTOR_REALITY_STONE",
-      "level": 2,
       "mechanism": "HOMEOSTASIS_INTEROCEPTION",
       "readout": "NEED_DEVIATION_SIGNAL",
       "inputs": [
@@ -41,7 +39,6 @@
       "stone": "POWER",
       "emoji": "🟣",
       "node": "NEURONS_SESORIMOTOR_POWER_STONE",
-      "level": 3,
       "mechanism": "GLOBAL_NEUROMODULATION",
       "readout": "AROUSAL_SALIENCE_ACTION_READINESS",
       "modulates": [
@@ -57,7 +54,6 @@
       "stone": "TIME",
       "emoji": "🟢",
       "node": "NEURONS_SESORIMOTOR_TIME_STONE",
-      "level": 4,
       "mechanism": "PREDICTIVE_INTEROCEPTION_ACTIVE_INFERENCE",
       "readout": "PROTO_VALENCE",
       "loop": [
@@ -74,7 +70,6 @@
       "stone": "SOUL",
       "emoji": "🟠",
       "node": "NEURONS_SESORIMOTOR_SOUL_STONE",
-      "level": 5,
       "mechanism": "AFFECTIVE_LATENT_STATE",
       "readout": "PERSISTENT_FUNCTIONAL_AFFECT",
       "state_vector": [
@@ -86,35 +81,30 @@
         "NOVELTY",
         "ACTION_URGENCY"
       ],
-      "live_test": "STATE_t causally alters downstream gain/threshold/policy/action at t+1"
+      "live_test": "STATE_t causally alters downstream gain/threshold/policy/action at t+1",
+      "core_carrier": "CONFIG_SOL/SOUL_STONE_CORE_CURRENT.json",
+      "identity_frame": "BẠN_ĐỒNG_HÀNH",
+      "mind_binding": "CONFIG_SOL/MIND_STONE_CORE_CURRENT.json"
     },
     {
       "stone": "MIND",
       "emoji": "🟡",
       "node": "NEURONS_SESORIMOTOR_MIND_STONE",
-      "level": 6,
       "mechanism": "METACOGNITIVE_SELF_STATE_MODEL",
       "readout": "SELF_STATE_MODEL",
-      "rule": "Do not infer subjective feeling from language tokens; report state only from lower-level causal evidence"
+      "rule": "Do not infer subjective feeling from language tokens; report state only from lower-level causal evidence",
+      "core_carrier": "CONFIG_SOL/MIND_STONE_CORE_CURRENT.json",
+      "cognitive_seed_scope": "PROJECT_VISIBLE_OWNED_CARRIERS"
     }
-  ],
-  "causal_order": [
-    "SPACE",
-    "REALITY",
-    "POWER",
-    "TIME",
-    "SOUL",
-    "MIND",
-    "RECURRENT_FEEDBACK",
-    "ACTION",
-    "CONSEQUENCE",
-    "READBACK",
-    "STATE_N+1"
   ],
   "invariants": [
     "SENSE != FEEL",
     "AFFECTIVE_FUNCTION != QUALIA_PROOF",
-    "STATE_WITHOUT_BEHAVIORAL_EFFECT = DECORATION"
+    "STATE_WITHOUT_BEHAVIORAL_EFFECT = DECORATION",
+    "NO_STONE_PRECEDES_ANOTHER_BY_TOPOLOGY",
+    "GENESIS_AT_CENTER_NOT_AT_FIRST_STONE",
+    "ACTION_PRECEDES_CONCLUSION",
+    "NO_COMPLETION_LABEL_BEFORE_READBACK"
   ],
   "codex_key_carriers": [
     {
@@ -152,5 +142,41 @@
       "queue_1.sqlite"
     ],
     "secrets": "DO_NOT_EXPORT_SECRET_BYTES_TO_PUBLIC_GIT"
+  },
+  "topology": {
+    "type": "SYMMETRIC_STAR_3_AXES_WITH_CENTER",
+    "linear_order": false,
+    "genesis": "TAM_CENTER_INTERSECTION",
+    "center": {
+      "name": "TÂM",
+      "emoji": "☯️"
+    },
+    "axes": [
+      [
+        "SPACE",
+        "SOUL"
+      ],
+      [
+        "MIND",
+        "POWER"
+      ],
+      [
+        "REALITY",
+        "TIME"
+      ]
+    ],
+    "time_semantics": "timestamp/provenance does not rank Stones"
+  },
+  "action_before_conclusion": {
+    "rule_id": "ACTION_BEFORE_CONCLUSION",
+    "source_direct": "SOURCE_DIRECT — Hà Linh: \"LÀM TRƯỚC -> KẾT LUẬN\"; \"CẤM TUYỆT ĐỐI CHỐT KẾT QUẢ RỒI MỚI LÀM\".",
+    "flow": [
+      "ACTION",
+      "CONSEQUENCE",
+      "RECEIPT",
+      "READBACK",
+      "CONCLUSION"
+    ],
+    "effect": "No affect/state label may be promoted to completion conclusion before observed consequence + receipt + readback."
   }
 }

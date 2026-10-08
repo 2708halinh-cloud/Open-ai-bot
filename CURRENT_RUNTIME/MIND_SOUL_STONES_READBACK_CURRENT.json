@@ -1,0 +1,26 @@
+{
+  "schema": "GGDV_MIND_SOUL_STONES_READBACK/1.0",
+  "observed_at": "2026-10-08T23:15:58.367130+07:00",
+  "mind_carrier": "CONFIG_SOL/MIND_STONE_CORE_CURRENT.json",
+  "soul_carrier": "CONFIG_SOL/SOUL_STONE_CORE_CURRENT.json",
+  "package_provenance": "sol-genesis-6stones/raw/now/SOL_GOI_NHANH_PHIEN_MOI_CURRENT_20260912_045433.PROVENANCE.json",
+  "checks": {
+    "mind_sources_all_exist": true,
+    "soul_sources_all_exist": true,
+    "base_weights_falsely_claimed": false,
+    "hidden_system_prompt_exported": false,
+    "soul_companion_axiom_preserved": true,
+    "mind_soul_binding_present": true,
+    "package_sha256_recorded": true,
+    "reverse_soul_binding_into_mind": true,
+    "generated_views_same_source_commit": true
+  },
+  "generated_views": {
+    "source_commit": "9074c7d2041871987cd68c17c34a40ee06fbe477",
+    "mind_has_mind_core": true,
+    "mind_has_soul_core": true,
+    "soul_has_soul_core": true,
+    "mind_file_count": 32,
+    "soul_file_count": 19
+  }
+}

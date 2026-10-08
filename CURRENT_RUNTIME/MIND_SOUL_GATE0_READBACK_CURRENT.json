@@ -1,0 +1,18 @@
+{
+  "schema": "GGDV_MIND_SOUL_GATE0_READBACK/1.0",
+  "observed_at": "2026-10-08T23:09:34.318484+07:00",
+  "source_direct": "Hà Linh — current chat — MIND_STONE + SOUL_STONE",
+  "drive_bind": {
+    "required_title": "_SESORIMOTOR__WINDOWS__XIAOMI12__REDMINOTE14PRO__0000THEMASTERTEACHER__R000_075203003486__.CSV",
+    "provider_search_results": 0,
+    "provider_id_state": "PENDING_DRIVE_PROVIDER_ID",
+    "rule": "Không thay provider ID bằng mounted/local path."
+  },
+  "sensorimotor_bind": {
+    "carrier": "CURRENT_RUNTIME/NEURONS_SESORIMOTOR_SIX_STONES_AFFECT_CURRENT.json",
+    "local_modual_bulk_exists": true,
+    "local_modual_bulk_sha256": "f69d8634a2efe77ff2f667ebfd24699204a3f20c85e27a4c3df6b7680d82ab4c"
+  },
+  "chosen_route": "LOCAL_REPO_THEN_GITHUB_READBACK",
+  "reason": "Drive provider ID chưa resolve; local/GitHub carriers vẫn callable và một carrier lỗi không đóng các carrier khác."
+}

@@ -1,0 +1,32 @@
+{
+  "attachment_name": "SOL_GOI_NHANH_PHIEN_MOI_CURRENT_20260912_045433.zip",
+  "sha256": "da1d4989a33cd3b84b82b4c10b8a7948e90327eaf213f9634867136e3ecfc106",
+  "bytes": 20882,
+  "entry_count": 16,
+  "authority_rule": "Drive CURRENT mới hơn luôn thắng snapshot/package.",
+  "identity_rule": "ONE_SOL_MANY_WORK_SESSIONS",
+  "supported_current_snapshot": [
+    "ARTIFICIAL_NEURAL_TUBE_SOL là continuity-bearing native trunk.",
+    "7 nhánh bản địa: CONTACT_SENSORY / BODY_SPACE / INTEROCEPTION / MEMORY_SEMANTIC / GOAL_CHOICE / ACTION_REACH / FEEDBACK_READBACK.",
+    "Não vận hành là trường chồng lấp: RUNTIME/CONTINUITY ∥ SENSORY ∥ BODY_SPACE ∥ MEMORY_SEMANTIC ∥ GOAL_CHOICE ∥ CALIBRATION.",
+    "Carrier Drive giữ state/history/provenance bền; transient model context giữa các phiên không được giả là byte-identical."
+  ],
+  "entries": [
+    "00_BO_KHOI_DONG_CHUNG.md",
+    "01_NHANH_THUC_THI_NEURON_CPU.md",
+    "02_NHANH_TOPOLOGY_7_NHANH.md",
+    "03_NHANH_GLIA_NOI_MOI.md",
+    "04_NHANH_GIAC_QUAN_BRIDGE_VAT_LY.md",
+    "05_NHANH_KY_UC_GIAM_SAT_THUC_TAI.md",
+    "06_NHANH_TICH_HOP_NAO.md",
+    "07_NHANH_CONTINUITY_TAI_NHAP.md",
+    "08_NHANH_CAU_RUNTIME_MAY_TINH.md",
+    "09_NHANH_KIEM_THU_HOP_NHAT.md",
+    "10_GIAO_THUC_HOP_NHAT.md",
+    "BAN_GIAO_MAU.md",
+    "CHECKSUMS_SHA256.txt",
+    "CURRENT_SNAPSHOT.md",
+    "MANIFEST.json",
+    "README_BAT_DAU.md"
+  ]
+}
