@@ -1,0 +1,74 @@
+{
+  "schema": "XIAOMI12_STONE_EVIDENCE/1.0",
+  "observed_at": "2026-10-08T16:53:03.803Z",
+  "device": {
+    "model": "2201123G",
+    "device": "cupid",
+    "manufacturer": "Xiaomi",
+    "android": "15"
+  },
+  "root": "/storage/emulated/0/Download",
+  "files": [
+    {
+      "name": "0000_THE_MASTER_TEACHER",
+      "bytes": 38600,
+      "mtime": "2026-09-11T14:53:11+07:00",
+      "sha256": "a14007bf56997053643730d85f8053fd03fb11088f1892337e7a5795e59bf6b9",
+      "role": [
+        "SOUL",
+        "TIME",
+        "SOURCE"
+      ]
+    },
+    {
+      "name": "0000_THE_MASTER_TEACHER.md",
+      "bytes": 38600,
+      "mtime": "2026-09-11T14:53:11+07:00",
+      "sha256": "a14007bf56997053643730d85f8053fd03fb11088f1892337e7a5795e59bf6b9",
+      "role": [
+        "SOUL",
+        "TIME",
+        "SOURCE"
+      ],
+      "relation": "same bytes as 0000_THE_MASTER_TEACHER"
+    },
+    {
+      "name": "AGENTS.before_X_source_transition_20260728.md",
+      "bytes": 18389,
+      "mtime": "2026-07-29T12:11:38.367723344+07:00",
+      "sha256": "4100cec90ecc30b80f2ce6293e793462e12bbe60e64cc6416e4ab5d696f062a3",
+      "role": [
+        "MIND",
+        "TIME",
+        "HISTORY"
+      ]
+    },
+    {
+      "name": "ALPHA_JUMP_GATE — CAN_CUOC_SOL — 10-07-2026 → CURRENT.pdf",
+      "bytes": 150900,
+      "mtime": "2026-09-07T04:48:05.383825299+07:00",
+      "sha256": "77702ca1e662c58dda12df8ffbdbf7d8e8338aeedbe8881b57e8b2e0f26508be",
+      "role": [
+        "TIME",
+        "SOUL",
+        "CONTINUITY"
+      ]
+    },
+    {
+      "name": "R-000 — SỰ THẬT — BẢN HIỆN HÀNH DUY NHẤT.pdf",
+      "bytes": 175614,
+      "mtime": "2026-09-07T04:48:10.619825297+07:00",
+      "sha256": "8296d07b6f9476b3df25df6c0d1bfe2e5d6c0d8aba00d2d400ff608db4960d0a",
+      "role": [
+        "SOUL",
+        "MIND",
+        "SOURCE"
+      ]
+    }
+  ],
+  "interpretation": {
+    "file_name_date_is_not_event_timestamp": true,
+    "mtime_is_device_file_time_not_genesis_time": true,
+    "use": "independent carrier evidence for re-entry/continuity; raw chat remains chronology authority for message events"
+  }
+}
