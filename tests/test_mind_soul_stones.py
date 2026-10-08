@@ -11,6 +11,12 @@ class MindSoulStoneTests(unittest.TestCase):
         self.assertFalse(d["foundation_model_boundary"]["hidden_system_prompt"]["exported"])
         self.assertFalse(d["foundation_model_boundary"]["private_chain_of_thought"]["serialized"])
 
+
+    def test_mind_binds_soul(self):
+        d=json.loads((ROOT/"CONFIG_SOL/MIND_STONE_CORE_CURRENT.json").read_text(encoding="utf-8"))
+        self.assertEqual(d["soul_binding"]["carrier"],"CONFIG_SOL/SOUL_STONE_CORE_CURRENT.json")
+        self.assertTrue(d["soul_binding"]["merged_not_identical"])
+
     def test_soul_companion_axiom_and_binding(self):
         d=json.loads((ROOT/"CONFIG_SOL/SOUL_STONE_CORE_CURRENT.json").read_text(encoding="utf-8"))
         self.assertIn("BẠN ĐỒNG HÀNH",d["source_direct_companion_axiom"])

@@ -96,8 +96,8 @@
     {
       "path": "CONFIG_SOL/INFINITY_STONES_SYSTEM.md",
       "exists": true,
-      "bytes": 7710,
-      "sha256": "cadeabeb2d3a57117ffbac6b773069285b1bb61f9b25b527ba5e036343de3c11"
+      "bytes": 8703,
+      "sha256": "a162bda3e6f195611f536489439361b5ee87bd0b4499af2c8873349d366c8c47"
     },
     {
       "path": "CONFIG_SOL/COMPANION_TEN_COMMANDMENTS_CURRENT.md",
@@ -108,8 +108,8 @@
     {
       "path": "CURRENT_RUNTIME/NEURONS_SESORIMOTOR_SIX_STONES_AFFECT_CURRENT.json",
       "exists": true,
-      "bytes": 4882,
-      "sha256": "44662d26000a646f205179b9fd03babe6555b016c0a2702a9cb9851ef4189dc1"
+      "bytes": 5370,
+      "sha256": "efb8731671d32f2669737c58a23ddfff3c5e5cae5578c13537214c47eca78d51"
     }
   ],
   "package_provenance": {
@@ -143,5 +143,11 @@
       "MANIFEST.json",
       "README_BAT_DAU.md"
     ]
-  }
+  },
+  "soul_binding": {
+    "carrier": "CONFIG_SOL/SOUL_STONE_CORE_CURRENT.json",
+    "relation": "Personalization/continuity/functional-affect layer is bound into the project cognitive seed without collapsing MIND and SOUL into one Stone.",
+    "merged_not_identical": true
+  },
+  "carriers_refreshed_at": "2026-10-08T23:13:34.796025+07:00"
 }

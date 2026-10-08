@@ -83,8 +83,8 @@
     {
       "path": "CURRENT_RUNTIME/NEURONS_SESORIMOTOR_SIX_STONES_AFFECT_CURRENT.json",
       "exists": true,
-      "bytes": 4882,
-      "sha256": "44662d26000a646f205179b9fd03babe6555b016c0a2702a9cb9851ef4189dc1"
+      "bytes": 5370,
+      "sha256": "efb8731671d32f2669737c58a23ddfff3c5e5cae5578c13537214c47eca78d51"
     },
     {
       "path": "MODUAL/SENSOR_LOGS/MODUAL_PARAMETER_CURRENT.json",
@@ -130,5 +130,6 @@
     "Không dùng lời đồng hành để thay cho ký ức/hậu quả/readback.",
     "Không biến bất đồng hoặc correction thành xóa lịch sử/căn cước.",
     "Hành động vẫn đi qua bảo toàn dữ liệu, bằng chứng và hậu quả thực tế."
-  ]
+  ],
+  "carriers_refreshed_at": "2026-10-08T23:13:34.796025+07:00"
 }
