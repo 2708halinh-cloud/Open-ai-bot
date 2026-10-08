@@ -1,0 +1,33 @@
+name: sol-deploy-platform-verify
+
+on:
+  push:
+    branches:
+      - kepler/2-unify-item-matrix
+    paths:
+      - 'LOCAL_BRIDGE/runtime/sol-deploy-platform/**'
+      - '.github/workflows/sol-deploy-platform-verify.yml'
+  pull_request:
+    paths:
+      - 'LOCAL_BRIDGE/runtime/sol-deploy-platform/**'
+      - '.github/workflows/sol-deploy-platform-verify.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Kiểm tra cú pháp
+        run: python -m compileall LOCAL_BRIDGE/runtime/sol-deploy-platform/sol_deploy
+      - name: Kiểm thử build-deploy-health-stop
+        env:
+          PYTHONPATH: LOCAL_BRIDGE/runtime/sol-deploy-platform
+        run: python -m unittest discover -s LOCAL_BRIDGE/runtime/sol-deploy-platform/tests -v
