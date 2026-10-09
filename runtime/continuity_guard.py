@@ -253,7 +253,7 @@ def continue_bounded(
         "objective_id": cp.objective_id,
         "steps": steps,
         "objective_done": cp.objective_done(),
-        "open": not cp.objective_done(),
+        "objective_unfinished": not cp.objective_done(),
         "next_callable_edge": (
             select_next_callable_edge(cp).edge_id
             if select_next_callable_edge(cp) is not None else None
