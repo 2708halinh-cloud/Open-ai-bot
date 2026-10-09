@@ -1,0 +1,10 @@
+# Keep original private source carriers local; only public-safe metadata is committed
+Webshare_10_proxy.md
+Webshare.html
+Modual.csv
+__.VSOL.ENV
+.VSOL.ENV
+github.env
+github.env.txt
+*.secret
+*.token
