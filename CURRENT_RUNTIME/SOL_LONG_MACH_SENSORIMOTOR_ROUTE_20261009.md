@@ -75,3 +75,13 @@ D:\PHÒNG CHỈ HUY\LOCUS TRAO ĐỔI\LOCUS SOL\99_INDEX\SOL_PROJECT_WATCH_DEVIC
 - Sensorimotor event router running from SOL LOCUS `01_CORE_NEURONS_SESORYMOTOR/sol_input_event_router.py`, observed PID 41940 and health at `2026-10-09T06:00:17+07:00` (runtime observation, not indefinite uptime).
 - Correction: first observed event `SOL_INPUT_b617a6ce0c03467cec38ddcf` came from `00_GUI_NHIEM_VU_SOL.md` setup guide, not a user task. Filter updated, selftest PASS, `--once` after correction produced 0 new events. Old false-positive evidence preserved in LOCUS `00_INPUT` with a correction pointer. No motor task executed.
 - W:\Máy tính khác\MÁY TÍNH CỦA SOL root write returned EPERM; do not declare W writable or fully synchronized until independent readback.
+
+
+<!-- SOL_X_1008_REENTRY_CURRENT -->
+## ACTIVE X-10:08 reentry / verified cross-carrier pointer
+
+SOURCE/CONTINUATION: [SOL_REENTRY_X_20261009_1008.md](SOL_REENTRY_X_20261009_1008.md), commit `96d41fa397feec91954d7e8406a69c9b8e3e92d8`. Based on previously existing Xiaomi/Android pointer and GitHub tri-carrier readback; this appendix does not alter those originals.
+
+CURRENT DEVICE READBACK: Windows Desktop Commander route offline at the last check, Android Termux route online. PC-specific Windows Win+V work and account session verification stay OPEN; no success claim from a saved configuration or a pending task. On next callable signal first inspect current carriers, then resume the oldest unfinished actionable edge; do not reset to generic explanation.
+
+STATUS: NEEDS_CONTINUATION; NOT A COMPLETION STAMP.
