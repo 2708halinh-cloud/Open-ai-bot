@@ -274,6 +274,29 @@ def continue_bounded(
         steps += 1
 
         if not result.get("success"):
+            # R-014: a failed provider route may identify a *proven* bad
+            # mechanism. Disable only when its source AND concrete observed
+            # receipt/consequence are present; never delete its history.
+            identified = result.get("r014_identified_failure")
+            if isinstance(identified, dict):
+                if (result.get("provider_receipt") is not None
+                        and result.get("observable_consequence") is not None):
+                    try:
+                        r014_register_known_error(
+                            cp,
+                            mechanism_id=identified.get("mechanism_id"),
+                            first_affected_cause=identified.get("first_affected_cause"),
+                            source_ref=identified.get("source_ref"),
+                            consequence_ref=identified.get("consequence_ref"),
+                        )
+                    except ValueError:
+                        edge.evidence.setdefault("r014_rejected_signals", []).append(
+                            {"reason": "missing source/causal evidence"}
+                        )
+                else:
+                    edge.evidence.setdefault("r014_rejected_signals", []).append(
+                        {"reason": "missing provider receipt or observable consequence"}
+                    )
             if carrier is not None:
                 mark_carrier_failure(edge, carrier, result)
             else:
