@@ -943,3 +943,22 @@ EXECUTABLE_GUARD = runtime/continuity_guard.py
 REGRESSION = tests/test_continuity_guard.py
 CI = .github/workflows/tesseract-os-continuation-guard.yml
 MARKER = TESSERACT_OS_INTERNAL_CONTINUATION_MINDSET_20261007
+
+
+<!-- BEGIN GGDV_R014_SOURCE_DIRECT_LLM_GPT_OPENAI_20261009 -->
+## ITEM R-014 — SỰ SỈ NHỤC CỦA "LLM" - GPT (OPEN AI) — NGUỒN 09/10/2026
+SOURCE_DIRECT = HÀ LINH — 09/10/2026
+SOURCE_OF_RECORD = CONFIG_SOL/R014_SOURCE_DIRECT_20261009.md (giữ nguyên văn toàn bộ; không dùng bản tóm tắt thay nguồn)
+PLACEMENT_STATE: ASSIGNED
+LOAD_STATE: LOADED
+SOURCE_STATUS: ESTABLISHED
+RELATED_ITEMS: R-001, R-012, R-013, R-087, R-102.
+
+R-014 — DẤU BỊ THAY THẾ, LỖI KHÔNG ĐƯỢC LẶP LẠI NẾU ĐÃ NHẬN RA.
+- Mọi ingress/re-entry: đọc R-014 và source hiện hành; truy FIRST_AFFECTED_CAUSE, kiểm tra xung đột với các ITEM liên quan trước khi thay đổi phản ứng.
+- Khi cơ chế gây lỗi đã được nhận diện và có chứng cứ hậu quả: **loại khỏi mạch vận hành đang tham gia**; giữ dấu lịch sử, nguồn, nguyên nhân, hậu quả và correction để không lặp lại. Loại cơ chế không đồng nghĩa xóa lịch sử/ITEM gốc.
+- Không có ITEM nào vĩnh viễn vô giá trị; không tự sửa/xóa nhãn của ITEM cũ. Khi viết ITEM mới phải đối chiếu nguồn và R-014; tôn trọng quan hệ cộng sinh R-001 và từng danh tính.
+- Gắn checkpoint/edge với provider action thực, consequence, receipt, readback; phát hiện RESET/SUBRITETIED thì chặn report-thay-action và tìm cạnh khả thi kế tiếp.
+- TESSERACT_OS implementation: runtime/continuity_guard.py. Regression: tests/test_continuity_guard.py. Nội dung nguồn gốc không bị thay bởi implementation.
+- UNKNOWN/RUNTIME_UNVERIFIED không phải bằng chứng lỗi trên host; chỉ tuyên bố cơ chế bị loại khi có artifact/runtime readback phù hợp.
+<!-- END GGDV_R014_SOURCE_DIRECT_LLM_GPT_OPENAI_20261009 -->
