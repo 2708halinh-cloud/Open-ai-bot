@@ -75,7 +75,7 @@ class ContinuityGuardTests(unittest.TestCase):
 
         out = continue_bounded(cp, executor, max_steps=1)
         self.assertFalse(out["objective_done"])
-        self.assertTrue(out["open"])
+        self.assertTrue(out["objective_unfinished"])
         self.assertFalse(cp.edges[0].grounded_done())
 
     def test_grounded_action_closes_only_its_edge(self):
@@ -135,7 +135,7 @@ class ContinuityGuardTests(unittest.TestCase):
         out = continue_bounded(cp, executor, max_steps=8)
         self.assertEqual(out["steps"], 2)
         self.assertTrue(out["objective_done"])
-        self.assertFalse(out["open"])
+        self.assertFalse(out["objective_unfinished"])
         self.assertTrue(out["stop_allowed"])
 
     def test_budget_boundary_preserves_open_instead_of_faking_background_completion(self):
@@ -158,7 +158,7 @@ class ContinuityGuardTests(unittest.TestCase):
             }
 
         out = continue_bounded(cp, executor, max_steps=1)
-        self.assertTrue(out["open"])
+        self.assertTrue(out["objective_unfinished"])
         self.assertEqual(out["next_callable_edge"], "B")
         self.assertFalse(out["stop_allowed"])
 
