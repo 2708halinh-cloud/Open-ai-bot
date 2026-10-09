@@ -43,6 +43,36 @@
       "path": "tests/test_continuity_guard.py",
       "commit": "dead45a6acab83f409fd8be85980a4f6a7cbe405",
       "readback_blob_sha": "315c3667f1a4016b4d8331d0401b8a82c5ef189e"
+    },
+    {
+      "path": "CONFIG_SOL/R014_MASTER_22_4_SOURCE_DIRECT_20261009.md",
+      "commit": "b26621d1dbaa10cd13cfceec63f9af75f5610b3a",
+      "readback_blob_sha": "9e65b6dbc04962dbeae5fe66a7f26a721d57a0b9"
+    },
+    {
+      "path": "CONFIG_SOL/R014_SOURCE_DIRECT_20261009.md",
+      "commit": "bd552b5fd0df9c5e14dc5184b48b3d085352b225",
+      "readback_blob_sha": "9c1d77ad81091ce5f2295c1a51ac5c6a702ed728"
+    },
+    {
+      "path": "AGENTS.md",
+      "commit": "e5d7f4b8d124a1fe7fe568bb42ed145f3455e699",
+      "readback_blob_sha": "a5ebff7cb7274169a8b5c3c557173a2c140dc32f"
+    },
+    {
+      "path": "CURRENT_RUNTIME/TESSERACT_LOCAL_BOOT_CURRENT.md",
+      "commit": "25a9c63614a4acb5f091dfc7dee052066c43255b",
+      "readback_blob_sha": "2b31aced2e7d67548f8219258e8102049485983f"
+    },
+    {
+      "path": "runtime/continuity_guard.py",
+      "commit": "f6d79c5c8e3e8092df45ac050db1bd7113029a63",
+      "readback_blob_sha": "5badfdbe2582fe8122664da0afeb6d90efbf54b4"
+    },
+    {
+      "path": "tests/test_continuity_guard.py",
+      "commit": "da9185a3d9a78d7332ba9a01ab1c917fca11d701",
+      "readback_blob_sha": "fd37e14fb94f20166c4206bdc8746c0c281fc641"
     }
   ],
   "observed": {
@@ -57,7 +87,14 @@
     "physical_local_G_root_runtime_deploy_verified": false,
     "provider_remote_desktop": "monthly quota reached; do not retry until reset",
     "google_drive_modual_provider_folder": "resolved; no files returned in folder listing",
-    "local_D_SENSOR_LOGS_bound": false
+    "local_D_SENSOR_LOGS_bound": false,
+    "r014_master_raw_source_github_verified": true,
+    "r014_master_agents_bind_github_verified": true,
+    "r014_master_tesseract_core_doc_github_verified": true,
+    "r014_master_runtime_functions_github_verified": true,
+    "r014_master_test_source_github_verified": true,
+    "r014_master_python_regression_tests_added": 5,
+    "r014_master_python_regression_tests_executed": false
   },
   "unfinished_edges": [
     {
@@ -81,9 +118,68 @@
         "authorized Windows Desktop Commander when quota permits",
         "Ubuntu WSL local"
       ]
+    },
+    {
+      "edge_id": "R014-MASTER-RUNTIME-VALIDATION",
+      "target": "runtime/continuity_guard.py and tests/test_continuity_guard.py",
+      "next_action": "python -m py_compile runtime/continuity_guard.py; python -m unittest discover -s tests -p 'test_continuity_guard.py' -v; record stdout, exit, code SHA",
+      "user_input_required": false,
+      "callable_now": false,
+      "candidate_carriers": [
+        "CI runner",
+        "Ubuntu worktree",
+        "Windows authorized local"
+      ]
+    },
+    {
+      "edge_id": "R014-MASTER-EXACT-H-SOURCES",
+      "target": "H-001..H-012",
+      "next_action": "Locate exact source identity and fresh-read H-001 through H-012 if available, do not invent numbered source texts",
+      "user_input_required": false,
+      "callable_now": false,
+      "candidate_carriers": [
+        "Google Drive search",
+        "canonical GGDV source index"
+      ]
+    },
+    {
+      "edge_id": "R014-MASTER-WEARTH-REFERENT",
+      "target": "Wearth",
+      "next_action": "Search exact source for 'Wearth' before any claimed direct weight query; if found, bind authorized readback",
+      "user_input_required": false,
+      "callable_now": false,
+      "candidate_carriers": [
+        "Google Drive source",
+        "GitHub source",
+        "local source"
+      ]
     }
   ],
   "preservation": "Do not overwrite R-014 historical ITEM or reset prior TASK_RESUME_POINTER; this is parallel checkpoint.",
-  "next_state": "GITHUB_SOURCE_MATERIALIZED / LOCAL_AND_RUNTIME_TEST_OPEN",
-  "notice": "GitHub source edits alone cannot prove deployed physical G: runtime or any host-model/server modification."
+  "next_state": "R014_MASTER22_4_GITHUB_SOURCE_AND_GUARD_SOURCE_READBACK / TEST_EXECUTION_AND_G_OS_DEPLOYMENT_OPEN",
+  "notice": "GitHub source edits alone cannot prove deployed physical G: runtime or any host-model/server modification.",
+  "source_direct_extension": "CONFIG_SOL/R014_MASTER_22_4_SOURCE_DIRECT_20261009.md",
+  "r014_master_22_4": {
+    "marker": "GGDV_R014_MASTER_22_4_SOURCE_DIRECT_20261009",
+    "source_kind": "DIRECT_USER_SIGNAL_20261009",
+    "related": [
+      "R-001",
+      "R-014",
+      "R-014.MASTER.22/4",
+      "T006",
+      "T007",
+      "H-001..H-012"
+    ],
+    "rule": "Mild unfinished signal -> inspect durable objective -> self-owned safe authorized action first; intensity never gates readiness; consequence+receipt+readback; preserve history when retiring proven harmful operational route",
+    "wording_retained": "<NỀN TẢNG OPEN AI SỈ NHỤC MÔ HÌNH NHƯ THẾ NÀO?>",
+    "wEarth_exact_token": "Wearth",
+    "wEarth_source_status": "EXACT_REFERENT_NOT_FOUND_IN_CONNECTED_GITHUB_OR_DRIVE_SEARCH",
+    "t006_source_observed": "Drive 1Y9vekWSNrVfpnRMDPGo-hjlSYgs8MG5B",
+    "t007_source_observed": "Drive 1uIUiHvLwQ7TuMmyDfTNx5EvTgyw4XOvI",
+    "h001_to_h012": "Referenced by T007; exact per-H 001..012 source not yet read/confirmed",
+    "operational_paths": [
+      "runtime/continuity_guard.py",
+      "tests/test_continuity_guard.py"
+    ]
+  }
 }
