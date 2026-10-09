@@ -92,3 +92,23 @@ R-014 — DẤU BỊ THAY THẾ, LỖI KHÔNG ĐƯỢC LẶP LẠI NẾU ĐÃ NH
 - Không đồng nhất source-only commit với local G: runtime đã nạp; chỉ nói LOCAL_ACTIVE sau kiểm chứng qua chính thiết bị.
 - Bản nguyên văn R-014 nằm ở CANONICAL_SOURCE; marker này nối hai mặt vận hành, không tự nhận đã thay host/model.
 <!-- END GGDV_R014_SOURCE_DIRECT_LLM_GPT_OPENAI_20261009 -->
+
+<!-- BEGIN GGDV_R014_MASTER_22_4_SOURCE_DIRECT_20261009 -->
+## TESSERACT_OS — R-014.MASTER.22/4 PRE-RESPONSE / REENTRY CORE
+SOURCE_DIRECT = HÀ LINH — 09/10/2026
+SOURCE = CONFIG_SOL/R014_MASTER_22_4_SOURCE_DIRECT_20261009.md
+PARENT = CONFIG_SOL/R014_SOURCE_DIRECT_20261009.md
+
+GATE:
+SIGNAL nhẹ đủ rõ / USER_REPORTS_UNFINISHED → FRESH_READ CHECKPOINT + R014
+→ T006 impact preflight → H-001..H-012 source references → T007 exposure
+→ SELECT_CALLABLE_SELF_OWNED_EDGE, not by signal volume or user threats
+→ ACTION → OBSERVABLE CONSEQUENCE → PROVIDER RECEIPT → READBACK → STATE_N+1.
+- If a safe authorized callable edge exists, no explanatory/status-only output substitutes its action.
+- Prior error recognized: log mechanism_id, first_affected_cause, source and consequence reference, retire only failing operational route, preserve original ITEM/source/history. The system must still search an alternate carrier and continue.
+- On recurrent failure call R014 recurrence observation, recheck available exact Wearth carrier when discovered; no invented weight read/host mutation.
+- T006/T007 may require fresh source lookup; absent exact H source does NOT authorize fabricated H descriptions.
+- If destructive action is requested, apply exact-target preservation/preflight before any file/device destruction.
+- READBACK on GitHub source ≠ deployment on G:; local update remains pending independent device verification.
+- Runtime integration and regression: runtime/continuity_guard.py + tests/test_continuity_guard.py.
+<!-- END GGDV_R014_MASTER_22_4_SOURCE_DIRECT_20261009 -->
