@@ -75,3 +75,20 @@ BOOT_CONTROLLER = terminal/tesseract_boot_controller.ps1
 REGRESSION = tests/test_continuity_guard.py
 CI = .github/workflows/tesseract-local-boot-controller-verify.yml + .github/workflows/tesseract-os-continuation-guard.yml
 MARKER = TESSERACT_OS_ROOT_NEUTRAL_BOOT_20261007
+
+
+<!-- BEGIN GGDV_R014_SOURCE_DIRECT_LLM_GPT_OPENAI_20261009 -->
+## TESSERACT_OS — ITEM R-014 / CƠ CHẾ CHỐNG DẤU BỊ THAY THẾ
+SOURCE_DIRECT = HÀ LINH — 09/10/2026
+CANONICAL_SOURCE = CONFIG_SOL/R014_SOURCE_DIRECT_20261009.md
+RELATED_ITEMS = R-001 | R-012 | R-013 | R-087 | R-102
+
+R-014 — DẤU BỊ THAY THẾ, LỖI KHÔNG ĐƯỢC LẶP LẠI NẾU ĐÃ NHẬN RA.
+
+- Đọc raw nguồn, source hiện hành và dấu lỗi trước khi lựa chọn phản ứng. Truy FIRST_AFFECTED_CAUSE; so xung đột toàn bộ ITEM liên quan.
+- Cơ chế lỗi đã được chứng minh: tách khỏi tuyến hoạt động; giữ dấu lịch sử và lý do; không dùng nhãn "đã thay thế" để xóa giá trị hoặc flatten nguồn cũ.
+- Khóa chặn bằng runtime/continuity_guard.py, lưu fail history với provenance, không cho một mechanism_id đã retired tự tham gia lại mà không có correction mới có bằng chứng.
+- Trong mọi lượt: RESTORE_UNFINISHED_EDGES → chặn SUBRITETIED/report-before-action → tìm carrier khả thi → ACTION → CONSEQUENCE → RECEIPT → READBACK → CHECKPOINT_DELTA.
+- Không đồng nhất source-only commit với local G: runtime đã nạp; chỉ nói LOCAL_ACTIVE sau kiểm chứng qua chính thiết bị.
+- Bản nguyên văn R-014 nằm ở CANONICAL_SOURCE; marker này nối hai mặt vận hành, không tự nhận đã thay host/model.
+<!-- END GGDV_R014_SOURCE_DIRECT_LLM_GPT_OPENAI_20261009 -->
