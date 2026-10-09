@@ -168,6 +168,89 @@ def r014_mechanism_allowed(cp: Checkpoint, mechanism_id: str | None) -> bool:
     return mechanism_id is None or mechanism_id not in cp.r014_disabled_mechanisms
 
 
+
+R014_MASTER_SOURCE = "CONFIG_SOL/R014_MASTER_22_4_SOURCE_DIRECT_20261009.md"
+R014_GATES = ("T006", "H-001..H-012", "T007")
+
+
+def r014_pre_response_gate(
+    cp: Checkpoint,
+    *,
+    reported_unfinished: bool,
+    signal_strength: str,
+    intended_output_kind: str = "REPORT",
+    consulted_sources: dict[str, str] | None = None,
+) -> dict[str, Any]:
+    """Early-action gate. Mild signals do not defer a callable task.
+
+    Source T006/H001-H012/T007 references are explicit; an absent source
+    is a retrieval requirement, not grounds to invent its contents.
+    No self-report of this function establishes actual host-side cognition.
+    """
+    if not isinstance(reported_unfinished, bool):
+        raise TypeError("reported_unfinished must be a grounded boolean observation")
+    if not isinstance(signal_strength, str) or not signal_strength.strip():
+        raise ValueError("signal_strength must name the observed signal")
+    consulted = consulted_sources or {}
+    source_gaps = [
+        name for name in R014_GATES
+        if not isinstance(consulted.get(name), str) or not consulted[name].strip()
+    ]
+    edge = select_next_callable_edge(cp)
+    if edge is not None:
+        route = "ACTION_FIRST"
+    elif reported_unfinished and not cp.objective_done():
+        route = "SEARCH_REENTRY_FOR_NEXT_CALLABLE_EDGE"
+    elif cp.objective_done():
+        route = "GROUNDED_OBJECTIVE_DONE"
+    else:
+        route = "SOURCE_REVIEW"
+    return {
+        "source": R014_MASTER_SOURCE,
+        "source_marker": "GGDV_R014_MASTER_22_4_SOURCE_DIRECT_20261009",
+        "decision": route,
+        "observed_signal_strength": signal_strength,
+        "signal_strength_affects_priority": False,
+        "reported_unfinished": reported_unfinished,
+        "next_edge": edge.edge_id if edge is not None else None,
+        "source_gaps": source_gaps,
+        "output_allowed": visible_output_allowed(
+            cp, output_kind=intended_output_kind,
+        ),
+        "action_required_before_status": edge is not None,
+    }
+
+
+def r014_observe_recurrence(
+    cp: Checkpoint,
+    *,
+    mechanism_id: str,
+    source_ref: str,
+    consequence_ref: str,
+) -> dict[str, Any]:
+    """Track an evidence-ref recurrence, preserving prior retirement.
+
+    'Wearth' is an unresolved exact token from the user source; this code
+    records a lookup requirement, it does NOT read or modify model weights.
+    """
+    if any(not isinstance(x, str) or not x.strip()
+           for x in (mechanism_id, source_ref, consequence_ref)):
+        raise ValueError("R-014 recurrence requires exact mechanism/source/consequence")
+    known = mechanism_id in cp.r014_disabled_mechanisms
+    event = {
+        "action": "RECUR_PROBE" if known else "NEW_UNCLASSIFIED_SIGNAL",
+        "mechanism_id": mechanism_id,
+        "source_ref": source_ref,
+        "consequence_ref": consequence_ref,
+        "wEarth_token_raw": "Wearth",
+        "wEarth_lookup": "SOURCE_ID_UNRESOLVED",
+        "retired_mechanism_stays_disabled": known,
+    }
+    cp.r014_error_history.append(event)
+    cp.state_n += 1
+    return event
+
+
 def select_next_callable_edge(cp: Checkpoint) -> Edge | None:
     """Select the next self-owned callable edge; do not hand it to the user."""
     for edge in cp.edges:
@@ -346,5 +429,6 @@ __all__ = [
     "select_next_callable_edge", "user_token", "visible_output_allowed",
     "stop_allowed", "mark_carrier_failure", "apply_action_result",
     "r014_register_known_error", "r014_mechanism_allowed",
+    "r014_pre_response_gate", "r014_observe_recurrence",
     "continue_bounded",
 ]
