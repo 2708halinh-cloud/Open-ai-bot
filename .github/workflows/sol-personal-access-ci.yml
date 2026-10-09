@@ -1,0 +1,52 @@
+name: SOL Personal-Access CI
+on:
+  push:
+    branches:
+      - sol-personal-access-ci-artifacts-20261010
+    paths:
+      - 'PERSONAL_ACCESS/**'
+      - '.github/workflows/sol-personal-access-ci.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  personal-access-readback:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact commit
+        uses: actions/checkout@v4
+      - name: Run genuine local-source unit tests
+        id: tests
+        run: python3 -m unittest discover -s PERSONAL_ACCESS/tests -v
+      - name: Write run receipt, including failure
+        if: always()
+        env:
+          SOL_TEST_OUTCOME: ${{ steps.tests.outcome }}
+          SOL_COMMIT_SHA: ${{ github.sha }}
+          SOL_RUN_ID: ${{ github.run_id }}
+        run: |
+          python3 - <<'PY'
+          import json,os,pathlib,datetime
+          out=pathlib.Path('PERSONAL_ACCESS/readback/receipt.json')
+          out.parent.mkdir(parents=True,exist_ok=True)
+          content={
+            'schema':'sol.personal-access.ci-receipt/1',
+            'source':'github-actions-real-run',
+            'sha':os.environ['SOL_COMMIT_SHA'],
+            'workflow_run_id':os.environ['SOL_RUN_ID'],
+            'test_step_outcome':os.environ.get('SOL_TEST_OUTCOME'),
+            'recorded_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),
+          }
+          out.write_text(json.dumps(content,indent=2),encoding='utf-8')
+          print('SOL CI receipt written; test outcome:',content['test_step_outcome'])
+          PY
+      - name: Upload actual CI readback artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sol-personal-access-ci-readback-${{ github.run_id }}
+          path: PERSONAL_ACCESS/readback/receipt.json
+          if-no-files-found: error
+          retention-days: 7
