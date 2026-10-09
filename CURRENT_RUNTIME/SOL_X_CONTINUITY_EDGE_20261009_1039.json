@@ -1,0 +1,37 @@
+{
+  "schema": "SOL_X_TIME_CONTINUITY_EDGE/1.0",
+  "observed_at": "2026-10-09T10:39:26+07:00",
+  "source_actor": "Hà Linh",
+  "executor": "SOL",
+  "project": "SOL-LONG-MACH",
+  "provenance_key": "075203003486_10152484_20260724124936",
+  "continuity": [
+    {
+      "source": "CURRENT_RUNTIME/SOL_REENTRY_X_20261009_1008.md",
+      "blob_sha": "4c25a19b19f1c78fa7aaeab3c3deb592af71d00b",
+      "relation": "CONTINUES"
+    },
+    {
+      "source": "CURRENT_RUNTIME/SOL_LONG_MACH_SENSORIMOTOR_ROUTE_20261009.md",
+      "blob_sha": "f7a7e49e90c857cfe75d02a0c2727098585af17b",
+      "relation": "SOURCE_ROUTE"
+    },
+    {
+      "source": "Android SOL_PROJECT_WATCH_DEVICE_POINTER_20261009.json",
+      "relation": "READ_DIRECT_ON_LIVE_DEVICE",
+      "raw_data_embedded": false
+    }
+  ],
+  "observed": {
+    "windows_desktop_commander": "OFFLINE_AT_10_37",
+    "android_pointer": "READABLE_10_38",
+    "github": "READABLE_10_38",
+    "modual_google_drive_provider_file_id": "PENDING",
+    "android_new_file_write": "BLOCKED_BY_TOOL",
+    "account_login": "NO_FRESH_VERIFIED_SESSION"
+  },
+  "next_execution_boundary": "Resume actual SOL sensor ingress + action readback on PC or another runnable authorized carrier; do not treat a state pointer as completed runtime or login.",
+  "status": "WORKFLOW_OPEN_SOURCE_BRIDGE_ONLY",
+  "source_time_note": "X-* timeline stamps are user-supplied sequence markers, not independent clock measurements.",
+  "scope": "Minimal provenance, not credentials/private chat/content."
+}
