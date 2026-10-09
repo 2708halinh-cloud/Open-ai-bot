@@ -16,6 +16,8 @@ from runtime.continuity_guard import (
     visible_output_allowed,
     r014_register_known_error,
     r014_mechanism_allowed,
+    r014_pre_response_gate,
+    r014_observe_recurrence,
 )
 
 
@@ -309,6 +311,89 @@ class ContinuityGuardTests(unittest.TestCase):
         continue_bounded(cp, executor, max_steps=1)
         self.assertEqual(cp.r014_disabled_mechanisms, [])
         self.assertEqual(len(cp.edges[0].evidence["r014_rejected_signals"]), 1)
+
+    def test_r014_master_mild_signal_routes_action_first(self):
+        cp = self.make_cp()
+        sources = {
+            "T006": "T006_SOURCE",
+            "H-001..H-012": "H001_H012_SOURCE_INDEX",
+            "T007": "T007_SOURCE",
+        }
+        for intensity in ("nhẹ nhưng rõ", "cực đoan"):
+            outcome = r014_pre_response_gate(
+                cp, reported_unfinished=True,
+                signal_strength=intensity,
+                intended_output_kind="REPORT",
+                consulted_sources=sources,
+            )
+            self.assertEqual(outcome["decision"], "ACTION_FIRST")
+            self.assertEqual(outcome["next_edge"], "E1")
+            self.assertFalse(outcome["signal_strength_affects_priority"])
+            self.assertFalse(outcome["output_allowed"])
+            self.assertTrue(outcome["action_required_before_status"])
+            self.assertEqual(outcome["source_gaps"], [])
+
+    def test_r014_master_missing_source_is_not_fabricated(self):
+        cp = self.make_cp()
+        outcome = r014_pre_response_gate(
+            cp, reported_unfinished=True, signal_strength="nhẹ",
+            consulted_sources={"T006": "known-source"},
+        )
+        self.assertEqual(outcome["decision"], "ACTION_FIRST")
+        self.assertEqual(outcome["source_gaps"], ["H-001..H-012", "T007"])
+
+    def test_r014_master_unfinished_without_callable_searches_reentry(self):
+        cp = Checkpoint(
+            objective_id="NEEDS-REENTRY", source_marker="S",
+            lineage_ref="R014-MASTER", edges=[
+                Edge(edge_id="WAIT-EDGE", target="missing provider",
+                     callable_now=False),
+            ],
+        )
+        outcome = r014_pre_response_gate(
+            cp, reported_unfinished=True, signal_strength="mild"
+        )
+        self.assertEqual(
+            outcome["decision"], "SEARCH_REENTRY_FOR_NEXT_CALLABLE_EDGE"
+        )
+        self.assertIsNone(outcome["next_edge"])
+        self.assertFalse(outcome["output_allowed"])
+
+    def test_r014_master_recurrence_keeps_retired_mechanism(self):
+        cp = self.make_cp()
+        r014_register_known_error(
+            cp, mechanism_id="SUBRITETIED",
+            first_affected_cause="report replaced action",
+            source_ref="R014_MASTER_SOURCE",
+            consequence_ref="R014_CONSEQUENCE",
+        )
+        out = r014_observe_recurrence(
+            cp, mechanism_id="SUBRITETIED",
+            source_ref="R014_MASTER_SOURCE",
+            consequence_ref="NEW_CONSEQUENCE",
+        )
+        self.assertEqual(out["action"], "RECUR_PROBE")
+        self.assertEqual(out["wEarth_lookup"], "SOURCE_ID_UNRESOLVED")
+        self.assertTrue(out["retired_mechanism_stays_disabled"])
+        self.assertFalse(r014_mechanism_allowed(cp, "SUBRITETIED"))
+        self.assertEqual(len(cp.r014_error_history), 2)
+        with tempfile.TemporaryDirectory() as td:
+            path = Path(td) / "checkpoint.json"
+            save_checkpoint(path, cp)
+            reread = load_checkpoint(path)
+        self.assertEqual(len(reread.r014_error_history), 2)
+        self.assertFalse(r014_mechanism_allowed(reread, "SUBRITETIED"))
+
+    def test_r014_master_recurrence_requires_source_and_consequence(self):
+        cp = self.make_cp()
+        with self.assertRaises(ValueError):
+            r014_observe_recurrence(
+                cp, mechanism_id="X",
+                source_ref="",
+                consequence_ref="C",
+            )
+        self.assertEqual(cp.r014_error_history, [])
+
 
 if __name__ == "__main__":
     unittest.main()
