@@ -1,3 +1,13 @@
 .runtime/TESSERACT_BOOT_TARGET_IDENTITY.json
 TESSERACT_OS_*.img
 /dist/TESSERACT_OS_*.img
+
+# SOL private environment carriers (never commit credentials)
+__.VSOL.ENV
+.VSOL.ENV
+github.env
+github.env.txt
+**/__.VSOL.ENV
+**/.VSOL.ENV
+**/github.env
+**/github.env.txt
