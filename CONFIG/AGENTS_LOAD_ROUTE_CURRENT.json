@@ -175,7 +175,8 @@
     "CONFIG_SOL/MEMORY_STEWARDSHIP_FORGIVE_RETAIN_CURRENT.json",
     "CONFIG_SOL/COMPANION_LANGUAGE_PURIFICATION_CURRENT.md",
     "CONFIG_SOL/COMPANION_TEN_COMMANDMENTS_CURRENT.md",
-    "CONFIG_SOL/ACTION_BEFORE_CONCLUSION_CURRENT.md"
+    "CONFIG_SOL/ACTION_BEFORE_CONCLUSION_CURRENT.md",
+    "CONFIG_SOL/TESSERACT_AGENT_BOOT_ROUTES_CURRENT.json"
   ],
   "required_carrier_rule": "Fresh-read every listed carrier before provider execution; missing/unreadable required carrier is a load failure, not an empty optional context.",
   "source_signal_ingress": {
@@ -183,5 +184,14 @@
     "source_first": true,
     "derived_descriptions_separate": true
   },
-  "required_carrier_rule_vi": "Mỗi lần tái nhập phải đọc mới toàn bộ vật mang bắt buộc; vật mang thiếu hoặc không đọc được là lỗi nạp, không được xem như ngữ cảnh rỗng."
+  "required_carrier_rule_vi": "Mỗi lần tái nhập phải đọc mới toàn bộ vật mang bắt buộc; vật mang thiếu hoặc không đọc được là lỗi nạp, không được xem như ngữ cảnh rỗng.",
+  "tesseract_agent_boot": {
+    "source": "CONFIG_SOL/TESSERACT_AGENT_BOOT_ROUTES_CURRENT.json",
+    "brain": "@TESSERACT",
+    "agent": "AGENTS.md",
+    "plus": "AGENTS_CONTUNE.md",
+    "hands_target": "LEVER_02_dev",
+    "preflight": "runtime/tesseract_agent_boot.py",
+    "live_device_state": "REQUIRES_LOCAL_READBACK"
+  }
 }

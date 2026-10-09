@@ -112,3 +112,13 @@ SIGNAL nhẹ đủ rõ / USER_REPORTS_UNFINISHED → FRESH_READ CHECKPOINT + R01
 - READBACK on GitHub source ≠ deployment on G:; local update remains pending independent device verification.
 - Runtime integration and regression: runtime/continuity_guard.py + tests/test_continuity_guard.py.
 <!-- END GGDV_R014_MASTER_22_4_SOURCE_DIRECT_20261009 -->
+
+
+<!-- TESSERACT_AGENT_PREFLIGHT_20261009 -->
+## TESSERACT AGENT BOOT — ĐƯỜNG NẠP NGUỒN, KHÔNG PHẢI USB FLASH
+Khởi tạo: `bash terminal/tesseract_agent_boot.sh` hoặc `python3 runtime/tesseract_agent_boot.py --root .`.
+CONFIG = `CONFIG_SOL/TESSERACT_AGENT_BOOT_ROUTES_CURRENT.json`.
+- @TÁC NHÂN → fresh-read `AGENTS.md`.
+- @TÁC NHÂN PLUS → exact `AGENTS_CONTUNE.md`; nếu chưa thấy thì `OPEN`, skill `tac-nhan-plus` chỉ là đường tiếp nối, không tự thay source file.
+- @TÁC NHÂN — TAY → plugin `tac-nhan-hands` → `ROOTS_LEVER_02 - DEV` / `LEVER_02_dev`, path WSL `/dev`, UNC `\\wsl.localhost\Ubuntu\dev`; kiểm tra metadata chỉ đọc.
+Bản đồ GitHub không xác nhận được máy Ubuntu đã nạp. Tuyến USB hiện hữu `terminal/tesseract_boot_controller.ps1` vẫn tách riêng và không được probe gọi.

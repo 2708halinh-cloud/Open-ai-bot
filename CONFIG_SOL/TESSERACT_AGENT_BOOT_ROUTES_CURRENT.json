@@ -1,0 +1,50 @@
+{
+  "schema": "GGDV_TESSERACT_AGENT_BOOT_ROUTES/1.0",
+  "source_direct": "Hà Linh 2026-10-09: TESSERACT BOOT / AGENTS.md / AGENTS_CONTUNE.md / ROOTS_LEVER_02 - DEV",
+  "repo": "2708halinh-cloud/SOL-LONG-MACH",
+  "entrypoint": "runtime/tesseract_agent_boot.py",
+  "boot_surface": "TESSERACT_AGENT_SOURCE_PREFLIGHT",
+  "separates_from": "ROOT_NEUTRAL_USB_IMAGE_WRITER",
+  "tesseract_brain": {
+    "name": "@TESSERACT — Não TÁC NHÂN",
+    "plugin_id": "plugins_6ac888137270819182ad423ac2a913bf",
+    "skill_uri": "skills://plugins/tesseract-brain/tesseract-brain"
+  },
+  "tac_nhan": {
+    "name": "@TÁC NHÂN",
+    "plugin_id": "plugins_6ac87d73febc819180106cb10aa60431",
+    "skill_uri": "skills://plugins/tac-nhan/tac-nhan",
+    "source_path": "AGENTS.md",
+    "fresh_read": true
+  },
+  "tac_nhan_plus": {
+    "name": "@TÁC NHÂN PLUS",
+    "plugin_id": "plugins_6ac8801107c08191a829cf479e813980",
+    "skill_uri": "skills://plugins/tac-nhan-plus/tac-nhan-plus",
+    "source_path": "AGENTS_CONTUNE.md",
+    "current_source_status": "OPEN_EXACT_FILE_NOT_LOCATED",
+    "fallback_status": "INSTALLED_SKILL_POINTER_NOT_CANONICAL_SOURCE"
+  },
+  "hands": {
+    "name": "@TÁC NHÂN — TAY",
+    "plugin_id": "plugins_6ac89337264c8191aab0fa3791803937",
+    "skill_uri": "skills://plugins/tac-nhan-hands/agents-skill-hands",
+    "declared_routes": 21,
+    "target": {
+      "request_name": "ROOTS_LEVER_02 - DEV",
+      "canonical_id": "LEVER_02_dev",
+      "parent": "LEVER_01_Ubuntu",
+      "unc_path": "\\\\wsl.localhost\\Ubuntu\\dev",
+      "wsl_path": "/dev"
+    },
+    "mode": "READ_ONLY_DEVICE_METADATA",
+    "writes_to_dev": false
+  },
+  "source_boundary": {
+    "wsl_roots": "skills://plugins/tesseract-brain/tesseract-brain/assets/wsl-roots.json",
+    "missing_contune": "KEEP_OPEN_NO_FABRICATED_CONTENT",
+    "git_not_local_activation": true,
+    "no_usb_flash": true,
+    "no_secrets": true
+  }
+}

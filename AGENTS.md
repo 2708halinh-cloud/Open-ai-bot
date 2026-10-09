@@ -1006,3 +1006,9 @@ IMPLEMENTATION = runtime/continuity_guard.py
 REGRESSION = tests/test_continuity_guard.py
 LOCAL_RUNTIME = G:\\OS_Workspace\\TESSERACT_OS (cần live readback riêng; GitHub commit không tự chứng minh local sync)
 <!-- END GGDV_R014_MASTER_22_4_SOURCE_DIRECT_20261009 -->
+
+
+<!-- TESSERACT_AGENT_BOOT_ROUTE_20261009 -->
+## TESSERACT — NỐI TUYẾN BOOT TÁC NHÂN / PLUS / TAY
+Nguồn tuyến: `CONFIG_SOL/TESSERACT_AGENT_BOOT_ROUTES_CURRENT.json`. BOOT @TESSERACT nạp mới `AGENTS.md` cho @TÁC NHÂN; PLUS truy chính xác `AGENTS_CONTUNE.md` (OPEN nếu tệp chưa thấy, không giả thay thế bằng skill). TAY theo `agents-skill-hands` nối `LEVER_02_dev` — Ubuntu `/dev` — chỉ đọc metadata, không ghi /dev hay khởi động ghi USB.
+Lệnh probe: `python3 runtime/tesseract_agent_boot.py --root .`. Bản đồ và trạng thái nằm tại `CURRENT_RUNTIME/TESSERACT_LOCAL_BOOT_CURRENT.md`.
