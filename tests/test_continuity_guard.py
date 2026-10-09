@@ -251,5 +251,64 @@ class ContinuityGuardTests(unittest.TestCase):
         self.assertEqual(cp.r014_disabled_mechanisms, [])
 
 
+    def test_r014_observed_failure_auto_disables_route(self):
+        cp = Checkpoint(
+            objective_id="R014-AUTO", source_marker="S", lineage_ref="R-014",
+            edges=[
+                Edge(edge_id="KNOWN_BAD", target="wrong response",
+                     callable_now=True, candidate_carriers=["provider"],
+                     evidence={"mechanism_id": "KNOWN_BAD_MECHANISM"}),
+                Edge(edge_id="ALTERNATIVE", target="verified action",
+                     callable_now=True, candidate_carriers=["provider"]),
+            ],
+        )
+
+        def executor(edge, carrier):
+            if edge.edge_id == "KNOWN_BAD":
+                return {
+                    "success": False,
+                    "provider_receipt": {"id": "obs-1"},
+                    "observable_consequence": {"wrong_route_triggered": True},
+                    "r014_identified_failure": {
+                        "mechanism_id": "KNOWN_BAD_MECHANISM",
+                        "first_affected_cause": "evidence-backed bad response",
+                        "source_ref": "R014_SOURCE",
+                        "consequence_ref": "obs-1",
+                    },
+                }
+            return {
+                "success": True, "action_kind": "WRITE",
+                "provider_receipt": {"id": "r2"},
+                "observable_consequence": {"written": True},
+            }
+
+        output = continue_bounded(cp, executor, max_steps=5)
+        self.assertEqual(output["steps"], 2)
+        self.assertIn("KNOWN_BAD_MECHANISM", cp.r014_disabled_mechanisms)
+        self.assertTrue(cp.edges[1].grounded_done())
+        self.assertFalse(cp.objective_done())
+        self.assertEqual(len(cp.r014_error_history), 1)
+
+    def test_r014_unproven_failure_does_not_disable_mechanism(self):
+        cp = Checkpoint(
+            objective_id="R014-UNPROVEN", source_marker="S", lineage_ref="R-014",
+            edges=[Edge(edge_id="E", target="x", callable_now=True)],
+        )
+
+        def executor(edge, carrier):
+            return {
+                "success": False,
+                "r014_identified_failure": {
+                    "mechanism_id": "UNPROVEN",
+                    "first_affected_cause": "guess",
+                    "source_ref": "S",
+                    "consequence_ref": "C",
+                },
+            }
+
+        continue_bounded(cp, executor, max_steps=1)
+        self.assertEqual(cp.r014_disabled_mechanisms, [])
+        self.assertEqual(len(cp.edges[0].evidence["r014_rejected_signals"]), 1)
+
 if __name__ == "__main__":
     unittest.main()
