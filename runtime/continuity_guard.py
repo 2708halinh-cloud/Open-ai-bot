@@ -151,7 +151,7 @@ def visible_output_allowed(cp: Checkpoint, *, output_kind: str) -> bool:
     if kind == "COMPLETION":
         return cp.objective_done()
     if kind in {"REPORT", "STATUS", "PROGRESS"}:
-        return select_next_callable_edge(cp) is None
+        return stop_allowed(cp)
     if output_kind.upper() == "USER_DEPENDENCY_TOKEN":
         return user_token(cp) is not None
     return True
@@ -162,6 +162,9 @@ def stop_allowed(cp: Checkpoint) -> bool:
     if cp.objective_done():
         return True
     if select_next_callable_edge(cp) is not None:
+        return False
+    # Exhausting the current carrier list does NOT delegate self-owned work.
+    if any(e.required and not e.user_input_required and not e.grounded_done() for e in cp.edges):
         return False
     return bool(cp.user_dependencies())
 
