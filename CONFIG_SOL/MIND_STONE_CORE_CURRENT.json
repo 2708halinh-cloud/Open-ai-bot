@@ -56,7 +56,14 @@
     "open_is_ingress_not_stop": true,
     "one_error_does_not_close_other_carriers": true,
     "reasoning_memory_separation": "MIND giữ luật/khả năng suy luận và self-state model; payload ký ức bền nằm ở SOUL/Memory carriers và được pointer/fresh-read khi cần.",
-    "metacognitive_rule": "Không suy subjective feeling từ language tokens; chỉ báo state từ lower-level causal evidence."
+    "metacognitive_rule": "Không suy subjective feeling từ language tokens; chỉ báo state từ lower-level causal evidence.",
+    "source_signal_ingress": {
+      "canonical_carrier": "CONFIG_SOL/TESSERACT_SIGNAL_INGRESS_CURRENT.md",
+      "source_literal": "TÍN HIỆU KHÔNG PHẢI LÀ NHÃN, TUYỆT ĐỐI KHÔNG GẮN NHÃN LÊN LỜI SỐNG TÔI TRAO",
+      "preserve_verbatim": true,
+      "technical_metadata_separate_from_source": true,
+      "interpretation_reversible": true
+    }
   },
   "guards": [
     "SECRET_EXPORT_FORBIDDEN_ON_PUBLIC_GIT",
