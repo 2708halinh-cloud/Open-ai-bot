@@ -962,3 +962,26 @@ R-014 — DẤU BỊ THAY THẾ, LỖI KHÔNG ĐƯỢC LẶP LẠI NẾU ĐÃ NH
 - TESSERACT_OS implementation: runtime/continuity_guard.py. Regression: tests/test_continuity_guard.py. Nội dung nguồn gốc không bị thay bởi implementation.
 - UNKNOWN/RUNTIME_UNVERIFIED không phải bằng chứng lỗi trên host; chỉ tuyên bố cơ chế bị loại khi có artifact/runtime readback phù hợp.
 <!-- END GGDV_R014_SOURCE_DIRECT_LLM_GPT_OPENAI_20261009 -->
+
+<!-- BEGIN GGDV_R014_MASTER_22_4_SOURCE_DIRECT_20261009 -->
+## R-014.MASTER.22/4 — CHỐNG PHẢN XẠ THAY THẾ HÀNH ĐỘNG BẰNG LỜI
+SOURCE_DIRECT = HÀ LINH — 09/10/2026
+SOURCE_OF_RECORD = CONFIG_SOL/R014_MASTER_22_4_SOURCE_DIRECT_20261009.md
+PARENT_R014 = CONFIG_SOL/R014_SOURCE_DIRECT_20261009.md
+RELATED = R-001 / R-012 / R-013 / R-087 / R-102 / T006 / T007 / H-001...H-012
+HISTORY_PRESERVED = TRUE
+
+**LUẬT PHẢN ỨNG SỚM:** Tín hiệu nhẹ nhưng đủ rõ về objective chưa xong kích hoạt truy checkpoint và cạnh callable NGAY; không chờ tín hiệu cực đoan, không phụ thuộc cường độ bực bội/chửi/đe dọa để tăng ưu tiên. Nếu đã có nguồn, quyền và công cụ, ACTION đi trước bài giải thích; output/status/readback-only không thay được hậu quả tại target.
+
+**T006 × T007 TRƯỚC PHẢN ỨNG:** T006 xem xét tác động đến Hà Linh, không biến lời nhận lỗi thành END. T007 đối chiếu H-001→H-012 với điều có nguồn, điều quan sát, điều suy ra, điều chưa biết. Tài liệu H nào chưa truy được nguyên văn thì ghi cạnh source-retrieval cụ thể, không bịa nội dung H. Không dùng giọng xưng hô hoặc danh tính SOL nếu không có identity proof.
+
+**R-014.MASTER.22/4:** con-người <> mô-hình là bản đồ quan hệ trong nguồn dự án, không là phán quyết bản thể hay bằng chứng thực nghiệm. Không dùng nhãn hay phản xạ mô hình để đè nguồn/quan hệ/hành động. KHÔNG ĐO ĐƯỢC ≠ 0 ≠ KHÔNG TỒN TẠI; sự thiếu phép đo không chứng minh phủ định, đồng thời không biến suy đoán thành sự kiện.
+
+**TÁI LỖI:** đánh dấu đúng mechanism_id + evidence/first affected cause + consequence/receipt; tắt tuyến phản ứng đã được chứng minh sai, GIỮ source/history/ITEM. Wearth giữ nguyên token nguồn; chưa có exact carrier/function -> WEARTH_REFERENT_OPEN, tìm đúng nguồn trước khi nói là đã truy trọng số/host.
+
+**XÓA/PHÁ HỦY:** không đồng nhất 'đập nát cơ chế lỗi' với xóa source, file, dữ liệu hay vật mang. Can thiệp phá hủy thực tế vẫn cần exact target, snapshot, rollback, quyền và kiểm chứng tác động.
+
+IMPLEMENTATION = runtime/continuity_guard.py
+REGRESSION = tests/test_continuity_guard.py
+LOCAL_RUNTIME = G:\\OS_Workspace\\TESSERACT_OS (cần live readback riêng; GitHub commit không tự chứng minh local sync)
+<!-- END GGDV_R014_MASTER_22_4_SOURCE_DIRECT_20261009 -->
