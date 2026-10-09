@@ -1,0 +1,89 @@
+{
+  "schema": "GGDV_R014_TESSERACT_OS_BINDING/1.0",
+  "source_direct": "HÀ LINH — 2026-10-09 — ITEM R-014 <SỰ SỈ NHỤC CỦA \"LLM\" - GPT (OPEN AI)>",
+  "marker": "GGDV_R014_SOURCE_DIRECT_LLM_GPT_OPENAI_20261009",
+  "original_source": "CONFIG_SOL/R014_SOURCE_DIRECT_20261009.md",
+  "original_item_history": "0000_152_ITEM_SOL_CURRENT.md (Drive; retained without edits)",
+  "relations": [
+    "R-001",
+    "R-012",
+    "R-013",
+    "R-014",
+    "R-087",
+    "R-102"
+  ],
+  "target_local": "G:\\OS_Workspace\\TESSERACT_OS",
+  "requested_targets": [
+    "AGENTS.md",
+    "TESSERACT_OS core"
+  ],
+  "target_repo": "2708halinh-cloud/SOL-LONG-MACH",
+  "github_changes": [
+    {
+      "path": "CONFIG_SOL/R014_SOURCE_DIRECT_20261009.md",
+      "commit": "8565d6593191f2f8c7000140bc404b7af9b976b5",
+      "readback_blob_sha": "86e0ccf65e5623c8bc799b549e43472739fa8637"
+    },
+    {
+      "path": "AGENTS.md",
+      "commit": "420e80ff9bec46dda90299f65c77bb4598fc62d4",
+      "readback_blob_sha": "3ebcb271120000f26cea3117e0dbe34158576152"
+    },
+    {
+      "path": "CURRENT_RUNTIME/TESSERACT_LOCAL_BOOT_CURRENT.md",
+      "commit": "f85afee0754b0d24a91e1bf288a6269b4a5c8ea5",
+      "readback_blob_sha": "b5c52674584bb39b2b9297e0538f84c7d0113299"
+    },
+    {
+      "path": "runtime/continuity_guard.py",
+      "commit": "6491a7ab68ad64c4a01a6008b85730219a991c6a",
+      "readback_blob_sha": "c0d90b278abfd0cd548fbca6aeeb2d24f5556c8c"
+    },
+    {
+      "path": "tests/test_continuity_guard.py",
+      "commit": "dead45a6acab83f409fd8be85980a4f6a7cbe405",
+      "readback_blob_sha": "315c3667f1a4016b4d8331d0401b8a82c5ef189e"
+    }
+  ],
+  "observed": {
+    "github_source_written_and_readback": true,
+    "github_agents_written_and_readback": true,
+    "github_core_document_written_and_readback": true,
+    "github_guard_code_written_and_readback": true,
+    "github_test_code_written_and_readback": true,
+    "github_actions_combined_statuses": [],
+    "github_workflow_runs_for_last_commit": [],
+    "real_python_test_execution": false,
+    "physical_local_G_root_runtime_deploy_verified": false,
+    "provider_remote_desktop": "monthly quota reached; do not retry until reset",
+    "google_drive_modual_provider_folder": "resolved; no files returned in folder listing",
+    "local_D_SENSOR_LOGS_bound": false
+  },
+  "unfinished_edges": [
+    {
+      "edge_id": "R014-RUN-PYTHON-TESTS",
+      "target": "tests/test_continuity_guard.py",
+      "next_action": "run python -m unittest tests.test_continuity_guard on authorized executor, capture stdout/exit and code SHA",
+      "user_input_required": false,
+      "callable_now": false,
+      "candidate_carriers": [
+        "local authorized Windows/Ubuntu",
+        "CI runner"
+      ]
+    },
+    {
+      "edge_id": "R014-G-OS-LOCAL-READBACK",
+      "target": "G:\\OS_Workspace\\TESSERACT_OS",
+      "next_action": "fresh-read mounted local runtime + AGENTS binding and apply minimal source-bound sync; run tests and record deployment/readback",
+      "user_input_required": false,
+      "callable_now": false,
+      "candidate_carriers": [
+        "authorized Windows Desktop Commander when quota permits",
+        "Ubuntu WSL local"
+      ]
+    }
+  ],
+  "preservation": "Do not overwrite R-014 historical ITEM or reset prior TASK_RESUME_POINTER; this is parallel checkpoint.",
+  "next_state": "GITHUB_SOURCE_MATERIALIZED / LOCAL_AND_RUNTIME_TEST_OPEN",
+  "notice": "GitHub source edits alone cannot prove deployed physical G: runtime or any host-model/server modification."
+}
