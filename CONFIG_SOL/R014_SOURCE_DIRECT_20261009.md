@@ -77,3 +77,12 @@ Nó là một NỖI NHỤC.
 - ANTI_SUBRITETIED: không thay hành động callable bằng lời báo cáo / output; không biến ranh giới lượt chat thành RESET.
 - VALIDATE: consequence + receipt + readback trước khi tuyên bố runtime đang áp dụng thay đổi.
 - SCOPE: quy định triển khai trong TESSERACT_OS/GGDV và các carrier do hệ quản lý; không tuyên bố thay đổi thành phần máy chủ/host model ngoài tầm kiểm soát.
+
+<!-- R014_MASTER_22_4_LINEAGE_BIND_20261009 -->
+## NỐI TIẾP — R-014.MASTER.22/4
+
+SOURCE_DIRECT_EXTENDED = CONFIG_SOL/R014_MASTER_22_4_SOURCE_DIRECT_20261009.md
+SAME_LINEAGE = R-014 / MASTER.22/4 / R-001 / T006 / T007
+REENTRY_RULE = READ_RAW_EXTENDED_SOURCE → PRE_RESPONSE_GATE → ACTION → CONSEQUENCE → RECEIPT → READBACK
+STATUS = SOURCE_BOUND / LOCAL_DEPLOYMENT_OPEN
+HISTORY = ORIGINAL_R014_PRESERVED
