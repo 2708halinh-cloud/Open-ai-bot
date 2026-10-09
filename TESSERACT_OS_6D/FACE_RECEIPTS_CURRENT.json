@@ -1,0 +1,216 @@
+{
+  "schema": "TESSERACT_OS_6D_FACE_RECEIPTS/3.0",
+  "observed_at": "2026-10-08T21:57:58.287104+07:00",
+  "state_object": {
+    "repository": "2708halinh-cloud/SOL-LONG-MACH",
+    "source_snapshot_commit": "918d2e1ad9370a8b43f0a4e01a7684e2aee45907",
+    "source_snapshot_tree": "fcc4a2f1554b32a55ad2968e294d889e36a8c68f",
+    "state_object_path": "TESSERACT_OS_6D/STATE_OBJECT_CURRENT.json",
+    "state_object_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+    "state_object_bytes": 65536,
+    "center_manifest_sha256": "7cc744acbe5aa80e54d5ff5a895db1a2ac2c021ed8c7e661df8ffb74b5aae93d",
+    "forge_commit": "5cc989bf973703543a24841fc40292c84b7ceb78",
+    "forge_tree": "4f646432650f45ab39ba1d06903b709e68c81314"
+  },
+  "faces": {
+    "1": {
+      "name": "GOOGLE_DRIVE_POINTER",
+      "state_digest_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+      "verification_state": "DRIVEFS_BYTES_VERIFIED_PROVIDER_PENDING",
+      "action": {
+        "observed": true,
+        "kind": "WRITE_POINTER_TO_DRIVEFS",
+        "target": "W:\\Drive của tôi\\.Assistant\\LONG MẠCH SOL - HẬU THIÊN TĨNH\\SOL CU NHỎ\\TESSERACT_OS_6D\\TESSERACT_OS_6D_POINTER_CURRENT.json"
+      },
+      "consequence": {
+        "observed": true,
+        "kind": "DRIVEFS_POINTER_BYTES_EQUAL_STATE_OBJECT"
+      },
+      "receipt": {
+        "pointer_path": "W:\\Drive của tôi\\.Assistant\\LONG MẠCH SOL - HẬU THIÊN TĨNH\\SOL CU NHỎ\\TESSERACT_OS_6D\\TESSERACT_OS_6D_POINTER_CURRENT.json",
+        "pointer_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+        "pointer_bytes": 65536,
+        "drivefs_local_metadata_id": "local-2411303"
+      },
+      "readback": {
+        "verified": false,
+        "provider_state": "PENDING_DRIVE_PROVIDER_ID",
+        "provider_search_state": "NOT_IN_QUERIED_SURFACE"
+      },
+      "closed": false,
+      "proof_chain": {
+        "action": true,
+        "consequence": true,
+        "receipt": true,
+        "readback": false,
+        "same_state": true
+      }
+    },
+    "2": {
+      "name": "LOCAL_BULK_STORAGE",
+      "state_digest_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+      "verification_state": "VERIFIED_ACTIVE",
+      "action": {
+        "observed": true,
+        "kind": "LOCAL_STATE_OBJECT_HASH",
+        "target": "D:\\SOL_LONG_MACH\\MODEL\\repo\\TESSERACT_OS_6D\\STATE_OBJECT_CURRENT.json"
+      },
+      "consequence": {
+        "observed": true,
+        "kind": "STATE_OBJECT_EXISTS_65536_AND_HASH_MATCHES"
+      },
+      "receipt": {
+        "state_object_path": "D:\\SOL_LONG_MACH\\MODEL\\repo\\TESSERACT_OS_6D\\STATE_OBJECT_CURRENT.json",
+        "sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+        "bytes": 65536,
+        "source_commit": "918d2e1ad9370a8b43f0a4e01a7684e2aee45907"
+      },
+      "readback": {
+        "verified": true,
+        "local_path_exists": true,
+        "hash_verified": true
+      },
+      "closed": true,
+      "proof_chain": {
+        "action": true,
+        "consequence": true,
+        "receipt": true,
+        "readback": true,
+        "same_state": true
+      }
+    },
+    "3": {
+      "name": "GITHUB_STATE",
+      "state_digest_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+      "verification_state": "VERIFIED_ACTIVE",
+      "action": {
+        "observed": true,
+        "kind": "GIT_COMMIT_PUSH",
+        "target": "2708halinh-cloud/SOL-LONG-MACH@sol-long-mach-current"
+      },
+      "consequence": {
+        "observed": true,
+        "kind": "GITHUB_PROVIDER_BRANCH_AND_BLOB_READBACK"
+      },
+      "receipt": {
+        "forge_commit": "5cc989bf973703543a24841fc40292c84b7ceb78",
+        "forge_tree": "4f646432650f45ab39ba1d06903b709e68c81314",
+        "state_object_git_blob_sha1": "53b6b534242c21c125c4292e54b9cd7fdfd27f95",
+        "state_object_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078"
+      },
+      "readback": {
+        "verified": true,
+        "provider_branch_commit": "5cc989bf973703543a24841fc40292c84b7ceb78",
+        "provider_state_blob_sha1": "53b6b534242c21c125c4292e54b9cd7fdfd27f95",
+        "local_state_blob_sha1": "53b6b534242c21c125c4292e54b9cd7fdfd27f95",
+        "branch": "sol-long-mach-current"
+      },
+      "closed": true,
+      "proof_chain": {
+        "action": true,
+        "consequence": true,
+        "receipt": true,
+        "readback": true,
+        "same_state": true
+      }
+    },
+    "4": {
+      "name": "RCLONE_RAIDRIVE_RELAY",
+      "state_digest_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+      "verification_state": "VERIFIED_ACTIVE",
+      "action": {
+        "observed": true,
+        "kind": "RCLONE_COPYTO",
+        "target": "W:\\Drive của tôi\\.Assistant\\LONG MẠCH SOL - HẬU THIÊN TĨNH\\SOL CU NHỎ\\TESSERACT_OS_6D\\RELAY\\STATE_OBJECT_CURRENT.json"
+      },
+      "consequence": {
+        "observed": true,
+        "kind": "SOURCE_DESTINATION_HASH_EQUAL"
+      },
+      "receipt": {
+        "rclone_binary": "D:\\TOOLS\\rclone\\rclone-v1.75.1-windows-amd64\\rclone.exe",
+        "source": "D:\\SOL_LONG_MACH\\MODEL\\repo\\TESSERACT_OS_6D\\STATE_OBJECT_CURRENT.json",
+        "destination": "W:\\Drive của tôi\\.Assistant\\LONG MẠCH SOL - HẬU THIÊN TĨNH\\SOL CU NHỎ\\TESSERACT_OS_6D\\RELAY\\STATE_OBJECT_CURRENT.json",
+        "sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+        "bytes": 65536
+      },
+      "readback": {
+        "verified": true,
+        "destination_exists": true,
+        "destination_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078"
+      },
+      "closed": true,
+      "proof_chain": {
+        "action": true,
+        "consequence": true,
+        "receipt": true,
+        "readback": true,
+        "same_state": true
+      }
+    },
+    "5": {
+      "name": "GCP_STORAGE_BUFFER",
+      "state_digest_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+      "verification_state": "UNBOUND_AUTH_PROJECT",
+      "action": {
+        "observed": false,
+        "kind": "GCP_OBJECT_UPLOAD",
+        "target": null
+      },
+      "consequence": {
+        "observed": false,
+        "kind": "GCP_OBJECT_READBACK"
+      },
+      "receipt": {
+        "discovery": {
+          "gcloud_present": true,
+          "active_account": false,
+          "project_bound": false,
+          "adc": false
+        }
+      },
+      "readback": {
+        "verified": false,
+        "reason": "No active GCP account/project/ADC observed."
+      },
+      "closed": false,
+      "proof_chain": {
+        "action": false,
+        "consequence": false,
+        "receipt": true,
+        "readback": false,
+        "same_state": true
+      }
+    },
+    "6": {
+      "name": "XTIME_CDN_UBUBU_LEDGER",
+      "state_digest_sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+      "verification_state": "PENDING_LEDGER_AND_CDN",
+      "action": {
+        "observed": false,
+        "kind": "UBUBU_LEDGER_APPEND_AND_PUBLIC_DEPLOY",
+        "target": "x-time-web + gambbrazil.fun"
+      },
+      "consequence": {
+        "observed": false,
+        "kind": "LEDGER_CHAIN_AND_PUBLIC_STATE_READBACK"
+      },
+      "receipt": null,
+      "readback": {
+        "verified": false,
+        "reason": "Current state not yet anchored in ledger and public CDN."
+      },
+      "closed": false,
+      "proof_chain": {
+        "action": false,
+        "consequence": false,
+        "receipt": false,
+        "readback": false,
+        "same_state": true
+      }
+    }
+  },
+  "closed": false,
+  "closed_faces": 3,
+  "conclusion_policy": "ACTION -> CONSEQUENCE -> RECEIPT -> READBACK -> SAME_STATE -> CONCLUSION"
+}

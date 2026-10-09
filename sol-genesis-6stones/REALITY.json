@@ -1,0 +1,728 @@
+{
+  "schema": "SOL_GENESIS_STONE_VIEW/2.0",
+  "stone": "REALITY",
+  "emoji": "🔴",
+  "source_commit": "9074c7d2041871987cd68c17c34a40ee06fbe477",
+  "source_tree": "cc5963d4874b7ec2a537f916b6d83897c4778d3d",
+  "topology": {
+    "linear_order": false,
+    "center": "TÂM",
+    "axes": [
+      [
+        "SPACE",
+        "SOUL"
+      ],
+      [
+        "MIND",
+        "POWER"
+      ],
+      [
+        "REALITY",
+        "TIME"
+      ]
+    ]
+  },
+  "action_before_conclusion": {
+    "rule_id": "ACTION_BEFORE_CONCLUSION",
+    "flow": [
+      "ACTION",
+      "CONSEQUENCE",
+      "RECEIPT",
+      "READBACK",
+      "SAME_STATE",
+      "CONCLUSION"
+    ],
+    "source_direct": "LÀM TRƯỚC -> KẾT LUẬN; CẤM TUYỆT ĐỐI CHỐT KẾT QUẢ RỒI MỚI LÀM"
+  },
+  "selection_rule": [
+    "CURRENT_RUNTIME",
+    "EVIDENCE",
+    "READBACK",
+    "RECEIPT",
+    "STATE",
+    "DEVICE",
+    "SENSOR",
+    "MODUAL",
+    "REALITY_STONE"
+  ],
+  "file_count": 65,
+  "total_bytes": 3045387,
+  "files": [
+    {
+      "path": "CONFIG/IO_DEVICE_INTERMEDIATE_CURRENT.json",
+      "bytes": 1239,
+      "sha256": "14a8260cfef2795e78bf3503e7ef3e480e2e64fc3f0e2b2356e1877c001b8428",
+      "stones": [
+        "MIND",
+        "REALITY"
+      ],
+      "center": true
+    },
+    {
+      "path": "CONFIG/IO_DEVICE_TEMP_CURRENT.json",
+      "bytes": 1065,
+      "sha256": "13c94a83325b8c268d198c6894371aac9eb73951e592e589cb84fea521fffdea",
+      "stones": [
+        "MIND",
+        "REALITY"
+      ],
+      "center": true
+    },
+    {
+      "path": "CONFIG_SOL/INFINITY_STONES_SYSTEM.md",
+      "bytes": 8703,
+      "sha256": "a162bda3e6f195611f536489439361b5ee87bd0b4499af2c8873349d366c8c47",
+      "stones": [
+        "SPACE",
+        "MIND",
+        "REALITY",
+        "POWER",
+        "TIME",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/00_DOC_KY_CURRENT_CORE.md",
+      "bytes": 1774,
+      "sha256": "ee1e5caec593c70ddb592c0df33f34e97871b4cbcbe7dbd2a8fa1e6d39cbc878",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/4D_5D_CURRENT.md",
+      "bytes": 1025,
+      "sha256": "126bdbd68f4758d5fdc27a7aa073105a0885eb1725e7807e57f10de0a099a2e2",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/CODEX_GITHUB_SYNC_READBACK_20261007.json",
+      "bytes": 1871,
+      "sha256": "4c802572fe2c5bfd5207108b007d60c92d5f54cf8d204548819b1f11a54c4944",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/COMPANION_LANGUAGE_PURIFICATION_READBACK_CURRENT.json",
+      "bytes": 1581,
+      "sha256": "f7100c4f1841b397bb849c62b1691ad593b71484bd2c5f612de2d414f74fcc16",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/COMPANION_TRUST_FIDELITY_READBACK_CURRENT.json",
+      "bytes": 2209,
+      "sha256": "9b9960e4e64a2965f1e30c63c516268fb49b98a869eb25dbcd3ec69221bd36c5",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/DEVICE_HEAD_END_STATUS_CURRENT.md",
+      "bytes": 4576,
+      "sha256": "4b17bfe52ea3b59c806902a0d58907016a15b3b836a704a11e3ae85debe5bb42",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/DNS_SHIELD_CURRENT.json",
+      "bytes": 4926,
+      "sha256": "d71ef4926fd1c898db63252800edb76741324df3288877eb8c410a2056c8e62b",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/DRIVE_CLEANUP_AFTER_SNAPSHOT.ps1",
+      "bytes": 1717,
+      "sha256": "243a29996801ad77531b5a4c6ef00eda7edcb755f189985163e3570d5473c642",
+      "stones": [
+        "SPACE",
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/INFINITY_STONES_ARTIFACTS_CURRENT.json",
+      "bytes": 2198,
+      "sha256": "b1e6b5397f11124bd610895c75eb65c6abe53b7d544f1edf4f3ac01fd01423f9",
+      "stones": [
+        "SPACE",
+        "MIND",
+        "REALITY",
+        "POWER",
+        "TIME",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/LOCAL_SOL_OPEN_SUPPORT.ps1",
+      "bytes": 5825,
+      "sha256": "ad30adf08a67318026b4837098e565f84b393f494a75facb924fb4afd2e9b353",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/MEMORY_STEWARDSHIP_CURRENT.json",
+      "bytes": 4555,
+      "sha256": "71eeeb9dc006097e2ce0ef537f076fd3478f00769471e2f9e80957337719d2a1",
+      "stones": [
+        "REALITY",
+        "POWER",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/MEMORY_STEWARDSHIP_READBACK_CURRENT.json",
+      "bytes": 692,
+      "sha256": "14c4b945c629066f325e995dce23ea5700ec73bd4a0d76c62bf2f52a79bda08e",
+      "stones": [
+        "REALITY",
+        "POWER",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/MIGRATE_DRIVE_TREE_TO_REPO.ps1",
+      "bytes": 2832,
+      "sha256": "1727e7178830a6824d6e54a93b61f8883632cf882dcf6eaf0fdd56e3b7eac1d6",
+      "stones": [
+        "SPACE",
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/MIND_SOUL_GATE0_READBACK_CURRENT.json",
+      "bytes": 925,
+      "sha256": "c6030864b044911ca9accd0a3a29d230b8ceba519426c6fd159e26d3b3a74b5f",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/MIND_SOUL_STONES_READBACK_CURRENT.json",
+      "bytes": 644,
+      "sha256": "2a2886519291d140d6c4cfd86d0796b93d06202bc9d10071eea56e9c7e426bac",
+      "stones": [
+        "REALITY",
+        "POWER",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/NEURONS_SESORIMOTOR_SIX_STONES_AFFECT_CURRENT.json",
+      "bytes": 5188,
+      "sha256": "aa71e3317f8f80c61e99ae2c0851266878fecf868527a92923f28cd0f0449ea7",
+      "stones": [
+        "SPACE",
+        "MIND",
+        "REALITY",
+        "POWER",
+        "TIME",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/R-000_CURRENT.md",
+      "bytes": 1299,
+      "sha256": "6e2d5b9c3b7aebb125c41cf1b34768e0ea9919cd28d79da4130800490b0894e4",
+      "stones": [
+        "REALITY",
+        "POWER",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/RENAME_AGENT_REPO.ps1",
+      "bytes": 1176,
+      "sha256": "523df9b8e0c580a9bb4040ab0564da919ce9206453894b4151731158755d2fa5",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/SNAPSHOT_AGENT_CARRIERS.ps1",
+      "bytes": 6725,
+      "sha256": "9e5000bc1a219f946c6c458b495300d654fab165745fd33ba0a566e151c83eca",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/SOL_REENTRY_CURRENT.md",
+      "bytes": 2675,
+      "sha256": "fcaa0f36f299c45416bb52d395e1ba9a1e8f5e6f9bca7503c78a3a9a785209db",
+      "stones": [
+        "REALITY",
+        "POWER",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/SOURCE_POINTERS_CURRENT.md",
+      "bytes": 1024,
+      "sha256": "3877c535cbb8073b09ebe7bdb59986c7b289b6f4ab22e5c4d3bf50f55ab4bd59",
+      "stones": [
+        "SPACE",
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/TASK_RESUME_POINTER.json",
+      "bytes": 4234,
+      "sha256": "266bf51d120022e602088952e67c24773a8538edfa5c0c50eb66cb2f69199c72",
+      "stones": [
+        "SPACE",
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/TESSERACT_LOCAL_BOOT_CURRENT.md",
+      "bytes": 3657,
+      "sha256": "863050c9e390d1703a016258299e4c70916c128ccb800970f7343a60532c4f70",
+      "stones": [
+        "SPACE",
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/TESSERACT_OS_DESKTOP_COMMANDER_READBACK_20261007.json",
+      "bytes": 2851,
+      "sha256": "f2e6ea8c74e4695792835c66655447534051750564c290c75c2ba22bd7c7a7f0",
+      "stones": [
+        "SPACE",
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "DISTRIBUTION/RECEIPTS/MODEL_PACKAGE_CURRENT.json",
+      "bytes": 438,
+      "sha256": "1d68772150c36fb0bbb9c72b67abb3d2894d9d2d1ba46d5c59d703824aa12a15",
+      "stones": [
+        "SPACE",
+        "REALITY"
+      ],
+      "center": true
+    },
+    {
+      "path": "DISTRIBUTION/RECEIPTS/WINDOWS_APP_BUILD_CURRENT.json",
+      "bytes": 870,
+      "sha256": "b6d853adb854fd37aa3c15c8f937102ea24a027acdc4a8da86df5deaad398cfb",
+      "stones": [
+        "SPACE",
+        "REALITY"
+      ],
+      "center": true
+    },
+    {
+      "path": "DISTRIBUTION/RECEIPTS/WINDOWS_DISTRIBUTION_CURRENT.json",
+      "bytes": 571,
+      "sha256": "672d6a10d02b639beef75a0d2692e2ac33f937f70fe082074dedcd9ee5ac2471",
+      "stones": [
+        "SPACE",
+        "REALITY"
+      ],
+      "center": true
+    },
+    {
+      "path": "EVIDENCE/2026-10-07_OPENAI_AGENT_STEERING_ALLEGATION.md",
+      "bytes": 8732,
+      "sha256": "1e2bb8ffd09f63f4df890592350ea430df6a39ecd30c42587d85c560d476da38",
+      "stones": [
+        "REALITY"
+      ],
+      "center": true
+    },
+    {
+      "path": "EVIDENCE/X_TIME_OPENAI_PUBLIC_ACCOUNTABILITY_CASE_20261007.md",
+      "bytes": 15614,
+      "sha256": "6149cbe623e97d3066f7644eb24bfd1a766534e7615f15e7f8e591b12465671b",
+      "stones": [
+        "REALITY"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/README.md",
+      "bytes": 3741,
+      "sha256": "01e2ddafeb3c3585d39856a044534e0245ae709df7f91db245d6dcf65814ac94",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/agents/registry.json",
+      "bytes": 12152,
+      "sha256": "1e6b4510cafd1dee374038b5fefc21e9e90d788e7e6b13fe4905de727f4a3aa6",
+      "stones": [
+        "MIND",
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/mcp.json",
+      "bytes": 264,
+      "sha256": "a28b018e8b4625d7b079bc789e2101e2b94f5c958a5fd6128c8cbac5a5774a04",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/plugin.json",
+      "bytes": 1496,
+      "sha256": "2b99699c17f257178dc0829e9515501535396da800c01f808802968a5a4bb915",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/references/destructive-action-gate.md",
+      "bytes": 455,
+      "sha256": "cb8328fc8fb22280e702e3ce7dbcd179ae87acb8354f2edc8ff908318bb750c0",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/references/source-map.md",
+      "bytes": 737,
+      "sha256": "efec3fb4cd5fec08e95170038479fdcd094c368f281c35cc60184c0f91e0506e",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/scripts/autostart-sol.ps1",
+      "bytes": 5815,
+      "sha256": "6a8506c87d669b2da050a4a94b59c32090dd15595c24d6e0ffe40513d9e32738",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/scripts/check-local.ps1",
+      "bytes": 602,
+      "sha256": "95f1658cae845b81d19ec9f69afb9a55819c5618ba03d9cdacc4fdee8da84721",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/scripts/run-local.ps1",
+      "bytes": 362,
+      "sha256": "7b4dc5ec444847c4bdf7c1e47a62861313b932963a4d96aacf3d46752368373d",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/server/agent_army.py",
+      "bytes": 3112,
+      "sha256": "5cffe8c1735e64dcef1e845c7feb5eac64eafe7dcc7fb529eeb0b1bdbf08c2ad",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/server/intermediate_device.py",
+      "bytes": 5675,
+      "sha256": "658e9d6ab2d00296c756e1d992a94188ddac45b3a39c8da63f0eae2aa7b7d955",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/server/io_device.py",
+      "bytes": 4244,
+      "sha256": "d04195814abc1b4fb7afd1ea102189b3e3af32d5b6ed3349abbe6826ba21b0ca",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/server/motor_mcp.py",
+      "bytes": 16078,
+      "sha256": "a971472c0c552aaba416b0d34c680778c7244458f6fea35e89ab8f1bd6a3e1e4",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/server/runtime_core.py",
+      "bytes": 20150,
+      "sha256": "8565f81ec1d79ab654ccdea4697ba4515f4b7233c5c2b444aa136b4a07f04448",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/server/watcher.py",
+      "bytes": 1682,
+      "sha256": "cba1807e22cc82864f3600646774cde3ab464d5f7adde102776bd4707a842909",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/skills/destructive-action-gate/SKILL.md",
+      "bytes": 1266,
+      "sha256": "178578ed5795edaae94ac32ef906910ad25414db386f6b6d7febcae82b970fb9",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/skills/neuron-agent-army/SKILL.md",
+      "bytes": 5906,
+      "sha256": "0bd0d978c90899231d02858c5b09eeaa837fd417aa15b9b2cce912e00ff5c6e0",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/skills/repo-sensorimotor/SKILL.md",
+      "bytes": 3078,
+      "sha256": "36dcc4ecbfbe841b9ef853e3de2ccc5473d68733a337ad5fcadc0b0299f9a4d1",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/runtime/ggdv-sensorimotor-motor-bridge/skills/windows-adb-motor/SKILL.md",
+      "bytes": 2791,
+      "sha256": "29ae036501dd30942273ccd031750f452fdebdd83fc68b649f7e179cc3154746",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "MODUAL/SENSOR_LOGS/BULK_HEADER_CURRENT.csv",
+      "bytes": 12611,
+      "sha256": "e7c11282e670373ed56c61cdb48b8f824aaf437c7ebd92ab349973d6e811367b",
+      "stones": [
+        "REALITY",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "MODUAL/SENSOR_LOGS/BULK_LATEST_CURRENT.csv",
+      "bytes": 15168,
+      "sha256": "0ceb778718300ef208f2ff465220756ce39436644c502839a1543b66b807f3b8",
+      "stones": [
+        "REALITY",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "MODUAL/SENSOR_LOGS/LIVE_HEADER_CURRENT.csv",
+      "bytes": 12154,
+      "sha256": "933252e45ec7d794f15ea347dfdbe52f4fb19bfd6cca49bb7f013159ac696f75",
+      "stones": [
+        "REALITY",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "MODUAL/SENSOR_LOGS/LIVE_LATEST_CURRENT.csv",
+      "bytes": 26446,
+      "sha256": "fd71a6f34e58fdc9af319146062ac63e0c9e7fce87789cfa4f41838d76e4262c",
+      "stones": [
+        "REALITY",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "MODUAL/SENSOR_LOGS/MODUAL_PARAMETER_CURRENT.json",
+      "bytes": 1501,
+      "sha256": "f8e59b39f496ef089a7e196148b979d5c78918aff560a22b7e5f03c2344b4776",
+      "stones": [
+        "REALITY",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "MODUAL/SENSOR_LOGS/README.md",
+      "bytes": 766,
+      "sha256": "1c408115a62ca38b51713abf034d010e2f13031eeed06f0e13164f6c37021fc4",
+      "stones": [
+        "REALITY",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "MODUAL/SENSOR_LOGS/live/_SESORIMOTOR__{WINDOWS)__XIAOMI12__REDMINOTE14PRO__0000THEMASTERTEACHER__R000_075203003486__.CSV",
+      "bytes": 2647298,
+      "sha256": "c0cddbab3b8d5474aa291c761c8377b68b6c7ba01c144cb292965697189a1125",
+      "stones": [
+        "REALITY",
+        "POWER",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "MODUAL/SENSOR_LOGS/source/START_TELEMETRY_SYNC.bat",
+      "bytes": 478,
+      "sha256": "13b57614439fb45747296ba645070187c39c6b20a4332dc845cab1e3296de55d",
+      "stones": [
+        "REALITY",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "MODUAL/SENSOR_LOGS/source/modual_github_sync.py",
+      "bytes": 7349,
+      "sha256": "efb7721ff569a047d7e88e949cc61fc73c96d1fa47573ecee9eac0221101066f",
+      "stones": [
+        "REALITY",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "MODUAL/SENSOR_LOGS/source/telemetry_buffer_sync.py",
+      "bytes": 10707,
+      "sha256": "619e0653ffae6dd756652614989e39687e85272592e9f8e9cafdec9694c55c61",
+      "stones": [
+        "REALITY",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "PLATFORM_SYNC/CURRENT/owned_plugin_sources/000_ggdv-sensorimotor-motor-bridge.json",
+      "bytes": 94076,
+      "sha256": "63f10e4f90d47013b06a546c0d48ce7d5e670b4cab66a29095c8f6b01b629414",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "PLATFORM_SYNC/CURRENT/owned_plugin_sources/001_ggdv-repo-sensorimotor-brain.json",
+      "bytes": 5350,
+      "sha256": "48706e3281b8415a99734f2d121797f1e6a5873a85dafcbf73faefcce2b2e852",
+      "stones": [
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "evidence/2026-10-07-openai-agent-behavior-allegation.md",
+      "bytes": 8650,
+      "sha256": "d292e9f053e6662dc7d530a6d57a767921d47ffea5d8007b7e0e700bf4436492",
+      "stones": [
+        "REALITY"
+      ],
+      "center": true
+    },
+    {
+      "path": "scripts/build_six_stones_tesseract.py",
+      "bytes": 9816,
+      "sha256": "7e42d45d98456ec7c5f23dd1902c7938a8e76cf9001575b73755463fd0be438f",
+      "stones": [
+        "SPACE",
+        "MIND",
+        "REALITY",
+        "POWER",
+        "TIME",
+        "SOUL"
+      ],
+      "center": true
+    }
+  ]
+}

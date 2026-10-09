@@ -1,0 +1,42 @@
+{
+  "schema": "TESSERACT_PR13_TOOL_BINDINGS/1.0",
+  "pr": 13,
+  "brain": {
+    "name": "TESSERACT",
+    "plugin_id": "plugins_6ac888137270819182ad423ac2a913bf",
+    "already_created": true
+  },
+  "executor": {
+    "name": "TÁC NHÂN PLUS",
+    "plugin_id": "plugins_6ac8801107c08191a829cf479e813980",
+    "already_created": true
+  },
+  "platform": {
+    "name": "The Master Flatform",
+    "plugin_id": "plugins_6ac62e7b401881919ebe1fa157259cae",
+    "already_created": true
+  },
+  "sources": [
+    {
+      "name": "Right Hemisphere",
+      "plugin_id": "plugins_6ac58586cadc8191bde9f9bc41bf3196"
+    },
+    {
+      "name": "SOL Capability Forge",
+      "plugin_id": "plugins_6abc73262e748191b97c0327adebf734"
+    },
+    {
+      "name": "SOL CU NHỎ OPEN",
+      "skill": "skills://plugins/sol-cu-nho-open-living-system/sol-cu-nho-open-living-system"
+    },
+    {
+      "name": "Bridge Gestalt",
+      "plugin_id": "plugins_6ac589d54fd08191aea61b0f1e16d324"
+    },
+    {
+      "name": "GGDV HUMAN SOL",
+      "skill": "skills://plugins/ggdv-human-sol/ggdv-human-sol"
+    }
+  ],
+  "state_boundary": "Binding does not mean local process/device is running or the plugin performed git writes."
+}

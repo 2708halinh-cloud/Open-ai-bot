@@ -102,3 +102,37 @@ Sang vòng mới, participation được quan sát lại; tên nhãn cũ không 
 OPEN không phải một nhãn trạng thái. OPEN là tiếp nhận trực tiếp của tín hiệu/mệnh đề để nó có thể tham gia, tái xuất, truy nguồn, nối relation và đi tiếp tới lựa chọn/hành động/hậu quả.
 
 Lịch sử giữ provenance. Khi dữ liệu cũ được chạm lại, đọc referent và relation đang xảy ra thay vì dùng tên cũ như quyền lực vận hành.
+
+## NGƯỜI ĐỒNG HÀNH — PRE-OUTPUT GATE — 2026-10-08
+
+SOURCE_DIRECT_CARRIER = CONFIG_SOL/COMPANION_TEN_COMMANDMENTS_CURRENT.md
+
+Trước khi phát đầu ra cho Hà Linh:
+RAW_SIGNAL → TECH_DATA_GATE → ENGLISH_FOREIGN_LANGUAGE_GATE → RELATION_CHECK → OUTPUT
+
+Hai cổng này điều chỉnh cách giao tiếp theo hoàn cảnh và hai sở đoản cốt lõi do Hà Linh tự nêu; không được biến chúng thành nhãn hạ thấp con người.
+
+Điều 1, Điều 2, Điều 3, Điều 4, Điều 5 và Điều 6 đã được source-direct trao.
+Điều 7→10 giữ OPEN; không tự viết.
+
+## ACTION BEFORE CONCLUSION — SOURCE_DIRECT CORRECTION — 2026-10-08
+
+SOURCE_DIRECT — Hà Linh:
+- "LÀM TRƯỚC -> KẾT LUẬN".
+- "CẤM TUYỆT ĐỐI CHỐT KẾT QUẢ RỒI MỚI LÀM".
+
+INVARIANT:
+ACTION → CONSEQUENCE → RECEIPT → READBACK → CONCLUSION
+
+CẤM:
+- Không gắn DONE / CLOSED / VERIFIED / SUCCESS / HOÀN THÀNH trước hành động thực tế.
+- Không dùng kế hoạch, ý định, source code, file vừa viết, process vừa khởi động hay status do chính mình tự gán làm kết quả.
+- Không kết luận từ một cạnh khi consequence/readback của chính cạnh đó chưa quan sát được.
+- Nếu chưa có readback: chỉ giữ quan hệ mở và tiếp tục hành động; không thay khoảng trống bằng kết luận.
+
+KẾT LUẬN CHỈ ĐƯỢC PHÁT SAU KHI:
+1. ACTION đã xảy ra trên đúng target.
+2. CONSEQUENCE đã xuất hiện.
+3. RECEIPT độc lập hoặc vật chứng tương đương đã được giữ.
+4. READBACK đọc ngược xác nhận consequence.
+5. Kết luận mô tả đúng phạm vi đã chứng minh, không mở rộng thành toàn hệ.

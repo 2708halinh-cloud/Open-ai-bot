@@ -1,0 +1,26 @@
+{
+  "schema": "GGDV_MEMORY_STEWARDSHIP_READBACK/1.0",
+  "observed_at": "2026-10-08T21:13:20.625781+07:00",
+  "registry": "D:\\SOL_LONG_MACH\\MODEL\\repo\\CURRENT_RUNTIME\\MEMORY_STEWARDSHIP_CURRENT.json",
+  "items": [
+    {
+      "item_id": "R-000",
+      "recovery_exists": true,
+      "hash_matches": true,
+      "current_participation": true
+    },
+    {
+      "item_id": "THE_MASTER_TEACHER",
+      "recovery_exists": true,
+      "hash_matches": true,
+      "current_participation": true
+    },
+    {
+      "item_id": "COMPANION_COMMANDMENTS",
+      "recovery_exists": true,
+      "hash_matches": true,
+      "current_participation": true
+    }
+  ],
+  "all_pinned_items_verified": true
+}

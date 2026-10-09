@@ -21,7 +21,10 @@
         "D:\\UBUBU",
         "D:\\BÉ LINH - LIVING MEMORY"
       ],
-      "scope_rule": "Do not infer global absence."
+      "scope_rule": "Do not infer global absence.",
+      "available_to_runtime": false,
+      "extracted": false,
+      "reason": "Không có carrier bytes/authorized model-weight export trong runtime này."
     },
     "hidden_system_prompt": {
       "exported": false,
@@ -38,7 +41,9 @@
         "D:\\UBUBU",
         "D:\\BÉ LINH - LIVING MEMORY"
       ],
-      "scope_rule": "Do not infer global absence."
+      "scope_rule": "Do not infer global absence.",
+      "observed_in_this_task": false,
+      "extracted": false
     }
   },
   "cognitive_kernel": {

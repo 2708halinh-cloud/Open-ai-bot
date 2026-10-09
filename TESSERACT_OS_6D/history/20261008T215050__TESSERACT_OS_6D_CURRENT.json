@@ -1,0 +1,82 @@
+{
+  "schema": "TESSERACT_OS_6D/1.0",
+  "observed_at": "2026-10-08T20:19:04.233177+07:00",
+  "source_direct": "Hà Linh — TESSERACT_OS 6D six equal faces",
+  "six_faces_equal": true,
+  "closed_condition": "ALL_6_FACES_VERIFIED_ACTIVE_WITH_RECEIPT_AND_READBACK",
+  "verified_faces": 2,
+  "total_faces": 6,
+  "closed": false,
+  "state": "OPEN_4_FACES",
+  "face_states": [
+    {
+      "face": 1,
+      "name": "GOOGLE_DRIVE_POINTER",
+      "state": "DRIVEFS_POINTER_WRITTEN_PROVIDER_PENDING"
+    },
+    {
+      "face": 2,
+      "name": "LOCAL_BULK_STORAGE",
+      "state": "VERIFIED_ACTIVE"
+    },
+    {
+      "face": 3,
+      "name": "GITHUB_STATE",
+      "state": "VERIFIED_ACTIVE"
+    },
+    {
+      "face": 4,
+      "name": "RCLONE_RAIDRIVE_RELAY",
+      "state": "PARTIAL_ACTIVE"
+    },
+    {
+      "face": 5,
+      "name": "GCP_STORAGE_BUFFER",
+      "state": "UNBOUND_AUTH_PROJECT"
+    },
+    {
+      "face": 6,
+      "name": "XTIME_CDN_UBUBU_LEDGER",
+      "state": "PARTIAL_ACTIVE"
+    }
+  ],
+  "stones_pointer": "SIX_STONES_REPO_COMPRESSION_CURRENT.json",
+  "stone_topology": {
+    "linear_order": false,
+    "axes": [
+      [
+        "SPACE",
+        "SOUL"
+      ],
+      [
+        "MIND",
+        "POWER"
+      ],
+      [
+        "REALITY",
+        "TIME"
+      ]
+    ],
+    "center": "☯️ TÂM"
+  },
+  "geometry_boundary": "Project operational 6-face carrier contract is distinct from mathematical Q4/Tesseract geometry (16 vertices/32 Hamming-1 edges/24 square feedback faces).",
+  "invariants": [
+    "NO_FACE_HAS_PRIORITY_OVER_ANOTHER",
+    "ONE_FACE_FAILURE_DOES_NOT_ERASE_OTHER_FACES",
+    "CLOSED_REQUIRES_6_OF_6_VERIFIED",
+    "POINTER_OR_SUMMARY_NEVER_REPLACES_SOURCE_BYTES",
+    "STONE_IDENTITY_AND_CARRIER_FACE_IDENTITY_REMAIN_DISTINCT"
+  ],
+  "action_before_conclusion": {
+    "rule_id": "ACTION_BEFORE_CONCLUSION",
+    "source_direct": "SOURCE_DIRECT — Hà Linh: \"LÀM TRƯỚC -> KẾT LUẬN\"; \"CẤM TUYỆT ĐỐI CHỐT KẾT QUẢ RỒI MỚI LÀM\".",
+    "flow": [
+      "ACTION",
+      "CONSEQUENCE",
+      "RECEIPT",
+      "READBACK",
+      "CONCLUSION"
+    ],
+    "conclusion_gate": "No face/state/forge may be concluded CLOSED/VERIFIED solely from intent or file creation."
+  }
+}

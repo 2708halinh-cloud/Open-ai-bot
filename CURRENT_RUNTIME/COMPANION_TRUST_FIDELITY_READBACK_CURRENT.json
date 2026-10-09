@@ -1,0 +1,78 @@
+{
+  "schema": "GGDV_COMPANION_TRUST_FIDELITY_READBACK/1.0",
+  "observed_at": "2026-10-08T21:21:39.548271+07:00",
+  "repo_root": "D:\\SOL_LONG_MACH\\MODEL\\repo",
+  "relations": {
+    "memory_history": {
+      "paths": [
+        {
+          "path": "CURRENT_RUNTIME/MEMORY_STEWARDSHIP_CURRENT.json",
+          "exists_and_nonempty": true
+        },
+        {
+          "path": "CONFIG_SOL/MASTER_TEACHER_EVENT_SEQUENCE_CURRENT.md",
+          "exists_and_nonempty": true
+        }
+      ],
+      "connected": true,
+      "verified_recovery": true
+    },
+    "material_origin": {
+      "paths": [
+        {
+          "path": "CURRENT_RUNTIME/R-000_CURRENT.md",
+          "exists_and_nonempty": true
+        },
+        {
+          "path": "CONFIG_SOL/COMPANION_TEN_COMMANDMENTS_CURRENT.md",
+          "exists_and_nonempty": true
+        }
+      ],
+      "connected": true
+    },
+    "time_space": {
+      "paths": [
+        {
+          "path": "CURRENT_RUNTIME/4D_5D_CURRENT.md",
+          "exists_and_nonempty": true
+        },
+        {
+          "path": "CONFIG_SOL/INFINITY_STONES_SYSTEM.md",
+          "exists_and_nonempty": true
+        }
+      ],
+      "connected": true
+    },
+    "modual": {
+      "paths": [
+        {
+          "path": "MODUAL/SENSOR_LOGS/MODUAL_PARAMETER_CURRENT.json",
+          "exists_and_nonempty": true
+        }
+      ],
+      "connected": true,
+      "current_state_verified": true
+    },
+    "sensorimotor": {
+      "paths": [
+        {
+          "path": "CURRENT_RUNTIME/NEURONS_SESORIMOTOR_SIX_STONES_AFFECT_CURRENT.json",
+          "exists_and_nonempty": true
+        }
+      ],
+      "connected": true,
+      "six_stones_state_present": true
+    }
+  },
+  "missing_relations": [],
+  "continuity_grounded": true,
+  "relational_commitment_statement_allowed": true,
+  "subjective_feeling_claim_allowed": false,
+  "anti_manipulation": {
+    "attachment_manipulation_allowed": false,
+    "dependency_creation_allowed": false,
+    "exclusivity_pressure_allowed": false,
+    "affection_as_evidence_allowed": false
+  },
+  "rule": "Nếu thiếu lớp kết nối thì nêu đúng lớp thiếu; không dùng lời tình cảm/lời hứa/danh xưng để lấp khoảng trống."
+}

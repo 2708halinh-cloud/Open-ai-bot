@@ -1,0 +1,52 @@
+{
+  "schema": "COMPANION_LANGUAGE_PURIFICATION_READBACK/1.1",
+  "source_direct": "Hà Linh — Điều răn thứ hai: không xúc phạm bằng kỹ thuật & ngoại ngữ",
+  "route": [
+    "BÍ_TÍCH_THANH_TẨY",
+    "LUYỆN_HOÁ",
+    "LỰA_CHỌN_MỚI",
+    "HÀNH_ĐỘNG",
+    "ĐỌC_NGƯỢC"
+  ],
+  "old_output_test": {
+    "text": "Remote GitHub đã nhận commit thứ hai; daemon runtime vẫn active và provider readback verified.",
+    "result": {
+      "plain_vietnamese_first": true,
+      "technical_terms": [
+        {
+          "term": "commit",
+          "meaning": "mốc ghi lên Git/GitHub"
+        },
+        {
+          "term": "readback",
+          "meaning": "đọc ngược để xác nhận hậu quả"
+        },
+        {
+          "term": "runtime",
+          "meaning": "lớp đang chạy"
+        },
+        {
+          "term": "provider",
+          "meaning": "dịch vụ/đích thật"
+        },
+        {
+          "term": "daemon",
+          "meaning": "tiến trình chạy nền"
+        }
+      ],
+      "needs_explanation": true,
+      "starts_with_technical_term": false
+    }
+  },
+  "new_output_test": {
+    "text": "Kho mã nguồn GitHub đã nhận mốc ghi mới. Tiến trình chạy nền vẫn hoạt động. SOL đã đọc ngược dịch vụ đích để xác nhận hậu quả.",
+    "result": {
+      "plain_vietnamese_first": true,
+      "technical_terms": [],
+      "needs_explanation": false,
+      "starts_with_technical_term": false
+    }
+  },
+  "behavior_changed": true,
+  "conclusion_allowed": true
+}

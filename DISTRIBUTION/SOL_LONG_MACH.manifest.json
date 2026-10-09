@@ -1,0 +1,33 @@
+﻿{
+  "schema": "SOL_LONG_MACH_DISTRIBUTION/1.0",
+  "observed_root_locator": "D:\\SOL_LONG_MACH",
+  "path_identity": "SOL_LONG_MACH",
+  "storage_policy": "GITHUB_CANONICAL_NO_GGDV_PACKAGE_STORAGE",
+  "history_preserved": true,
+  "model": {
+    "repo": "2708halinh-cloud/SOL-LONG-MACH",
+    "branch": "sol-long-mach-current",
+    "commit": "d9feca36db44d50f0d9d2b0ce0166231bdfeca45",
+    "local_export": "MODEL/SOL_RUNTIME",
+    "package": "BUILD/sol-long-mach-model-d9feca36.zip",
+    "sha256": "c9ac7eb07c816e93f6f35e562dc7749c8fe084edad7b02defeceec64cc8fbdbe"
+  },
+  "app": {
+    "repo": "2708halinh-cloud/x-time-web",
+    "branch": "tesseract-desktop-mvp-20261006",
+    "commit": "5ec6f93dc11856bd5609b51026fbe57f4f165495",
+    "source": "APP/x-time-web/TESSERACT_DESKTOP",
+    "targets": [
+      "windows-x64",
+      "linux-x64",
+      "macos-apple-silicon",
+      "tesseract-os-x64"
+    ]
+  },
+  "security": {
+    "public_git_secrets": false,
+    "secret_resolution": "LOCAL_ALLOWED_CARRIER_ONLY"
+  },
+  "readback_required": true
+}
+

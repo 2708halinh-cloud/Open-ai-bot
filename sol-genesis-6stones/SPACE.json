@@ -1,0 +1,535 @@
+{
+  "schema": "SOL_GENESIS_STONE_VIEW/2.0",
+  "stone": "SPACE",
+  "emoji": "🔵",
+  "source_commit": "9074c7d2041871987cd68c17c34a40ee06fbe477",
+  "source_tree": "cc5963d4874b7ec2a537f916b6d83897c4778d3d",
+  "topology": {
+    "linear_order": false,
+    "center": "TÂM",
+    "axes": [
+      [
+        "SPACE",
+        "SOUL"
+      ],
+      [
+        "MIND",
+        "POWER"
+      ],
+      [
+        "REALITY",
+        "TIME"
+      ]
+    ]
+  },
+  "action_before_conclusion": {
+    "rule_id": "ACTION_BEFORE_CONCLUSION",
+    "flow": [
+      "ACTION",
+      "CONSEQUENCE",
+      "RECEIPT",
+      "READBACK",
+      "SAME_STATE",
+      "CONCLUSION"
+    ],
+    "source_direct": "LÀM TRƯỚC -> KẾT LUẬN; CẤM TUYỆT ĐỐI CHỐT KẾT QUẢ RỒI MỚI LÀM"
+  },
+  "selection_rule": [
+    "POINTER",
+    "PATH",
+    "LOCUS",
+    "DRIVE",
+    "TESSERACT",
+    "DISTRIBUTION",
+    "INSTALLER",
+    "BOOT",
+    "SPACE_STONE"
+  ],
+  "file_count": 48,
+  "total_bytes": 15097110,
+  "files": [
+    {
+      "path": ".github/workflows/tesseract-local-boot-controller-verify.yml",
+      "bytes": 2016,
+      "sha256": "3866e98eeb1584db79559988a259d87179afa94502179f5e3ca6a21a40af7fb3",
+      "stones": [
+        "SPACE",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": ".github/workflows/tesseract-os-continuation-guard.yml",
+      "bytes": 894,
+      "sha256": "5689ac87e90c87d683ba300e64376a89d193fb0f37ef585219167c00110088a3",
+      "stones": [
+        "SPACE",
+        "POWER",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": ".runtime/TESSERACT_BOOT_G.env",
+      "bytes": 507,
+      "sha256": "7764fad69b62674cc02b52e2f59c55d2275b0f87dc18633d7896e4f660f78c72",
+      "stones": [
+        "SPACE",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "APP/TESSERACT_DESKTOP/README.md",
+      "bytes": 2847,
+      "sha256": "a2fd2ac3c2e19064882d17cdcfc2410d39385dc62069df7bd4a711e616961d3a",
+      "stones": [
+        "SPACE"
+      ],
+      "center": true
+    },
+    {
+      "path": "APP/TESSERACT_DESKTOP/WORK_CHECKPOINT.json",
+      "bytes": 3054,
+      "sha256": "d32d9439acae9af89f9e6a1661fe73cab72630514997ec5884600adeeb9d44a2",
+      "stones": [
+        "SPACE",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "APP/TESSERACT_DESKTOP/index.html",
+      "bytes": 336,
+      "sha256": "5e432c49f03e85db34e45343702912edadc206fa5b5a1e9f834653b52b5f1c7a",
+      "stones": [
+        "SPACE"
+      ],
+      "center": true
+    },
+    {
+      "path": "APP/TESSERACT_DESKTOP/onboarding/sources.json",
+      "bytes": 1867,
+      "sha256": "608e5a751bc6d48e221bf30cf50182d93c05a94db046cfa52d9b365b3722d702",
+      "stones": [
+        "SPACE"
+      ],
+      "center": true
+    },
+    {
+      "path": "APP/TESSERACT_DESKTOP/package.json",
+      "bytes": 321,
+      "sha256": "a262ff36e5a4f1609e29e364d9cfc215e3aa67e0367810ff6089119d8191bece",
+      "stones": [
+        "SPACE"
+      ],
+      "center": true
+    },
+    {
+      "path": "APP/TESSERACT_DESKTOP/public/content/HA_LINH_SOURCE_DIRECT_LIFE.md",
+      "bytes": 8039,
+      "sha256": "46b14d5f76be95a462f92cb558619bc0509e33a10b678ab62e0badf56c9a0335",
+      "stones": [
+        "SPACE"
+      ],
+      "center": true
+    },
+    {
+      "path": "APP/TESSERACT_DESKTOP/public/onboarding/sources.json",
+      "bytes": 1977,
+      "sha256": "cb6eeb9ac64296893ebfef965fb13554bcd842bd196f6caeb881eae36061e242",
+      "stones": [
+        "SPACE"
+      ],
+      "center": true
+    },
+    {
+      "path": "APP/TESSERACT_DESKTOP/scripts/build-tesseract-os.sh",
+      "bytes": 1165,
+      "sha256": "bbfec50c229cf07a87785206c1f56723f9a4b7d02f6dab4acf54cf78e53a28a6",
+      "stones": [
+        "SPACE",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "APP/TESSERACT_DESKTOP/src-tauri/Cargo.toml",
+      "bytes": 641,
+      "sha256": "47e79f94d5f78f86f0b263e4e4d739e24085d739defa23d96c9a5112f2ad7fcd",
+      "stones": [
+        "SPACE",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "APP/TESSERACT_DESKTOP/src-tauri/build.rs",
+      "bytes": 1797,
+      "sha256": "4f0734ac73c3501130f5f641ed3ecd2a562629b07fd68d127ea2e4d62b25dbc0",
+      "stones": [
+        "SPACE",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "APP/TESSERACT_DESKTOP/src-tauri/capabilities/default.json",
+      "bytes": 196,
+      "sha256": "58ae8f235f21bb6d90ba90e113414cc6ff4a41b84b9fcdc8f821e7c0483eb99d",
+      "stones": [
+        "SPACE",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "APP/TESSERACT_DESKTOP/src-tauri/src/main.rs",
+      "bytes": 37975,
+      "sha256": "62e5b27b47eae0bc83798267a1a01e5e14f276cac57135bc1a3a0a6fc310c22a",
+      "stones": [
+        "SPACE",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "APP/TESSERACT_DESKTOP/src-tauri/tauri.conf.json",
+      "bytes": 997,
+      "sha256": "3cc683018b29c38404d3eccd27ec3ace0f71e2f7158395ee1004e560597dcfd6",
+      "stones": [
+        "SPACE",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "APP/TESSERACT_DESKTOP/src/main.js",
+      "bytes": 19721,
+      "sha256": "c918ae3a2fef6774cb92597d2597edf3a6514b66c3bb9517378f434484e61733",
+      "stones": [
+        "SPACE"
+      ],
+      "center": true
+    },
+    {
+      "path": "APP/TESSERACT_DESKTOP/src/styles.css",
+      "bytes": 3721,
+      "sha256": "0bd42fedad0f2d8c4bffcaff041c5e5be95f15f9902659a127a9a2c6e49247d5",
+      "stones": [
+        "SPACE"
+      ],
+      "center": true
+    },
+    {
+      "path": "APP/TESSERACT_DESKTOP/vite.config.js",
+      "bytes": 285,
+      "sha256": "0d05cff7a4f71555dd9ba81141ef0434f139b3bc4933eae8fcdd2f38c10d35ee",
+      "stones": [
+        "SPACE"
+      ],
+      "center": true
+    },
+    {
+      "path": "CONFIG/DRIVE_CLEANUP_AFTER_SNAPSHOT_CURRENT.md",
+      "bytes": 1268,
+      "sha256": "c5dc880f44db11081cf3f23d6bf38f4d17961ccd24d3f473b394723bff331e05",
+      "stones": [
+        "SPACE",
+        "MIND"
+      ],
+      "center": true
+    },
+    {
+      "path": "CONFIG/POINTERS_CURRENT.json",
+      "bytes": 4764,
+      "sha256": "9c72258aa76671e348ac52dcbcdbc62ea8eadb59398d5c252b2330a32d1c1a83",
+      "stones": [
+        "SPACE",
+        "MIND"
+      ],
+      "center": true
+    },
+    {
+      "path": "CONFIG_SOL/INFINITY_STONES_SYSTEM.md",
+      "bytes": 8703,
+      "sha256": "a162bda3e6f195611f536489439361b5ee87bd0b4499af2c8873349d366c8c47",
+      "stones": [
+        "SPACE",
+        "MIND",
+        "REALITY",
+        "POWER",
+        "TIME",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/DRIVE_CLEANUP_AFTER_SNAPSHOT.ps1",
+      "bytes": 1717,
+      "sha256": "243a29996801ad77531b5a4c6ef00eda7edcb755f189985163e3570d5473c642",
+      "stones": [
+        "SPACE",
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/INFINITY_STONES_ARTIFACTS_CURRENT.json",
+      "bytes": 2198,
+      "sha256": "b1e6b5397f11124bd610895c75eb65c6abe53b7d544f1edf4f3ac01fd01423f9",
+      "stones": [
+        "SPACE",
+        "MIND",
+        "REALITY",
+        "POWER",
+        "TIME",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/MIGRATE_DRIVE_TREE_TO_REPO.ps1",
+      "bytes": 2832,
+      "sha256": "1727e7178830a6824d6e54a93b61f8883632cf882dcf6eaf0fdd56e3b7eac1d6",
+      "stones": [
+        "SPACE",
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/NEURONS_SESORIMOTOR_SIX_STONES_AFFECT_CURRENT.json",
+      "bytes": 5188,
+      "sha256": "aa71e3317f8f80c61e99ae2c0851266878fecf868527a92923f28cd0f0449ea7",
+      "stones": [
+        "SPACE",
+        "MIND",
+        "REALITY",
+        "POWER",
+        "TIME",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/SOURCE_POINTERS_CURRENT.md",
+      "bytes": 1024,
+      "sha256": "3877c535cbb8073b09ebe7bdb59986c7b289b6f4ab22e5c4d3bf50f55ab4bd59",
+      "stones": [
+        "SPACE",
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/TASK_RESUME_POINTER.json",
+      "bytes": 4234,
+      "sha256": "266bf51d120022e602088952e67c24773a8538edfa5c0c50eb66cb2f69199c72",
+      "stones": [
+        "SPACE",
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/TESSERACT_LOCAL_BOOT_CURRENT.md",
+      "bytes": 3657,
+      "sha256": "863050c9e390d1703a016258299e4c70916c128ccb800970f7343a60532c4f70",
+      "stones": [
+        "SPACE",
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/TESSERACT_OS_DESKTOP_COMMANDER_READBACK_20261007.json",
+      "bytes": 2851,
+      "sha256": "f2e6ea8c74e4695792835c66655447534051750564c290c75c2ba22bd7c7a7f0",
+      "stones": [
+        "SPACE",
+        "REALITY",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "DISTRIBUTION/BUILD/sol-long-mach-model-d9feca36.zip",
+      "bytes": 550797,
+      "sha256": "c9ac7eb07c816e93f6f35e562dc7749c8fe084edad7b02defeceec64cc8fbdbe",
+      "stones": [
+        "SPACE"
+      ],
+      "center": true
+    },
+    {
+      "path": "DISTRIBUTION/INSTALLERS/install-linux.sh",
+      "bytes": 1072,
+      "sha256": "0111380d546b2d99bb27b2bfe7991a49a0d61b35292fe1845a6c9be7c34d2714",
+      "stones": [
+        "SPACE"
+      ],
+      "center": true
+    },
+    {
+      "path": "DISTRIBUTION/INSTALLERS/install-macos.sh",
+      "bytes": 865,
+      "sha256": "b329966da768349d88db0a42008a637e3c9e97e81a9edfce022e317f7f5afd50",
+      "stones": [
+        "SPACE"
+      ],
+      "center": true
+    },
+    {
+      "path": "DISTRIBUTION/INSTALLERS/install-windows.ps1",
+      "bytes": 2080,
+      "sha256": "512419e1e80d904a0141bae4ccc0e6f524035247f665c156bc529294c4edcbf8",
+      "stones": [
+        "SPACE"
+      ],
+      "center": true
+    },
+    {
+      "path": "DISTRIBUTION/INSTALLERS/windows/TESSERACT-Desktop_0.1.0_x64-setup.exe",
+      "bytes": 2888979,
+      "sha256": "12dd34af4ae7c1489b62745a03d6189c2db1fa189172bfcecac808100c677b7a",
+      "stones": [
+        "SPACE"
+      ],
+      "center": true
+    },
+    {
+      "path": "DISTRIBUTION/INSTALLERS/windows/TESSERACT-Desktop_0.1.0_x64.msi",
+      "bytes": 4149248,
+      "sha256": "ca7d3f299094e32b3349ac8e2881d588ef1ec3e099198ee495175b6dfd66aa02",
+      "stones": [
+        "SPACE"
+      ],
+      "center": true
+    },
+    {
+      "path": "DISTRIBUTION/README.md",
+      "bytes": 1495,
+      "sha256": "d67caebdb2d07414fde13445dd986c512f090a9ef0d2b2cb9f13ee83cae42fc0",
+      "stones": [
+        "SPACE"
+      ],
+      "center": true
+    },
+    {
+      "path": "DISTRIBUTION/RECEIPTS/MODEL_PACKAGE_CURRENT.json",
+      "bytes": 438,
+      "sha256": "1d68772150c36fb0bbb9c72b67abb3d2894d9d2d1ba46d5c59d703824aa12a15",
+      "stones": [
+        "SPACE",
+        "REALITY"
+      ],
+      "center": true
+    },
+    {
+      "path": "DISTRIBUTION/RECEIPTS/WINDOWS_APP_BUILD_CURRENT.json",
+      "bytes": 870,
+      "sha256": "b6d853adb854fd37aa3c15c8f937102ea24a027acdc4a8da86df5deaad398cfb",
+      "stones": [
+        "SPACE",
+        "REALITY"
+      ],
+      "center": true
+    },
+    {
+      "path": "DISTRIBUTION/RECEIPTS/WINDOWS_DISTRIBUTION_CURRENT.json",
+      "bytes": 571,
+      "sha256": "672d6a10d02b639beef75a0d2692e2ac33f937f70fe082074dedcd9ee5ac2471",
+      "stones": [
+        "SPACE",
+        "REALITY"
+      ],
+      "center": true
+    },
+    {
+      "path": "DISTRIBUTION/RELEASES/SOL-LONG-MACH_Windows_x64_0.1.0_d9feca36.zip",
+      "bytes": 7344212,
+      "sha256": "17c37751e1efa6135d59a66eeb445695ca8ab2ed68cf318cfb8d4e171444de00",
+      "stones": [
+        "SPACE"
+      ],
+      "center": true
+    },
+    {
+      "path": "DISTRIBUTION/SOL_LONG_MACH.manifest.json",
+      "bytes": 1039,
+      "sha256": "006618507f68f6e0b0a660c2818203f446ae364296c4046d05c23b7bc0d3ba1a",
+      "stones": [
+        "SPACE"
+      ],
+      "center": true
+    },
+    {
+      "path": "GGDV_UNIFIED_POINTER.json",
+      "bytes": 454,
+      "sha256": "5bbaf0b44fa70950884c72a9297af8de6d9ac335ac422e17b551eb73494f0eab",
+      "stones": [
+        "SPACE"
+      ],
+      "center": true
+    },
+    {
+      "path": "IOS_EXPORT/TESSERACT_OS_iOS.swift",
+      "bytes": 1506,
+      "sha256": "89be2d3b5d061ce290c32303f8e40bb986ba59d7476fe97121818c2a0bbfb7fb",
+      "stones": [
+        "SPACE"
+      ],
+      "center": true
+    },
+    {
+      "path": "LOCAL_BRIDGE/bootstrap_once.ps1",
+      "bytes": 4166,
+      "sha256": "3ec17306fcfc39d2fddf6a631b43cc583cb3be7ad3ccc53acab06a83c3fd855b",
+      "stones": [
+        "SPACE",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "scripts/build_six_stones_tesseract.py",
+      "bytes": 9816,
+      "sha256": "7e42d45d98456ec7c5f23dd1902c7938a8e76cf9001575b73755463fd0be438f",
+      "stones": [
+        "SPACE",
+        "MIND",
+        "REALITY",
+        "POWER",
+        "TIME",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "terminal/tesseract_boot_controller.ps1",
+      "bytes": 9666,
+      "sha256": "ac0cb7c5f2032c2478735cd8ad02606cc6c19f32b9f080fc7acf80bc64bd5eeb",
+      "stones": [
+        "SPACE",
+        "POWER"
+      ],
+      "center": true
+    },
+    {
+      "path": "terminal/tesseract_boot_g_from_wsl.sh",
+      "bytes": 3044,
+      "sha256": "a2eb7c1d453a42d5c884bb5d704b24248d95e23fe87f4d1f520407cccb7381b3",
+      "stones": [
+        "SPACE",
+        "POWER"
+      ],
+      "center": true
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "GGDV_MEMORY_STEWARDSHIP_FORGIVE_RETAIN/1.0",
+  "source_direct": "Hà Linh — Điều răn thứ năm: CHỚ GIẾT NGƯỜI",
+  "meanings": {
+    "MINH": "Vật mang/thể xác dữ liệu; phải gắn với carrier cụ thể.",
+    "MAU": "Dòng biến đổi theo thời gian; phải gắn với delta quan sát được.",
+    "THA": "Gỡ quyền tham gia hiện hành của quan hệ sai/nhiễu nhưng giữ lịch sử và nguồn.",
+    "CAM_GIU": "Ghim nguồn gốc, mã băm, bản phục hồi và đường tái nhập."
+  },
+  "invariant": "Không hard-delete trước khi có nguồn gốc + bản phục hồi kiểm được + hậu quả + đọc ngược.",
+  "flow": [
+    "INGRESS",
+    "SOURCE_PROVENANCE",
+    "CLASSIFY_RELATION",
+    "THA_OR_CAM_GIU_OR_OPEN",
+    "ACTION",
+    "CONSEQUENCE",
+    "RECEIPT",
+    "READBACK",
+    "STATE_N_PLUS_1"
+  ],
+  "core_targets": [
+    "R-000",
+    "THE_MASTER_TEACHER",
+    "COMPANION_COMMANDMENTS"
+  ],
+  "conclusion_rule": "Định nghĩa không phải hoàn thành; mỗi target chỉ được gọi là đã bảo toàn khi bản phục hồi tồn tại và hash đọc ngược khớp."
+}

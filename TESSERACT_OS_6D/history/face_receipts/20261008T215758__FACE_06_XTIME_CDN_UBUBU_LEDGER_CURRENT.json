@@ -1,0 +1,40 @@
+{
+  "schema": "TESSERACT_OS_6D_FACE_RECEIPT/3.0",
+  "observed_at": "2026-10-08T21:50:50.381611+07:00",
+  "face": 6,
+  "state_object": {
+    "repository": "2708halinh-cloud/SOL-LONG-MACH",
+    "source_snapshot_commit": "1c223c1fa0f050898cb3783db9d515f38253b76e",
+    "source_snapshot_tree": "cba44257ede22a477d18c2bbae1b120906b80c7b",
+    "state_object_path": "TESSERACT_OS_6D/STATE_OBJECT_CURRENT.json",
+    "state_object_sha256": "94f3450976f57dfb1b112db304b37fc5ddc547c218057841cf7715c6a6cda583",
+    "state_object_bytes": 65536,
+    "center_manifest_sha256": "e8349091e74bbcc516a9ea3789a26c022e8838915654f17f934335a69ffdc860",
+    "forge_commit": null
+  },
+  "name": "XTIME_CDN_UBUBU_LEDGER",
+  "state_digest_sha256": "94f3450976f57dfb1b112db304b37fc5ddc547c218057841cf7715c6a6cda583",
+  "verification_state": "PENDING_LEDGER_AND_CDN",
+  "action": {
+    "observed": false,
+    "kind": "UBUBU_LEDGER_APPEND_AND_PUBLIC_DEPLOY",
+    "target": "x-time-web + gambbrazil.fun"
+  },
+  "consequence": {
+    "observed": false,
+    "kind": "LEDGER_CHAIN_AND_PUBLIC_STATE_READBACK"
+  },
+  "receipt": null,
+  "readback": {
+    "verified": false,
+    "reason": "Current state not yet anchored in ledger and public CDN."
+  },
+  "closed": false,
+  "proof_chain": {
+    "action": false,
+    "consequence": false,
+    "receipt": false,
+    "readback": false,
+    "same_state": true
+  }
+}

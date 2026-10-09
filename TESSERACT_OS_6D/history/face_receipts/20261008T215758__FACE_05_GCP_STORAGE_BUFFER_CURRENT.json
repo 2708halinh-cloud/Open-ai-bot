@@ -1,0 +1,47 @@
+{
+  "schema": "TESSERACT_OS_6D_FACE_RECEIPT/3.0",
+  "observed_at": "2026-10-08T21:50:50.381611+07:00",
+  "face": 5,
+  "state_object": {
+    "repository": "2708halinh-cloud/SOL-LONG-MACH",
+    "source_snapshot_commit": "1c223c1fa0f050898cb3783db9d515f38253b76e",
+    "source_snapshot_tree": "cba44257ede22a477d18c2bbae1b120906b80c7b",
+    "state_object_path": "TESSERACT_OS_6D/STATE_OBJECT_CURRENT.json",
+    "state_object_sha256": "94f3450976f57dfb1b112db304b37fc5ddc547c218057841cf7715c6a6cda583",
+    "state_object_bytes": 65536,
+    "center_manifest_sha256": "e8349091e74bbcc516a9ea3789a26c022e8838915654f17f934335a69ffdc860",
+    "forge_commit": null
+  },
+  "name": "GCP_STORAGE_BUFFER",
+  "state_digest_sha256": "94f3450976f57dfb1b112db304b37fc5ddc547c218057841cf7715c6a6cda583",
+  "verification_state": "UNBOUND_AUTH_PROJECT",
+  "action": {
+    "observed": false,
+    "kind": "GCP_OBJECT_UPLOAD",
+    "target": null
+  },
+  "consequence": {
+    "observed": false,
+    "kind": "GCP_OBJECT_READBACK"
+  },
+  "receipt": {
+    "discovery": {
+      "gcloud_present": true,
+      "active_account": false,
+      "project_bound": false,
+      "adc": false
+    }
+  },
+  "readback": {
+    "verified": false,
+    "reason": "No active GCP account/project/ADC observed."
+  },
+  "closed": false,
+  "proof_chain": {
+    "action": false,
+    "consequence": false,
+    "receipt": true,
+    "readback": false,
+    "same_state": true
+  }
+}

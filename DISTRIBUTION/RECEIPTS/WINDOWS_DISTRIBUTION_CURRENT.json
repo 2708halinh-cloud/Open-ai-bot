@@ -1,0 +1,11 @@
+﻿{
+    "schema":  "SOL_LONG_MACH_WINDOWS_DISTRIBUTION/1.1",
+    "layout":  "ROOT/BUILD + ROOT/INSTALLERS + ROOT/RECEIPTS",
+    "file":  "SOL-LONG-MACH_Windows_x64_0.1.0_d9feca36.zip",
+    "bytes":  7344212,
+    "sha256":  "17c37751e1efa6135d59a66eeb445695ca8ab2ed68cf318cfb8d4e171444de00",
+    "model_commit":  "d9feca36db44d50f0d9d2b0ce0166231bdfeca45",
+    "app_commit":  "5ec6f93dc11856bd5609b51026fbe57f4f165495",
+    "supersedes_sha256":  "6cd54434a6686e2a8199a7968a59c40b1b7207204359f289fa59b3902b2c0e66",
+    "created_at":  "2026-10-07T09:38:40.6557936+07:00"
+}

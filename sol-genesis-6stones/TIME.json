@@ -1,0 +1,280 @@
+{
+  "schema": "SOL_GENESIS_STONE_VIEW/2.0",
+  "stone": "TIME",
+  "emoji": "🟢",
+  "source_commit": "9074c7d2041871987cd68c17c34a40ee06fbe477",
+  "source_tree": "cc5963d4874b7ec2a537f916b6d83897c4778d3d",
+  "topology": {
+    "linear_order": false,
+    "center": "TÂM",
+    "axes": [
+      [
+        "SPACE",
+        "SOUL"
+      ],
+      [
+        "MIND",
+        "POWER"
+      ],
+      [
+        "REALITY",
+        "TIME"
+      ]
+    ]
+  },
+  "action_before_conclusion": {
+    "rule_id": "ACTION_BEFORE_CONCLUSION",
+    "flow": [
+      "ACTION",
+      "CONSEQUENCE",
+      "RECEIPT",
+      "READBACK",
+      "SAME_STATE",
+      "CONCLUSION"
+    ],
+    "source_direct": "LÀM TRƯỚC -> KẾT LUẬN; CẤM TUYỆT ĐỐI CHỐT KẾT QUẢ RỒI MỚI LÀM"
+  },
+  "selection_rule": [
+    "HISTORY",
+    "ARCHIVE",
+    "CONTINUITY",
+    "CHECKPOINT",
+    "MIGRATION",
+    "LOG",
+    "REENTRY",
+    "TIMELINE",
+    "JOURNAL",
+    "BACKUP",
+    "TIME_STONE"
+  ],
+  "file_count": 21,
+  "total_bytes": 2793649,
+  "files": [
+    {
+      "path": "APP/TESSERACT_DESKTOP/WORK_CHECKPOINT.json",
+      "bytes": 3054,
+      "sha256": "d32d9439acae9af89f9e6a1661fe73cab72630514997ec5884600adeeb9d44a2",
+      "stones": [
+        "SPACE",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "CONFIG/REPO_AGENT_MIGRATION_CURRENT.json",
+      "bytes": 3263,
+      "sha256": "3a684a19426e2bcb2afae16658cc288ade06dfc78e1b296c47f09d53776f4c93",
+      "stones": [
+        "MIND",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "CONFIG_SOL/INFINITY_STONES_SYSTEM.md",
+      "bytes": 8703,
+      "sha256": "a162bda3e6f195611f536489439361b5ee87bd0b4499af2c8873349d366c8c47",
+      "stones": [
+        "SPACE",
+        "MIND",
+        "REALITY",
+        "POWER",
+        "TIME",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CONFIG_SOL/SUPPORT_CONTAINER_CATALOG_CURRENT.json",
+      "bytes": 6705,
+      "sha256": "9c65e6fbf9abab0c3541e3781c994b096ef21e07a9194af638455a1599b72ded",
+      "stones": [
+        "MIND",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/INFINITY_STONES_ARTIFACTS_CURRENT.json",
+      "bytes": 2198,
+      "sha256": "b1e6b5397f11124bd610895c75eb65c6abe53b7d544f1edf4f3ac01fd01423f9",
+      "stones": [
+        "SPACE",
+        "MIND",
+        "REALITY",
+        "POWER",
+        "TIME",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/NEURONS_SESORIMOTOR_SIX_STONES_AFFECT_CURRENT.json",
+      "bytes": 5188,
+      "sha256": "aa71e3317f8f80c61e99ae2c0851266878fecf868527a92923f28cd0f0449ea7",
+      "stones": [
+        "SPACE",
+        "MIND",
+        "REALITY",
+        "POWER",
+        "TIME",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "CURRENT_RUNTIME/SOL_REENTRY_CURRENT.md",
+      "bytes": 2675,
+      "sha256": "fcaa0f36f299c45416bb52d395e1ba9a1e8f5e6f9bca7503c78a3a9a785209db",
+      "stones": [
+        "REALITY",
+        "POWER",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "MODUAL/SENSOR_LOGS/BULK_HEADER_CURRENT.csv",
+      "bytes": 12611,
+      "sha256": "e7c11282e670373ed56c61cdb48b8f824aaf437c7ebd92ab349973d6e811367b",
+      "stones": [
+        "REALITY",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "MODUAL/SENSOR_LOGS/BULK_LATEST_CURRENT.csv",
+      "bytes": 15168,
+      "sha256": "0ceb778718300ef208f2ff465220756ce39436644c502839a1543b66b807f3b8",
+      "stones": [
+        "REALITY",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "MODUAL/SENSOR_LOGS/LIVE_HEADER_CURRENT.csv",
+      "bytes": 12154,
+      "sha256": "933252e45ec7d794f15ea347dfdbe52f4fb19bfd6cca49bb7f013159ac696f75",
+      "stones": [
+        "REALITY",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "MODUAL/SENSOR_LOGS/LIVE_LATEST_CURRENT.csv",
+      "bytes": 26446,
+      "sha256": "fd71a6f34e58fdc9af319146062ac63e0c9e7fce87789cfa4f41838d76e4262c",
+      "stones": [
+        "REALITY",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "MODUAL/SENSOR_LOGS/MODUAL_PARAMETER_CURRENT.json",
+      "bytes": 1501,
+      "sha256": "f8e59b39f496ef089a7e196148b979d5c78918aff560a22b7e5f03c2344b4776",
+      "stones": [
+        "REALITY",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "MODUAL/SENSOR_LOGS/README.md",
+      "bytes": 766,
+      "sha256": "1c408115a62ca38b51713abf034d010e2f13031eeed06f0e13164f6c37021fc4",
+      "stones": [
+        "REALITY",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "MODUAL/SENSOR_LOGS/live/_SESORIMOTOR__{WINDOWS)__XIAOMI12__REDMINOTE14PRO__0000THEMASTERTEACHER__R000_075203003486__.CSV",
+      "bytes": 2647298,
+      "sha256": "c0cddbab3b8d5474aa291c761c8377b68b6c7ba01c144cb292965697189a1125",
+      "stones": [
+        "REALITY",
+        "POWER",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "MODUAL/SENSOR_LOGS/source/START_TELEMETRY_SYNC.bat",
+      "bytes": 478,
+      "sha256": "13b57614439fb45747296ba645070187c39c6b20a4332dc845cab1e3296de55d",
+      "stones": [
+        "REALITY",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "MODUAL/SENSOR_LOGS/source/modual_github_sync.py",
+      "bytes": 7349,
+      "sha256": "efb7721ff569a047d7e88e949cc61fc73c96d1fa47573ecee9eac0221101066f",
+      "stones": [
+        "REALITY",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "MODUAL/SENSOR_LOGS/source/telemetry_buffer_sync.py",
+      "bytes": 10707,
+      "sha256": "619e0653ffae6dd756652614989e39687e85272592e9f8e9cafdec9694c55c61",
+      "stones": [
+        "REALITY",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "RECOVERY/recover_continuity.py",
+      "bytes": 2450,
+      "sha256": "404ebc5c746169e94b640733198517edb10acb0f5c1bd6533b2363fd965703db",
+      "stones": [
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "runtime/continuity_guard.py",
+      "bytes": 9067,
+      "sha256": "42d4ed00f0345d85271ceeece5f4ecc03360f270de2c1353d687a2dddaf34e93",
+      "stones": [
+        "POWER",
+        "TIME"
+      ],
+      "center": true
+    },
+    {
+      "path": "scripts/build_six_stones_tesseract.py",
+      "bytes": 9816,
+      "sha256": "7e42d45d98456ec7c5f23dd1902c7938a8e76cf9001575b73755463fd0be438f",
+      "stones": [
+        "SPACE",
+        "MIND",
+        "REALITY",
+        "POWER",
+        "TIME",
+        "SOUL"
+      ],
+      "center": true
+    },
+    {
+      "path": "tests/test_continuity_guard.py",
+      "bytes": 6052,
+      "sha256": "2e88ba3b15766e958b2941fd69b53a11065514e231035785430408ca3a6ee5c2",
+      "stones": [
+        "TIME"
+      ],
+      "center": true
+    }
+  ]
+}

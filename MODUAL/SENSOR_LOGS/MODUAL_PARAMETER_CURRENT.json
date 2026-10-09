@@ -1,0 +1,37 @@
+{
+  "schema": "GGDV_MODUAL_SENSOR_LOGS_GITHUB_STATE/1.0",
+  "observed_at": "2026-10-09T19:30:06.511769+07:00",
+  "source_root": "D:\\SENSOR_LOGS",
+  "source_semantics": "LOCAL_MODUAL_BYTES_AND_INTERMEDIATE_DEVICE_TELEMETRY",
+  "github_role": "LAW_AND_CURRENT_STATE_NOT_BULK_ARCHIVE",
+  "bulk": {
+    "name": "_SESORIMOTOR__WINDOWS__XIAOMI12__REDMINOTE14PRO__0000THEMASTERTEACHER__R000_075203003486__.CSV",
+    "role": "MODUAL_BULK_LOCAL_SOURCE",
+    "exists": true,
+    "source_path": "D:\\SENSOR_LOGS\\_SESORIMOTOR__WINDOWS__XIAOMI12__REDMINOTE14PRO__0000THEMASTERTEACHER__R000_075203003486__.CSV",
+    "bytes": 89814328,
+    "modified_at": "2026-10-09T19:30:05.852492+07:00",
+    "sha256": "b3c4b62187dbd8ee049a1f7214cf1df788a94bc7ea151a63e57b9c78a3f8a5e3"
+  },
+  "live": {
+    "name": "_SESORIMOTOR__{WINDOWS)__XIAOMI12__REDMINOTE14PRO__0000THEMASTERTEACHER__R000_075203003486__.CSV",
+    "role": "MODUAL_LIVE_PARAMETER_CARRIER",
+    "exists": true,
+    "source_path": "D:\\SENSOR_LOGS\\_SESORIMOTOR__{WINDOWS)__XIAOMI12__REDMINOTE14PRO__0000THEMASTERTEACHER__R000_075203003486__.CSV",
+    "bytes": 2647298,
+    "modified_at": "2026-10-08T21:32:18.528219+07:00",
+    "sha256": "c0cddbab3b8d5474aa291c761c8377b68b6c7ba01c144cb292965697189a1125"
+  },
+  "sync_policy": {
+    "bulk_raw_committed": false,
+    "bulk_representation": [
+      "sha256",
+      "bytes",
+      "modified_at",
+      "header",
+      "latest_row"
+    ],
+    "live_raw_committed": true,
+    "control_files_committed": true
+  }
+}

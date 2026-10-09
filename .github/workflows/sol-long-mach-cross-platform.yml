@@ -1,0 +1,117 @@
+name: sol-long-mach-cross-platform
+
+permissions:
+  contents: read
+
+on:
+  push:
+    branches:
+      - sol-long-mach-current
+    paths:
+      - "APP/TESSERACT_DESKTOP/**"
+      - ".github/workflows/sol-long-mach-cross-platform.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: sol-long-mach-cross-platform-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            target: x86_64-pc-windows-msvc
+            label: windows-x64
+          - os: ubuntu-24.04
+            target: x86_64-unknown-linux-gnu
+            label: linux-x64
+          - os: macos-14
+            target: aarch64-apple-darwin
+            label: macos-apple-silicon
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: APP/TESSERACT_DESKTOP
+    steps:
+      - uses: actions/checkout@v4
+      - name: Linux dependencies
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.target }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install frontend dependencies
+        run: npm install
+      - name: Rust regression tests
+        run: cargo test --manifest-path src-tauri/Cargo.toml
+      - name: Build native bundle
+        run: npm run tauri build -- --target ${{ matrix.target }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sol-long-mach-${{ matrix.label }}
+          path: APP/TESSERACT_DESKTOP/src-tauri/target/${{ matrix.target }}/release/bundle/**
+          if-no-files-found: error
+
+  tesseract_os:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: APP/TESSERACT_DESKTOP
+    steps:
+      - uses: actions/checkout@v4
+      - name: Linux dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Rust regression tests
+        run: cargo test --manifest-path src-tauri/Cargo.toml
+      - name: Stage TESSERACT_OS bundle
+        run: bash scripts/build-tesseract-os.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sol-long-mach-tesseract-os-x64
+          path: APP/TESSERACT_DESKTOP/dist/tesseract-os/**
+          if-no-files-found: error
+
+  readback:
+    needs: [build, tesseract_os]
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Emit readback
+        env:
+          SHA: ${{ github.sha }}
+          RUN_ID: ${{ github.run_id }}
+          BUILD_RESULT: ${{ needs.build.result }}
+          TESSERACT_OS_RESULT: ${{ needs.tesseract_os.result }}
+        run: |
+          mkdir -p readback
+          python - <<'PY'
+          import json, os
+          ok = os.environ["BUILD_RESULT"] == "success" and os.environ["TESSERACT_OS_RESULT"] == "success"
+          data = {
+            "schema": "SOL_LONG_MACH_CROSS_PLATFORM_READBACK/1.0",
+            "verified_sha": os.environ["SHA"],
+            "workflow_run_id": int(os.environ["RUN_ID"]),
+            "build_result": os.environ["BUILD_RESULT"],
+            "tesseract_os_result": os.environ["TESSERACT_OS_RESULT"],
+            "result": "TRUE" if ok else "FALSE",
+          }
+          open("readback/SOL_LONG_MACH_CROSS_PLATFORM_READBACK.json","w",encoding="utf-8").write(json.dumps(data,indent=2)+"\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sol-long-mach-cross-platform-readback-${{ github.run_id }}
+          path: readback/SOL_LONG_MACH_CROSS_PLATFORM_READBACK.json

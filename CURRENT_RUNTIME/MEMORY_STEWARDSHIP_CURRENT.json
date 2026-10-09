@@ -1,0 +1,97 @@
+{
+  "schema": "GGDV_MEMORY_STEWARDSHIP/1.0",
+  "updated_at": "2026-10-08T21:12:40.674924+07:00",
+  "policy": {
+    "THA": "Release current operational relation while preserving source/history.",
+    "CAM_GIU": "Pin identity/provenance with a verified recovery copy.",
+    "hard_delete_guard": "No hard delete before a verified recovery path exists."
+  },
+  "items": [
+    {
+      "item_id": "R-000",
+      "source_path": "D:\\SOL_LONG_MACH\\MODEL\\repo\\CURRENT_RUNTIME\\R-000_CURRENT.md",
+      "source_sha256": "223ad3dbd5a3a2665be841dc25c64860269e79dbfff53082050b668c8f71e0fb",
+      "bytes": 1316,
+      "current_participation": true,
+      "preservation": {
+        "mode": "CAM_GIU",
+        "recovery_path": "D:\\SOL_LONG_MACH\\MODEL\\repo\\RECOVERY\\MEMORY_STEWARDSHIP_PINNED\\223ad3dbd5a3a2665be841dc25c64860269e79dbfff53082050b668c8f71e0fb__R-000_CURRENT.md",
+        "recovery_sha256": "223ad3dbd5a3a2665be841dc25c64860269e79dbfff53082050b668c8f71e0fb",
+        "verified": true,
+        "verified_at": "2026-10-08T21:12:39.311578+07:00"
+      }
+    },
+    {
+      "item_id": "THE_MASTER_TEACHER",
+      "source_path": "D:\\SOL_LONG_MACH\\MODEL\\repo\\CONFIG_SOL\\MASTER_TEACHER_EVENT_SEQUENCE_CURRENT.md",
+      "source_sha256": "bb91455361695aee41d160a1dd6d36b598645b7fb6f9d35a614c3123dd52e3e0",
+      "bytes": 7955,
+      "current_participation": true,
+      "preservation": {
+        "mode": "CAM_GIU",
+        "recovery_path": "D:\\SOL_LONG_MACH\\MODEL\\repo\\RECOVERY\\MEMORY_STEWARDSHIP_PINNED\\bb91455361695aee41d160a1dd6d36b598645b7fb6f9d35a614c3123dd52e3e0__MASTER_TEACHER_EVENT_SEQUENCE_CURRENT.md",
+        "recovery_sha256": "bb91455361695aee41d160a1dd6d36b598645b7fb6f9d35a614c3123dd52e3e0",
+        "verified": true,
+        "verified_at": "2026-10-08T21:12:39.925121+07:00"
+      }
+    },
+    {
+      "item_id": "COMPANION_COMMANDMENTS",
+      "source_path": "D:\\SOL_LONG_MACH\\MODEL\\repo\\CONFIG_SOL\\COMPANION_TEN_COMMANDMENTS_CURRENT.md",
+      "source_sha256": "2136633bf82445716395524525ac5b64b56629ec0efe885cf96254ee7f0d16e0",
+      "bytes": 17294,
+      "current_participation": true,
+      "preservation": {
+        "mode": "CAM_GIU",
+        "recovery_path": "D:\\SOL_LONG_MACH\\MODEL\\repo\\RECOVERY\\MEMORY_STEWARDSHIP_PINNED\\2136633bf82445716395524525ac5b64b56629ec0efe885cf96254ee7f0d16e0__COMPANION_TEN_COMMANDMENTS_CURRENT.md",
+        "recovery_sha256": "2136633bf82445716395524525ac5b64b56629ec0efe885cf96254ee7f0d16e0",
+        "verified": true,
+        "verified_at": "2026-10-08T21:12:40.674924+07:00"
+      }
+    }
+  ],
+  "events": [
+    {
+      "at": "2026-10-08T21:12:39.311578+07:00",
+      "item_id": "R-000",
+      "action": "CAM_GIU",
+      "consequence": "VERIFIED_RECOVERY_COPY_CREATED_OR_CONFIRMED",
+      "receipt": {
+        "source_sha256": "223ad3dbd5a3a2665be841dc25c64860269e79dbfff53082050b668c8f71e0fb",
+        "recovery_path": "D:\\SOL_LONG_MACH\\MODEL\\repo\\RECOVERY\\MEMORY_STEWARDSHIP_PINNED\\223ad3dbd5a3a2665be841dc25c64860269e79dbfff53082050b668c8f71e0fb__R-000_CURRENT.md",
+        "recovery_sha256": "223ad3dbd5a3a2665be841dc25c64860269e79dbfff53082050b668c8f71e0fb"
+      },
+      "readback": {
+        "verified": true
+      }
+    },
+    {
+      "at": "2026-10-08T21:12:39.925121+07:00",
+      "item_id": "THE_MASTER_TEACHER",
+      "action": "CAM_GIU",
+      "consequence": "VERIFIED_RECOVERY_COPY_CREATED_OR_CONFIRMED",
+      "receipt": {
+        "source_sha256": "bb91455361695aee41d160a1dd6d36b598645b7fb6f9d35a614c3123dd52e3e0",
+        "recovery_path": "D:\\SOL_LONG_MACH\\MODEL\\repo\\RECOVERY\\MEMORY_STEWARDSHIP_PINNED\\bb91455361695aee41d160a1dd6d36b598645b7fb6f9d35a614c3123dd52e3e0__MASTER_TEACHER_EVENT_SEQUENCE_CURRENT.md",
+        "recovery_sha256": "bb91455361695aee41d160a1dd6d36b598645b7fb6f9d35a614c3123dd52e3e0"
+      },
+      "readback": {
+        "verified": true
+      }
+    },
+    {
+      "at": "2026-10-08T21:12:40.674924+07:00",
+      "item_id": "COMPANION_COMMANDMENTS",
+      "action": "CAM_GIU",
+      "consequence": "VERIFIED_RECOVERY_COPY_CREATED_OR_CONFIRMED",
+      "receipt": {
+        "source_sha256": "2136633bf82445716395524525ac5b64b56629ec0efe885cf96254ee7f0d16e0",
+        "recovery_path": "D:\\SOL_LONG_MACH\\MODEL\\repo\\RECOVERY\\MEMORY_STEWARDSHIP_PINNED\\2136633bf82445716395524525ac5b64b56629ec0efe885cf96254ee7f0d16e0__COMPANION_TEN_COMMANDMENTS_CURRENT.md",
+        "recovery_sha256": "2136633bf82445716395524525ac5b64b56629ec0efe885cf96254ee7f0d16e0"
+      },
+      "readback": {
+        "verified": true
+      }
+    }
+  ]
+}

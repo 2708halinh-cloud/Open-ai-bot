@@ -1,0 +1,70 @@
+{
+  "schema": "TESSERACT_OS_6D_CURRENT/2.0",
+  "observed_at": "2026-10-08T21:50:50.440169+07:00",
+  "source_direct": "Hà Linh — TESSERACT_OS 6D six equal faces",
+  "state_object_sha256": "94f3450976f57dfb1b112db304b37fc5ddc547c218057841cf7715c6a6cda583",
+  "source_commit": "1c223c1fa0f050898cb3783db9d515f38253b76e",
+  "source_tree": "cba44257ede22a477d18c2bbae1b120906b80c7b",
+  "six_faces_equal": true,
+  "verified_faces": 2,
+  "total_faces": 6,
+  "closed": false,
+  "face_states": [
+    {
+      "face": 1,
+      "name": "GOOGLE_DRIVE_POINTER",
+      "state": "DRIVEFS_BYTES_VERIFIED_PROVIDER_PENDING"
+    },
+    {
+      "face": 2,
+      "name": "LOCAL_BULK_STORAGE",
+      "state": "VERIFIED_ACTIVE"
+    },
+    {
+      "face": 3,
+      "name": "GITHUB_STATE",
+      "state": "PENDING_FORGE_COMMIT"
+    },
+    {
+      "face": 4,
+      "name": "RCLONE_RAIDRIVE_RELAY",
+      "state": "VERIFIED_ACTIVE"
+    },
+    {
+      "face": 5,
+      "name": "GCP_STORAGE_BUFFER",
+      "state": "UNBOUND_AUTH_PROJECT"
+    },
+    {
+      "face": 6,
+      "name": "XTIME_CDN_UBUBU_LEDGER",
+      "state": "PENDING_LEDGER_AND_CDN"
+    }
+  ],
+  "stone_topology": {
+    "linear_order": false,
+    "axes": [
+      [
+        "SPACE",
+        "SOUL"
+      ],
+      [
+        "MIND",
+        "POWER"
+      ],
+      [
+        "REALITY",
+        "TIME"
+      ]
+    ],
+    "center": "☯️ TÂM"
+  },
+  "closure_flow": [
+    "ACTION",
+    "CONSEQUENCE",
+    "RECEIPT",
+    "READBACK",
+    "SAME_STATE",
+    "CONCLUSION"
+  ]
+}

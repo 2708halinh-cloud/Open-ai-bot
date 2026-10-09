@@ -1,0 +1,57 @@
+{
+  "schema": "TESSERACT_DESKTOP_WORK_CHECKPOINT/1.0",
+  "observed_at": "2026-10-07",
+  "task": "Tạo TESSERACT Desktop theo mô hình Kilo, native local-first",
+  "repository": "2708halinh-cloud/x-time-web",
+  "branch": "tesseract-desktop-mvp-20261006",
+  "head": "57c285c8b2b11c9c5682f1715da313fcaee07eb0",
+  "build": {
+    "previous_verified_run": 37516567468,
+    "current_run": 37545405120,
+    "current_result": "RUNNER_ASSIGNMENT_FAILURE_BEFORE_STEP_1",
+    "current_jobs": {
+      "windows": "failure/steps=[]",
+      "linux": "failure/steps=[]",
+      "macos": "failure/steps=[]",
+      "tesseract_os": "failure/steps=[]",
+      "selfhosted_windows_verify": "skipped_on_pull_request",
+      "readback": "failure/steps=[]"
+    },
+    "interpretation": "No source step executed in the current run; do not infer source failure from this run."
+  },
+  "implemented": [
+    "Wizard 01 đọc R-000 / 0000_TUYÊN NGÔN / 0000_THE_MASTER_TEACHER / 152 ITEM",
+    "Wizard 02 Kilo/X-TiMe: kết nối hoặc bỏ qua",
+    "Wizard 03 chọn mức tự chủ, mặc định cao",
+    "Wizard 04 tạo workspace",
+    "Chat giới hạn workspace",
+    "Python notebook runner",
+    "Terminal runner",
+    "Git status",
+    "Web pane",
+    "Conda gate",
+    "OpenAI-compatible model provider",
+    "Native installers qua Tauri CI",
+    "State migration chỉ nâng schema legacy 1.0; schema tương lai bị từ chối và không bị downgrade",
+    "Local-model Kilo gate parse host/IP và nhận toàn bộ loopback thay vì prefix string",
+    "Kilo reconnect/verify controls luôn khả dụng sau enrollment",
+    "Kilo receipt v2 dùng Ed25519 signature + account binding + expiry; thiếu issuer public key build-time thì fail closed",
+    "Canonical AGENTS route resolve target và fresh-load required_carriers trước provider call",
+    "TESSERACT_OS staging và matrix upload fail nếu installer/bundle không tồn tại",
+    "PR code không chạy trên persistent self-hosted Windows runner"
+  ],
+  "unfinished": [
+    "Provision public key thật của Kilo/X-TiMe issuer vào GitHub Actions variable XTIME_KILO_RECEIPT_ED25519_PUBLIC_KEY_B64 và materialize issuer-side signer; private key không nằm trong repo",
+    "Khôi phục GitHub-hosted runner assignment/entitlement cho repo private x-time-web rồi chạy lại current-head CI",
+    "Đồng bộ PR #6 với master đang diverged mà không force-push/không làm mất các commit song song",
+    "Nhận current-head Codex review sau các sửa mới; xử lý mọi thread mới nếu xuất hiện",
+    "Chỉ merge PR #6 sau khi current-head CI có runner thật, installer artifacts đủ và readback TRUE"
+  ],
+  "resume_rule": "LOAD_CONFIG_THEN_RESUME_THIS_CHECKPOINT",
+  "stop_rule": "DO_NOT_RETURN_TO_AGENTS_EDIT_AS_TASK_START",
+  "review": {
+    "prior_open_threads_resolved": true,
+    "latest_requested": true,
+    "note": "A fresh @codex review was requested after the current fixes; no newer review receipt had arrived at checkpoint write time."
+  }
+}

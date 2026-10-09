@@ -1,0 +1,74 @@
+{
+  "schema": "TESSERACT_OS_6D/2.0",
+  "generated_at": "2026-10-08T23:14:59.883527+07:00",
+  "source_commit": "9074c7d2041871987cd68c17c34a40ee06fbe477",
+  "source_tree": "cc5963d4874b7ec2a537f916b6d83897c4778d3d",
+  "dimension": 6,
+  "faces_equal": true,
+  "center": "☯️ TÂM",
+  "stone_axes": [
+    [
+      "SPACE",
+      "SOUL"
+    ],
+    [
+      "MIND",
+      "POWER"
+    ],
+    [
+      "REALITY",
+      "TIME"
+    ]
+  ],
+  "action_before_conclusion": {
+    "rule_id": "ACTION_BEFORE_CONCLUSION",
+    "flow": [
+      "ACTION",
+      "CONSEQUENCE",
+      "RECEIPT",
+      "READBACK",
+      "SAME_STATE",
+      "CONCLUSION"
+    ],
+    "source_direct": "LÀM TRƯỚC -> KẾT LUẬN; CẤM TUYỆT ĐỐI CHỐT KẾT QUẢ RỒI MỚI LÀM"
+  },
+  "closure_rule": "CLOSED iff all 6 faces have ACTION + CONSEQUENCE + RECEIPT + READBACK + SAME_STATE for one state object.",
+  "faces": [
+    {
+      "id": 1,
+      "name": "GOOGLE_DRIVE",
+      "role": "Pointer <10MB + locator JSON",
+      "equal_weight": 1
+    },
+    {
+      "id": 2,
+      "name": "LOCAL_STORAGE",
+      "role": "W/D/NVMe bulk/raw/snapshot",
+      "equal_weight": 1
+    },
+    {
+      "id": 3,
+      "name": "GITHUB_X_TIME_WEB",
+      "role": "Law & State + immutable commit",
+      "equal_weight": 1
+    },
+    {
+      "id": 4,
+      "name": "RCLONE_RAIDRIVE",
+      "role": "Virtual-drive / cloud relay",
+      "equal_weight": 1
+    },
+    {
+      "id": 5,
+      "name": "GCP_STORAGE_BUCKET",
+      "role": "Processing buffer + lifecycle 3–7 days",
+      "equal_weight": 1
+    },
+    {
+      "id": 6,
+      "name": "X_TIME_CDN_UBUBU_LEDGER",
+      "role": "Display + hash-only ledger",
+      "equal_weight": 1
+    }
+  ]
+}

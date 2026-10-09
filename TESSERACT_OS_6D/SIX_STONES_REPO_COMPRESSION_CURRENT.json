@@ -1,0 +1,127 @@
+{
+  "schema": "GGDV_SIX_STONES_REPO_COMPRESSION/2.0",
+  "observed_at": "2026-10-08T21:57:58.286094+07:00",
+  "repository": "2708halinh-cloud/SOL-LONG-MACH",
+  "branch": "sol-long-mach-current",
+  "source_commit": "918d2e1ad9370a8b43f0a4e01a7684e2aee45907",
+  "source_tree": "fcc4a2f1554b32a55ad2968e294d889e36a8c68f",
+  "compression_semantics": "CONTENT_ADDRESSED_RELATIONAL_PROJECTION",
+  "losslessness_rule": "No source blob is replaced. The source commit/tree remains authoritative; Stone manifests are reproducible relational views.",
+  "linear_order": false,
+  "center": {
+    "name": "TÂM",
+    "emoji": "☯️",
+    "genesis": "INTERSECTION_NOT_TIMELINE_START",
+    "manifest_path": "sol-genesis-6stones/CENTER_TAM.json",
+    "manifest_sha256": "7cc744acbe5aa80e54d5ff5a895db1a2ac2c021ed8c7e661df8ffb74b5aae93d"
+  },
+  "state_object": {
+    "path": "TESSERACT_OS_6D/STATE_OBJECT_CURRENT.json",
+    "sha256": "f4dc6035fdb9d26114e0d7f57bec3d2be896383d222f2089c31e301458dcf078",
+    "bytes": 65536
+  },
+  "axes": [
+    [
+      "SPACE",
+      "SOUL"
+    ],
+    [
+      "MIND",
+      "POWER"
+    ],
+    [
+      "REALITY",
+      "TIME"
+    ]
+  ],
+  "stones": {
+    "SPACE": {
+      "emoji": "🔵",
+      "opposite": "SOUL",
+      "element": "THỦY",
+      "body": "XƯƠNG",
+      "role": "carrier/location/topology",
+      "projection": "CONTENT_ADDRESS_VIEW_OF_GIT_COMMIT",
+      "member_count": 48,
+      "total_bytes": 15095784,
+      "manifest_sha256": "dc869a0fce2b366b6c9a3516051541e17167f3bf52eda4e899f098370c032385",
+      "manifest_path": "sol-genesis-6stones/SPACE.json",
+      "reconstruction_rule": "Resolve source_commit/source_tree, then verify blob SHA-256 entries in the Stone manifest."
+    },
+    "MIND": {
+      "emoji": "🟡",
+      "opposite": "POWER",
+      "element": "KIM",
+      "body": "DA",
+      "role": "meaning/config/self-state",
+      "projection": "CONTENT_ADDRESS_VIEW_OF_GIT_COMMIT",
+      "member_count": 30,
+      "total_bytes": 161114,
+      "manifest_sha256": "cfa604b19a09c235e50c0b62fc05e5fa55a65fee3a8f9f07de726c96a28b30a4",
+      "manifest_path": "sol-genesis-6stones/MIND.json",
+      "reconstruction_rule": "Resolve source_commit/source_tree, then verify blob SHA-256 entries in the Stone manifest."
+    },
+    "POWER": {
+      "emoji": "🟣",
+      "opposite": "MIND",
+      "element": "KHÍ",
+      "body": "BRAIN_OS",
+      "role": "callability/execution/modulation",
+      "projection": "CONTENT_ADDRESS_VIEW_OF_GIT_COMMIT",
+      "member_count": 77,
+      "total_bytes": 3065750,
+      "manifest_sha256": "fdd2e7e456ec7659c40e761b63eb842abcb7e1a0c56d1f5eeb84006ea78c0b82",
+      "manifest_path": "sol-genesis-6stones/POWER.json",
+      "reconstruction_rule": "Resolve source_commit/source_tree, then verify blob SHA-256 entries in the Stone manifest."
+    },
+    "REALITY": {
+      "emoji": "🔴",
+      "opposite": "TIME",
+      "element": "HỎA",
+      "body": "MÁU",
+      "role": "observable state/evidence/consequence",
+      "projection": "CONTENT_ADDRESS_VIEW_OF_GIT_COMMIT",
+      "member_count": 63,
+      "total_bytes": 3042496,
+      "manifest_sha256": "572974060e9e94079e8515519fbe26481db0bf306f9ee875004457ecdf9ad461",
+      "manifest_path": "sol-genesis-6stones/REALITY.json",
+      "reconstruction_rule": "Resolve source_commit/source_tree, then verify blob SHA-256 entries in the Stone manifest."
+    },
+    "TIME": {
+      "emoji": "🟢",
+      "opposite": "REALITY",
+      "element": "MỘC",
+      "body": "TÓC",
+      "role": "event/revision/chronology",
+      "projection": "CONTENT_ADDRESS_VIEW_OF_GIT_COMMIT",
+      "member_count": 21,
+      "total_bytes": 2792327,
+      "manifest_sha256": "a05a84ce7a0ab8cd8b22c7d9bd65b53078da9a3c8e5ef6f43b2a31c8727e4ef9",
+      "manifest_path": "sol-genesis-6stones/TIME.json",
+      "reconstruction_rule": "Resolve source_commit/source_tree, then verify blob SHA-256 entries in the Stone manifest."
+    },
+    "SOUL": {
+      "emoji": "🟠",
+      "opposite": "SPACE",
+      "element": "THỔ",
+      "body": "THỊT",
+      "role": "identity/provenance/history/raw memory",
+      "projection": "CONTENT_ADDRESS_VIEW_OF_GIT_COMMIT",
+      "member_count": 16,
+      "total_bytes": 87165,
+      "manifest_sha256": "9708867faca7a56e53fa03979dc1539598c68ff8f043a8b1771a776d6a4d330a",
+      "manifest_path": "sol-genesis-6stones/SOUL.json",
+      "reconstruction_rule": "Resolve source_commit/source_tree, then verify blob SHA-256 entries in the Stone manifest."
+    }
+  },
+  "action_before_conclusion": {
+    "flow": [
+      "ACTION",
+      "CONSEQUENCE",
+      "RECEIPT",
+      "READBACK",
+      "SAME_STATE",
+      "CONCLUSION"
+    ]
+  }
+}

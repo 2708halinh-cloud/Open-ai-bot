@@ -1,0 +1,24 @@
+[package]
+name = "tesseract-desktop"
+version = "0.1.0"
+description = "Local-first TESSERACT workspace agent desktop"
+authors = ["GGDV"]
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+base64 = "0.22"
+
+[dependencies]
+tauri = { version = "2", features = [] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+dirs = "6"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+open = "5"
+sha2 = "0.10"
+base64 = "0.22"
+ed25519-dalek = { version = "2", default-features = false, features = ["std"] }
+
+[features]
+custom-protocol = ["tauri/custom-protocol"]

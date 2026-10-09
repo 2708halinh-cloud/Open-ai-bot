@@ -1,0 +1,15 @@
+{
+  "schema": "TESSERACT_OS_6D_FACE_RECEIPT/1.0",
+  "observed_at": "2026-10-08T20:19:04.233177+07:00",
+  "face": 5,
+  "name": "GCP_STORAGE_BUFFER",
+  "equal_rank": true,
+  "role": "Buồng đệm xử lý / Lifecycle tự hủy 3-7 ngày",
+  "state": "UNBOUND_AUTH_PROJECT",
+  "gcloud_installed": true,
+  "gsutil_installed": true,
+  "active_auth": false,
+  "project_bound": false,
+  "lifecycle_rule": "REQUIRED_3_TO_7_DAYS_WHEN_BOUND",
+  "requirement_for_verified": "Authenticated project + bucket + lifecycle readback + object transfer receipt."
+}
