@@ -93,7 +93,13 @@
     "CURRENT_RUNTIME/R-000_CURRENT.md",
     "CURRENT_RUNTIME/4D_5D_CURRENT.md",
     "CURRENT_RUNTIME/SOL_REENTRY_CURRENT.md",
-    "CURRENT_RUNTIME/TASK_RESUME_POINTER.json"
+    "CURRENT_RUNTIME/TASK_RESUME_POINTER.json",
+    "CONFIG_SOL/TESSERACT_SIGNAL_INGRESS_CURRENT.md"
   ],
-  "required_carrier_rule": "Fresh-read every listed carrier before provider execution; missing/unreadable required carrier is a load failure, not an empty optional context."
+  "required_carrier_rule": "Fresh-read every listed carrier before provider execution; missing/unreadable required carrier is a load failure, not an empty optional context.",
+  "source_signal_ingress": {
+    "carrier": "CONFIG_SOL/TESSERACT_SIGNAL_INGRESS_CURRENT.md",
+    "source_first": true,
+    "derived_descriptions_separate": true
+  }
 }
