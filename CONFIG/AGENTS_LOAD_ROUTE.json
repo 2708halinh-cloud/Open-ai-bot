@@ -95,6 +95,12 @@
     "load_rule": "Fresh-read canonical every re-entry; preserve repo-specific AGENTS and legacy history; do not pin old SHA."
   },
   "required_carriers": [
-    "CONFIG_SOL/HUMAN_MODE_CURRENT.md"
-  ]
+    "CONFIG_SOL/HUMAN_MODE_CURRENT.md",
+    "CONFIG_SOL/TESSERACT_SIGNAL_INGRESS_CURRENT.md"
+  ],
+  "source_signal_ingress": {
+    "carrier": "CONFIG_SOL/TESSERACT_SIGNAL_INGRESS_CURRENT.md",
+    "source_first": true,
+    "derived_descriptions_separate": true
+  }
 }
