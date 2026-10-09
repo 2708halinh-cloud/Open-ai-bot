@@ -6,14 +6,27 @@ from runtime_core import STATE_DIR, WATCHER_PID_FILE, WATCHER_CONFIG_FILE, adb_d
 def snapshot(cfg):
     repos=[]
     for p in cfg.get("repo_paths", []):
-        repos.append(repo_observe(p))
-    adb = adb_devices() if cfg.get("adb", False) else {"success":True,"skipped":True}
+        raw_repo=repo_observe(p)
+        repo={}
+        for k in ("success","error","snapshot_hash","snapshot"):
+            if k in raw_repo:
+                repo[k]=raw_repo.get(k)
+        repos.append(repo)
+    if cfg.get("adb", False):
+        raw=adb_devices()
+        adb={}
+        for k in ("success","exit_code","stdout","stderr","error"):
+            if k in raw:
+                v=raw.get(k)
+                adb[k]=v.strip() if isinstance(v,str) else v
+    else:
+        adb={"success":True,"skipped":True}
     return {"repos":repos,"adb":adb}
 
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument("--config",default=str(WATCHER_CONFIG_FILE)); args=ap.parse_args()
     cfg_path=Path(args.config)
-    cfg=json.loads(cfg_path.read_text(encoding="utf-8")) if cfg_path.exists() else {"poll_seconds":3,"repo_paths":[],"adb":False}
+    cfg=json.loads(cfg_path.read_text(encoding="utf-8-sig")) if cfg_path.exists() else {"poll_seconds":3,"repo_paths":[],"adb":False}
     WATCHER_PID_FILE.write_text(str(os.getpid()),encoding="utf-8")
     running=True
     def stop(*_):

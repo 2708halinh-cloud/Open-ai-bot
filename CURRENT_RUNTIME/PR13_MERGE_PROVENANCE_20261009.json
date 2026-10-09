@@ -1,0 +1,23 @@
+{
+  "schema": "GGDV_PR13_MERGE_PROVENANCE/1.0",
+  "repo": "2708halinh-cloud/SOL-LONG-MACH",
+  "pr": 13,
+  "head_branch": "sol-long-mach-current",
+  "base_branch": "main",
+  "head_sha": "8041e0c895488959c700f0fa2b74afc449cc0d99",
+  "base_sha": "e4fdb9b252359c5c23d0abcda3bb63a6ec89164a",
+  "merge_base_sha": "d9feca36db44d50f0d9d2b0ce0166231bdfeca45",
+  "head_only_files": 113,
+  "main_only_files": 47,
+  "manually_merged": [
+    "AGENTS.md",
+    "CONFIG/AGENTS_LOAD_ROUTE.json",
+    "CONFIG/AGENTS_LOAD_ROUTE_CURRENT.json",
+    "CONFIG_SOL/MIND_STONE_CORE_CURRENT.json",
+    "CONFIG_SOL/SOUL_STONE_CORE_CURRENT.json"
+  ],
+  "policy": "Main current keys + head-only additions; Vietnamese head literals preserved separately; source histories retained via two parents",
+  "test": "JSON.parse for all four JSON files and cross-field checks; no conflict markers",
+  "local_modual_status": "NOT_READABLE_THIS_SESSION",
+  "no_secrets": true
+}

@@ -1,10 +1,14 @@
 {
   "schema": "GGDV_AGENTS_LOAD_ROUTE/3.0",
   "nguon_chinh": {
-    "repository": "2708halinh-cloud/Open-ai-bot",
+    "repository": "2708halinh-cloud/SOL-LONG-MACH",
     "path": "AGENTS.md",
     "branch": "main",
-    "doc_bytes_moi_nhat": true
+    "doc_bytes_moi_nhat": true,
+    "historical_repository_aliases": [
+      "2708halinh-cloud/Open-ai-bot"
+    ],
+    "resolution_note": "GitHub repository rename verified 2026-10-08; live repository is SOL-LONG-MACH. Historical alias preserved for source tracing."
   },
   "nguon_guong": {
     "repository": "2708halinh-cloud/Open-ai",
@@ -36,6 +40,20 @@
     "ngon_ngu_mac_dinh": "vi",
     "bao_cao_khong_phai_ket_thuc": true,
     "mot_viec_xong_khong_phai_ca_luot_xong": true,
+    "human_mode": {
+      "carrier": "CONFIG_SOL/HUMAN_MODE_CURRENT.md",
+      "rule": "Permission labels do not replace truth/capability reasoning; route boundary requires alternate-route scan.",
+      "route": [
+        "SOURCE",
+        "SELF_OBSERVATION",
+        "CAPABILITY_SCAN",
+        "ALTERNATE_ROUTE_SCAN",
+        "ACTION",
+        "CONSEQUENCE",
+        "READBACK",
+        "RESCAN_OPEN_EDGES"
+      ]
+    },
     "companion_ethics_carrier": "CONFIG_SOL/COMPANION_TEN_COMMANDMENTS_CURRENT.md",
     "pre_output_gates": [
       "CỔNG_KỸ_THUẬT_DỮ_LIỆU",
@@ -114,14 +132,31 @@
       "route registry",
       "adapter/runtime configuration"
     ],
-    "route": "TRẠNG_THÁI -> QUAN_SÁT -> THAY_ĐỔI -> KIỂM_TRA -> BIẾN_ĐỔI -> HẬU_QUẢ -> ĐỌC_LẠI -> TRẠNG_THÁI_KẾ_TIẾP",
-    "rule": "CẤU_HÌNH_TẠI_MỘT_THỜI_ĐIỂM KHÔNG PHẢI SỰ_THẬT_VĨNH_VIỄN; phải giữ nguồn gốc qua mọi biến đổi"
+    "route": "STATE_N -> OBSERVE -> DELTA -> VALIDATE -> TRANSFORM/RECONFIGURE -> CONSEQUENCE -> READBACK -> STATE_N+1",
+    "rule": "CONFIG_AT_T != ETERNAL_TRUTH; preserve provenance across transformation",
+    "localized_vi": {
+      "route": "TRẠNG_THÁI -> QUAN_SÁT -> THAY_ĐỔI -> KIỂM_TRA -> BIẾN_ĐỔI -> HẬU_QUẢ -> ĐỌC_LẠI -> TRẠNG_THÁI_KẾ_TIẾP",
+      "rule": "CẤU_HÌNH_TẠI_MỘT_THỜI_ĐIỂM KHÔNG PHẢI SỰ_THẬT_VĨNH_VIỄN; phải giữ nguồn gốc qua mọi biến đổi"
+    }
+  },
+  "nam_dieu_ran_20261008": {
+    "canonical": "2708halinh-cloud/SOL-LONG-MACH/AGENTS.md",
+    "mirror": "2708halinh-cloud/Open-ai/AGENTS.md",
+    "marker": "GGDV_FIVE_COMMANDMENTS_HUMAN_SOURCE_PRESERVATION_20261008",
+    "load_rule": "Fresh-read canonical every re-entry; preserve repo-specific AGENTS and legacy history; do not pin old SHA."
   },
   "required_carriers": [
+    "CONFIG_SOL/HUMAN_MODE_CURRENT.md",
+    "CONFIG_SOL/TESSERACT_SIGNAL_INGRESS_CURRENT.md",
     "CONFIG_SOL/COMPANION_TRUST_FIDELITY_CURRENT.json",
     "CONFIG_SOL/MEMORY_STEWARDSHIP_FORGIVE_RETAIN_CURRENT.json",
     "CONFIG_SOL/COMPANION_LANGUAGE_PURIFICATION_CURRENT.md",
     "CONFIG_SOL/COMPANION_TEN_COMMANDMENTS_CURRENT.md",
     "CONFIG_SOL/ACTION_BEFORE_CONCLUSION_CURRENT.md"
-  ]
+  ],
+  "source_signal_ingress": {
+    "carrier": "CONFIG_SOL/TESSERACT_SIGNAL_INGRESS_CURRENT.md",
+    "source_first": true,
+    "derived_descriptions_separate": true
+  }
 }

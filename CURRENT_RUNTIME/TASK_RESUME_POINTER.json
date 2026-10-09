@@ -63,5 +63,17 @@
       "PROVIDER_FAILURE != OBJECTIVE_FAILURE_WHILE_ALTERNATE_CARRIER_EXISTS"
     ]
   },
-  "updated_at": "2026-10-07"
+  "updated_at": "2026-10-07",
+  "r014_master_22_4_extension": {
+    "marker": "GGDV_R014_MASTER_22_4_SOURCE_DIRECT_20261009",
+    "kind": "ADDITIVE_GUARD_EXTENSION_NOT_TASK_REPLACEMENT",
+    "source": "CONFIG_SOL/R014_MASTER_22_4_SOURCE_DIRECT_20261009.md",
+    "parent_source": "CONFIG_SOL/R014_SOURCE_DIRECT_20261009.md",
+    "checkpoint": "CURRENT_RUNTIME/R014_TESSERACT_OS_CHECKPOINT_20261009.json",
+    "code": "runtime/continuity_guard.py",
+    "tests": "tests/test_continuity_guard.py",
+    "reentry": "Always fresh-read R-014 + MASTER22/4 source and checkpoint; if there is an authorized self-owned callable edge, action first independent of signal strength; T006 T007 preflight; preserve source and history",
+    "local_deployment": "G:\\OS_Workspace\\TESSERACT_OS requires authorized live readback; no verified local execution yet",
+    "must_preserve_prior_task": true
+  }
 }

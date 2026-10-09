@@ -13,7 +13,7 @@ if ([string]::IsNullOrWhiteSpace($Root)) { $Root = "G:\OS_Workspace" }
 
 $Bridge = Join-Path $Root "ggdv-sensorimotor-motor-bridge"
 $SolExe = Join-Path $Root "SOL CU NHỎ.EXE"
-$StateDir = Join-Path $env:LOCALAPPDATA "GGDV\sensorimotor-motor"
+$StateDir = Join-Path $Root "TESSERACT_OS\runtime\state"
 $WatcherConfig = Join-Path $StateDir "watcher-config.json"
 $WatcherPid = Join-Path $StateDir "watcher.pid"
 $Log = Join-Path $StateDir "autostart.log"
@@ -55,13 +55,11 @@ if ([string]::IsNullOrWhiteSpace($Adapter) -and -not [string]::IsNullOrWhiteSpac
   if (Test-Path -LiteralPath $candidateAdapter) { $Adapter = $candidateAdapter }
 }
 
-[Environment]::SetEnvironmentVariable("GGDV_MOTOR_ENABLE","1","User")
-[Environment]::SetEnvironmentVariable("GGDV_DESTRUCTIVE_ENABLE","0","User")
 $env:GGDV_MOTOR_ENABLE = "1"
 $env:GGDV_DESTRUCTIVE_ENABLE = "0"
+$env:GGDV_SENSORIMOTOR_STATE_DIR = $StateDir
 
 if (-not [string]::IsNullOrWhiteSpace($RepoPath)) {
-  [Environment]::SetEnvironmentVariable("GGDV_REPO_PATH",$RepoPath,"User")
   $env:GGDV_REPO_PATH = $RepoPath
   Log "REPO_PATH=$RepoPath"
 } else {
@@ -69,17 +67,25 @@ if (-not [string]::IsNullOrWhiteSpace($RepoPath)) {
 }
 
 if (-not [string]::IsNullOrWhiteSpace($Adapter)) {
-  [Environment]::SetEnvironmentVariable("GGDV_APP_ADAPTER",$Adapter,"User")
   $env:GGDV_APP_ADAPTER = $Adapter
   Log "APP_ADAPTER=$Adapter"
 } else {
   Log "APP_ADAPTER=NOT_RESOLVED"
 }
 
-$adb = Get-ChildItem $Root -Recurse -File -Filter adb.exe -ErrorAction SilentlyContinue |
-  Select-Object -First 1 -ExpandProperty FullName
+$adb = $null
+if (-not [string]::IsNullOrWhiteSpace($env:GGDV_ADB_PATH) -and (Test-Path -LiteralPath $env:GGDV_ADB_PATH -PathType Leaf)) {
+  $adb = $env:GGDV_ADB_PATH
+}
+if (-not $adb) {
+  $userAdb = Join-Path $env:USERPROFILE "platform-tools-latest-windows\platform-tools\adb.exe"
+  if (Test-Path -LiteralPath $userAdb -PathType Leaf) { $adb = $userAdb }
+}
+if (-not $adb) {
+  $adb = Get-ChildItem $Root -Recurse -File -Filter adb.exe -ErrorAction SilentlyContinue |
+    Select-Object -First 1 -ExpandProperty FullName
+}
 if ($adb) {
-  [Environment]::SetEnvironmentVariable("GGDV_ADB_PATH",$adb,"User")
   $env:GGDV_ADB_PATH = $adb
   Log "ADB=$adb"
 } else {
@@ -92,7 +98,7 @@ if (-not (Test-Path (Join-Path $Bridge "server\motor_mcp.py"))) { throw "motor_m
 $plugin = Get-Content (Join-Path $Bridge "plugin.json") -Raw | ConvertFrom-Json
 Log "BRIDGE_VERSION=$($plugin.version)"
 
-if (Test-Path $SolExe) {
+if (Test-Path -LiteralPath $SolExe -PathType Leaf) {
   $running = Get-CimInstance Win32_Process -ErrorAction SilentlyContinue |
     Where-Object { $_.ExecutablePath -eq $SolExe } |
     Select-Object -First 1
@@ -102,6 +108,8 @@ if (Test-Path $SolExe) {
   } else {
     Log "SOL_APP=ALREADY_RUNNING PID=$($running.ProcessId)"
   }
+} elseif (Test-Path -LiteralPath $SolExe -PathType Container) {
+  Log "SOL_APP=FOLDER_NOT_EXECUTABLE"
 } else {
   Log "SOL_APP=MISSING"
 }
@@ -115,12 +123,29 @@ $watchCfg = [ordered]@{
 }
 $watchCfg | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath $WatcherConfig -Encoding UTF8
 
+function Get-WatcherProcess([int]$PidValue) {
+  try {
+    $p = Get-CimInstance Win32_Process -Filter "ProcessId=$PidValue" -ErrorAction SilentlyContinue
+    if ($p -and $p.CommandLine -match "watcher\.py") { return $p }
+  } catch {}
+  return $null
+}
+
 $watcherAlive = $false
+$watcherProcess = $null
 if (Test-Path $WatcherPid) {
   try {
     $pidValue = [int](Get-Content $WatcherPid -Raw).Trim()
-    $watcherAlive = [bool](Get-Process -Id $pidValue -ErrorAction SilentlyContinue)
-  } catch { $watcherAlive = $false }
+    $watcherProcess = Get-WatcherProcess $pidValue
+    $watcherAlive = [bool]$watcherProcess
+    if (-not $watcherAlive) {
+      Remove-Item -LiteralPath $WatcherPid -Force -ErrorAction SilentlyContinue
+      Log "WATCHER_PID=STALE_REMOVED PID=$pidValue"
+    }
+  } catch {
+    $watcherAlive = $false
+    Remove-Item -LiteralPath $WatcherPid -Force -ErrorAction SilentlyContinue
+  }
 }
 
 if (-not $watcherAlive) {
@@ -128,9 +153,16 @@ if (-not $watcherAlive) {
   $watcher = Join-Path $Bridge "server\watcher.py"
   Start-Process -FilePath $py -ArgumentList @($watcher,"--config",$WatcherConfig) -WorkingDirectory (Split-Path $watcher -Parent) -WindowStyle Hidden
   Start-Sleep -Seconds 2
-  Log "WATCHER=START_REQUESTED"
+  if (Test-Path $WatcherPid) {
+    try {
+      $pidValue = [int](Get-Content $WatcherPid -Raw).Trim()
+      $watcherProcess = Get-WatcherProcess $pidValue
+      $watcherAlive = [bool]$watcherProcess
+    } catch { $watcherAlive = $false }
+  }
+  Log "WATCHER=START_REQUESTED ALIVE=$watcherAlive"
 } else {
-  Log "WATCHER=ALREADY_RUNNING"
+  Log "WATCHER=ALREADY_RUNNING PID=$($watcherProcess.ProcessId)"
 }
 
 if ($InstallScheduledTask) {

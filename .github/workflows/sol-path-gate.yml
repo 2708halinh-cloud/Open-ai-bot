@@ -1,0 +1,20 @@
+name: SOL blocked-runtime-path guard
+on:
+  push:
+    paths:
+      - '09_SYSTEMS/02_RUNTIME_PATH_GATE/**'
+      - '.github/workflows/sol-path-gate.yml'
+  pull_request:
+    paths:
+      - '09_SYSTEMS/02_RUNTIME_PATH_GATE/**'
+      - '.github/workflows/sol-path-gate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate-sol-path-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run path-gate regression tests
+        run: python3 -m unittest discover -s 09_SYSTEMS/02_RUNTIME_PATH_GATE -p 'test_sol_path_gate.py' -v

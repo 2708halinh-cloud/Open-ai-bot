@@ -1,14 +1,13 @@
 {
-  "schema": "TESSERACT_LOCAL_BRIDGE_QUEUE/1.7",
-  "task_id": "CONNECT_HOME_SOL_20261007_01",
-  "action": "CONNECT_HOME_SOL",
-  "endpoint": "http://127.0.0.1:8765/sandbox/sol",
-  "purpose": "Connect HOME_SOL to the real-device local nervous bridge. Probe the loopback endpoint, start nervous_api_server.py on the authorized Windows host if needed, then require HTTP readback before declaring connected.",
+  "schema": "TESSERACT_LOCAL_BRIDGE_QUEUE/1.8",
+  "task_id": "ENSURE_DESKTOP_COMMANDER_REMOTE_20261008_01",
+  "action": "ENSURE_DESKTOP_COMMANDER_REMOTE",
+  "purpose": "On the authorized Windows host, install a per-user AtLogOn Scheduled Task named DesktopCommanderRemote that starts npx -y @wonderwhy-er/desktop-commander@latest remote, starts it once immediately, and persists a readback receipt.",
   "invariants": {
-    "local_loopback_only": true,
+    "authorized_host_only": true,
+    "at_logon_autostart": true,
+    "no_unrelated_task_changes": true,
     "readback_required": true,
-    "no_secret_body_persist": true,
-    "chat_not_runtime": true,
-    "preserve_existing_processes": true
+    "open_not_stop": true
   }
 }
